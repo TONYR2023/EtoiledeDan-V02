@@ -32,6 +32,7 @@ class BookedController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+            $booked->setUser($this->getUser());
             $entityManager->persist($booked);
             $entityManager->flush();
 
@@ -59,6 +60,7 @@ class BookedController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+            $booked->setUser($this->getUser());
             $entityManager->flush();
 
             return $this->redirectToRoute('app_booked_index', [], Response::HTTP_SEE_OTHER);

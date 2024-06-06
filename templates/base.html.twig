@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    
+
     <title>{% block title %}Welcome!{% endblock %}</title>
     <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text><text y=%221.3em%22 x=%220.2em%22 font-size=%2276%22 fill=%22%23fff%22>sf</text></svg>">
@@ -170,6 +170,19 @@
                     </li>
                 </ul>
             </div>
+
+
+            {% if app.user %}
+                <div>
+                    <h2>Admin</h2>
+                    <ul>
+                        <li><a href="{{ path('app_booked_index') }}">Réservation</a></li>
+                        <li><a href="{{ path('app_logout') }}">Déconnexion</a></li>
+                        <li><hr></li>
+                        <li><a href="{{ path('cache-clear') }}">Pour Anthony cache clear</a></li>
+                    </ul>
+                </div>
+            {% endif %}
         </div>
     </div>
 </footer>

@@ -20,10 +20,6 @@ class BookedType extends AbstractType
             ->add('dateFin', null, [
                 'widget' => 'single_text',
             ])
-            ->add('user', EntityType::class, [
-                'class' => User::class,
-                'choice_label' => 'id',
-            ])
         ;
     }
 
