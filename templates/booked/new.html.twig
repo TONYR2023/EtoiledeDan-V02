@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Ajout d'une réservation{% endblock %}
+
+{% block body %}
+    <div class="backgroundImageContainer">
+        <img src="{{ asset('img/homePage/home.png') }}" alt="salon" class="backgroundImage"/>
+    </div>
+
+    <div class="container-lg">
+        <h1>{{ block('title') }}</h1>
+
+        {{ include('booked/_form.html.twig') }}
+
+        <a href="{{ path('app_booked_index') }}">Retour à la liste des réservations</a>
+    </div>
+{% endblock %}

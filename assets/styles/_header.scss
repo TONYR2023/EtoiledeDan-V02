@@ -1,0 +1,85 @@
+
+
+.contact-info {
+  padding: 5px 20px 0px 0px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 200;
+
+  margin-right: 5px;
+
+  span {
+    margin-left: 20px;
+    color: #E4D4CDFF;
+  }
+
+  a {
+    color: #E4D4CDFF;
+    text-decoration: none;
+    font-size: calc(0.4em + 0.8vw);
+
+    &:hover {
+      color: #A5906AFF;
+    }
+  }
+}
+
+.header {
+  .logo-edd {
+    width: 10vw;
+    min-width: 75px;
+    padding-left: 2em;
+    margin-top: 1rem;
+  }
+
+  nav {
+    ul {
+      li {
+        display: inline;
+        font-size: 24px;
+
+        a {
+          text-decoration: none;
+          color: #E4D4CDFF;
+          font-size: calc(0.4em + 1.2vw);
+
+          &:hover {
+            color: #A5906AFF;
+          }
+        }
+      }
+    }
+  }
+}
+
+#icons {
+  cursor: pointer;
+  display: none;
+  position: relative;
+  color: #fbefe2;
+  right: -80px;
+}
+
+@media only screen and (max-width: 800px) {
+  /*.logo-edd {
+    width: 20vw !important;
+
+  }*/
+
+  #icons {
+    cursor: pointer;
+    display: block;
+    font-size: 2em;
+    padding: 10px;
+  }
+  #icons:before {
+    content: "\2630";
+  }
+  .active #icons::before {
+    content: "\2715";
+    display: block;
+  }
+
+
+}

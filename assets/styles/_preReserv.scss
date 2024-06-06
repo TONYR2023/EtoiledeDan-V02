@@ -1,0 +1,61 @@
+.buttonPreresev-form {
+  background-color: rgba(246, 237, 231, 0.7);
+  padding: 1em;
+  border-radius: 0.2em;
+}
+.btn-form {
+  background-color: white;
+  padding: 0.5em;
+  border: 1px solid #bfb3a3;
+  border-radius: 0.4em;
+  color: #bfb3a3;
+}
+
+.btn-form:hover {
+  background-color: #ddd0bf;
+  color: #413934;
+}
+
+
+.calendar {
+  width: 100%;
+  height: auto;
+  padding: 2em;
+  // background-color: yellow;
+}
+
+.calendarContainer {
+  border: 1px solid #ccc;
+  border-radius: 0.4em;
+  padding: 10px; /* Optionnel : ajoute un peu d'espacement à l'intérieur du cadre */
+}
+
+.but-reset {
+  background-color: #ddd0bf;
+  padding: 0.5em;
+  border: 1px solid #bfb3a3;
+  border-radius: 0.4em;
+  color: #413934;
+}
+.but-reset:hover {
+  background-color: white;
+  color: #413934;
+}
+
+.cadres p {
+  border: 1px solid #bfb3a3;
+  border-radius: 0.4em;
+  padding-left: 0.5em;
+  font-weight: bold;
+  color: #413934;
+}
+
+.checkboxHt {
+  margin-left: 1em;
+  margin-right: 1em;
+}
+.comprend p {
+  color: #413934;
+  font-size: 0.8em;
+}
+

@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Réservation{% endblock %}
+
+{% block body %}
+    <div class="backgroundImageContainer">
+        <img src="{{ asset('img/homePage/home.png') }}" alt="salon" class="backgroundImage"/>
+    </div>
+
+    <div class="container-lg">
+        <h1>{{ block('title') }}</h1>
+
+        <table class="table">
+            <tbody>
+            <tr>
+                <th>DateDebut</th>
+                <td>{{ booked.dateDebut ? booked.dateDebut|date('Y-m-d') : '' }}</td>
+            </tr>
+            <tr>
+                <th>DateFin</th>
+                <td>{{ booked.dateFin ? booked.dateFin|date('Y-m-d') : '' }}</td>
+            </tr>
+            </tbody>
+        </table>
+
+        <a href="{{ path('app_booked_index') }}">retour à la liste des réservations</a>
+
+        <a href="{{ path('app_booked_edit', {'id': booked.id}) }}">modifier</a>
+
+        {{ include('booked/_delete_form.html.twig') }}
+    </div>
+{% endblock %}

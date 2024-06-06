@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Liste des réservations{% endblock %}
+
+{% block body %}
+    <div class="backgroundImageContainer">
+        <img src="{{ asset('img/homePage/home.png') }}" alt="salon" class="backgroundImage"/>
+    </div>
+
+    <div class="container-lg">
+
+        <h1>{{ block('title') }}</h1>
+
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Date Debut</th>
+                <th>Date Fin</th>
+                <th>actions</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for booked in bookeds %}
+                <tr>
+                    <td>{{ booked.dateDebut ? booked.dateDebut|date('Y-m-d') : '' }}</td>
+                    <td>{{ booked.dateFin ? booked.dateFin|date('Y-m-d') : '' }}</td>
+                    <td>
+                        <a href="{{ path('app_booked_show', {'id': booked.id}) }}">voir</a>
+                        <a href="{{ path('app_booked_edit', {'id': booked.id}) }}">modifier</a>
+                    </td>
+                </tr>
+            {% else %}
+                <tr>
+                    <td colspan="4">Aucune réservation à ce jour</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+
+        <a href="{{ path('app_booked_new') }}">Ajouter une réservation</a>
+    </div>
+{% endblock %}

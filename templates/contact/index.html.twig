@@ -1,0 +1,135 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Contact{% endblock %}
+
+{% block body %}
+
+    <main>
+        <div class="backgroundImageContainer">
+            <img src="{{ asset('img/contactPage/contact.png') }}" alt="contact" class="backgroundImage"/>
+            <div class="buttonContainer">
+                {{ include('reservation/boutonReservation.twig') }}
+            </div>
+        </div>
+
+        <h2 class="mt-2">Contact</h2>
+        <div class="d-flex justify-content-center">
+            <hr class="separator"/>
+        </div>
+        <div class="d-flex justify-content-center mb-3">
+            <div class="container-lg">
+                <div class="">
+                    <h3>Informations Personnelles</h3>
+                    <form action="" method="post">
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span
+                                        class="input-group-text"
+                                        id="inputGroup-sizing-default"
+                                >
+                                  Nom
+                                </span>
+                            </div>
+                            <input
+                                    type="text"
+                                    id="nom"
+                                    name="nom"
+                                    class="form-control"
+                                    minlength="2"
+                                    {# ${
+                            validationErrors.nom ? "is-invalid" : "is-valid"
+                    }`} #}
+                                    placeholder="Entrez votre nom"
+                                    required
+                            />
+                        </div>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                <span
+                        class="input-group-text"
+                        id="inputGroup-sizing-default"
+                >
+                  Prenom
+                </span>
+                            </div>
+                            <input
+                                    type="text"
+                                    id="prenom"
+                                    name="prenom"
+                                    class="form-control"
+                                    placeholder="Entrez votre prénom"
+                                    minlength="2"
+                                    required
+                            />
+                        </div>
+
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                <span
+                        class="input-group-text"
+                        id="inputGroup-sizing-default"
+                >
+                  Email
+                </span>
+                            </div>
+                            <input
+                                    type="email"
+                                    id="mail"
+                                    name="mail"
+                                    class="form-control"
+                                    placeholder="Entrez votre email"
+                                    required
+                            />
+                        </div>
+
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                <span
+                        class="input-group-text"
+                        id="inputGroup-sizing-default"
+                >
+                  Telephone
+                </span>
+                            </div>
+                            <input
+                                    type="tel"
+                                    id="telephone"
+                                    name="telephone"
+                                    class="form-control"
+                                    placeholder="Entrez votre téléphone"
+                                    minlength="9"
+                                    required
+                            />
+                        </div>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                <span
+                        class="input-group-text"
+                        id="inputGroup-sizing-default"
+                >
+                  Ecrivez-nous
+                </span>
+                            </div>
+                            <textarea
+                                    class="form-control"
+                                    id="description"
+                                    name="description"
+                                    rows="3"
+                                    minlength="10"
+                                    required
+                            ></textarea>
+                        </div>
+
+                        <div>
+                            <button type="submit" class="form-control">
+                                ENVOYER
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+{% endblock %}

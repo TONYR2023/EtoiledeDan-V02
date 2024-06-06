@@ -1,0 +1,129 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}PMR{% endblock %}
+
+{% block body %}
+    <main>
+        <div class="backgroundImageContainer">
+            <img src="{{ asset('img/magazinePage/pmr.png') }}" alt="pmr" class="backgroundImage" />
+            <div class="buttonContainer">
+                {{ include('reservation/boutonReservation.twig') }}
+            </div>
+        </div>
+{#        {/*-----------------cadre---------------*/}#}
+        <h2 class="mt-2 mx-5 d-flex text-center">
+            Découvrez notre Gîte Spacieux et Accessible aux Personnes à Mobilité
+            Réduite (PMR) dans le Gard entre Nîmes, Alès et Montpellier
+        </h2>
+        <div class="d-flex justify-content-center">
+            <hr class="separator" />
+        </div>
+
+        <div class="p-3 mx-3">
+            <div>
+                <div class="container-fluid py-2">
+                    <p class="d-flex justify-content-center" style={{fontSize:"1.8em"}}>Pourquoi choisir notre gîte ?</p>
+                    <div class="row my-2 mx-1 justify-content-around">
+{#                        {/*-----------------pmr---------------*/}#}
+                        <div class="card" style="width: 15rem">
+                            <img
+                                    class="card-img-top mt-2"
+                                    src="{{ asset('img/magazinePage/magazine2.png') }}"
+                                    alt="Card image cap"
+                            ></img>
+                            <div class="card-body">
+                                <h3 class="card-title">Accessibilité PMR </h3>
+                                <p class="card-text">
+                                    Notre gîte est spécialement conçu pour accueillir les
+                                    personnes à mobilité réduite, avec des aménagements adaptés
+                                    pour faciliter leur séjour et leur circulation.
+                                </p>
+                            </div>
+                        </div>
+
+{#                        {/*-----------------grand volume---------------*/}#}
+                        <div class="card mx-1" style="width: 15rem">
+                            <img
+                                    class="card-img-top mt-2"
+                                    src="{{ asset('img/magazinePage/magazine2.png') }}"
+                                    alt="Card image cap"
+                            ></img>
+                            <div class="card-body">
+                                <h3 class="card-title">De Grand Volume </h3>
+                                <p class="card-text">
+                                    Profitez de vastes espaces intérieurs et extérieurs, offrant
+                                    confort et liberté pour toute la famille, y compris les
+                                    personnes en fauteuil roulant.
+                                </p>
+                            </div>
+                        </div>
+
+{#                        {/*-----------------Hébergement Familial ---------------*/}#}
+                        <div class="card mx-1" style="width: 15rem">
+                            <img
+                                    class="card-img-top mt-2"
+                                    src="{{ asset('img/magazinePage/magazine2.png') }}"
+                                    alt="Card image cap"
+                            ></img>
+                            <div class="card-body">
+                                <h3 class="card-title">Hébergement Familial </h3>
+                                <p class="card-text">
+                                    Avec plusieurs chambres et équipements adaptés, notre gîte
+                                    est parfait pour des vacances en famille, permettant à tous
+                                    de partager des moments inoubliables ensemble.
+                                </p>
+                            </div>
+                        </div>
+
+{#                        {/*-----------------Situation Idéale---------------*/}#}
+                        <div class="card mx-1" style="width: 15rem">
+                            <img
+                                    class="card-img-top mt-2"
+                                    src="{{ asset('img/magazinePage/magazine2.png') }}"
+                                    alt="Card image cap"
+                            ></img>
+                            <div class="card-body">
+                                <h3 class="card-title">Situation Idéale</h3>
+                                <p class="card-text">
+                                    Niché dans le charmant village de Crespian, notre gîte
+                                    bénéficie d'un cadre paisible et naturel, tout en étant à
+                                    proximité des attractions touristiques et des commodités de
+                                    Quissac(11km).
+                                </p>
+                            </div>
+                        </div>
+
+{#                        {/*-----------------Services Personnalisés ---------------*/}#}
+                        <div class="card mx-1" style="width: 15rem">
+                            <img
+                                    class="card-img-top mt-2"
+                                    src="{{ asset('img/magazinePage/magazine2.png') }}"
+                                    alt="Card image cap"
+                            ></img>
+                            <div class="card-body">
+                                <h3 class="card-title">Services Personnalisés </h3>
+                                <p class="card-text">
+                                    Notre équipe ainsi que des prestataires de services dévouées
+                                    sont à votre disposition pour répondre à tous vos besoins et
+                                    rendre votre séjour aussi agréable que possible.
+                                </p>
+                            </div>
+                        </div>
+
+{#                        {/*-----------------fin---------------*/}#}
+                        <b
+                                class="pt-4 d-flex justify-content-center"
+
+                        >
+                            Réservez des maintenant et offrez-vous des vacances accessibles pour tous
+                            et familiales inoubliables dans le Gard !
+                        </b>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center">
+                    {{ include('reservation/boutonReservation.twig') }}
+                </div>
+            </div>
+        </div>
+    </main>
+{% endblock %}

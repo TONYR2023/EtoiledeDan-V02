@@ -1,0 +1,35 @@
+.bla {
+  border: 1px solid #bfb3a3;
+  border-radius: 0.4em;
+  padding: 0.2em;
+  width: 100%;
+}
+
+label {
+  margin-left: 0.5em;
+}
+
+.center {
+  display: flex;
+  //justify-content: center;
+  //align-items: center;
+  height: 100%;
+}
+
+.btn-plus {
+  background-color: #bfb3a3;
+  text-decoration: none;
+  color: black;
+  border-radius: 0.2em;
+  padding-inline: 0.6em;
+  margin-inline: 0.5em;
+}
+
+.btn-plus:hover {
+  background-color: white;
+}
+
+.btn-reduit {
+  font-size: 0.7em;
+}
+

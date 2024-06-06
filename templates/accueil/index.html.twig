@@ -1,0 +1,82 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Accueil{% endblock %}
+
+{% block body %}
+    <main>
+        <div class="backgroundImageContainer">
+            <img src="{{ asset('img/homePage/home.png') }}" alt="salon" class="backgroundImage"/>
+            <div class="buttonContainer">
+                {{ include('reservation/boutonReservation.twig') }}
+            </div>
+        </div>
+
+        <h2 class="mt-2">Home Page</h2>
+        <div class="d-flex justify-content-center">
+            <hr class="separator"/>
+        </div>
+        {#        {/*------------------Presentation----------------*/} #}
+        <section class="container">
+            <div class="row">
+
+                {% for type, messages in app.flashes %}
+                    {% for message in messages %}
+                        <div class="alert alert-{{ type }}">{{ message }}</div>
+                    {% endfor %}
+                {% endfor %}
+                {#                {/*------------------Texte de Presentation----------------*/} #}
+                <div class="col-md-6 p-3">
+                    <div class="container p-3 m-2">
+                        <p>
+                            Entre Cévennes et Camargue, venez profiter de notre gîte
+                            familial pour 12 personnes d’une superficie de 260 m2, de ses
+                            4 chambres dont une pour les personnes en PMR. Vous disposerez
+                            de sa piscine couverte et chauffée toute l’année, de son
+                            jacuzzi, de sa salle de jeux avec baby-foot , borne d’arcarde
+                            et billard. Venez vous détendre sur le hamac géant et dans le
+                            grand jardin arboré de 2500 m2 disposant de son barbecue, son
+                            boulodrome et ses transats.
+                        </p>
+
+                        <div class="d-flex justify-content-center">
+                            <a class="btn-enSavoirPlus" href="{{ path('gite') }}">
+                                <span>En savoir plus</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                {#                {/*------------------Carousel----------------*/} #}
+                <div class="col-md-5 px-3 ">
+                    <div id="carouselExampleIndicators" class="carousel slide">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        </div>
+
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="{{ asset('img/carousel/photo1.png') }}" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="{{ asset('img/carousel/photo2.png') }}" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="{{ asset('img/carousel/photo3.png') }}" class="d-block w-100" alt="...">
+                            </div>
+                        </div>
+
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+{% endblock %}

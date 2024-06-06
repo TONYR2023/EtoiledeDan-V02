@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Nouvel utilisateur{% endblock %}
+
+{% block body %}
+    <div class="backgroundImageContainer">
+        <img src="{{ asset('img/homePage/home.png') }}" alt="salon" class="backgroundImage"/>
+    </div>
+
+    <div class="container-lg">
+        <h1>Nouvel utilisateur</h1>
+        {{ form_errors(registrationForm) }}
+
+        {{ form_start(registrationForm) }}
+        {{ form_row(registrationForm.email) }}
+        {{ form_row(registrationForm.plainPassword, {
+            label: 'Password'
+        }) }}
+        {{ form_row(registrationForm.agreeTerms) }}
+
+        <button type="submit" class="btn btn-primary">Valider</button>
+        {{ form_end(registrationForm) }}
+    </div>
+{% endblock %}

@@ -1,0 +1,35 @@
+<h1>Bonjour,</h1>
+
+<h2>Pré-réservation de {{ nom ~ ' ' ~ prenom }}</h2>
+<p>Email : {{ mail }}</p>
+<p>Date de début: {{ dates[0] }}</p>
+<p>Date de fin: {{ dates[1] }}</p>
+<p>Prix: {{ prix }}</p>
+<br>
+<p>Tel : <a href="tel: {{ telephone }}">{{ telephone }}</a></p>
+
+<p>Description</p>
+<p>{{ description }}</p>
+
+
+<h3>Options</h3>
+<ul>
+    {% if breakfast is defined %}
+        <li>Nombre de personne {{ nbrPersonne }}</li>
+    {% endif %}
+    {% if visite is defined %}
+        <li>Visite guidée</li>
+    {% endif %}
+    {% if degustation is defined %}
+        <li>Service de Dégustation</li>
+    {% endif %}
+    {% if massage is defined %}
+        <li>Service de Massage</li>
+    {% endif %}
+    {% if chef is defined %}
+        <li>Service de Chef à domicile</li>
+    {% endif %}
+</ul>
+
+
+

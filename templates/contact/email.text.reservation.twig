@@ -1,0 +1,31 @@
+Bonjour,
+
+Pré-réservation de {{ nom ~ ' ' ~ prenom }}
+Email : {{ mail }}
+Date de début: {{ dates[0] }}
+Date de fin: {{ dates[1] }}
+Prix: {{ prix }}
+<br>
+Tel : {{ telephone }}
+
+Description
+{{ description }}
+
+
+Options
+
+{% if breakfast is defined %}
+    Nombre de personne {{ nbrPersonne }}
+{% endif %}
+{% if visite is defined %}
+    Visite guidée
+{% endif %}
+{% if degustation is defined %}
+    Service de Dégustation
+{% endif %}
+{% if massage is defined %}
+    Service de Massage
+{% endif %}
+{% if chef is defined %}
+    Service de Chef à domicile
+{% endif %}

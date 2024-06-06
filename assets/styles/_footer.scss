@@ -1,0 +1,28 @@
+.footer {
+  background-color: rgba(65, 57, 52, 0.6);
+  width: 100vw;
+  margin: 0;
+  padding-top: 1em;
+
+  h2 {
+    color: #fbefe2;
+    display: flex;
+    justify-content: start;
+    padding-left: 1em;
+  }
+  ul {
+    color: #fbefe2;
+    list-style: none;
+
+    li {
+      a {
+        color: #fbefe2;
+        text-decoration: none;
+
+        &:hover {
+          color: #443a2e;
+        }
+      }
+    }
+  }
+}

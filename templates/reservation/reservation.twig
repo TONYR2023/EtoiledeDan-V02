@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Pré réservation{% endblock %}
+
+{% block javascripts %}
+    {{ encore_entry_script_tags('prereserv') }}
+
+    <script>
+        const bookeds = {{ reserved|json_encode|raw }}
+        let reserved = []
+
+        bookeds.map((e) => {
+            reserved.push({'startDate': new Date(e.startDate), endDate: new Date(e.endDate)})
+        })
+    </script>
+{% endblock %}
+
+{% block body %}
+    <main>
+        <div class="backgroundImageContainer">
+            <img src="{{ asset('img/gitePage/gite.png') }}" alt="gite" class="backgroundImage"/>
+            <div class="buttonContainer"></div>
+        </div>
+
+        <h2 class="mt-2">Pré-Réserver votre Séjour</h2>
+        <div class="d-flex justify-content-center">
+            <hr class="separator"/>
+        </div>
+
+        <section class="container-fluid" id="presreserv">
+        </section>
+    </main>
+{% endblock %}

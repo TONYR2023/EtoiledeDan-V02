@@ -1,0 +1,170 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Notre gite{% endblock %}
+
+{% block body %}
+    <main>
+        <div class="backgroundImageContainer">
+            <img src="{{ asset('img/gitePage/gite.jpg') }}" alt="gite" class="backgroundImage"/>
+            <div class="buttonContainer">
+                {{ include('reservation/boutonReservation.twig') }}
+            </div>
+        </div>
+
+        <h2 class="mt-2">Notre Gîte</h2>
+        <div class="d-flex justify-content-center">
+            <hr class="separator"/>
+        </div>
+
+        {#        {/*------------------Presentation----------------*/} #}
+        <section class="container">
+            <div class="row">
+                {#                {/*------------------La maison----------------*/} #}
+                <div class="cadre col-md-5 p-4 mx-2">
+                    <h3 class="d-flex justify-content-around">
+                        La Maison
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                            <path fill="none" d="M0 0h24v24H0V0z"></path>
+                            <circle cx="12" cy="4" r="2"></circle>
+                            <path d="M19 13v-2c-1.54.02-3.09-.75-4.07-1.83l-1.29-1.43c-.17-.19-.38-.34-.61-.45-.01 0-.01-.01-.02-.01H13c-.35-.2-.75-.3-1.19-.26C10.76 7.11 10 8.04 10 9.09V15c0 1.1.9 2 2 2h5v5h2v-5.5c0-1.1-.9-2-2-2h-3v-3.45c1.29 1.07 3.25 1.94 5 1.95zm-9 7c-1.66 0-3-1.34-3-3 0-1.31.84-2.41 2-2.83V12.1a5 5 0 1 0 5.9 5.9h-2.07c-.41 1.16-1.52 2-2.83 2z"></path>
+                        </svg>
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                            <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M384 240H96V136a40.12 40.12 0 0 1 40-40h240a40.12 40.12 0 0 1 40 40v104zM48 416V304a64.19 64.19 0 0 1 64-64h288a64.19 64.19 0 0 1 64 64v112"></path>
+                            <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M48 416v-8a24.07 24.07 0 0 1 24-24h368a24.07 24.07 0 0 1 24 24v8M112 240v-16a32.09 32.09 0 0 1 32-32h80a32.09 32.09 0 0 1 32 32v16m0 0v-16a32.09 32.09 0 0 1 32-32h80a32.09 32.09 0 0 1 32 32v16"></path>
+                        </svg>
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                            <path fill="none" d="M0 0h24v24H0V0z"></path>
+                            <path d="m10 8-3.25 3.25c.31.12.56.27.77.39.37.23.59.36 1.15.36s.78-.13 1.15-.36c.46-.27 1.08-.64 2.19-.64s1.73.37 2.18.64c.37.22.6.36 1.15.36.55 0 .78-.13 1.15-.36.12-.07.26-.15.41-.23L10.48 5C8.93 3.45 7.5 2.99 5 3v2.5c1.82-.01 2.89.39 4 1.5l1 1zm12 8.5h-.02.02zm-16.65-1c.55 0 .78.14 1.15.36.45.27 1.07.64 2.18.64s1.73-.37 2.18-.64c.37-.23.59-.36 1.15-.36.55 0 .78.14 1.15.36.45.27 1.07.64 2.18.64s1.73-.37 2.18-.64c.37-.23.59-.36 1.15-.36.55 0 .78.14 1.15.36.45.27 1.06.63 2.16.64v-2c-.55 0-.78-.14-1.15-.36-.45-.27-1.07-.64-2.18-.64s-1.73.37-2.18.64c-.37.23-.6.36-1.15.36s-.78-.14-1.15-.36c-.45-.27-1.07-.64-2.18-.64s-1.73.37-2.18.64c-.37.23-.59.36-1.15.36-.55 0-.78-.14-1.15-.36-.45-.27-1.07-.64-2.18-.64s-1.73.37-2.18.64c-.37.23-.59.36-1.15.36v2c1.11 0 1.73-.37 2.2-.64.37-.23.6-.36 1.15-.36zM18.67 18c-1.11 0-1.73.37-2.18.64-.37.23-.6.36-1.15.36-.55 0-.78-.14-1.15-.36-.45-.27-1.07-.64-2.18-.64s-1.73.37-2.19.64c-.37.23-.59.36-1.15.36s-.78-.13-1.15-.36c-.45-.27-1.07-.64-2.18-.64s-1.73.37-2.19.64c-.37.23-.59.36-1.15.36v2c1.11 0 1.73-.37 2.19-.64.37-.23.6-.36 1.15-.36.55 0 .78.13 1.15.36.45.27 1.07.64 2.18.64s1.73-.37 2.19-.64c.37-.23.59-.36 1.15-.36.55 0 .78.14 1.15.36.45.27 1.07.64 2.18.64s1.72-.37 2.18-.64c.37-.23.59-.36 1.15-.36.55 0 .78.14 1.15.36.45.27 1.07.64 2.18.64v-2c-.56 0-.78-.13-1.15-.36-.45-.27-1.07-.64-2.18-.64z"></path>
+                            <circle cx="16.5" cy="5.5" r="2.5"></circle>
+                        </svg>
+                        <svg stroke="currentColor" fill="none" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15.4695 11.2929C15.0789 10.9024 14.4458 10.9024 14.0553 11.2929C13.6647 11.6834 13.6647 12.3166 14.0553 12.7071C14.4458 13.0976 15.0789 13.0976 15.4695 12.7071C15.86 12.3166 15.86 11.6834 15.4695 11.2929Z" fill="currentColor"></path>
+                            <path d="M16.1766 9.17156C16.5671 8.78103 17.2003 8.78103 17.5908 9.17156C17.9813 9.56208 17.9813 10.1952 17.5908 10.5858C17.2003 10.9763 16.5671 10.9763 16.1766 10.5858C15.7861 10.1952 15.7861 9.56208 16.1766 9.17156Z" fill="currentColor"></path>
+                            <path d="M19.7121 11.2929C19.3216 10.9024 18.6885 10.9024 18.2979 11.2929C17.9074 11.6834 17.9074 12.3166 18.2979 12.7071C18.6885 13.0976 19.3216 13.0976 19.7121 12.7071C20.1027 12.3166 20.1027 11.6834 19.7121 11.2929Z" fill="currentColor"></path>
+                            <path d="M16.1766 13.4142C16.5671 13.0237 17.2003 13.0237 17.5908 13.4142C17.9813 13.8048 17.9813 14.4379 17.5908 14.8284C17.2003 15.219 16.5671 15.219 16.1766 14.8284C15.7861 14.4379 15.7861 13.8048 16.1766 13.4142Z" fill="currentColor"></path>
+                            <path d="M6 13H4V11H6V9H8V11H10V13H8V15H6V13Z" fill="currentColor"></path>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M7 5C3.13401 5 0 8.13401 0 12C0 15.866 3.13401 19 7 19H17C20.866 19 24 15.866 24 12C24 8.13401 20.866 5 17 5H7ZM17 7H7C4.23858 7 2 9.23858 2 12C2 14.7614 4.23858 17 7 17H17C19.7614 17 22 14.7614 22 12C22 9.23858 19.7614 7 17 7Z" fill="currentColor"></path>
+                        </svg>
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 640 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M634.91 154.88C457.74-8.99 182.19-8.93 5.09 154.88c-6.66 6.16-6.79 16.59-.35 22.98l34.24 33.97c6.14 6.1 16.02 6.23 22.4.38 145.92-133.68 371.3-133.71 517.25 0 6.38 5.85 16.26 5.71 22.4-.38l34.24-33.97c6.43-6.39 6.3-16.82-.36-22.98zM320 352c-35.35 0-64 28.65-64 64s28.65 64 64 64 64-28.65 64-64-28.65-64-64-64zm202.67-83.59c-115.26-101.93-290.21-101.82-405.34 0-6.9 6.1-7.12 16.69-.57 23.15l34.44 33.99c6 5.92 15.66 6.32 22.05.8 83.95-72.57 209.74-72.41 293.49 0 6.39 5.52 16.05 5.13 22.05-.8l34.44-33.99c6.56-6.46 6.33-17.06-.56-23.15z"></path>
+                        </svg>
+                        {#                        <MdOutlineAccessible /> #}
+                        {#                        <IoBedOutline /> #}
+                        {#                        <MdOutlinePool /> #}
+                        {#                        <CgGames /> #}
+                        {#                        <FaWifi /> #}
+                    </h3>
+
+                    <p>
+                        <b>
+                            Notre maison d’architecte combine design, modernité et
+                            caractère
+                        </b>
+                        pour vous apporter tout le confort durant votre séjour. Ses
+                        terrasses, son salon, sa salle de jeu et sa piscine sont
+                        notamment conçus pour
+                        <b> accueillir les Personnes à Mobilité Réduite</b> tout en
+                        mettant à disposition une suite adaptée dont l’accès est
+                        facilité grâce à sa rampe PMR.
+                    </p>
+                    <img
+                            src="{{ asset('img/prestationsPage/prestations1.png') }}"
+                            alt=""
+                            style="
+                            width: 10em;
+                            float: right;
+                            shape-outside: margin-box;
+                            margin: 0 20px 5px 0;
+                            border-radius: 50%
+                            "
+                    />
+
+                    <p>
+                        La pièce à vivre de 75 m2 est aménagée avec : <br/>- Une
+                        cuisine entièrement équipée avec son réfrigérateur américain, sa
+                        cave à vin, son grand îlot central, etc. <br/>- Un salon avec
+                        sa télévision très grand écran, <br/>- Une salle à manger avec
+                        sa grande table pouvant accueillir 12 convives, <br/>- un
+                        billard et un hamac géant, idéal pour la détente. <br/>
+                        Poursuivez cette douceur de vivre dans l’espace ludique :<br/>-
+                        Avec sa piscine intérieure et sa baie aquarium, <br/>- Une
+                        salle de jeux disposant : d’un baby-foot, d’une borne arcade et
+                        d’une table de jeux.
+                    </p>
+                    <img
+                            src="{{ asset('img/prestationsPage/prestations1.png') }}"
+                            alt=""
+                            style="
+                            width: 10em;
+                            float: left;
+                            shape-outside: margin-box;
+                            margin: 0 20px 5px 0;
+                            border-radius: 50%
+                            "
+                    />
+                    <p>
+                        Pour accueillir jusqu’à{" "}
+                        <b>
+                            12 résidents, le gîte dispose de 4 chambres et de 3 Salles
+                            d’eau{" "}
+                        </b>
+                        avec douche à l’italienne :
+                        <br/>- Une suite parentale équipée PMR avec son lit en 160x200,
+                        son dressing et sa salle d’eau privative <br/>
+                        - Une chambre double avec son lit en 160x200 <br/>
+                        - Deux chambres quadruples avec dressing, idéales pour les
+                        familles, puisqu’en plus de leur lit en 160x200, l’une est
+                        équipée de 2 fauteuils convertibles 1 place tandis que l’autre
+                        dispose d’un canapé convertible 2 places. <br/>- Enfin, l’une
+                        des trois terrasses dispose d’une cuisine d’été équipée d’un
+                        BBQ.
+                    </p>
+                </div>
+                {#                {/*------------------Separation---------------*/} #}
+                <div class="col-md-1"></div>
+
+                {#                {/*------------------Le Jardin----------------*/} #}
+                <div class="cadre col-md-5 mx-2">
+                    <h3 class="container p-3">
+                        Le Jardin
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M0 0h24v24H0V0z"></path><circle cx="12" cy="4" r="2"></circle><path d="M19 13v-2c-1.54.02-3.09-.75-4.07-1.83l-1.29-1.43c-.17-.19-.38-.34-.61-.45-.01 0-.01-.01-.02-.01H13c-.35-.2-.75-.3-1.19-.26C10.76 7.11 10 8.04 10 9.09V15c0 1.1.9 2 2 2h5v5h2v-5.5c0-1.1-.9-2-2-2h-3v-3.45c1.29 1.07 3.25 1.94 5 1.95zm-9 7c-1.66 0-3-1.34-3-3 0-1.31.84-2.41 2-2.83V12.1a5 5 0 1 0 5.9 5.9h-2.07c-.41 1.16-1.52 2-2.83 2z"></path></svg>
+                    </h3>
+                    <img
+                            src="{{ asset('img/prestationsPage/prestations1.png') }}"
+                            alt="jardin"
+                            style="
+                            width: 10em;
+                            float: left;
+                            shape-outside: margin-box;
+                            margin: 0 20px 5px 0;
+                            border-radius: 50%
+                            "
+                    />
+                    <p>
+                        Le jardin arboré de 2500 m2 dispose : <br/>
+                        - D’un salon de jardin <br/>
+                        - D’un grand garage avec 2 abris de voitures (équipés de 2
+                        bornes de charge) dans lesquels peuvent stationner 4 véhicules à
+                        <br/>
+                        - L’arrière de la maison, d’une aire de stationnement pour 2
+                        véhicules directement en contact avec la rampe PMR, <br/>
+                        - D’un magnifique boulodrome, <br/>
+                        - D’une table de ping-pong, <br/>
+                        - D’un trampoline réservé aux enfants
+                    </p>
+
+                    {#                    {/*------------------Le Plan----------------*/} #}
+                    <h3 class="container p-3">Le Plan</h3>
+                    <img
+                            src="{{ asset('img/gitePage/Plan.jpg') }}"
+                            alt="plan"
+                            style="
+                            width: 100%;
+                            padding-bottom: 1em
+                            "
+                    />
+                </div>
+            </div>
+        </section>
+    </main>
+{% endblock %}
