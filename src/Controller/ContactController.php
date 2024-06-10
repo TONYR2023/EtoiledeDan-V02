@@ -63,8 +63,7 @@ class ContactController extends AbstractController
                 $this->checkField($datas['nom']) &&
                 $this->checkField($datas['prenom']) &&
                 filter_var($datas['mail'], FILTER_VALIDATE_EMAIL) &&
-                $this->checkField($datas['telephone'], 10) &&
-                $this->checkField($datas['description'], 10)) {
+                $this->checkField($datas['telephone'], 10)) {
                 $datas['dates'] = explode(',', $datas['selectedDates']);
                 $datas['dates'][0] = (new \DateTime(substr($datas['dates'][0], 0, 34)))->format("d/m/Y");
                 $datas['dates'][1] = (new \DateTime(substr($datas['dates'][1], 0, 34)))->format("d/m/Y");
@@ -102,7 +101,6 @@ class ContactController extends AbstractController
                         'prenom' => $this->checkField($datas['prenom']),
                         'mail' => filter_var($datas['mail'], FILTER_VALIDATE_EMAIL),
                         'telephone' => $this->checkField($datas['telephone'], 10),
-                        'description' => $this->checkField($datas['description'], 10),
                         'options' => [
                             'visite' => $this->checkField($datas['visite']),
                             'degustation' => $this->checkField($datas['degustation']),
