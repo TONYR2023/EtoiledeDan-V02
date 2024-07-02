@@ -1,11 +1,103 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Magazine{% endblock %}
+{% block title %}Magazine - Gîte Spacieux et Accessible dans le Gard{% endblock %}
+
+{% block head %}
+    <meta name="description" content="Découvrez notre gîte spacieux et accessible aux personnes à mobilité réduite (PMR) dans le Gard. Entre Nîmes, Alès et Montpellier, notre gîte offre un confort exceptionnel et des aménagements adaptés."/>
+    <meta name="keywords" content="letoilededan, etoile, dan, gite, gîte, gard, france, caractère, jacouzi, piscine, chef à domicile, massage, découverte touristique, produits locaux, 
+    famillial, détente, nature, convivial, atypique, charmant, calme, PMR, handicap" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Magazine - Gîte Spacieux et Accessible dans le Gard" />
+    <meta property="og:description" content="Découvrez notre gîte spacieux et accessible aux personnes à mobilité réduite (PMR) dans le Gard. Entre Nîmes, Alès et Montpellier, notre gîte offre un confort exceptionnel et des aménagements adaptés." />
+    <meta property="og:image" content="{{ asset('img/magazinePage/magazine.png') }}" />
+    <meta property="og:url" content="{{ app.request.uri }}" />
+    <meta property="og:type" content="article" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Magazine - Gîte Spacieux et Accessible dans le Gard" />
+    <meta name="twitter:description" content="Découvrez notre gîte spacieux et accessible aux personnes à mobilité réduite (PMR) dans le Gard. Entre Nîmes, Alès et Montpellier, notre gîte offre un confort exceptionnel et des aménagements adaptés." />
+    <meta name="twitter:image" content="{{ asset('img/magazinePage/magazine.png') }}" />
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "TouristAttraction",
+      "name": "Gîte Spacieux et Accessible dans le Gard",
+      "description": "Découvrez notre gîte spacieux et accessible aux personnes à mobilité réduite (PMR) dans le Gard. Entre Nîmes, Alès et Montpellier, notre gîte offre un confort exceptionnel et des aménagements adaptés.",
+      "image": "{{ asset('img/magazinePage/magazine.png') }}",
+      "url": "{{ app.request.uri }}",
+      "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "61, route départementale 6110",
+            "addressLocality": "Crespian",
+            "addressRegion": "Occitanie",
+            "postalCode": "30260",
+            "addressCountry": "France"
+      },
+      "geo" : {
+            "@type": "GeoCoordinates",
+            "latitude": 43.882362,
+            "longitude": 4.095823
+      },
+       "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone":[ "+33 06 22 57 15 52", "+33 06 78 44 27 07"],
+        "contactType": "Réservations"
+      },
+          "priceRange": "100-300 EUR",
+      "amenityFeature": [
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Jacuzzi",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Piscine",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Chef à domicile",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Massage",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Produits locaux",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Accessible PMR",
+          "value": true
+        }
+      ],
+      "openingHours": "Mo-Su",
+      "offers": {
+        "@type": "Offer",
+        "url": "{{ path('reservation') }}",
+        "priceCurrency": "EUR",
+          "price": "450.00",
+        "availability": "https://schema.org/InStock"
+      }
+    }
+    </script>
+
+
+{% endblock %}
 
 {% block body %}
     <main>
         <div class="backgroundImageContainer">
-            <img src="{{ asset('img/magazinePage/magazine.png') }}" alt="magazine" class="backgroundImage"/>
+            <img src="{{ asset('img/magazinePage/magazine.png') }}" alt="Image de couverture du magazine" class="backgroundImage"/>
             <div class="buttonContainer">
                 {{ include('reservation/boutonReservation.twig') }}
             </div>
@@ -21,7 +113,7 @@
                 {#                {/*---------------PMR---------------*/} #}
                 <div class="cadre col-md-3 mb-2">
                     <div class="d-flex justify-content-center">
-                        <img src="{{ asset('img/magazinePage/magazine1.png') }}" alt="hostellerie" class="presta-img"/>
+                        <img src="{{ asset('img/magazinePage/magazine1.png') }}" alt="Gîte pour personnes à mobilité réduite" class="presta-img"/>
                     </div>
                     <div>
                         <h3>
@@ -29,22 +121,23 @@
                             Mobilité Réduite (PMR) dans le Gard entre Nîmes, Alès et
                             Montpellier
                         </h3>
-                        <b class="m-2">Pourquoi choisir notre gîte ?</b>
+                        <h4 class="m-2">Pourquoi choisir notre gîte ?</h4>
                         <p class="m-2">
                             Notre gîte est spécialement conçu pour accueillir les
                             personnes à mobilité réduite, avec des aménagements adaptés
                             pour faciliter leur séjour et leur circulation.
                         </p>
-                        <a class="btn-enSavoirPlus" href="{{ path('pmr') }}">
-                            <span>En savoir plus</span>
+                       <a class="btn-enSavoirPlus" href="{{ path('pmr') }}" aria-label="En savoir plus sur le gîte accessible aux personnes à mobilité réduite">
+                        <span>En savoir plus</span>
                         </a>
+
                     </div>
                 </div>
 
                 {#                {/*---------------Architecture---------------*/} #}
                 <div class="cadre col-md-3 mb-2">
                     <div class="d-flex justify-content-center">
-                        <img src="{{ asset('img/magazinePage/magazine2.png') }}" alt="hostellerie" class="presta-img"/>
+                        <img src="{{ asset('img/magazinePage/magazine2.png') }}" alt="Gîte avec architecture remarquable" class="presta-img"/>
                     </div>
 
                     <div>
@@ -52,7 +145,7 @@
                             Découvrez notre Gîte avec ses volumes, son architecture, sa
                             localité et ses espaces sécurisés dans le sud de la France
                         </h3>
-                        <b class="m-2">Pourquoi choisir notre gîte ?</b>
+                        <h4 class="m-2">Pourquoi choisir notre gîte ?</h4>
                         <p class="m-2">
                             Notre gîte est spécialement conçu pour accueillir les
                             personnes à mobilité réduite, avec des aménagements adaptés
@@ -61,32 +154,32 @@
                     </div>
 
                     <div class="mt-5">
-                        <a class="btn-enSavoirPlus" href="{{ path('gite') }}">
-                            <span>En savoir plus</span>
+                         <a class="btn-enSavoirPlus" href="{{ path('pmr') }}" aria-label="En savoir plus sur le gîte avec architecture remarquable">
+                        <span>En savoir plus</span>
                         </a>
                     </div>
                 </div>
 
-                {#                {/*---------------Architecture---------------*/} #}
+                {#                {/*---------------Famille---------------*/} #}
                 <div class="cadre col-md-3 mb-2">
                     <div class="d-flex justify-content-center">
-                        <img src="{{ asset('img/magazinePage/magazine3.png') }}" alt="hostellerie" class="presta-img"/>
+                        <img src="{{ asset('img/magazinePage/magazine3.png') }}" alt="Gîte haut de gamme" class="presta-img"/>
                     </div>
                     <div>
                         <h3>
                             Découvrez notre gîte haut de gamme, conçu pour offrir un
                             confort exceptionnel et luxueux à 12 personnes.
                         </h3>
-                        <b class="m-2">Pourquoi choisir notre gîte ?</b>
+                        <h4 class="m-2">Pourquoi choisir notre gîte ?</h4>
                         <p class="m-2">
                             Notre gîte est spécialement conçu pour accueillir les
                             personnes à mobilité réduite, avec des aménagements adaptés
                             pour faciliter leur séjour et leur circulation.
                         </p>
                         <div class="mt-5">
-                            <a class="btn-enSavoirPlus" href="{{ path('gite') }}">
-                                <span>En savoir plus</span>
-                            </a>
+                             <a class="btn-enSavoirPlus" href="{{ path('pmr') }}" aria-label="En savoir plus sur le gîte haut de gamme">
+                        <span>En savoir plus</span>
+                        </a>
                         </div>
                     </div>
                 </div>
