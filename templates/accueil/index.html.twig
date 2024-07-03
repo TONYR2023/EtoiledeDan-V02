@@ -1,11 +1,11 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Accueil{% endblock %}
+{% block title %}Accueil - Gîte Spacieux et famillial  - Entre les Cévennes et le Gard {% endblock %}
 
 {% block body %}
     <main>
         <div class="backgroundImageContainer">
-            <img src="{{ asset('img/homePage/home.png') }}" alt="salon" class="backgroundImage"/>
+            <img src="{{ asset('img/homePage/home.png') }}" alt="gite exterieur" class="backgroundImage"/>
             <div class="buttonContainer">
                 {{ include('reservation/boutonReservation.twig') }}
             </div>
@@ -46,7 +46,7 @@
                     </div>
                 </div>
                 {#                {/*------------------Carousel----------------*/} #}
-                <div class="px-2 ">
+                <div class="col-md-6">
                     <div id="carouselExampleIndicators" class="carousel slide">
                         <div class="carousel-indicators">
                             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -67,10 +67,13 @@
                                 <img src="{{ asset('img/carousel/photo3.png') }}" class="d-block w-100" alt="...">
                             </div>
                             <div class="carousel-item">
-                                <img src="{{ asset('img/carousel/photo3.png') }}" class="d-block w-100" alt="...">
+                                <img src="{{ asset('img/carousel/photo4.png') }}" class="d-block w-100" alt="...">
                             </div>
                             <div class="carousel-item">
-                                <img src="{{ asset('img/carousel/photo3.png') }}" class="d-block w-100" alt="...">
+                                <img src="{{ asset('img/carousel/photo5.png') }}" class="d-block w-100" alt="...">
+                            </div>
+                             <div class="carousel-item">
+                                <img src="{{ asset('img/carousel/photo6.png') }}" class="d-block w-100" alt="...">
                             </div>
                         </div>
 

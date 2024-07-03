@@ -1,6 +1,13 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Prestations{% endblock %}
+{% block title %}Prestations : Hostellerie - Découverte touristique - Dégustation - Massage - Chef à domicile {% endblock %}
+
+{% block head %} 
+<meta name="description" content="Découvrez nos prestations variées pour un séjour inoubliable : hostellerie confortable, dégustations régionales, massages relaxants, chef à domicile et découvertes touristiques. Profitez d'une expérience unique et personnalisée avec nous.">
+<meta name="keywords" content="letoilededan, etoile, dan, gite, gîte, gard, france, caractère, jacouzi, piscine, chef à domicile, massage, découverte touristique, produits locaux, 
+    famillial, détente, nature, convivial, atypique, charmant, calme, PMR, handicap" />
+{% endblock %}
+
 
 {% block body %}
     <main>
@@ -17,7 +24,7 @@
         </div>
 
         {#        {/*------------------Presentation----------------*/} #}
-        <div>
+        <section>
             <div class=" mx-4">
                 <p class="align-items-center text-center ">
                     Découvrez nos prestations variées pour un séjour inoubliable :
@@ -40,7 +47,7 @@
             <div class="container-fluid">
                 <div class="row my-2 mx-1 justify-content-around ">
                     {#                    {/*---------------hostellerie---------------*/} #}
-                    <div class="cadre col-md-2 mb-2">
+                    <article class="cadre col-md-2 mb-2">
                         <div class="d-flex justify-content-center">
                             <img
                                     src="{{ asset('img/prestationsPage/prestations2.png') }}"
@@ -51,7 +58,7 @@
                         <div>
                             <h3>
                                 Hostellerie
-                                <IoBedOutline/>
+                                <i class="bi bi-bed"></i>
                             </h3>
                             <p class="m-2">
                                 Plongez dans un séjour offrant confort et tranquillité avec
@@ -59,16 +66,16 @@
                                 conçues pour offrir une expérience de repos exceptionnel,
                                 alliant élégance et fonctionnalité. Que ce soit pour une
                                 escapade romantique, des vacances en famille, un moment
-                                « farniente » ou un séminaire d’entreprise, notre
+                                «farniente» ou un séminaire d’entreprise, notre
                                 établissement saura répondre à tous vos besoins.
                             </p>
                             <p> Service assuré par nos soins</p>
                         </div>
-                    </div>
+                    </article>
 
 
                     {#                    {/*---------------découverte touristique---------------*/} #}
-                    <div class="cadre col-md-2 mb-2">
+                    <article class="cadre col-md-2 mb-2">
                         <div class="d-flex justify-content-center">
                             <img
                                     src="{{ asset('img/prestationsPage/prestations5.png') }}"
@@ -79,7 +86,7 @@
                         <div>
                             <h3>
                                 Découverte Touristique
-                                <IoTrailSignOutline/>
+                               <i class="bi bi-compass"></i>
                             </h3>
                             <p class="m-2">
                                 Explorez les trésors cachés de notre région avec notre
@@ -93,13 +100,13 @@
                             </p>
                               <p> Service assuré par nos soins</p>
                         </div>
-                    </div>
+                    </article>
 
                     {#                    {/*---------------degustation---------------*/} #}
-                    <div class="cadre col-md-2 mb-2">
+                    <article class="cadre col-md-2 mb-2">
                         <div class="d-flex justify-content-center">
                             <img
-                                    src="{{ asset('img/prestationsPage/prestations.png') }}"
+                                    src="{{ asset('img/prestationsPage/prestations1.png') }}"
                                     alt="degustation"
                                     class="presta-img"
                             />
@@ -107,7 +114,8 @@
                         <div>
                             <h3>
                                 Degustation
-                                <PiWineLight/>
+                                <i class="bi bi-wine-bottle"></i>
+
                             </h3>
                             <p class="m-2">
                                 Sous la direction du service de dégustation de Florence
@@ -120,17 +128,17 @@
                             </p>
                             <a href="http://degustezsud.com">Degustez Sud</a>
                         </div>
-                    </div>
+                    </article>
 
                     {#                    {/*---------------Massage---------------*/} #}
-                    <div class="cadre col-md-2 mb-2">
+                    <article class="cadre col-md-2 mb-2">
                         <div class="d-flex justify-content-center">
                             <img src="{{ asset('img/prestationsPage/prestations3.png') }}" alt="massage" class="presta-img"/>
                         </div>
                         <div>
                             <h3>
                                 Massage
-                                <TbMassage/>
+                                <i class="bi bi-spa"></i>
                             </h3>
                             <p class="m-2">
                                 A 5 minutes à pied du gîte, ressourcez-vous en vous offrant
@@ -144,17 +152,17 @@
                             </p>
                              <a href="https://octao.fr/bienvenue/">OC'Tao</a>
                         </div>
-                    </div>
+                    </article>
 
 {#                    {/*---------------Chef à domicile---------------*/}#}
-                    <div class="cadre col-md-2 mb-2">
+                    <article class="cadre col-md-2 mb-2">
                         <div class="d-flex justify-content-center">
                             <img src="{{ asset('img/prestationsPage/prestations4.png') }}" alt="chef" class="presta-img"/>
                         </div>
                         <div>
                             <h3>
                                 Chef à Domicile
-                                <LuChefHat/>
+                                <i class="bi bi-hat-chef"></i>
                             </h3>
                             <p class="m-2">
                                 Avec takeachef et l’un de ses 78 chefs à domicile,
@@ -165,16 +173,16 @@
                                 préférences. Que ce soit pour une occasion spéciale ou
                                 simplement pour savourer un dîner exclusif dans le confort
                                 de votre chez-vous, vivez une expérience culinaire
-                                exceptionnelle !
+                                exceptionnelle !
                             </p>
                              <a href="https://www.takeachef.com/fr-fr">Take A Chef</a>
                         </div>
-                    </div>
+                    </article>
 
 
                     {#                    {/*---------------fin---------------*/} #}
                 </div>
             </div>
-        </div>
+        </section>
     </main>
 {% endblock %}
