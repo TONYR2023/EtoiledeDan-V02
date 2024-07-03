@@ -1,11 +1,97 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Notre gite{% endblock %}
+{% block title %}Notre gite - L'Etoile De Dan - Gite d'Architecte Spacieux, Calme et famillial dans le Gard {% endblock %}
+
+{% block head %}
+    <meta name="description" content="Découvrez notre gîte d'architecte spacieux et accessible aux personnes à mobilité réduite (PMR) dans le Gard. Entre Nîmes, Alès et Montpellier, notre gîte offre un confort exceptionnel et des aménagements adaptés."/>
+    <meta name="keywords" content="letoilededan, etoile, dan, gite, gîte, gard, france, caractère, jacouzi, piscine, chef à domicile, massage, découverte touristique, produits locaux, 
+    famillial, détente, nature, convivial, atypique, charmant, calme, PMR, handicap" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Magazine - Gîte Spacieux et Accessible dans le Gard" />
+    <meta property="og:description" content="Découvrez notre gîte spacieux et accessible aux personnes à mobilité réduite (PMR) dans le Gard. Entre Nîmes, Alès et Montpellier, notre gîte offre un confort exceptionnel et des aménagements adaptés." />
+    <meta property="og:image" content="{{ asset('img/magazinePage/magazine.png') }}" />
+    <meta property="og:url" content="{{ app.request.uri }}" />
+    <meta property="og:type" content="article" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Magazine - Gîte Spacieux et Accessible dans le Gard" />
+    <meta name="twitter:description" content="Découvrez notre gîte spacieux et accessible aux personnes à mobilité réduite (PMR) dans le Gard. Entre Nîmes, Alès et Montpellier, notre gîte offre un confort exceptionnel et des aménagements adaptés." />
+    <meta name="twitter:image" content="{{ asset('img/magazinePage/magazine.png') }}" />
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "TouristAttraction",
+      "name": "Gîte Spacieux et Accessible dans le Gard",
+      "description": "Découvrez notre gîte spacieux et accessible aux personnes à mobilité réduite (PMR) dans le Gard. Entre Nîmes, Alès et Montpellier, notre gîte offre un confort exceptionnel et des aménagements adaptés.",
+      "image": "{{ asset('img/magazinePage/magazine.png') }}",
+      "url": "{{ app.request.uri }}",
+      "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "61, route départementale 6110",
+            "addressLocality": "Crespian",
+            "addressRegion": "Occitanie",
+            "postalCode": "30260",
+            "addressCountry": "France"
+      },
+      "geo" : {
+            "@type": "GeoCoordinates",
+            "latitude": 43.882362,
+            "longitude": 4.095823
+      },
+       "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone":[ "+33 06 22 57 15 52", "+33 06 78 44 27 07"],
+        "contactType": "Réservations"
+      },
+          "priceRange": "100-300 EUR",
+      "amenityFeature": [
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Jacuzzi",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Piscine",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Chef à domicile",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Massage",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Produits locaux",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Accessible PMR",
+          "value": true
+        }
+      ],
+      "openingHours": "Mo-Su",
+    }
+    </script>
+
+
+{% endblock %}
+
 
 {% block body %}
     <main>
         <div class="backgroundImageContainer">
-            <img src="{{ asset('img/gitePage/gite.jpg') }}" alt="gite" class="backgroundImage"/>
+            <img src="{{ asset('img/gitePage/gite.webp') }}" alt="gite salon" class="backgroundImage"/>
             <div class="buttonContainer">
                 {{ include('reservation/boutonReservation.twig') }}
             </div>
@@ -26,6 +112,7 @@
                 <div class="cadre col-md-5 p-4 mx-2">
                     <h3 class="d-flex justify-content-around">
                         La Maison
+                        <br />
                         <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
                             <path fill="none" d="M0 0h24v24H0V0z"></path>
                             <circle cx="12" cy="4" r="2"></circle>
@@ -34,7 +121,7 @@
                         <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
                             <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M384 240H96V136a40.12 40.12 0 0 1 40-40h240a40.12 40.12 0 0 1 40 40v104zM48 416V304a64.19 64.19 0 0 1 64-64h288a64.19 64.19 0 0 1 64 64v112"></path>
                             <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M48 416v-8a24.07 24.07 0 0 1 24-24h368a24.07 24.07 0 0 1 24 24v8M112 240v-16a32.09 32.09 0 0 1 32-32h80a32.09 32.09 0 0 1 32 32v16m0 0v-16a32.09 32.09 0 0 1 32-32h80a32.09 32.09 0 0 1 32 32v16"></path>
-                        </svg>
+                        </svg><p> 4 Chambres <p>
                         <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
                             <path fill="none" d="M0 0h24v24H0V0z"></path>
                             <path d="m10 8-3.25 3.25c.31.12.56.27.77.39.37.23.59.36 1.15.36s.78-.13 1.15-.36c.46-.27 1.08-.64 2.19-.64s1.73.37 2.18.64c.37.22.6.36 1.15.36.55 0 .78-.13 1.15-.36.12-.07.26-.15.41-.23L10.48 5C8.93 3.45 7.5 2.99 5 3v2.5c1.82-.01 2.89.39 4 1.5l1 1zm12 8.5h-.02.02zm-16.65-1c.55 0 .78.14 1.15.36.45.27 1.07.64 2.18.64s1.73-.37 2.18-.64c.37-.23.59-.36 1.15-.36.55 0 .78.14 1.15.36.45.27 1.07.64 2.18.64s1.73-.37 2.18-.64c.37-.23.59-.36 1.15-.36.55 0 .78.14 1.15.36.45.27 1.06.63 2.16.64v-2c-.55 0-.78-.14-1.15-.36-.45-.27-1.07-.64-2.18-.64s-1.73.37-2.18.64c-.37.23-.6.36-1.15.36s-.78-.14-1.15-.36c-.45-.27-1.07-.64-2.18-.64s-1.73.37-2.18.64c-.37.23-.59.36-1.15.36-.55 0-.78-.14-1.15-.36-.45-.27-1.07-.64-2.18-.64s-1.73.37-2.18.64c-.37.23-.59.36-1.15.36v2c1.11 0 1.73-.37 2.2-.64.37-.23.6-.36 1.15-.36zM18.67 18c-1.11 0-1.73.37-2.18.64-.37.23-.6.36-1.15.36-.55 0-.78-.14-1.15-.36-.45-.27-1.07-.64-2.18-.64s-1.73.37-2.19.64c-.37.23-.59.36-1.15.36s-.78-.13-1.15-.36c-.45-.27-1.07-.64-2.18-.64s-1.73.37-2.19.64c-.37.23-.59.36-1.15.36v2c1.11 0 1.73-.37 2.19-.64.37-.23.6-.36 1.15-.36.55 0 .78.13 1.15.36.45.27 1.07.64 2.18.64s1.73-.37 2.19-.64c.37-.23.59-.36 1.15-.36.55 0 .78.14 1.15.36.45.27 1.07.64 2.18.64s1.72-.37 2.18-.64c.37-.23.59-.36 1.15-.36.55 0 .78.14 1.15.36.45.27 1.07.64 2.18.64v-2c-.56 0-.78-.13-1.15-.36-.45-.27-1.07-.64-2.18-.64z"></path>
