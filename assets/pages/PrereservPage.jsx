@@ -87,9 +87,9 @@ const Prereserv = () => {
         const jourNonPossibleHs = [2, 3, , 4, 5]
         const jourNonPossiblePs = [0, 1, 2, 3, 4]
 
-        let totalPrice1 = 3810;
-        const totalPrice2 = 2490;
-        let totalPrice3 = 4410;
+        let totalPrice1 = 3000;
+        const totalPrice2 = 2000;
+        let totalPrice3 = 3800;
 
         //hors saison
         if (![6, 7].includes(startDate.getMonth())) {
