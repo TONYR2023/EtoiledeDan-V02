@@ -63,4 +63,10 @@ Encore
     .addEntry('app', './assets/app.js')
     .addEntry('prereserv', './assets/presreserv.js')
 
+//----------------Leaflet----------------
+//  .addEntry('leaflet', ['leaflet/dist/leaflet.css', 'leaflet/dist/leaflet.js']) // Ajout de Leaflet
+//  .autoProvideVariables({
+//      L: 'leaflet'
+//  });
+
 module.exports = Encore.getWebpackConfig();

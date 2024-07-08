@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}PMR{% endblock %}
+
+{% block body %}
+    <main>
+        <div class="backgroundImageContainer">
+            <img src="{{ asset('img/magazinePage/pmr.png') }}" alt="pmr" class="backgroundImage" />
+            <div class="buttonContainer">
+                {{ include('reservation/boutonReservation.twig') }}
+            </div>
+        </div>
+        <h2 class="mt-2 mx-5 d-flex text-center">
+            Découvrez notre Gîte Spacieux et Accessible aux Personnes à Mobilité Réduite (PMR) dans le Gard entre Nîmes, Alès et Montpellier
+        </h2>
+        <div class="d-flex justify-content-center">
+            <hr class="separator" />
+        </div>
+
+        <div class="p-3 mx-3">
+            <div>
+                <div class="container-fluid py-2">
+                    <p class="d-flex justify-content-center" style="font-size: 1.8em;">Pourquoi choisir notre gîte ?</p>
+                    <div class="row my-2 mx-1 justify-content-around">
+                        <div class="card" style="width: 15rem">
+                            <img
+                                class="card-img-top mt-2"
+                                src="{{ asset('img/magazinePage/pmr/magazine1.png') }}"
+                                alt="Card image cap"
+                            />
+                            <div class="card-body">
+                                <h3 class="card-title">Accessibilité PMR</h3>
+                                <p class="card-text">
+                                    Notre gîte est spécialement conçu pour accueillir les personnes à mobilité réduite, avec des aménagements adaptés pour faciliter leur séjour et leur circulation.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+{% endblock %}
