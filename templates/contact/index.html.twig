@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Contact{% endblock %}
+{% block title %}Contact - gîte l'étoile de dan{% endblock %}
 
 {% block body %}
 
@@ -16,6 +16,17 @@
         <div class="d-flex justify-content-center">
             <hr class="separator"/>
         </div>
+        {#-----------bloc image+contact-------------#}
+        <div class="container-fluid">
+        <div class="row">
+        {#-----------bloc image-------------#}
+        <div class="col-md-3 p-5">
+        <img src="{{ asset('img/magazinePage/stefetvan.webp') }}" alt="proprietaire" class="rounded-circle" style="max-width: 300px;">
+        </div>
+      
+
+        {#-----------bloc contact-------------#}
+      <div class="col-md-9">
         <div class="d-flex justify-content-center mb-3">
             <div class="container-lg">
                 <div class="">
@@ -129,6 +140,11 @@
                 </div>
             </div>
         </div>
+        </div>
+          
+        {#-----------fin bloc contact-------------#}
+        </div>
+ </div>
     </main>
 
 
