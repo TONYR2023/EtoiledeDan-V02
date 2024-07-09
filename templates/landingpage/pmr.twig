@@ -1,6 +1,7 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}PMR{% endblock %}
+{% block title %}Découvrez notre Gîte Spacieux et Accessible aux Personnes à Mobilité
+            Réduite (PMR){% endblock %}
 
 {% block body %}
     <main>
@@ -10,28 +11,28 @@
                 {{ include('reservation/boutonReservation.twig') }}
             </div>
         </div>
-{#        {/*-----------------cadre---------------*/}#}
-        <h2 class="mt-2 mx-5 d-flex text-center">
-            Découvrez notre Gîte Spacieux et Accessible aux Personnes à Mobilité
-            Réduite (PMR) dans le Gard entre Nîmes, Alès et Montpellier
-        </h2>
-        <div class="d-flex justify-content-center">
-            <hr class="separator" />
-        </div>
+                {#---------------cadre---------------#}
+                        <h2 class="mt-2 mx-5 d-flex text-center">
+                            Découvrez notre Gîte Spacieux et Accessible aux Personnes à Mobilité
+                            Réduite (PMR) dans le Gard entre Nîmes, Alès et Montpellier
+                        </h2>
+                        <div class="d-flex justify-content-center">
+                            <hr class="separator" />
+                        </div>
 
-        <div class="p-3 mx-3">
-            <div>
+                {#---------------presentation---------------#}
                 <div class="container-fluid py-2">
-                    <p class="d-flex justify-content-center" style={{fontSize:"1.8em"}}>Pourquoi choisir notre gîte ?</p>
-                    <div class="row my-2 mx-1 justify-content-around">
-{#                        {/*-----------------pmr---------------*/}#}
-                        <div class="card" style="width: 15rem">
+                     
+                            <div class="row my-2 mx-1 justify-content-around">
+
+                {# ----------------pmr---------------#}
+                        <div class="card p-2 " style="width: 18%;">
                             <img
                                     class="card-img-top mt-2"
-                                    src="{{ asset('img/magazinePage/magazine2.png') }}"
-                                    alt="Card image cap"
+                                    src="{{ asset('img/magazinePage/pmr/maison-ext04.webp') }}"
+                                    alt="accessibilité pmr"
                             ></img>
-                            <div class="card-body">
+                            <div class="pmr gite">
                                 <h3 class="card-title">Accessibilité PMR </h3>
                                 <p class="card-text">
                                     Notre gîte est spécialement conçu pour accueillir les
@@ -41,12 +42,13 @@
                             </div>
                         </div>
 
+                
 {#                        {/*-----------------grand volume---------------*/}#}
-                        <div class="card mx-1" style="width: 15rem">
+                        <div class="card p-2" style="width: 18%;">
                             <img
                                     class="card-img-top mt-2"
-                                    src="{{ asset('img/magazinePage/magazine2.png') }}"
-                                    alt="Card image cap"
+                                    src="{{ asset('img/magazinePage/pmr/salon01.webp') }}"
+                                    alt="grand volume"
                             ></img>
                             <div class="card-body">
                                 <h3 class="card-title">De Grand Volume </h3>
@@ -59,11 +61,11 @@
                         </div>
 
 {#                        {/*-----------------Hébergement Familial ---------------*/}#}
-                        <div class="card mx-1" style="width: 15rem">
+                        <div class="card p-2" style="width: 18%;">
                             <img
                                     class="card-img-top mt-2"
-                                    src="{{ asset('img/magazinePage/magazine2.png') }}"
-                                    alt="Card image cap"
+                                    src="{{ asset('img/magazinePage/pmr/chambre01-1.webp') }}"
+                                    alt="famille familial"
                             ></img>
                             <div class="card-body">
                                 <h3 class="card-title">Hébergement Familial </h3>
@@ -76,11 +78,11 @@
                         </div>
 
 {#                        {/*-----------------Situation Idéale---------------*/}#}
-                        <div class="card mx-1" style="width: 15rem">
+                        <div class="card p-2" style="width: 18%;">
                             <img
                                     class="card-img-top mt-2"
-                                    src="{{ asset('img/magazinePage/magazine2.png') }}"
-                                    alt="Card image cap"
+                                    src="{{ asset('img/magazinePage/pmr/crespian.webp') }}"
+                                    alt="gard crespian"
                             ></img>
                             <div class="card-body">
                                 <h3 class="card-title">Situation Idéale</h3>
@@ -94,14 +96,14 @@
                         </div>
 
 {#                        {/*-----------------Services Personnalisés ---------------*/}#}
-                        <div class="card mx-1" style="width: 15rem">
+                        <div class="card m-1 p-2" style="width: 18%;">
                             <img
                                     class="card-img-top mt-2"
-                                    src="{{ asset('img/magazinePage/magazine2.png') }}"
-                                    alt="Card image cap"
+                                    src="{{ asset('img/magazinePage/pmr/prestations.webp') }}"
+                                    alt="prestations services"
                             ></img>
                             <div class="card-body">
-                                <h3 class="card-title">Services Personnalisés </h3>
+                                <h3 class="card-title">Services Personnalisés</h3>
                                 <p class="card-text">
                                     Notre équipe ainsi que des prestataires de services dévouées
                                     sont à votre disposition pour répondre à tous vos besoins et
@@ -110,20 +112,17 @@
                             </div>
                         </div>
 
-{#                        {/*-----------------fin---------------*/}#}
-                        <b
-                                class="pt-4 d-flex justify-content-center"
-
-                        >
+                 {# ----------------fin--------------#}
+                 </div>
+                 </div>
+                <b class="pt-4 d-flex justify-content-center">
                             Réservez des maintenant et offrez-vous des vacances accessibles pour tous
                             et familiales inoubliables dans le Gard !
-                        </b>
-                    </div>
-                </div>
-                <div class="d-flex justify-content-center">
+                </b>
+        
+                <div class="d-flex justify-content-center my-2">
                     {{ include('reservation/boutonReservation.twig') }}
                 </div>
-            </div>
-        </div>
+           
     </main>
 {% endblock %}
