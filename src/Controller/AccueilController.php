@@ -50,10 +50,15 @@ class AccueilController extends AbstractController
     {
         return $this->render('landingpage/pmr.twig');
     }
-    #[Route('/pmr', name: 'pmr')]
+    #[Route('/famille', name: 'famille')]
     public function famille(): Response
     {
         return $this->render('landingpage/famille.twig');
+    }
+    #[Route('/architecture', name: 'architecture')]
+    public function architecture(): Response
+    {
+        return $this->render('landingpage/architecture.twig');
     }
     #[Route('/cgu', name: 'cgu')]
     public function cgu(): Response
