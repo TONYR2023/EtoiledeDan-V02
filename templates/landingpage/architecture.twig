@@ -19,13 +19,16 @@
                             <hr class="separator" />
                         </div>
 
-                {#---------------cadre presentation--------------#}
-                 <div class="p-3 mx-3">
-                    <div class="container-fluid py-2">
+
+            {#---------------cadre presentation--------------#}
+        
+             {#    <div class="p-3 mx-3">      #}
+                    <div class="container-fluid ">
                         <div class="row my-2 mx-1 justify-content-around">
 
                         {#-----------------bloc1---------------#}
-                        <article class="card" style="width: 18%;">
+                        <article class="cadre col-md-2 mb-2">
+                        <div class="d-flex justify-content-center">
                             <img
                                     class="card-img-top my-2 rounded"
                                     src="{{ asset('img/carousel/photosint/salon02.webp') }}"
@@ -39,10 +42,12 @@
                                 </p>
                                 </article>
                             </div>
+                        </div>
                         </article>
 
                          {#-----------------bloc2---------------#}
-                        <div class="card" style="width: 18%;">
+                        <article class="cadre col-md-2 mb-2">
+                        <div class="d-flex justify-content-center">
                             <img
                                     class="card-img-top my-2 rounded"
                                     src="{{ asset('img/carousel/photosext/maison-ext06.webp') }}"
@@ -54,11 +59,10 @@
                                 <p class="card-text">
                                     Conçue par un architecte, notre maison se distingue par son design unique et son caractère distinctif. Vous serez charmé par ses détails architecturaux originaux.                               
                                  </p>
-                                </article>
-                            </div>
-                        </div>
-
-                         {#-----------------bloc3---------------#}
+                         </div>
+                        </article>
+                          
+                         {#-----------------bloc3---------------
                         <div class="card" style="width: 18%;">
                             <img
                                     class="card-img-top my-2 rounded"
@@ -75,7 +79,7 @@
                             </div>
                         </div>
 
-                        {#-----------------bloc4---------------#}
+                        {#-----------------bloc4---------------
                         <div class="card" style="width: 18%;">
                             <img
                                     class="card-img-top my-2 rounded"
@@ -92,7 +96,7 @@
                             </div>
                         </div>
 
-                        {#-----------------bloc5---------------#}
+                        {#-----------------bloc5---------------
                         <div class="card" style="width: 18%;">
                             <img
                                     class="card-img-top my-2 rounded"
@@ -110,7 +114,7 @@
                         </div>
                
                      {#-----------------fin bloc---------------#}
-                     </div>
+                    {#-  </div> #}
                      </div>
                      </div>
                 {#-----------------fin---------------#}
