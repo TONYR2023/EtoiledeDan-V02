@@ -90,6 +90,7 @@ const Prereserv = () => {
         let totalPrice1 = 3000;
         const totalPrice2 = 2000;
         let totalPrice3 = 3800;
+        let totalPrice4 = 2400;
 
         //hors saison
         if (![6, 7].includes(startDate.getMonth())) {
@@ -116,27 +117,32 @@ const Prereserv = () => {
                         "- Le week-end : du Vendredi soir au Lundi matin "
                     )
             }
-        } else if ([6, 7].includes(startDate.getMonth())) { //pleine saison
+        } else if ([6, 7].includes(startDate.getMonth()))
+        { //pleine saison
             // console.log("pleine saison:", startDate.getMonth())
 
             switch (true) {
-                //case 1 semaine
-                case numberOfDays === 8 && startDay === 6 && endDay === 6:
-                    // console.log("prix", totalPrice3);
-                    return totalPrice3;
-                //case 2 semaines
-                case numberOfDays === 15 && startDay === 6 && endDay === 6:
-                    // console.log("prix", totalPrice3 * 2);
-                    return totalPrice3 * 2;
+              //case 1 semaine
+              case numberOfDays === 8 && startDay === 6 && endDay === 6:
+                // console.log("prix", totalPrice3);
+                return totalPrice3;
+              //case 2 semaines
+              case numberOfDays === 15 && startDay === 6 && endDay === 6:
+                // console.log("prix", totalPrice3 * 2);
+                return totalPrice3 * 2;
+              //case 4 premiers jours ou 3 derniers jours
+              case (startDay === 5 && endDay === 1) ||
+                (startDay === 1 && endDay === 5):
+                return totalPrice4;
 
-                case jourNonPossiblePs.includes(numberOfDays):
-                default:
-                    resetCheckbox()
-                    setMessageCalendar(
-                        "vous devez choisir des dates comprenant une semaine complète \n" +
-                        "- Du samedi soir au Samedi matin \n" +
-                        "- Pour plus de 2 semaines, veuillez nous contacter directement par email"
-                    )
+              case jourNonPossiblePs.includes(numberOfDays):
+              default:
+                resetCheckbox();
+                setMessageCalendar(
+                  "vous devez choisir des dates comprenant une semaine complète \n" +
+                    "- Du samedi soir au Samedi matin \n" +
+                    "- Pour plus de 2 semaines, veuillez nous contacter directement par email"
+                );
             }
         }
 
