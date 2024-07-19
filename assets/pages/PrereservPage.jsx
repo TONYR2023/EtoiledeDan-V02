@@ -91,7 +91,7 @@ const Prereserv = () => {
     let totalPrice1 = 3000;
     const totalPrice2 = 2000;
     let totalPrice3 = 3800;
-    let totalPrice4 = 2400;
+    let totalPrice4 = 2850;
 
     //hors saison
     if (![6, 7].includes(startDate.getMonth())) {
@@ -111,12 +111,14 @@ const Prereserv = () => {
         case jourNonPossibleHs.includes(numberOfDays):
         default:
           resetCheckbox();
-          setMessageCalendar(
-            "vous devez choisir des dates comprenant : \n" +
-              "- Une semaine complète : du samedi soir au Samedi matin  \n" +
-              "- Les 4 premiers jours de la semaine : du Lundi soir au Vendredi matin \n" +
-              "- Le week-end : du Vendredi soir au Lundi matin "
-          );
+          setMessageCalendar(messageCalendarTemplate);
+
+          const messageCalendarTemplate = `
+            Vous devez choisir des dates comprenant :
+              - Une semaine complète : du samedi soir au Samedi matin
+              - Les 4 premiers jours de la semaine : du Lundi soir au Vendredi matin
+              - Le week-end : du Vendredi soir au Lundi matin
+          `;
       }
     } else if ([6, 7].includes(startDate.getMonth())) {
       //pleine saison
