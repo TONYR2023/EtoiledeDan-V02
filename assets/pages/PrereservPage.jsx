@@ -142,12 +142,10 @@ const Prereserv = () => {
         default:
           resetCheckbox();
           setMessageCalendar(
-            // "vous devez choisir des dates comprenant une semaine complète \n" +
-              //  "- Du samedi soir au Samedi matin \n" +
-              "vous devez choisir des dates comprenant : \n" +
+            "vous devez choisir des dates comprenant : \n" +
               "- Une semaine complète : du samedi soir au Samedi matin  \n" +
               "- Les 4 premiers jours de la semaine : du Lundi soir au Vendredi matin \n" +
-              "- Le week-end : du Vendredi soir au Lundi matin "+
+              "- Le week-end : du Vendredi soir au Lundi matin \n" +
               "- Pour plus de 2 semaines, veuillez nous contacter directement par email"
           );
       }
