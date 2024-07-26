@@ -85,11 +85,11 @@ const Prereserv = () => {
     setMessageCalendar("");
 
     // jours non possibles
-    const jourNonPossibleHs = [2, 3, , 4, 5];
+    const jourNonPossibleHs = [2, 3, 4, 5];
     const jourNonPossiblePs = [0, 1, 2, 3, 4];
 
     let totalPrice1 = 3000;
-    const totalPrice2 = 2000;
+    let totalPrice2 = 2000;
     let totalPrice3 = 3800;
     let totalPrice4 = 2850;
 
@@ -114,10 +114,11 @@ const Prereserv = () => {
           setMessageCalendar(messageCalendarTemplate);
 
           const messageCalendarTemplate = `
-            Vous devez choisir des dates comprenant :
-              - Une semaine complète : du samedi soir au Samedi matin
-              - Les 4 premiers jours de la semaine : du Lundi soir au Vendredi matin
-              - Le week-end : du Vendredi soir au Lundi matin
+             "vous devez choisir des dates comprenant : \n" +
+              "- Une semaine complète : du samedi soir au Samedi matin  \n" +
+              "- Les 4 premiers jours de la semaine : du Lundi soir au Vendredi matin \n" +
+              "- Le week-end : du Vendredi soir au Lundi matin \n"+
+              "- Pour plus de 2 semaines, veuillez nous contacter directement par email"
           `;
       }
     } else if ([6, 7].includes(startDate.getMonth())) {
@@ -143,11 +144,11 @@ const Prereserv = () => {
           resetCheckbox();
           setMessageCalendar(
             // "vous devez choisir des dates comprenant une semaine complète \n" +
-              //  "- Du samedi soir au Samedi matin \n" +
-              "vous devez choisir des dates comprenant : \n" +
+            //  "- Du samedi soir au Samedi matin \n" +
+            "vous devez choisir des dates comprenant : \n" +
               "- Une semaine complète : du samedi soir au Samedi matin  \n" +
               "- Les 4 premiers jours de la semaine : du Lundi soir au Vendredi matin \n" +
-              "- Le week-end : du Vendredi soir au Lundi matin "+
+              "- Le week-end : du Vendredi soir au Lundi matin \n" +
               "- Pour plus de 2 semaines, veuillez nous contacter directement par email"
           );
       }
