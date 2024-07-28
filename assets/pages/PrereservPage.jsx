@@ -111,15 +111,14 @@ const Prereserv = () => {
         case jourNonPossibleHs.includes(numberOfDays):
         default:
           resetCheckbox();
-          setMessageCalendar(messageCalendarTemplate);
-
           const messageCalendarTemplate = `
-             "vous devez choisir des dates comprenant : \n" +
-              "- Une semaine complète : du samedi soir au Samedi matin  \n" +
-              "- Les 4 premiers jours de la semaine : du Lundi soir au Vendredi matin \n" +
-              "- Le week-end : du Vendredi soir au Lundi matin \n"+
-              "- Pour plus de 2 semaines, veuillez nous contacter directement par email"
+             "vous devez choisir des dates comprenant : \n
+              - Une semaine complète : du samedi soir au Samedi matin  \n
+              - Les 4 premiers jours de la semaine : du Lundi soir au Vendredi matin \n
+              - Le week-end : du Vendredi soir au Lundi matin \n
+              - Pour plus de 2 semaines, veuillez nous contacter directement par email"
           `;
+          setMessageCalendar(messageCalendarTemplate);
       }
     } else if ([6, 7].includes(startDate.getMonth())) {
       //pleine saison
