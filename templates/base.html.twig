@@ -51,15 +51,14 @@
 					</div>
 				</span>
 
-				<span>
-					<button id="langToggleBtn" class="btn btn-secondary btn-sm small-btn" onclick="toggleLanguage()" style="font-size: 12px;" data-href-fr="{{ path('accueil') }}" data-href-en="{{ path('prestations') }}">
-
-						FR
-					</button>
-				</span>
-
-
-			</div>
+     {#  <span>
+            <button id="langToggleBtn" class="btn btn-secondary btn-sm small-btn" onclick="toggleLanguage()" style="font-size: 12px;">
+                FR
+            </button>
+        </span>
+    #}
+    
+    </div>
 
 			<script>
 				function togglePhoneNumbers() {
@@ -80,18 +79,16 @@ contactButton.style.display = 'none';
 }
 }
 
-function toggleLanguage() {
-var button = document.getElementById('langToggleBtn');
-var currentLanguage = button.textContent.trim();
-if (currentLanguage === 'FR') {
-button.textContent = 'EN';
-window.location.href = button.getAttribute('data-href-fr');
-} else {
-button.textContent = 'FR';
-window.location.href = button.getAttribute('data-href-en');
-}
-}
-			</script>
+     {#    function toggleLanguage() {
+            var button = document.getElementById('langToggleBtn');
+            if (button.textContent.trim() === 'FR') {
+                button.textContent = 'EN';
+            } else {
+                button.textContent = 'FR';
+            }
+        }
+        #}
+    </script>
 
 			<nav class="navbar navbar-expand-lg " data-bs-theme="dark">
 				<div class="container-fluid">
