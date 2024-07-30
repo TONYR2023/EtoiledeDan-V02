@@ -1,4 +1,0 @@
-presta_sitemap:
-    defaults:
-        priority: 1.0
-        changefreq: 'daily'
