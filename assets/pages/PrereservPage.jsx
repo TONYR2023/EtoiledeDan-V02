@@ -92,6 +92,15 @@ const Prereserv = () => {
     let totalPrice2 = 2000;
     let totalPrice3 = 3800;
     let totalPrice4 = 2850;
+    let totalPrice5 = 3600;
+
+    //constante pour les vacances hors saison
+    const specificStartDate = new Date(startDate.getFullYear(), 9, 22); // 22 octobre
+    const specificEndDate = new Date(startDate.getFullYear(), 10, 4); // 4 novembre
+
+    if (startDate >= specificStartDate && endDate <= specificEndDate) {
+      return totalPrice5;
+    }
 
     //hors saison
     if (![6, 7].includes(startDate.getMonth())) {
