@@ -1,19 +1,16 @@
 <!DOCTYPE html>
 <html lang="fr">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="description" content="Pré-reservez votre gîte accessible pour les pmr en ligne 24/7. Trouvez un lieu de prestige entre Alès, Nîmes et Montpellier. Un espace de villegiature idéal pour tous y compris les PMR"/>
-		<meta name="keywords" content="letoilededan, etoile, dan, gite, gîte, gard, france, caractère, jacouzi, piscine, chef à domicile, massage, découverte touristique, produits locaux, famillial, détente, nature, convivial, atypique, charmant, calme, pmr, handicap"/>
-		<title>
-			{% block title %}Bienvenue sur le gîte l'Étoile de Dan
-			{% endblock %}
-		</title>
-		<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0">
-		<link rel="shortcut icon" href="/img/favicon-32x32.png"/>
-		<link rel="apple-touch-icon" href="/img/favicon-32x32.png"/>
-		{% block stylesheets %}
-			{{ encore_entry_link_tags('app') }}
-		{% endblock %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Pré-reservez votre gîte accessible pour les pmr en ligne 24/7. Trouvez un lieu de prestige entre Alès, Nîmes et Montpellier. Un espace de villegiature idéal pour tous y compris les PMR" /> 
+    <meta name="keywords" content="letoilededan, etoile, dan, gite, gîte, gard, france, caractère, jacouzi, piscine, chef à domicile, massage, découverte touristique, produits locaux, famillial, détente, nature, convivial, atypique, charmant, calme, pmr, handicap" />
+    <title>{% block title %}Bienvenue sur le gîte l'Étoile de Dan{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0">
+    <link rel="shortcut icon" href="/img/favicon-32x32.png"/>
+    <link rel="apple-touch-icon" href="/img/favicon-32x32.png"/>
+    {% block stylesheets %}
+        {{ encore_entry_link_tags('app') }}
+    {% endblock %}
 
 		{% block javascripts %}
 			{{ encore_entry_script_tags('app') }}
@@ -51,12 +48,12 @@
 					</div>
 				</span>
 
-     {#  <span>
+     <span>
             <button id="langToggleBtn" class="btn btn-secondary btn-sm small-btn" onclick="toggleLanguage()" style="font-size: 12px;">
                 FR
             </button>
         </span>
-    #}
+  
     
     </div>
 
@@ -79,7 +76,7 @@ contactButton.style.display = 'none';
 }
 }
 
-     {#    function toggleLanguage() {
+        function toggleLanguage() {
             var button = document.getElementById('langToggleBtn');
             if (button.textContent.trim() === 'FR') {
                 button.textContent = 'EN';
@@ -87,57 +84,53 @@ contactButton.style.display = 'none';
                 button.textContent = 'FR';
             }
         }
-        #}
     </script>
 
-			<nav class="navbar navbar-expand-lg " data-bs-theme="dark">
-				<div class="container-fluid">
-					<a class="navbar-brand" href="{{ path('accueil') }}">
-						<img class="logo-edd" src="{{ asset('img/logo.png') }}" alt="Logo 'L étoile de Dan' - retour accueil"/>
-					</a>
-					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-						<span class="navbar-toggler-icon"></span>
-					</button>
-					<div class="collapse navbar-collapse " id="navbarSupportedContent">
-						<ul class="navbar-nav navbar-light ms-auto">
-							<li>
-								<a class="nav-link" href="{{ path('accueil') }}">
-									<span>Accueil</span>
-								</a>
-							</li>
-							<li>
-								<a class="nav-link" href="{{ path('gite') }}">
-									<span>Notre Gite</span>
-								</a>
-							</li>
-							<li>
-								<a class="nav-link" href="{{ path('prestations') }}">
-									<span>Prestations</span>
-								</a>
-							</li>
-							<li>
-								<a class="nav-link" href="{{ path('tourisme') }}">
-									<span>Tourisme</span>
-								</a>
-							</li>
-							<li>
-								<a class="nav-link" href="{{ path('informations') }}">
-									<span>
-										Informations</span>
-								</a>
-							</li>
-							<li>
-								<a class="nav-link" href="{{ path('magazine') }}">
-									<span>
-										Magazine
-									</span>
-								</a>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</nav>
-		</header>
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="{{ path('accueil') }}">
+                <img class="logo-edd" src="{{ asset('img/logo.png') }}" alt="Logo 'L étoile de Dan' - retour accueil"/>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                <ul class="navbar-nav navbar-light ms-auto">
+                    <li>
+                        <a class="nav-link" href="{{ path('accueil') }}">
+                            <span>Accueil</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="{{ path('gite') }}">
+                            <span>Notre Gite</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="{{ path('prestations') }}">
+                            <span>Prestations</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="{{ path('tourisme') }}">
+                            <span>Tourisme</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="{{ path('informations') }}">
+                            <span> Informations</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="{{ path('magazine') }}">
+                            <span> Magazine </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
 
 		<div class="visually-hidden">
 			<h1 class="text-center">L'Étoile de Dan</h1>
