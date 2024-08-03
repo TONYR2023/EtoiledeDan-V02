@@ -1,16 +1,21 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="description" content="Pré-reservez votre gîte accessible pour les pmr en ligne 24/7. Trouvez un lieu de prestige entre Alès, Nîmes et Montpellier. Un espace de villegiature idéal pour tous y compris les PMR" /> 
-    <meta name="keywords" content="letoilededan, etoile, dan, gite, gîte, gard, france, caractère, jacouzi, piscine, chef à domicile, massage, découverte touristique, produits locaux, famillial, détente, nature, convivial, atypique, charmant, calme, pmr, handicap" />
-    <title>{% block title %}Bienvenue sur le gîte l'Étoile de Dan{% endblock %}</title>
-    <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0">
-    <link rel="shortcut icon" href="/img/favicon-32x32.png"/>
-    <link rel="apple-touch-icon" href="/img/favicon-32x32.png"/>
-    {% block stylesheets %}
-        {{ encore_entry_link_tags('app') }}
-    {% endblock %}
+	<head>
+		<meta charset="UTF-8">
+		<meta name="description" content="Découvrez L'Étoile de Dan, un gîte famillial dans le Gard avec piscine interieure, et de nombreux services. Idéal pour détente et découverte touristique.">
+		<meta name="keywords" content="L'Étoile de Dan, gîte de France Gard, gîte avec piscine interieure, gîte avec jacuzzi, chef à domicile Gard, massage Gard, découverte touristique Gard, produits locaux Gard, gîte familial, détente nature, gîte convivial, gîte atypique, gîte charmant, gîte calme, gîte PMR, gîte accessible handicap, gîte accessible pmr"/>
+		<meta name="robots" content="index, follow">
+
+		<title>
+			{% block title %}Bienvenue sur le gîte l'Étoile de Dan
+			{% endblock %}
+		</title>
+		<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0">
+		<link rel="shortcut icon" href="/img/favicon-32x32.png"/>
+		<link rel="apple-touch-icon" href="/img/favicon-32x32.png"/>
+		{% block stylesheets %}
+			{{ encore_entry_link_tags('app') }}
+		{% endblock %}
 
 		{% block javascripts %}
 			{{ encore_entry_script_tags('app') }}
