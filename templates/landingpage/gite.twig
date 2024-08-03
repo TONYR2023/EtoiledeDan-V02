@@ -7,7 +7,7 @@
 	<meta name="description" content="Découvrez notre gîte d'architecte spacieux et accessible aux personnes à mobilité réduite (PMR) dans le Gard. Entre Nîmes, Alès et Montpellier, notre gîte offre un confort exceptionnel et des aménagements adaptés."/>
 	<meta
 	name="keywords" content="letoilededan, etoile, dan, gite, gîte, gard, france, caractère, jacouzi, piscine, chef à domicile, massage, découverte touristique, produits locaux,
-						    famillial, détente, nature, convivial, atypique, charmant, calme, PMR, handicap"/>
+								    famillial, détente, nature, convivial, atypique, charmant, calme, PMR, handicap"/>
 
 	<!-- Open Graph -->
 	<meta property="og:title" content="Magazine - Gîte Spacieux et Accessible dans le Gard"/>
@@ -27,65 +27,65 @@
 	<!-- Schema.org JSON-LD -->
 	<script type="application/ld+json">
 		{
-						      "@context": "https://schema.org",
-						      "@type": "TouristAttraction",
-						      "name": "Gîte Spacieux et Accessible dans le Gard",
-						      "description": "Découvrez notre gîte spacieux et accessible aux personnes à mobilité réduite (PMR) dans le Gard. Entre Nîmes, Alès et Montpellier, notre gîte offre un confort exceptionnel et des aménagements adaptés.",
-						      "image": "{{ asset('img/magazinePage/magazine.png') }}",
-						      "url": "{{ app.request.uri }}",
-						      "address": {
-						            "@type": "PostalAddress",
-						            "streetAddress": "61, route départementale 6110",
-						            "addressLocality": "Crespian",
-						            "addressRegion": "Occitanie",
-						            "postalCode": "30260",
-						            "addressCountry": "France"
-						      },
-						      "geo" : {
-						            "@type": "GeoCoordinates",
-						            "latitude": 43.882362,
-						            "longitude": 4.095823
-						      },
-						       "contactPoint": {
-						        "@type": "ContactPoint",
-						        "telephone":[ "+33 06 22 57 15 52", "+33 06 78 44 27 07"],
-						        "contactType": "Réservations"
-						      },
-						          "priceRange": "100-300 EUR",
-						      "amenityFeature": [
-						        {
-						          "@type": "LocationFeatureSpecification",
-						          "name": "Jacuzzi",
-						          "value": true
-						        },
-						        {
-						          "@type": "LocationFeatureSpecification",
-						          "name": "Piscine",
-						          "value": true
-						        },
-						        {
-						          "@type": "LocationFeatureSpecification",
-						          "name": "Chef à domicile",
-						          "value": true
-						        },
-						        {
-						          "@type": "LocationFeatureSpecification",
-						          "name": "Massage",
-						          "value": true
-						        },
-						        {
-						          "@type": "LocationFeatureSpecification",
-						          "name": "Produits locaux",
-						          "value": true
-						        },
-						        {
-						          "@type": "LocationFeatureSpecification",
-						          "name": "Accessible PMR",
-						          "value": true
-						        }
-						      ],
-						      "openingHours": "Mo-Su",
-						    }
+								      "@context": "https://schema.org",
+								      "@type": "TouristAttraction",
+								      "name": "Gîte Spacieux et Accessible dans le Gard",
+								      "description": "Découvrez notre gîte spacieux et accessible aux personnes à mobilité réduite (PMR) dans le Gard. Entre Nîmes, Alès et Montpellier, notre gîte offre un confort exceptionnel et des aménagements adaptés.",
+								      "image": "{{ asset('img/magazinePage/magazine.png') }}",
+								      "url": "{{ app.request.uri }}",
+								      "address": {
+								            "@type": "PostalAddress",
+								            "streetAddress": "61, route départementale 6110",
+								            "addressLocality": "Crespian",
+								            "addressRegion": "Occitanie",
+								            "postalCode": "30260",
+								            "addressCountry": "France"
+								      },
+								      "geo" : {
+								            "@type": "GeoCoordinates",
+								            "latitude": 43.882362,
+								            "longitude": 4.095823
+								      },
+								       "contactPoint": {
+								        "@type": "ContactPoint",
+								        "telephone":[ "+33 06 22 57 15 52", "+33 06 78 44 27 07"],
+								        "contactType": "Réservations"
+								      },
+								          "priceRange": "100-300 EUR",
+								      "amenityFeature": [
+								        {
+								          "@type": "LocationFeatureSpecification",
+								          "name": "Jacuzzi",
+								          "value": true
+								        },
+								        {
+								          "@type": "LocationFeatureSpecification",
+								          "name": "Piscine",
+								          "value": true
+								        },
+								        {
+								          "@type": "LocationFeatureSpecification",
+								          "name": "Chef à domicile",
+								          "value": true
+								        },
+								        {
+								          "@type": "LocationFeatureSpecification",
+								          "name": "Massage",
+								          "value": true
+								        },
+								        {
+								          "@type": "LocationFeatureSpecification",
+								          "name": "Produits locaux",
+								          "value": true
+								        },
+								        {
+								          "@type": "LocationFeatureSpecification",
+								          "name": "Accessible PMR",
+								          "value": true
+								        }
+								      ],
+								      "openingHours": "Mo-Su",
+								    }
 	</script>
 
 
@@ -95,7 +95,9 @@
 {% block body %}
 	<main>
 		<div class="backgroundImageContainer">
-			<img src="{{ asset('img/gitePage/gite.webp') }}" alt="gite salon/salle à manger" class="backgroundImage"/>
+			<img src="{{ asset('img/gitePage/gite.webp') }}" alt="gite salon/salle à manger" class="backgroundImage" title="Vue exterieure du gîte avec jardin et piscine" loading="eager"/>
+
+
 			<div class="buttonContainer">
 				{{ include('reservation/boutonReservation.twig') }}
 			</div>
@@ -107,9 +109,9 @@
 		</div>
 
 		{#        {/*------------------Presentation----------------
-						        
-						        logo cf.abritel
-						        */} #}
+								        
+								        logo cf.abritel
+								        */} #}
 		<section class="container-fluid" style="margin-left:2em;">
 			<div
 				class="row d-flex justify-content-around">
@@ -240,81 +242,106 @@
 
 							<div class="carousel-inner">
 								<div class="carousel-item active">
-									<img src="img/carousel/photosint/salon01.webp" class="d-block w-100" alt="salon cuisine">
+									<img src="img/carousel/photosint/salon01.webp" class="d-block w-100" alt="salon cuisine" title="Vue interieure, cuisine" loading="lazy">
+
 								</div>
 								<div class="carousel-item">
-									<img src="img/carousel/photosint/salon02.webp" class="d-block w-100" alt="salon billard">
+									<img src="img/carousel/photosint/salon02.webp" class="d-block w-100" alt="salon billard" title="Vue interieure, billard" loading="lazy">
+
 								</div>
 								<div class="carousel-item">
-									<img src="img/carousel/photosint/salon03.webp" class="d-block w-100" alt="salon">
+									<img src="img/carousel/photosint/salon03.webp" class="d-block w-100" alt="salon" title="Vue interieure, salon" loading="lazy">
+
 								</div>
 								<div class="carousel-item">
-									<img src="img/carousel/photosint/salon04.webp" class="d-block w-100" alt="salon cuisine">
+									<img src="img/carousel/photosint/salon04.webp" class="d-block w-100" alt="salon cuisine" title="Vue interieure, salon" loading="lazy">
+
 								</div>
 								<div class="carousel-item">
-									<img src="img/carousel/photosint/salon05.webp" class="d-block w-100" alt="salon cuisine">
+									<img src="img/carousel/photosint/salon05.webp" class="d-block w-100" alt="salon cuisine" title="Vue interieure, cuisine" loading="lazy">
+
 								</div>
 								<div class="carousel-item">
-									<img src="img/carousel/photosint/salon06.webp" class="d-block w-100" alt="salon hamac">
+									<img src="img/carousel/photosint/salon06.webp" class="d-block w-100" alt="salon hamac" title="Vue interieure, salon avec hamac geant" loading="lazy">
+
 								</div>
 								<div class="carousel-item">
-									<img src="img/carousel/photosint/salon07.webp" class="d-block w-100" alt="salon hamac">
+									<img src="img/carousel/photosint/salon07.webp" class="d-block w-100" alt="salon hamac" title="Vue interieure, salon avec hamac geant" loading="lazy">
+
 								</div>
 								<div class="carousel-item">
-									<img src="img/carousel/photosint/salon08.webp" class="d-block w-100" alt="salon hamac">
+									<img src="img/carousel/photosint/salon08.webp" class="d-block w-100" alt="salon" title="Vue interieure, salon" loading="lazy">
+
 								</div>
 								<div class="carousel-item">
-									<img src="img/carousel/photosint/salon09.webp" class="d-block w-100" alt="salon hamac">
+									<img src="img/carousel/photosint/salon09.webp" class="d-block w-100" alt="salon hamac" title="Vue interieure, salon" loading="lazy">
+
 								</div>
 
 								<div class="carousel-item">
-									<img src="img/carousel/photosint/piscine01.webp" class="d-block w-100" alt="picine intérieure">
+									<img src="img/carousel/photosint/piscine01.webp" class="d-block w-100" alt="picine intérieure" title="Vue interieure, piscine" loading="lazy">
+
 								</div>
 								<div class="carousel-item">
-									<img src="img/carousel/photosint/piscine02.webp" class="d-block w-100" alt="picine intérieure">
+									<img src="img/carousel/photosint/piscine02.webp" class="d-block w-100" alt="picine intérieure" title="Vue interieure, piscine" loading="lazy">
+
 								</div>
 								<div class="carousel-item">
-									<img src="img/carousel/photosint/piscine03.webp" class="d-block w-100" alt="picine intérieure">
+									<img src="img/carousel/photosint/piscine03.webp" class="d-block w-100" alt="picine intérieure" title="Vue interieure, piscine" loading="lazy">
+
 								</div>
 								<div class="carousel-item">
-									<img src="img/carousel/photosint/piscine04.webp" class="d-block w-100" alt="picine intérieure">
+									<img src="img/carousel/photosint/piscine04.webp" class="d-block w-100" alt="picine intérieure" title="Vue interieure, piscine" loading="lazy">
+
 								</div>
 
 								<div class="carousel-item">
-									<img src="img/carousel/photosint/sallejeux03.webp" class="d-block w-100" alt="salle de jeux">
+									<img src="img/carousel/photosint/sallejeux03.webp" class="d-block w-100" alt="salle de jeux" title="Vue interieure, salle de jeux" loading="lazy">
+
 								</div>
 								<div class="carousel-item">
-									<img src="img/carousel/photosint/sallejeux02.webp" class="d-block w-100" alt="salle de jeux">
+									<img src="img/carousel/photosint/sallejeux02.webp" class="d-block w-100" alt="salle de jeux" title="Vue interieure, salle de jeux" loading="lazy">
+
 								</div>
 								<div class="carousel-item">
-									<img src="img/carousel/photosint/chambre01-1.webp" class="d-block w-100" alt="chambre vue exterieure">
+									<img src="img/carousel/photosint/chambre01-1.webp" class="d-block w-100" alt="chambre vue exterieure" title="Vue interieure, chambre" loading="lazy">
+
 								</div>
 								<div class="carousel-item">
-									<img src="img/carousel/photosint/chambre01-2.webp" class="d-block w-100" alt="chambre vue couloir">
+									<img src="img/carousel/photosint/chambre01-2.webp" class="d-block w-100" alt="chambre vue couloir" title="Vue interieure, chambre" loading="lazy">
+
 								</div>
 								<div class="carousel-item">
-									<img src="img/carousel/photosint/chambre02-PMR-07.webp" class="d-block w-100" alt="chambre pmr">
+									<img src="img/carousel/photosint/chambre02-PMR-07.webp" class="d-block w-100" alt="chambre pmr" title="Vue interieure, chambre" loading="lazy">
+
 								</div>
 								<div class="carousel-item">
-									<img src="img/carousel/photosint/chambre02-PMR-05.webp" class="d-block w-100" alt="chambre salle de bain pmr">
+									<img src="img/carousel/photosint/chambre02-PMR-05.webp" class="d-block w-100" alt="chambre salle de bain pmr" title="Vue interieure, chambre pmr" loading="lazy">
+
 								</div>
 								<div class="carousel-item">
-									<img src="img/carousel/photosint/chambre02-PMR-06.webp" class="d-block w-100" alt="chambre douche pmr">
+									<img src="img/carousel/photosint/chambre02-PMR-06.webp" class="d-block w-100" alt="chambre douche pmr" title="Vue interieure, chambre pmr" loading="lazy">
+
 								</div>
 								<div class="carousel-item">
-									<img src="img/carousel/photosint/chambre02-PMR-02.webp" class="d-block w-100" alt="chambre">
+									<img src="img/carousel/photosint/chambre02-PMR-02.webp" class="d-block w-100" alt="chambre" title="Vue interieure, chambre" loading="lazy">
+
 								</div>
 								<div class="carousel-item">
-									<img src="img/carousel/photosint/wcPMR01.webp" class="d-block w-100" alt="pmr wc">
+									<img src="img/carousel/photosint/wcPMR01.webp" class="d-block w-100" alt="pmr wc" title="Vue interieure, wc pmr" loading="lazy">
+
 								</div>
 								<div class="carousel-item">
-									<img src="img/carousel/photosint/chambre03-1.webp" class="d-block w-100" alt="chambre vue dressing">
+									<img src="img/carousel/photosint/chambre03-1.webp" class="d-block w-100" alt="chambre vue dressing" title="Vue interieure, dressing chambre" loading="lazy">
+
 								</div>
 								<div class="carousel-item">
-									<img src="img/carousel/photosint/chambre04-1.webp" class="d-block w-100" alt="chambre vue couloir">
+									<img src="img/carousel/photosint/chambre04-1.webp" class="d-block w-100" alt="chambre vue couloir" title="Vue interieure, chambre" loading="lazy">
+
 								</div>
 								<div class="carousel-item">
-									<img src="img/carousel/photosint/chambre04-3.webp" class="d-block w-100" alt="chambre vue exterieure">
+									<img src="img/carousel/photosint/chambre04-3.webp" class="d-block w-100" alt="chambre vue exterieure" title="Vue interieure, chambre" loading="lazy">
+
 								</div>
 
 							</div>
@@ -335,70 +362,70 @@
 						<p>
 							<b>
 								Notre maison d’architecte combine design, modernité et
-																								                            caractère
+																																                            caractère
 							</b>
 							pour vous apporter tout le confort durant votre séjour. Ses
-																					                        terrasses, son salon, sa salle de jeu et sa piscine sont
-																					                        notamment conçus pour
+																												                        terrasses, son salon, sa salle de jeu et sa piscine sont
+																												                        notamment conçus pour
 							<b>
 								accueillir les Personnes à Mobilité Réduite</b>
 							tout en
-																					                        mettant à disposition une suite adaptée dont l’accès est
-																					                        facilité grâce à sa rampe PMR.
+																												                        mettant à disposition une suite adaptée dont l’accès est
+																												                        facilité grâce à sa rampe PMR.
 						</p>
 
 
 						<p>
 							La pièce à vivre de 75 m2 est aménagée avec :
 							<br/>- Une
-																					                        cuisine entièrement équipée avec son réfrigérateur américain, sa
-																					                        cave à vin, son grand îlot central, etc.
+																												                        cuisine entièrement équipée avec son réfrigérateur américain, sa
+																												                        cave à vin, son grand îlot central, etc.
 							<br/>
 							{# ------------------IMAGE SALON 2 -------------- #}
 							<img src="{{ asset('img/gitePage/salon06.webp') }}" alt="hamac géant gite etoile de dan" style="width: 10em;
-																								                            float: right;
-																								                            shape-outside: margin-box;
-																								                            margin: 0 20px 5px 0;
-																								                            border-radius: 30%"/>
+																																                            float: right;
+																																                            shape-outside: margin-box;
+																																                            margin: 0 20px 5px 0;
+																																                            border-radius: 30%"/>
 							- Un salon avec
-																					                        sa télévision très grand écran,
+																												                        sa télévision très grand écran,
 							<br/>- Une salle à manger avec
-																					                        sa grande table pouvant accueillir 12 convives,
+																												                        sa grande table pouvant accueillir 12 convives,
 							<br/>- un
-																					                        billard et un hamac géant, idéal pour la détente.
+																												                        billard et un hamac géant, idéal pour la détente.
 							<br/>
 							Poursuivez cette douceur de vivre dans l’espace ludique :<br/>-
-																					                        Avec sa piscine intérieure et sa baie aquarium,
+																												                        Avec sa piscine intérieure et sa baie aquarium,
 							<br/>- Une
-																					                        salle de jeux disposant : d’un baby-foot, d’une borne arcade et
-																					                        d’une table de jeux.
+																												                        salle de jeux disposant : d’un baby-foot, d’une borne arcade et
+																												                        d’une table de jeux.
 						</p>
 						<img src="{{ asset('img/gitePage/chambre01.webp') }}" alt="chambre etoile de dan" style="
-																					                            width: 10em;
-																					                            float: left;
-																					                            shape-outside: margin-box;
-																					                            margin: 0 20px 5px 0;
-																					                            border-radius: 30%
-																					                            "/>
+																												                            width: 10em;
+																												                            float: left;
+																												                            shape-outside: margin-box;
+																												                            margin: 0 20px 5px 0;
+																												                            border-radius: 30%
+																												                            "/>
 						<p>
 							Pour accueillir jusqu’à
 							<b>
 								12 résidents, le gîte dispose de 4 chambres et de 3 Salles
-																								                            d’eau
+																																                            d’eau
 							</b>
 							avec douche à l’italienne :
 							<br/>- Une suite parentale équipée PMR avec son lit en 160x200,
-																					                        son dressing et sa salle d’eau privative
+																												                        son dressing et sa salle d’eau privative
 							<br/>
 							- Une chambre double avec son lit en 160x200
 							<br/>
 							- Deux chambres quadruples avec dressing, idéales pour les
-																					                        familles, puisqu’en plus de leur lit en 160x200 ou 140x200, l’une est
-																					                        équipée de 2 fauteuils convertibles 1 place tandis que l’autre
-																					                        dispose d’un canapé convertible 2 places.
+																												                        familles, puisqu’en plus de leur lit en 160x200 ou 140x200, l’une est
+																												                        équipée de 2 fauteuils convertibles 1 place tandis que l’autre
+																												                        dispose d’un canapé convertible 2 places.
 							<br/>- Enfin, l’une
-																					                        des trois terrasses dispose d’une cuisine d’été équipée d’un
-																					                        BBQ.
+																												                        des trois terrasses dispose d’une cuisine d’été équipée d’un
+																												                        BBQ.
 						</p>
 					</article>
 				</div>
@@ -426,78 +453,102 @@
 				</div>
 				<div class="carousel-inner">
 					<div class="carousel-item active">
-						<img src="img/carousel/photosext/salon-ext01.webp" class="d-block w-100" alt="salon exterieur">
+						<img src="img/carousel/photosext/salon-ext01.webp" class="d-block w-100" alt="salon exterieur" title="Vue exterieure, salon" loading="lazy">
+
 					</div>
 					<div class="carousel-item">
-						<img src="img/carousel/photosext/salon-ext02.webp" class="d-block w-100" alt="salon exterieur">
+						<img src="img/carousel/photosext/salon-ext02.webp" class="d-block w-100" alt="salon exterieur" title="Vue exterieure, salon" loading="lazy">
+
 					</div>
 					<div class="carousel-item">
-						<img src="img/carousel/photosext/piscine-ext02.webp" class="d-block w-100" alt="piscine exterieur">
+						<img src="img/carousel/photosext/piscine-ext02.webp" class="d-block w-100" alt="piscine exterieur" title="Vue exterieure, piscine" loading="lazy">
+
 					</div>
 					<div class="carousel-item">
-						<img src="img/carousel/photosext/piscine-ext01.webp" class="d-block w-100" alt="piscine exterieur">
+						<img src="img/carousel/photosext/piscine-ext01.webp" class="d-block w-100" alt="piscine exterieur" title="Vue exterieure, piscine" loading="lazy">
+
 					</div>
 					<div class="carousel-item">
-						<img src="img/carousel/photosext/piscine-ext03.webp" class="d-block w-100" alt="entrée">
+						<img src="img/carousel/photosext/piscine-ext03.webp" class="d-block w-100" alt="entrée" title="Vue exterieure, entrée" loading="lazy">
+
 					</div>
 
 					<div class="carousel-item">
-						<img src="img/carousel/photosext/maison-ext06.webp" class="d-block w-100" alt="vue piscine">
+						<img src="img/carousel/photosext/maison-ext06.webp" class="d-block w-100" alt="vue piscine" title="Vue exterieure, piscine" loading="lazy">
+
 					</div>
 					<div class="carousel-item">
-						<img src="img/carousel/photosext/maison-ext15.webp" class="d-block w-100" alt="entrée">
+						<img src="img/carousel/photosext/maison-ext15.webp" class="d-block w-100" alt="entrée" title="Vue exterieure, maison" loading="lazy">
+
 					</div>
 					<div class="carousel-item">
-						<img src="img/carousel/photosext/maison-ext14.webp" class="d-block w-100" alt="entrée">
+						<img src="img/carousel/photosext/maison-ext14.webp" class="d-block w-100" alt="entrée" title="Vue exterieure, maison" loading="lazy">
+
 					</div>
 					<div class="carousel-item">
-						<img src="img/carousel/photosext/maison-ext13.webp" class="d-block w-100" alt="entrée">
+						<img src="img/carousel/photosext/maison-ext13.webp" class="d-block w-100" alt="entrée" title="Vue exterieure, maison" loading="lazy">
+
 					</div>
 					<div class="carousel-item">
-						<img src="img/carousel/photosext/maison-ext12.webp" class="d-block w-100" alt="entrée">
+						<img src="img/carousel/photosext/maison-ext12.webp" class="d-block w-100" alt="entrée" title="Vue exterieure, maison" loading="lazy">
+
 					</div>
 					<div class="carousel-item">
-						<img src="img/carousel/photosext/maison-ext11.webp" class="d-block w-100" alt="entrée">
+						<img src="img/carousel/photosext/maison-ext11.webp" class="d-block w-100" alt="entrée" title="Vue exterieure, maison" loading="lazy">
+
 					</div>
 					<div class="carousel-item">
-						<img src="img/carousel/photosext/maison-ext10.webp" class="d-block w-100" alt="entrée">
+						<img src="img/carousel/photosext/maison-ext10.webp" class="d-block w-100" alt="entrée" title="Vue exterieure, maison" loading="lazy">
+
 					</div>
 					<div class="carousel-item">
-						<img src="img/carousel/photosext/maison-ext09.webp" class="d-block w-100" alt="entrée">
+						<img src="img/carousel/photosext/maison-ext09.webp" class="d-block w-100" alt="entrée" title="Vue exterieure, maison" loading="lazy">
+
 					</div>
 					<div class="carousel-item">
-						<img src="img/carousel/photosext/maison-ext08.webp" class="d-block w-100" alt="entrée">
+						<img src="img/carousel/photosext/maison-ext08.webp" class="d-block w-100" alt="entrée" title="Vue exterieure, maison" loading="lazy">
+
 					</div>
 
 					<div class="carousel-item">
-						<img src="img/carousel/photosext/jardin-ext03.webp" class="d-block w-100" alt="jardin exterieur">
+						<img src="img/carousel/photosext/jardin-ext03.webp" class="d-block w-100" alt="jardin exterieur" title="Vue exterieure, maison" loading="lazy">
+
 					</div>
 					<div class="carousel-item">
-						<img src="img/carousel/photosext/jardin-ext02.webp" class="d-block w-100" alt="jardin exterieur">
+						<img src="img/carousel/photosext/jardin-ext02.webp" class="d-block w-100" alt="jardin exterieur" title="Vue exterieure, maison" loading="lazy">
+
 					</div>
 					<div class="carousel-item">
-						<img src="img/carousel/photosext/jardin-ext04.webp" class="d-block w-100" alt="jardin exterieur">
+						<img src="img/carousel/photosext/jardin-ext04.webp" class="d-block w-100" alt="jardin exterieur" title="Vue exterieure, maison" loading="lazy">
+
 					</div>
 					<div class="carousel-item">
-						<img src="img/carousel/photosext/jardin-ext01.webp" class="d-block w-100" alt="jardin exterieur">
+						<img src="img/carousel/photosext/jardin-ext01.webp" class="d-block w-100" alt="jardin exterieur" title="Vue exterieure, maison" loading="lazy">
+
 					</div>
 					<div class="carousel-item">
-						<img src="img/carousel/photosext/jardin-garage-ext01.webp" class="d-block w-100" alt="jardin et garage exterieur">
+						<img src="img/carousel/photosext/jardin-garage-ext01.webp" class="d-block w-100" alt="jardin et garage exterieur" title="Vue exterieure, jardin" loading="lazy">
+
 					</div>
 					<div class="carousel-item">
-						<img src="img/carousel/photosext/maison-ext01.webp" class="d-block w-100" alt="maison exterieur">
+						<img src="img/carousel/photosext/maison-ext01.webp" class="d-block w-100" alt="maison exterieur" title="Vue exterieure, maison" loading="lazy">
+
 					</div>
 					<div class="carousel-item">
-						<img src="img/carousel/photosext/maison-ext02.webp" class="d-block w-100" alt="maison exterieur">
+						<img src="img/carousel/photosext/maison-ext02.webp" class="d-block w-100" alt="maison exterieur" title="Vue exterieure, maison" loading="lazy">
+
 					</div>
 					<div class="carousel-item">
-						<img src="img/carousel/photosext/maison-ext03.webp" class="d-block w-100" alt="maison exterieur">
+						<img src="img/carousel/photosext/maison-ext03.webp" class="d-block w-100" alt="maison exterieur" title="Vue exterieure, maison" loading="lazy">
+
 					</div>
 					<div class="carousel-item">
-						<img src="img/carousel/photosext/maison-ext04.webp" class="d-block w-100" alt="rampe pmr">
+						<img src="img/carousel/photosext/maison-ext04.webp" class="d-block w-100" alt="rampe pmr" title="Vue exterieure, entrée rampe pmr" loading="lazy">
+
 					</div>
 					<div class="carousel-item">
-						<img src="img/carousel/photosext/maison-ext07.webp" class="d-block w-100" alt="entrée">
+						<img src="img/carousel/photosext/maison-ext07.webp" class="d-block w-100" alt="entrée" title="Vue exterieure, maison" loading="lazy">
+
 					</div>
 
 				</div>
