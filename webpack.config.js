@@ -1,3 +1,4 @@
+const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 const Encore = require('@symfony/webpack-encore');
 
 // Manually configure the runtime environment if not already configured yet by the "encore" command.
@@ -17,6 +18,9 @@ Encore
 
     // When enabled, Webpack "splits" your files into smaller pieces for greater optimization.
     .splitEntryChunks()
+
+    // enables the Symfony UX Stimulus bridge (used in assets/bootstrap.js)
+    .enableStimulusBridge('./assets/controllers.json')
 
     // will require an extra script tag for runtime.js
     // but, you probably want this, unless you're building a single-page app
@@ -49,10 +53,11 @@ Encore
     .enableSassLoader()
 
     // uncomment if you use TypeScript
-    // .enableTypeScriptLoader()
+    .enableTypeScriptLoader()
 
     .enableReactPreset()
 
+    .enableForkedTypeScriptTypesChecking()
     // uncomment to get integrity="..." attributes on your script & link tags
     // requires WebpackEncoreBundle 1.4 or higher
     //.enableIntegrityHashes(Encore.isProduction())
@@ -61,8 +66,16 @@ Encore
     //.autoProvidejQuery()
 
     .addEntry('app', './assets/app.js')
-    .addEntry('prereserv', './assets/presreserv.js')
+    .addEntry('prereserv', './assets/presreserv.js');
 
+const config = Encore.getWebpackConfig();
+config.plugins.push(
+    new ForkTsCheckerWebpackPlugin({
+        typescript: {
+            configFile: './tsconfig.json'  // Chemin explicite vers tsconfig.json
+        }
+    })
+);
 //----------------Leaflet----------------
 //  .addEntry('leaflet', ['leaflet/dist/leaflet.css', 'leaflet/dist/leaflet.js']) // Ajout de Leaflet
 //  .autoProvideVariables({

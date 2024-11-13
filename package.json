@@ -1,18 +1,22 @@
 {
     "devDependencies": {
-        "@babel/core": "^7.17.0",
-        "@babel/preset-env": "^7.16.0",
-        "@babel/preset-react": "^7.24.1",
-        "@symfony/webpack-encore": "^4.6.1",
-        "core-js": "^3.23.0",
-        "react-scripts": "^5.0.1",
-        "regenerator-runtime": "^0.13.9",
-        "sass": "^1.77.2",
-        "sass-loader": "^14.2.1",
+        "@babel/core": "^7.25.8",
+        "@babel/preset-env": "^7.25.8",
+        "@babel/preset-react": "^7.25.7",
+        "@hotwired/stimulus": "^3.0.0",
+        "@symfony/stimulus-bridge": "^3.2.0",
+        "@symfony/ux-translator": "file:vendor/symfony/ux-translator/assets",
+        "@symfony/webpack-encore": "^5.0.1",
+        "core-js": "^3.38.1",
+        "fork-ts-checker-webpack-plugin": "^9.0.2",
+        "intl-messageformat": "^10.7.0",
+        "regenerator-runtime": "^0.14.1",
+        "sass": "^1.79.5",
+        "sass-loader": "^16.0.2",
         "ts-loader": "^9.5.1",
-        "typescript": "^4.9.5",
-        "webpack": "^5.91.0",
-        "webpack-cli": "^4.10.0",
+        "typescript": "^5.6.3",
+        "webpack": "^5.96.1",
+        "webpack-cli": "^5.1.4",
         "webpack-notifier": "^1.15.0"
     },
     "license": "UNLICENSED",
@@ -24,11 +28,18 @@
         "build": "encore production --progress"
     },
     "dependencies": {
-        "@demark-pro/react-booking-calendar": "^3.0.5",
+        "@demark-pro/react-booking-calendar": "^4.0.3",
+        "ajv-keywords": "^5.1.0",
+        "axios": "^1.7.7",
         "bootstrap": "^5.3.3",
+        "css-select": "^5.1.0",
         "leaflet": "^1.9.4",
+        "nth-check": "^2.1.1",
+        "postcss": "^8.4.47",
         "prop-types": "^15.8.1",
         "react": "^18.3.1",
-        "react-dom": "^18.3.1"
+        "react-dom": "^18.3.1",
+        "svgo": "^3.3.2",
+        "uuid": "^10.0.0"
     }
 }
