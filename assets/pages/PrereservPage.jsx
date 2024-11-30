@@ -276,6 +276,124 @@ const Prereserv = () => {
     setOpenGuide(!openGuide);
   };
 
+  const calculatePrice = (dates) => {
+    // Calculer le nombre de jours sélectionnés
+    const startDate = new Date(dates[0]);
+    const endDate = new Date(dates[dates.length - 1]);
+    const timeDiff = Math.abs(endDate - startDate);
+
+    // Convertir en jours
+    const numberOfDays = Math.ceil(timeDiff / (1000 * 60 * 60 * 24));
+
+    //conversion des boutons debut et fin
+    const startDay = startDate.getDay();
+    // console.log("start :", startDay)
+    const endDay = endDate.getDay();
+    // console.log("end :", endDay)
+
+    setMessageCalendar("");
+
+    // jours non possibles
+    const jourNonPossibleHs = [2, 3, 4, 5];
+    const jourNonPossiblePs = [0, 1, 2, 3, 4];
+
+    let totalPrice1 = 3000;
+    let totalPrice2 = 2000;
+    let totalPrice3 = 3800;
+    let totalPrice4 = 2850;
+    let totalPrice5 = 3600;
+
+    //constante pour les vacances hors saison
+    const specificStartDate = new Date(startDate.getFullYear(), 9, 22); // 22 octobre
+    const specificEndDate = new Date(startDate.getFullYear(), 10, 4); // 4 novembre
+
+    if (startDate >= specificStartDate && endDate <= specificEndDate) {
+      return totalPrice5;
+    }
+
+    //hors saison
+    if (![6, 7].includes(startDate.getMonth())) {
+      switch (true) {
+        case numberOfDays === 8 && startDay === 6 && endDay === 6:
+          console.log("prix", totalPrice1);
+          return totalPrice1;
+        //case 2 semaines
+        case numberOfDays === 15 && startDay === 6 && endDay === 6:
+          console.log("prix", totalPrice1 * 2);
+          return totalPrice1 * 2;
+        //case 4 premiers jours ou 3 derniers jours
+        case (startDay === 5 && endDay === 1) ||
+          (startDay === 1 && endDay === 5):
+          // console.log("prix", totalPrice2);
+          return totalPrice2;
+        case jourNonPossibleHs.includes(numberOfDays):
+        default:
+          resetCheckbox();
+          const messageCalendarTemplate = `
+             "vous devez choisir des dates comprenant : \n
+              - Une semaine complète : du samedi soir au Samedi matin  \n
+              - Les 4 premiers jours de la semaine : du Lundi soir au Vendredi matin \n
+              - Le week-end : du Vendredi soir au Lundi matin \n
+              - Pour plus de 2 semaines, veuillez nous contacter directement par email"
+          `;
+          setMessageCalendar(messageCalendarTemplate);
+      }
+    } else if ([6, 7].includes(startDate.getMonth())) {
+      //pleine saison
+      // console.log("pleine saison:", startDate.getMonth())
+
+      switch (true) {
+        //case 1 semaine
+        case numberOfDays === 8 && startDay === 6 && endDay === 6:
+          // console.log("prix", totalPrice3);
+          return totalPrice3;
+        //case 2 semaines
+        case numberOfDays === 15 && startDay === 6 && endDay === 6:
+          // console.log("prix", totalPrice3 * 2);
+          return totalPrice3 * 2;
+        //case 4 premiers jours ou 3 derniers jours
+        case (startDay === 5 && endDay === 1) ||
+          (startDay === 1 && endDay === 5):
+          return totalPrice4;
+
+        case jourNonPossiblePs.includes(numberOfDays):
+        default:
+          resetCheckbox();
+          setMessageCalendar(
+            // "vous devez choisir des dates comprenant une semaine complète \n" +
+            //  "- Du samedi soir au Samedi matin \n" +
+            "vous devez choisir des dates comprenant : \n" +
+              "- Une semaine complète : du samedi soir au Samedi matin  \n" +
+              "- Les 4 premiers jours de la semaine : du Lundi soir au Vendredi matin \n" +
+              "- Le week-end : du Vendredi soir au Lundi matin \n" +
+              "- Pour plus de 2 semaines, veuillez nous contacter directement par email"
+          );
+      }
+    }
+
+    return 0;
+  };
+
+  // selection des dates pour afficher le prix
+  const handleCalendarChange = (dates) => {
+    setSelectedDates(dates);
+    // console.log("dates:", dates)
+
+    const totalPrice = calculatePrice(dates); // Passer les dates sélectionnées à calculatePrice
+
+    if (openBreakfast && totalPrice) {
+      setPrice(totalPrice + totalPetitDej);
+    } else {
+      setPrice(totalPrice);
+    }
+
+    if (totalPrice) {
+      setDisabledOptionsAssurances(false);
+    } else {
+      setDisabledOptionsAssurances(true);
+    }
+  };
+
   // Evenement sur la Checkbox
   const handleChangePrixHt = (e) => {
     const isChecked = e.target.checked;

@@ -2,8 +2,18 @@
 
 {% block title %}Informations - tarifs, assurances, services de proximités et portfolio.
 {% endblock %}
+{% block title %}Informations - tarifs, assurances, services de proximités et portfolio.
+{% endblock %}
 
 {% block body %}
+	<main>
+		<div class="backgroundImageContainer">
+			<img src="{{ asset('img/informationsPage/informations.png') }}" alt="tourisme" class="backgroundImage" title="Photo logo informations" loading="eager"/>
+
+			<div class="buttonContainer">
+				{{ include('reservation/boutonReservation.twig') }}
+			</div>
+		</div>
 	<main>
 		<div class="backgroundImageContainer">
 			<img src="{{ asset('img/informationsPage/informations.png') }}" alt="tourisme" class="backgroundImage" title="Photo logo informations" loading="eager"/>
@@ -51,99 +61,85 @@
 							</p>
 						</article>
 
-						{#--------------basse saison---------------#}
-						<article class=" cadre p-2 my-3">
-							<b>
-								<u>Petites vacances + mois de mai :
-								</u>
-							</b>
-							<p>
-								- A la semaine :
-								<b>
-									3600€ TTC / 3000€ HT</b>
-							</p>
-							<p>
-								- Du vendredi soir au lundi matin (3 nuits) ou
-								<br/>
-								du lundi soir au vendredi matin (4 nuits):
-								<b>
-									2400€ TTC / 2000€ HT</b>
-							</p>
-						</article>
+                        {#--------------basse saison---------------#}
+                            <article class=" cadre p-2 my-3">
+                                <b>
+                                    <u>Petites vacances + mois de mai : </u>
+                                </b>
+                                <p>
+                                - A la semaine : <b> 3600€ TTC / 3000€ HT</b>
+                                </p>
+                                <p>
+                                - Du vendredi soir au lundi matin (3 nuits) ou
+                                <br /> du lundi soir au vendredi matin (4 nuits): <b> 2700€ TTC / 2250€ HT</b>
+                                </p>
+                            </article>
 
 
-						{#---------------pleine saison---------------#}
-						<article class="cadre p-2 my-3">
-							<b>
-								<u>Vacances d’été :</u>
-							</b>
-							<p>
-								- A la semaine :
-								<b>
-									3800€ TTC / 3167€ HT</b>
-							</p>
-							<p>
-								- Du vendredi soir au lundi matin (3 nuits) ou
-								<br/>
-								du lundi soir au vendredi matin (4 nuits) :
-								<b>
-									2550€ TTC / 2125 HT</b>
-							</p>
-						</article>
+                        {#---------------pleine saison---------------#}
+                            <article class="cadre p-2 my-3">
+                                <b>
+                                    <u>Vacances d’été :</u>
+                                </b>
+                                <p>
+                                - A la semaine : <b> 3800€ TTC / 3167€ HT</b>
+                                </p>
+                                 <p>
+                                    - Du vendredi soir au lundi matin (3 nuits) ou
+                                    <br /> du lundi soir au vendredi matin (4 nuits) : <b> 2850€ TTC / 2375 HT</b>
+                                </p>
+                            </article>
 
-						{#---------------Tarif dégressif---------------#}
-						<article class="cadre p-2 my-3 d-flex justify-content-center">
-							<b>
-								Tarif dégressif à partir de deux semaines. 																								
-								En dehors de toutes ces périodes, veuillez nous contacter.
-							</b>
-
-						</article>
-						{#---------------fin---------------#}
-
-					</div>
-				</div>
+                        {#---------------Tarif dégressif---------------#}
+                            <article class="cadre p-2 my-3 d-flex justify-content-center"> 
+                             <b> Tarif dégressif à partir de deux semaines </b>
+                            </article>
+                        {#---------------fin---------------#}
+                        
+                    </div>
+                </div>
+             
+               
 
 
-				{#---------------Assurance---------------#}
-				<div class="cadre .col-6 col-md-6 pt-2 mb-2">
-					<div class="d-flex justify-content-center">
-						<div>
-							<h3 class="d-flex justify-content-start" style="text-decoration:underline; mb-2">
-								Assurance / Garanties en cas de dommages
-							</h3>
-							<img src="{{ asset('img/informationsPage/assurance.png') }}" alt="" style="
-																																																																								                                    width: 10em;
-																																																																								                                    float: left;
-																																																																								                                    shape-outside: margin-box;
-																																																																								                                    margin: 0 20px 5px 0;
-																																																																								                                    border-radius: 50%
-																																																																								                                    "></img>
+    {#---------------Assurance---------------#}
+                <div class="cadre .col-6 col-md-6 pt-2 mb-2">
+                    <div class="d-flex justify-content-center">
+                        <div>
+                            <h3 class="d-flex justify-content-start" style="text-decoration:underline; mb-2">
+                            Assurance / Garanties en cas de dommages
+                            </h3>
+                            <img
+                                    src="{{ asset('img/informationsPage/assurance.png') }}"
+                                    alt=""
+                                    style="
+                                    width: 10em;
+                                    float: left;
+                                    shape-outside: margin-box;
+                                    margin: 0 20px 5px 0;
+                                    border-radius: 50%
+                                    "
+                            ></img>
 
-						<article class="mx-3">
-							<p>
-								<b>1</b>
-								- Pour valider la réservation, un chèque de caution de 2500€ servant de dépôt de garantie en cas de dommages est demandé.
-								<br/><b>2</b>
-								- En plus de cela, pour couvrir le montant des réparations supérieur au dépôt de garantie en cas de détérioration du gîte, il sera demandé aux résidents de fournir dès la réservation une attestation d'assurance villégiature (cette assurance couvre notamment les bris de vitres le cas échéant).
-																																																																								                                                Cette couverture d'assurance est inclus dans l'assurance du domicile de tout un chacun. Il suffit donc de demander cette attestation auprès de sa compagnie d'assurance...
-								<br/><b>3</b>
-								- Les questions relatives à la prise en charge des dommages seront traités dans les huit jours suivant l'établissement de l'état des lieux de sortie et de la remise des clés en fin de séjour et seront fonction de l'état du logement
-								<br/><b>4</b>
-								- Le locataire est obligé :
-								<br/>- de payer le loyer et les charges aux termes convenus
-								<br/>- d'user paisiblement des locaux loués en respectant leur destination contractuelle. Ceci induit notamment l'interdiction de générer des nuisances au voisinage, que ce soit par du tapage nocturne ou autre
-								<br/>- de répondre des dégradations ou des pertes survenues pendant la durée du contrat dans les locaux dont il a la jouissance exclusive
-								<br/>- de ne pas transformer les locaux et équipements loués
-								<br/>- d'être responsable de l'utilisation des dispositifs de sécurité destinés à protéger les usagers de la piscine et du hamac géant.
-								<br/>- Les enfants sont sous l'entière responsabilité des parents ou des représentants légaux
-								<br/><b>5</b>
-								- Le locataire sera accueilli par le bailleur ou son représentant afin d'établir un état des lieux d'entrée. A la fin du séjour, un état des lieux de sortie aura lieu
-							</p>
-						</article>
-					</div>
-				</div>
-			</div>
+                            <article class="mx-3">
+                            <p>
+                                <b>1</b> - Pour valider la réservation, un chèque de caution de 2500€ servant de dépôt de garantie en cas de dommages est demandé. 
+                                <br/><b>2</b> - En plus de cela, pour couvrir le montant des réparations supérieur au dépôt de garantie en cas de détérioration du gîte, il sera demandé aux résidents de fournir dès la réservation une attestation d'assurance villégiature (cette assurance couvre notamment les bris de vitres le cas échéant).
+                                                Cette couverture d'assurance est inclus dans l'assurance du domicile de tout un chacun. Il suffit donc de demander cette attestation auprès de sa compagnie d'assurance...
+                                <br/><b>3</b> - Les questions relatives à la prise en charge des dommages seront traités dans les huit jours suivant l'établissement de l'état des lieux de sortie et de la remise des clés en fin de séjour et seront fonction de l'état du logement
+                                <br/><b>4</b> - Le locataire est obligé :
+                                                <br/>- de payer le loyer et les charges aux termes convenus
+                                                <br/>- d'user paisiblement des locaux loués en respectant leur destination contractuelle. Ceci induit notamment l'interdiction de générer des nuisances au voisinage, que ce soit par du tapage nocturne ou autre
+                                                <br/>- de répondre des dégradations ou des pertes survenues pendant la durée du contrat dans les locaux dont il a la jouissance exclusive
+                                                <br/>- de ne pas transformer les locaux et équipements loués
+                                                <br/>- d'être responsable de l'utilisation des dispositifs de sécurité destinés à protéger les usagers de la piscine et du hamac géant.
+                                                <br/>- Les enfants sont sous l'entière responsabilité des parents ou des représentants légaux
+                                <br/><b>5</b> - Le locataire sera accueilli par le bailleur ou son représentant afin d'établir un état des lieux d'entrée. A la fin du séjour, un état des lieux de sortie aura lieu
+                            </p>
+                            </article>
+                        </div>
+                    </div>
+                </div>
 
 			{#---------------fin---------------#}
 		</div>
@@ -155,51 +151,54 @@
 		<div
 			class="row justify-content-around mx-1 my-2">
 
-			{#                {/*---------------Services de proximité---------------*/}#}
-			<div class="cadre .col-6 col-md-5 pt-2">
-				<div>
-					<h3 class="d-flex justify-content-start" style="text-decoration:underline;">
-						Services de Proximité
-					</h3>
-					<img src="{{ asset('img/informationsPage/proximite.png') }}" alt="" style="
-																																																						                                    width: 10em;
-																																																						                                    float: right;
-																																																						                                    shape-outside: margin-box;
-																																																						                                    margin: 0 20px 5px 0;
-																																																						                                    border-radius: 50%
-																																																						                                    "></img>
-				<article class="m-2">
-					<p>
-						Laissez-vous séduire par les délices culinaires de la région
-																																																						                                et savourez une cuisine authentique et raffinée. Explorez les
-																																																						                                marchés locaux où vous pourrez déguster des produits du
-																																																						                                terroir frais et savoureux, tels que les vins renommés de la
-																																																						                                région, les fromages artisanaux et les spécialités
-																																																						                                gastronomiques régionales. Vivez l'art de vivre à la française
-																																																						                                en vous attablant à de charmants bistrots ou en dégustant un
-																																																						                                pique-nique dans un cadre enchanteur.
-					</p>
-					<section class="cadre p-2 my-3">
-						<a href="https://ot-sommieres.com/marches">Marché de Sommières</a>- 12 min en voiture
-						<br/>
-						<a href="">Boulangerie ebiopi</a>- 5 min à pied
-						<br/>
-						<a href="">Pharmacie de Quissac</a>- 11 min en voiture
-						<br/>
-						<a href="https://www.carrefour.fr/magasin/market-villevieille">Carrefour Market Villevieille</a>- 10 min en voiture
-						<br/>
-						<a href="">Café Français</a>- 12 min en voiture
-						<br/>
-						<a href="https://www.chateaudepondres.fr/le-restaurant/">Château de Pondres
-						</a>- 9 min en voiture
-						<br/>
-						<a href="https://cafe-de-la-poste.net/">Café de la Poste</a>- 7 min en voiture
-					</section>
-				</article>
-				{#                            {/*---------------fin---------------*/}#}
-
-			</div>
-		</div>
+{#                {/*---------------Services de proximité---------------*/}#}
+                <div class="cadre .col-6 col-md-5 pt-2">
+                        <div>
+                            <h3 class="d-flex justify-content-start" style="text-decoration:underline;">
+                            Services de Proximité
+                            </h3>
+                            <img
+                                    src="{{ asset('img/informationsPage/proximite.png') }}"
+                                    alt=""
+                                    style="
+                                    width: 10em;
+                                    float: right;
+                                    shape-outside: margin-box;
+                                    margin: 0 20px 5px 0;
+                                    border-radius: 50%
+                                    "
+                            ></img>
+                            <article class="m-2">
+                                <p>
+                                Laissez-vous séduire par les délices culinaires de la région
+                                et savourez une cuisine authentique et raffinée. Explorez les
+                                marchés locaux où vous pourrez déguster des produits du
+                                terroir frais et savoureux, tels que les vins renommés de la
+                                région, les fromages artisanaux et les spécialités
+                                gastronomiques régionales. Vivez l'art de vivre à la française
+                                en vous attablant à de charmants bistrots ou en dégustant un
+                                pique-nique dans un cadre enchanteur.
+                                </p>
+                            <section class="cadre p-2 my-3">
+                                <a href="https://ot-sommieres.com/marches">Marché de Sommières</a>- 12 min en voiture
+                                <br/>
+                                <a href="">Boulangerie ebiopi</a>- 5 min à pied
+                                <br/>
+                                <a href="">Pharmacie de Quissac</a>- 11 min en voiture
+                                <br/>
+                                <a href="https://www.carrefour.fr/magasin/market-villevieille">Carrefour Market Villevieille</a>- 10 min en voiture
+                                <br/>
+                                <a href="">Café Français</a>- 12 min en voiture
+                                 <br/>
+                                <a href="https://www.chateaudepondres.fr/le-restaurant/">Château de Pondres </a>- 9 min en voiture
+                                 <br/>
+                                <a href="https://cafe-de-la-poste.net/">Café de la Poste</a>- 7 min en voiture
+                            </section>
+                            </article>
+{#                            {/*---------------fin---------------*/}#}
+                        
+                    </div>
+                </div>
 
 
 		{#                {/*---------------Galerie Photos---------------*/}#}
