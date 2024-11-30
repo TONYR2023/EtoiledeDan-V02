@@ -3,8 +3,9 @@ import Calendar from "@demark-pro/react-booking-calendar";
 
 const Prereserv = () => {
   const [selectedDates, setSelectedDates] = useState([]); //Etat pour selectionner les dates avec le range
+  const [displayedPrice, setDisplayedPrice] = useState(0);
 
-  const [price, setPrice] = useState(0); // État pour stocker le prix
+  const [price, setPrice] = useState(""); // État pour stocker le prix
   const [priceHT, setPriceHT] = useState(0); // Définir le prix HT comme état
   const [totalPetitDej, setTotalPetitDej] = useState(200);
   const prixDej = 25;
@@ -27,21 +28,210 @@ const Prereserv = () => {
     description: "",
   });
 
-  const increment = () => {
-    if (openBreakfast && nbrPersonne < 12) {
-      setNbrPersonne((prevNbrPersonne) => prevNbrPersonne + 1);
-      setTotalPetitDej((prevTotalPetitDej) => prevTotalPetitDej + prixDej);
-
-      setPrice((oldPrice) => oldPrice + prixDej);
+  // Fonction pour calculer le prix en fonction du nombres de jours
+  const calculatePrice = (dates) => {
+    if (!dates || dates.length < 2) {
+      return 0;
     }
+
+    // Calculer le nombre de jours sélectionnés
+    const startDate = new Date(dates[0]);
+    const endDate = new Date(dates[dates.length - 1]);
+    const timeDiff = Math.abs(endDate - startDate);
+
+    // Convertir en jours
+    const numberOfDays = Math.floor(timeDiff / (1000 * 60 * 60 * 24)) + 1;
+
+    //conversion des boutons debut et fin
+    const startDay = startDate.getDay();
+    const endDay = endDate.getDay();
+    console.log("Start Date:", startDate);
+    console.log("End Date:", endDate);
+    console.log("numberOfDays", numberOfDays);
+
+    setMessageCalendar("");
+
+    // Jours non valides pour la réservation (mardi, mercredi, jeudi, dimanche)
+    const joursNonValides = [2, 3, 4, 0]; // 0 = dimanche, 2 = mardi, 3 = mercredi, 4 = jeudi
+
+    // Nombres de jours non valides pour la réservation (1, 2, 3, 6, 7 jours)
+    const joursNonPossibles = [1, 2, 3, 6, 7];
+
+    // Vérification si le jour de début ou de fin est invalide
+    const isInvalidDay =
+      joursNonValides.includes(startDay) || joursNonValides.includes(endDay);
+
+    // Vérification si la durée de la réservation est invalide
+    const isInvalidDuration = joursNonPossibles.includes(numberOfDays);
+
+    // Si une des conditions est remplie, afficher le message d'erreur
+    if (isInvalidDay || isInvalidDuration) {
+      setMessageCalendar(
+        "Vous devez choisir des dates comprenant :\n" +
+          "- Une semaine complète (du samedi au samedi)\n" +
+          "- Les 4 premiers jours de la semaine (du lundi au vendredi)\n" +
+          "- Les 3 derniers jours de la semaine (du vendredi au lundi)\n" +
+          "- Tarif dégressif à partir de deux semaines.\n" +
+          "\n" +
+          "En dehors de toutes ces périodes:"
+      );
+      setPrice("");
+    } else {
+      setMessageCalendar("");
+    }
+
+    // Périodes de vacances
+    const periods = {
+      toussaint: {
+        start: new Date(startDate.getFullYear(), 9, 18), // 19 Octobre -1
+        end: new Date(endDate.getFullYear(), 10, 5), // 4 Novembre +1
+        priceOneWeek: 3600,
+        pricePartialWeek: 2400,
+      },
+      noel: {
+        start: new Date(startDate.getFullYear(), 11, 20), // 21 Décembre -1
+        end: new Date(endDate.getFullYear() + 1, 0, 5), // 4 Décembre +1
+        priceOneWeek: 3600,
+        pricePartialWeek: 2400,
+      },
+      fevrier: {
+        start: new Date(startDate.getFullYear(), 1, 7), // 8 fevrier
+        end: new Date(endDate.getFullYear(), 2, 11), // 10 mars
+        priceOneWeek: 3600,
+        pricePartialWeek: 2400,
+      },
+      paque: {
+        start: new Date(startDate.getFullYear(), 3, 4), // 4 avril
+        end: new Date(endDate.getFullYear(), 4, 6), // 5 mai
+        priceOneWeek: 3600,
+        pricePartialWeek: 2400,
+      },
+    };
+
+    // Vérification si la période est du 26 octobre au 2 novembre (Toussaint spécial)
+    const isToussaintSpecial =
+      startDate.getFullYear() === 2024 &&
+      startDate.getMonth() === 9 && // Mois d'octobre (0-indexé, donc 9 = octobre)
+      startDate.getDate() === 26 &&
+      endDate.getFullYear() === 2024 &&
+      endDate.getMonth() === 10 && // Mois de novembre (0-indexé, donc 10 = novembre)
+      endDate.getDate() === 2;
+
+    console.log("Start Date:", startDate);
+    console.log("End Date:", endDate);
+    console.log("isToussaintSpecial:", isToussaintSpecial);
+
+    if (isToussaintSpecial) {
+      if (numberOfDays === 9 && startDay === 6 && endDay === 6) {
+        console.log("Prix semaine spéciale Toussaint: 3600");
+        return 3600;
+      }
+    }
+
+    // Boucle sur les périodes pour appliquer les prix
+    for (const [periodName, period] of Object.entries(periods)) {
+      if (startDate >= period.start && endDate <= period.end) {
+        console.log(`Période sélectionnée : ${periodName}`);
+
+        if (numberOfDays === 8 && startDay === 6 && endDay === 6) {
+          return period.priceOneWeek;
+          console.log(`Prix ${periodName} une semaine:`, price);
+        } else if (
+          (startDay === 1 && endDay === 5) ||
+          (startDay === 5 && endDay === 1)
+        ) {
+          return period.pricePartialWeek;
+          console.log(`Prix ${periodName} partielle:`, price);
+        } else if (jourNonPossiblePs.includes(numberOfDays)) {
+          return (
+            "Vous devez choisir des dates comprenant :\n" +
+            "- Une semaine complète (du samedi au samedi)\n" +
+            "- Les 4 premiers jours de la semaine (du lundi au vendredi)\n" +
+            "- Les 3 derniers jours de la semaine (du vendredi au lundi)\n" +
+            "- Tarif dégressif à partir de deux semaines.\n" +
+            "En dehors de toutes ces périodes, veuillez nous contacter. "
+          );
+        } else {
+          return 0;
+        }
+      }
+    }
+
+    // Hors saison
+    if (![6, 7].includes(startDate.getMonth())) {
+      if (numberOfDays === 8 && startDay === 6 && endDay === 6) {
+        const priceOffSeasonOneWeek = 3000;
+        console.log("Prix une semaine hors saison:", priceOffSeasonOneWeek);
+        return priceOffSeasonOneWeek;
+      } else if (
+        (startDay === 1 && endDay === 5) ||
+        (startDay === 5 && endDay === 1)
+      ) {
+        const priceOffSeasonPartialWeek = 2000;
+        console.log("Prix partielle hors saison:", priceOffSeasonPartialWeek);
+        return priceOffSeasonPartialWeek;
+      } else if (jourNonPossibleHs.includes(numberOfDays)) {
+        return (
+          "Vous devez choisir des dates comprenant :\n" +
+          "- Une semaine complète (du samedi au samedi)\n" +
+          "- Les 4 premiers jours de la semaine (du lundi au vendredi)\n" +
+          "- Les 3 derniers jours de la semaine (du vendredi au lundi)\n" +
+          "- Pour 2 semaines et plus tarif DEGRESSIF, veuillez nous contacter directement par email"
+        );
+      } else {
+        return 0;
+      }
+    }
+
+    // Pleine saison
+    else if ([6, 7].includes(startDate.getMonth())) {
+      console.log("Pleine saison:", startDate.getMonth());
+      if (numberOfDays === 8 && startDay === 6 && endDay === 6) {
+        const priceFullSeasonOneWeek = 3800;
+        console.log("Prix pleine saison une semaine:", priceFullSeasonOneWeek);
+        return priceFullSeasonOneWeek;
+      } else if (
+        (startDay === 1 && endDay === 5) ||
+        (startDay === 5 && endDay === 1)
+      ) {
+        const priceFullSeasonPartialWeek = 2550;
+        console.log(
+          "Prix pleine saison partielle:",
+          priceFullSeasonPartialWeek
+        );
+        return priceFullSeasonPartialWeek;
+      } else if (jourNonPossiblePs.includes(numberOfDays)) {
+        return (
+          "Vous devez choisir des dates comprenant :\n" +
+          "- Une semaine complète (du samedi au samedi)\n" +
+          "- Les 4 premiers jours de la semaine (du lundi au vendredi)\n" +
+          "- Les 3 derniers jours de la semaine (du vendredi au lundi)"
+        );
+      } else {
+        return "nous contacter";
+      }
+    }
+    return 0;
   };
 
-  const decrement = () => {
-    if (openBreakfast && nbrPersonne > 8) {
-      setNbrPersonne((prevNbrPersonne) => prevNbrPersonne - 1);
-      setTotalPetitDej((prevTotalPetitDej) => prevTotalPetitDej - prixDej);
+  // selection des dates pour afficher le prix
+  const handleCalendarChange = (dates) => {
+    setSelectedDates(dates);
+    // console.log("dates:", dates)
 
-      setPrice((oldPrice) => oldPrice - prixDej);
+    const totalPrice = calculatePrice(dates); // Passer les dates sélectionnées à calculatePrice
+    console.log("Total Price:", totalPrice);
+
+    if (openBreakfast && totalPrice) {
+      setPrice(totalPrice + totalPetitDej);
+    } else {
+      setPrice(totalPrice);
+    }
+
+    if (totalPrice) {
+      setDisabledOptionsAssurances(false);
+    } else {
+      setDisabledOptionsAssurances(true);
     }
   };
 
@@ -62,118 +252,28 @@ const Prereserv = () => {
     }
   };
 
+  // fonction pour incrementer et decrementer le breakfast
+  const increment = () => {
+    if (openBreakfast && nbrPersonne < 12) {
+      setNbrPersonne((prevNbrPersonne) => prevNbrPersonne + 1);
+      setTotalPetitDej((prevTotalPetitDej) => prevTotalPetitDej + prixDej);
+
+      setPrice((oldPrice) => oldPrice + prixDej);
+    }
+  };
+
+  const decrement = () => {
+    if (openBreakfast && nbrPersonne > 8) {
+      setNbrPersonne((prevNbrPersonne) => prevNbrPersonne - 1);
+      setTotalPetitDej((prevTotalPetitDej) => prevTotalPetitDej - prixDej);
+
+      setPrice((oldPrice) => oldPrice - prixDej);
+    }
+  };
+
   // Fonction pour ouvrir ou fermer la checkbox Visite Guidée
   const handleCheckboxGuide = () => {
     setOpenGuide(!openGuide);
-  };
-
-  const calculatePrice = (dates) => {
-    // Calculer le nombre de jours sélectionnés
-    const startDate = new Date(dates[0]);
-    const endDate = new Date(dates[dates.length - 1]);
-    const timeDiff = Math.abs(endDate - startDate);
-
-    // Convertir en jours
-    const numberOfDays = Math.ceil(timeDiff / (1000 * 60 * 60 * 24));
-
-    //conversion des boutons debut et fin
-    const startDay = startDate.getDay();
-    // console.log("start :", startDay)
-    const endDay = endDate.getDay();
-    // console.log("end :", endDay)
-
-    setMessageCalendar("");
-
-    // jours non possibles
-    const jourNonPossibleHs = [2, 3, , 4, 5];
-    const jourNonPossiblePs = [0, 1, 2, 3, 4];
-
-    let totalPrice1 = 3000;
-    const totalPrice2 = 2000;
-    let totalPrice3 = 3800;
-    let totalPrice4 = 2850;
-
-    //hors saison
-    if (![6, 7].includes(startDate.getMonth())) {
-      switch (true) {
-        case numberOfDays === 8 && startDay === 6 && endDay === 6:
-          console.log("prix", totalPrice1);
-          return totalPrice1;
-        //case 2 semaines
-        case numberOfDays === 15 && startDay === 6 && endDay === 6:
-          console.log("prix", totalPrice1 * 2);
-          return totalPrice1 * 2;
-        //case 4 premiers jours ou 3 derniers jours
-        case (startDay === 5 && endDay === 1) ||
-          (startDay === 1 && endDay === 5):
-          // console.log("prix", totalPrice2);
-          return totalPrice2;
-        case jourNonPossibleHs.includes(numberOfDays):
-        default:
-          resetCheckbox();
-          setMessageCalendar(messageCalendarTemplate);
-
-          const messageCalendarTemplate = `
-            Vous devez choisir des dates comprenant :
-              - Une semaine complète : du samedi soir au Samedi matin
-              - Les 4 premiers jours de la semaine : du Lundi soir au Vendredi matin
-              - Le week-end : du Vendredi soir au Lundi matin
-          `;
-      }
-    } else if ([6, 7].includes(startDate.getMonth())) {
-      //pleine saison
-      // console.log("pleine saison:", startDate.getMonth())
-
-      switch (true) {
-        //case 1 semaine
-        case numberOfDays === 8 && startDay === 6 && endDay === 6:
-          // console.log("prix", totalPrice3);
-          return totalPrice3;
-        //case 2 semaines
-        case numberOfDays === 15 && startDay === 6 && endDay === 6:
-          // console.log("prix", totalPrice3 * 2);
-          return totalPrice3 * 2;
-        //case 4 premiers jours ou 3 derniers jours
-        case (startDay === 5 && endDay === 1) ||
-          (startDay === 1 && endDay === 5):
-          return totalPrice4;
-
-        case jourNonPossiblePs.includes(numberOfDays):
-        default:
-          resetCheckbox();
-          setMessageCalendar(
-            // "vous devez choisir des dates comprenant une semaine complète \n" +
-              //  "- Du samedi soir au Samedi matin \n" +
-              "vous devez choisir des dates comprenant : \n" +
-              "- Une semaine complète : du samedi soir au Samedi matin  \n" +
-              "- Les 4 premiers jours de la semaine : du Lundi soir au Vendredi matin \n" +
-              "- Le week-end : du Vendredi soir au Lundi matin "+
-              "- Pour plus de 2 semaines, veuillez nous contacter directement par email"
-          );
-      }
-    }
-
-    return 0;
-  };
-
-  // selection des dates pour afficher le prix
-  const handleCalendarChange = (dates) => {
-    setSelectedDates(dates);
-    // console.log("dates:", dates)
-
-    const totalPrice = calculatePrice(dates); // Passer les dates sélectionnées à calculatePrice
-
-    if (openBreakfast && totalPrice) {
-      setPrice(totalPrice + totalPetitDej);
-    } else {
-      setPrice(totalPrice);
-    }
-
-    if (totalPrice) {
-      setDisabledOptionsAssurances(false);
-    } else {
-      setDisabledOptionsAssurances(true);
-    }
   };
 
   // Evenement sur la Checkbox
@@ -208,6 +308,7 @@ const Prereserv = () => {
     resetCheckbox();
     setMessageCalendar("");
     setMessageGeneral("");
+    setPrice("");
   };
 
   const validateNom = (nom) => {
@@ -347,12 +448,6 @@ const Prereserv = () => {
             />
           </div>
 
-          {messageCalendar.length > 0 && (
-            <div className="p-3 mb-3 mt-3 text-bg-danger rounded-3">
-              {messageCalendar}
-            </div>
-          )}
-
           {/*------button reinitialisation calendrier-------*/}
           <div className="d-flex justify-content-center">
             <button
@@ -363,6 +458,25 @@ const Prereserv = () => {
               Réinitialiser le calendrier
             </button>
           </div>
+
+          {/*------Message d'erreur calendrier-------*/}
+          {messageCalendar.length > 0 && (
+            <div className="p-3 m-3 text-bg-danger rounded-3">
+              {messageCalendar.split("\n").map((line, index) => (
+                <span key={index}>
+                  {line}
+                  <br /> {/* Saut de ligne */}
+                </span>
+              ))}
+              <div className="d-flex justify-content-center">
+                <button type="button" className="btn btn-light m-1">
+                  <a href="/contact" style={{ textDecoration: "none" }}>
+                    Nous contacter
+                  </a>
+                </button>
+              </div>
+            </div>
+          )}
         </div>
 
         {/*------------------bloc2----------------*/}

@@ -3,3 +3,23 @@ controllers:
         path: ../src/Controller/
         namespace: App\Controller
     type: attribute
+
+accueil:
+    path: /{_locale}/
+    controller: App\Controller\AccueilController::index
+    requirements:
+        _locale: 'fr|en' # Cela spécifie que seules ces langues sont valides
+    defaults:
+        _locale: 'fr'  # Définit 'fr' comme langue par défaut
+
+app_home_redirect:
+    path: /
+    controller: App\Controller\AccueilController::redirectToDefaultLanguage
+
+
+# config/routes.yaml
+switch_language:
+    path: /switch-language/{_locale}
+    controller: App\Controller\LanguageController::switchLanguage
+    requirements:
+        _locale: 'en|fr'  # Langues acceptées
