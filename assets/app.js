@@ -1,3 +1,4 @@
+import './bootstrap.js';
 import './styles/app.scss';
 import './styles/_backgroundImage.scss'
 import './styles/_carousel.scss'

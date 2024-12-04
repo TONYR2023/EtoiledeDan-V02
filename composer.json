@@ -19,9 +19,11 @@
         "symfony/mailer": "6.4.*",
         "symfony/runtime": "6.4.*",
         "symfony/security-bundle": "6.4.*",
+        "symfony/stimulus-bundle": "^2.22",
         "symfony/twig-bundle": "6.4.*",
+        "symfony/ux-translator": "^2.22",
         "symfony/validator": "6.4.*",
-        "symfony/webpack-encore-bundle": "^2.1",
+        "symfony/webpack-encore-bundle": "^2.2",
         "symfony/yaml": "6.4.*",
         "twig/extra-bundle": "^3.10"
     },
