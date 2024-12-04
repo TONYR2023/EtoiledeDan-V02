@@ -28,12 +28,6 @@ const Prereserv = () => {
     description: "",
   });
 
-  // Fonction pour calculer le prix en fonction du nombres de jours
-  const calculatePrice = (dates) => {
-    if (!dates || dates.length < 2) {
-      return 0;
-    }
-
     // Calculer le nombre de jours sélectionnés
     const startDate = new Date(dates[0]);
     const endDate = new Date(dates[dates.length - 1]);
@@ -275,7 +269,12 @@ const Prereserv = () => {
   const handleCheckboxGuide = () => {
     setOpenGuide(!openGuide);
   };
-
+  
+  // Fonction pour calculer le prix en fonction du nombres de jours
+  const calculatePrice = (dates) => {
+    if (!dates || dates.length < 2) {
+      return 0;
+    }
   const calculatePrice = (dates) => {
     // Calculer le nombre de jours sélectionnés
     const startDate = new Date(dates[0]);
