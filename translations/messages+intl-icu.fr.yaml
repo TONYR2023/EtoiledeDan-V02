@@ -6,6 +6,7 @@ navbar:
     informations : "informations"
     magazine: "Magazine"
 footer:
+<<<<<<< HEAD
     about: "A propos"
     legalnotices: "Mentions légales"
     contactpage: "Contact Page"
@@ -64,3 +65,10 @@ reservation :
 
 
        
+=======
+
+button:
+    more: "en savoir plus"
+homepage:
+    text: "Entre Cévennes et Camargue, venez profiter de notre gîte familial pour 12 personnes d’une superficie de 260 m2, de ses 4 chambres dont une pour les Personnes à Mobilité Réduite(PMR). Vous disposerez de sa piscine couverte et chauffée toute l’année, de son jacuzzi, de sa salle de jeux avec baby-foot , borne d’arcarde et billard. Venez vous détendre sur le hamac géant et dans le grand jardin arboré de 2500 m2 disposant de son barbecue, son boulodrome et ses transats."
+>>>>>>> 934c314924fad945bb73f051126fbd4564a29d9c

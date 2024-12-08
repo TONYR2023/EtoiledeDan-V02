@@ -13,6 +13,7 @@ setLocaleFallbacks(localeFallbacks);
 
 export { trans };
 
+<<<<<<< HEAD
 export * from '../var/translations';
 
 
@@ -21,3 +22,6 @@ import { setLocale, getLocale, trans } from '@symfony/ux-translator';
 console.log('Current locale:', getLocale());
 // Définir une nouvelle locale
 setLocale('fr');
+=======
+export * from '../var/translations';
+>>>>>>> 934c314924fad945bb73f051126fbd4564a29d9c

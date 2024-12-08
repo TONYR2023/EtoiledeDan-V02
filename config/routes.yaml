@@ -16,11 +16,14 @@ app_home_redirect:
     path: /
     controller: App\Controller\AccueilController::redirectToDefaultLanguage
 
+<<<<<<< HEAD
 app_reservation:
     path: /{_locale}/reservation
     controller: App\Controller\ReservationController::index
     requirements:
         _locale: en|fr
+=======
+>>>>>>> 934c314924fad945bb73f051126fbd4564a29d9c
 
 # config/routes.yaml
 switch_language:

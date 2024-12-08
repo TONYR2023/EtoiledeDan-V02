@@ -1,7 +1,10 @@
 framework:
     default_locale: fr
     translator:
+<<<<<<< HEAD
         enabled: true
+=======
+>>>>>>> 934c314924fad945bb73f051126fbd4564a29d9c
         default_path: '%kernel.project_dir%/translations'
         fallbacks:
             - 'fr'

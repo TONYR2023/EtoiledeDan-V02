@@ -65,15 +65,15 @@
     
     </div>
 
-    <script>
-        function togglePhoneNumbers() {
-            var phoneNumbers = document.getElementById('phoneNumbers');
-            if (phoneNumbers.style.display === 'none') {
-                phoneNumbers.style.display = 'inline';
-            } else {
-                phoneNumbers.style.display = 'none';
-            }
-        }
+			<script>
+				function togglePhoneNumbers() {
+var phoneNumbers = document.getElementById('phoneNumbers');
+if (phoneNumbers.style.display === 'none') {
+phoneNumbers.style.display = 'inline';
+} else {
+phoneNumbers.style.display = 'none';
+}
+}
 
         function toggleContact() {
             var contactButton = document.getElementById('contactButton');
@@ -85,6 +85,7 @@
         }
     </script>
 
+<<<<<<< HEAD
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="{{ path('accueil') }}">
@@ -96,11 +97,25 @@
             <div class="collapse navbar-collapse " id="navbarSupportedContent">
                 <ul class="navbar-nav navbar-light ms-auto">
                   <li>
+=======
+			<nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+				<div class="container-fluid">
+					<a class="navbar-brand" href="{{ path('accueil', { '_locale': app.request.locale }) }}">
+						<img class="logo-edd" src="{{ asset('img/logo.png') }}" alt="Logo 'L étoile de Dan' - retour accueil"/>
+					</a>
+					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="collapse navbar-collapse " id="navbarSupportedContent">
+						<ul class="navbar-nav navbar-light ms-auto">
+							<li>
+>>>>>>> 934c314924fad945bb73f051126fbd4564a29d9c
 								<a class="nav-link" href="{{ path('accueil', { '_locale': app.request.locale }) }}">
 									<span>
 										{{ 'navbar.home' | trans }}</span>
 								</a>
 							</li>
+<<<<<<< HEAD
                     <li>
                         <a class="nav-link" href="{{ path('gite', { '_locale': app.request.locale }) }}">
                             <span>{{ 'navbar.gite' | trans }}</span>
@@ -131,12 +146,49 @@
         </div>
     </nav>
 </header>
+=======
+							<li>
+								<a class="nav-link" href="{{ path('gite', { '_locale': app.request.locale }) }}">
+									<span>{{ 'navbar.gite' | trans }}</span>
+>>>>>>> 934c314924fad945bb73f051126fbd4564a29d9c
 
-<div class="visually-hidden">
-    <h1 class="text-center">L'Étoile de Dan</h1>
-</div>
+								</a>
+							</li>
+							<li>
+								<a class="nav-link" href="{{ path('prestations', { '_locale': app.request.locale }) }}">
+									<span>{{ 'navbar.prestation' | trans }}</span>
 
-{% block body %}{% endblock %}
+								</a>
+							</li>
+							<li>
+								<a class="nav-link" href="{{ path('tourisme', { '_locale': app.request.locale }) }}">
+									<span>{{ 'navbar.tourism' | trans }}</span>
+
+								</a>
+							</li>
+							<li>
+								<a class="nav-link" href="{{ path('informations', { '_locale': app.request.locale }) }}">
+									<span>{{ 'navbar.informations' | trans }}</span>
+
+								</a>
+							</li>
+							<li>
+								<a class="nav-link" href="{{ path('magazine', { '_locale': app.request.locale }) }}">
+									<span>{{ 'navbar.magazine' | trans }}</span>
+
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</header>
+
+		<div class="visually-hidden">
+			<h1 class="text-center">L'Étoile de Dan</h1>
+		</div>
+
+		{% block body %}{% endblock %}
 
 <footer class="footer">
     <div class="container">
@@ -227,6 +279,7 @@
                 </ul>
             </div>
 
+<<<<<<< HEAD
             {% if app.user %}
                 <div>
                     <h2>Admin</h2>
@@ -243,4 +296,28 @@
 </footer>
 
 </body>
+=======
+					{% if app.user %}
+						<div>
+							<h2>Admin</h2>
+							<ul>
+								<li>
+									<a href="{{ path('app_booked_index') }}">Réservation</a>
+								</li>
+								<li>
+									<a href="{{ path('app_logout') }}">Déconnexion</a>
+								</li>
+								<li><hr></li>
+								<li>
+									<a href="{{ path('cache-clear') }}">Pour Anthony cache clear</a>
+								</li>
+							</ul>
+						</div>
+					{% endif %}
+				</div>
+			</div>
+		</footer>
+	</body>
+>>>>>>> 934c314924fad945bb73f051126fbd4564a29d9c
 </html>
+
