@@ -1,23 +1,18 @@
-<<<<<<< HEAD
-
 // Importer le JS de Bootstrap
 import 'bootstrap';
 
 // Importer le CSS de Bootstrap (au cas où vous l'auriez besoin ici aussi)
 import 'bootstrap/dist/css/bootstrap.css';
 
-=======
-import './bootstrap.js';
->>>>>>> 934c314924fad945bb73f051126fbd4564a29d9c
 import './styles/app.scss';
-import './styles/_backgroundImage.scss'
-import './styles/_carousel.scss'
+import './styles/_backgroundImage.scss';
+import './styles/_carousel.scss';
 // import './styles/_custom.scss'
-import './styles/_footer.scss'
-import './styles/_header.scss'
-import './styles/_options.scss'
-import './styles/_preReserv.scss'
-import './styles/_prestations.scss'
+import './styles/_footer.scss';
+import './styles/_header.scss';
+import './styles/_options.scss';
+import './styles/_preReserv.scss';
+import './styles/_prestations.scss';
 
 // import './bootstrap'
 require('bootstrap')
