@@ -97,7 +97,7 @@
             </div>
         </div>
 
-        <h2 class="mt-2">Notre Gîte</h2>
+        <h2 class="mt-2">{{ 'navbar.gite' | trans }}</h2>
         <div class="d-flex justify-content-center">
             <hr class="separator"/>
         </div>
@@ -111,7 +111,7 @@
                 {# ------------------La maison---------------- #}
                 <div class="cadre col-md-5 p-4 my-2">
                     <h3 class="d-flex justify-content-start" style="text-decoration:underline;">
-                        La Maison    
+                        {{ 'gite.house' | trans }}   
                     </h3>
                        
                        
@@ -122,7 +122,7 @@
                         <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1.6em" width="1.6em" xmlns="http://www.w3.org/2000/svg">
                             <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M384 240H96V136a40.12 40.12 0 0 1 40-40h240a40.12 40.12 0 0 1 40 40v104zM48 416V304a64.19 64.19 0 0 1 64-64h288a64.19 64.19 0 0 1 64 64v112"></path>
                             <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M48 416v-8a24.07 24.07 0 0 1 24-24h368a24.07 24.07 0 0 1 24 24v8M112 240v-16a32.09 32.09 0 0 1 32-32h80a32.09 32.09 0 0 1 32 32v16m0 0v-16a32.09 32.09 0 0 1 32-32h80a32.09 32.09 0 0 1 32 32v16"></path>
-                        </svg> 4 Chambres</span>
+                        </svg> 4 {{ 'gite.icons.room' | trans }}   </span>
 
                         <!-- Deuxième icône SVG  / SALLES DE BAINS-->
                          <span>
@@ -133,14 +133,14 @@
                             <path d="M56,104V52a20,20,0,0,1,40,0" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="12"/>
                             <rect x="136" y="96" width="64" height="48" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="12"/>
                             <path d="M200,104h32a8,8,0,0,1,8,8v32a48,48,0,0,1-48,48H64a48,48,0,0,1-48-48V112a8,8,0,0,1,8-8H136" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="12"/>
-                        </svg> 3 Salles de bains</span>
+                        </svg> 3 {{ 'gite.icons.bathrooms' | trans }}</span>
 
                         <!-- Troisième icône SVG / PERSONNES-->
                        <span>
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" height="1.6em" width="1.6em" class="size-6">
                             <path fill-rule="evenodd" d="M8.25 6.75a3.75 3.75 0 1 1 7.5 0 3.75 3.75 0 0 1-7.5 0ZM15.75 9.75a3 3 0 1 1 6 0 3 3 0 0 1-6 0ZM2.25 9.75a3 3 0 1 1 6 0 3 3 0 0 1-6 0ZM6.31 15.117A6.745 6.745 0 0 1 12 12a6.745 6.745 0 0 1 6.709 7.498.75.75 0 0 1-.372.568A12.696 12.696 0 0 1 12 21.75c-2.305 0-4.47-.612-6.337-1.684a.75.75 0 0 1-.372-.568 6.787 6.787 0 0 1 1.019-4.38Z" clip-rule="evenodd"/>
                             <path d="M5.082 14.254a8.287 8.287 0 0 0-1.308 5.135 9.687 9.687 0 0 1-1.764-.44l-.115-.04a.563.563 0 0 1-.373-.487l-.01-.121a3.75 3.75 0 0 1 3.57-4.047ZM20.226 19.389a8.287 8.287 0 0 0-1.308-5.135 3.75 3.75 0 0 1 3.57 4.047l-.01.121a.563.563 0 0 1-.373.486l-.115.04c-.567.2-1.156.349-1.764.441Z"/>
-                        </svg> 12 personnes</span>
+                        </svg> 12 {{ 'gite.icons.peoples' | trans }}</span>
                     </section>
 
                     {# ------------------Les icones en + --------------- #}
@@ -150,14 +150,14 @@
                                     <path fill="none" d="M0 0h24v24H0V0z"></path>
                                     <circle cx="12" cy="4" r="2"></circle>
                                     <path d="M19 13v-2c-1.54.02-3.09-.75-4.07-1.83l-1.29-1.43c-.17-.19-.38-.34-.61-.45-.01 0-.01-.01-.02-.01H13c-.35-.2-.75-.3-1.19-.26C10.76 7.11 10 8.04 10 9.09V15c0 1.1.9 2 2 2h5v5h2v-5.5c0-1.1-.9-2-2-2h-3v-3.45c1.29 1.07 3.25 1.94 5 1.95zm-9 7c-1.66 0-3-1.34-3-3 0-1.31.84-2.41 2-2.83V12.1a5 5 0 1 0 5.9 5.9h-2.07c-.41 1.16-1.52 2-2.83 2z"></path>
-                                </svg> PMR</span>
+                                </svg>{{ 'gite.icons.prm' | trans }}</span>
 
                                 {# ------------------PISCINE--------------- #}
                                 <span><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1.6em" width="1.6em" xmlns="http://www.w3.org/2000/svg">
                                     <path fill="none" d="M0 0h24v24H0V0z"></path>
                                     <path d="m10 8-3.25 3.25c.31.12.56.27.77.39.37.23.59.36 1.15.36s.78-.13 1.15-.36c.46-.27 1.08-.64 2.19-.64s1.73.37 2.18.64c.37.22.6.36 1.15.36.55 0 .78-.13 1.15-.36.12-.07.26-.15.41-.23L10.48 5C8.93 3.45 7.5 2.99 5 3v2.5c1.82-.01 2.89.39 4 1.5l1 1zm12 8.5h-.02.02zm-16.65-1c.55 0 .78.14 1.15.36.45.27 1.07.64 2.18.64s1.73-.37 2.18-.64c.37-.23.59-.36 1.15-.36.55 0 .78.14 1.15.36.45.27 1.07.64 2.18.64s1.73-.37 2.18-.64c.37-.23.59-.36 1.15-.36.55 0 .78.14 1.15.36.45.27 1.06.63 2.16.64v-2c-.55 0-.78-.14-1.15-.36-.45-.27-1.07-.64-2.18-.64s-1.73.37-2.18.64c-.37.23-.6.36-1.15.36s-.78-.14-1.15-.36c-.45-.27-1.07-.64-2.18-.64s-1.73.37-2.18.64c-.37.23-.59.36-1.15.36-.55 0-.78-.14-1.15-.36-.45-.27-1.07-.64-2.18-.64s-1.73.37-2.18.64c-.37.23-.59.36-1.15.36v2c1.11 0 1.73-.37 2.2-.64.37-.23.6-.36 1.15-.36zM18.67 18c-1.11 0-1.73.37-2.18.64-.37.23-.6.36-1.15.36-.55 0-.78-.14-1.15-.36-.45-.27-1.07-.64-2.18-.64s-1.73.37-2.19.64c-.37.23-.59.36-1.15.36s-.78-.13-1.15-.36c-.45-.27-1.07-.64-2.18-.64s-1.73.37-2.19.64c-.37.23-.59.36-1.15.36v2c1.11 0 1.73-.37 2.19-.64.37-.23.6-.36 1.15-.36.55 0 .78.13 1.15.36.45.27 1.07.64 2.18.64s1.73-.37 2.19-.64c.37-.23.59-.36 1.15-.36.55 0 .78.14 1.15.36.45.27 1.07.64 2.18.64s1.72-.37 2.18-.64c.37-.23.59-.36 1.15-.36.55 0 .78.14 1.15.36.45.27 1.07.64 2.18.64v-2c-.56 0-.78-.13-1.15-.36-.45-.27-1.07-.64-2.18-.64z"></path>
                                     <circle cx="16.5" cy="5.5" r="2.5"></circle>
-                                </svg> Piscine intérieure</span>
+                                </svg>{{ 'gite.icons.pool' | trans }}</span>
 
                                 {# ------------------JEUX---------------  #}
                                  <span><svg stroke="currentColor" fill="none" stroke-width="0" viewBox="0 0 24 24" height="2em" width="2em" xmlns="http://www.w3.org/2000/svg">
@@ -167,14 +167,14 @@
                                     <path d="M16.1766 13.4142C16.5671 13.0237 17.2003 13.0237 17.5908 13.4142C17.9813 13.8048 17.9813 14.4379 17.5908 14.8284C17.2003 15.219 16.5671 15.219 16.1766 14.8284C15.7861 14.4379 15.7861 13.8048 16.1766 13.4142Z" fill="currentColor"></path>
                                     <path d="M6 13H4V11H6V9H8V11H10V13H8V15H6V13Z" fill="currentColor"></path>
                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M7 5C3.13401 5 0 8.13401 0 12C0 15.866 3.13401 19 7 19H17C20.866 19 24 15.866 24 12C24 8.13401 20.866 5 17 5H7ZM17 7H7C4.23858 7 2 9.23858 2 12C2 14.7614 4.23858 17 7 17H17C19.7614 17 22 14.7614 22 12C22 9.23858 19.7614 7 17 7Z" fill="currentColor"></path>
-                                </svg> Salle de jeux</span>
+                                </svg>{{ 'gite.icons.games' | trans }}</span>
 
                                
 
                                  {# ------------------WIFI--------------- #}
                                 <span><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 640 512" height="1.6em" width="1.6em" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M634.91 154.88C457.74-8.99 182.19-8.93 5.09 154.88c-6.66 6.16-6.79 16.59-.35 22.98l34.24 33.97c6.14 6.1 16.02 6.23 22.4.38 145.92-133.68 371.3-133.71 517.25 0 6.38 5.85 16.26 5.71 22.4-.38l34.24-33.97c6.43-6.39 6.3-16.82-.36-22.98zM320 352c-35.35 0-64 28.65-64 64s28.65 64 64 64 64-28.65 64-64-28.65-64-64-64zm202.67-83.59c-115.26-101.93-290.21-101.82-405.34 0-6.9 6.1-7.12 16.69-.57 23.15l34.44 33.99c6 5.92 15.66 6.32 22.05.8 83.95-72.57 209.74-72.41 293.49 0 6.39 5.52 16.05 5.13 22.05-.8l34.44-33.99c6.56-6.46 6.33-17.06-.56-23.15z"></path>
-                                </svg> WIFI Gratuit</span>
+                                </svg>{{ 'gite.icons.wifi' | trans }}</span>
 
                                  {# ------------------CUISINE--------------- #}
                                     <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 122.88 102.18" fill="currentColor" height="1.6em" width="1.6em" style="enable-background:new 0 0 122.88 102.18" xml:space="preserve">
@@ -182,7 +182,7 @@
                                            <path d="M0,0h119.01c0.47,0,0.92,0.09,1.33,0.27c0.58,0.25,1.67,1.34,1.9,1.91c0.17,0.41,0.27,0.86,0.27,1.33v23.72 c0,0.47-0.09,0.92-0.27,1.34c-0.18,0.43-0.44,0.81-0.76,1.14l-0.04,0.03c-0.32,0.31-0.69,0.56-1.1,0.73 c-0.41,0.17-0.86,0.27-1.33,0.27H70.58c-0.15,0-0.26-0.12-0.26-0.26V4.13H32.58v6.89L44.87,25c0.35,0.4,0.51,0.9,0.48,1.4 c-0.03,0.49-0.25,0.97-0.65,1.33l-0.02,0.01c-0.18,0.15-0.37,0.27-0.58,0.34c-0.21,0.08-0.44,0.12-0.66,0.12H6.52 c-0.53,0-1.02-0.22-1.36-0.57c-0.35-0.35-0.57-0.83-0.57-1.36c0-0.28,0.06-0.54,0.17-0.78c0.11-0.25,0.27-0.47,0.47-0.65 l12.65-13.83V4.13H0V0L0,0z M31.55,58.58c1.14,0,2.07,0.93,2.07,2.07s-0.93,2.07-2.07,2.07c-1.14,0-2.07-0.93-2.07-2.07 S30.41,58.58,31.55,58.58L31.55,58.58z M18.35,58.58c1.14,0,2.07,0.93,2.07,2.07s-0.93,2.07-2.07,2.07s-2.07-0.93-2.07-2.07 S17.21,58.58,18.35,58.58L18.35,58.58z M32.62,47.47v2.19h0v2.9h86.77c1.92,0,3.5,1.58,3.5,3.5v42.62c0,1.92-1.57,3.5-3.49,3.5 c-38.6,0-77.18,0-115.79,0c-1.91,0-3.5-1.59-3.5-3.5V56.06c0-1.93,1.57-3.5,3.5-3.5h13.68c0-1.7,0-3.39,0-5.09h4.55v2.19h-2.08v2.9 h10.4v-2.9h-2.08v-2.19H32.62L32.62,47.47z M119.02,56.42H89.4v41.9h29.63V56.42L119.02,56.42L119.02,56.42z M85.54,56.42H46.77 v9.33h38.77V56.42L85.54,56.42L85.54,56.42z M42.91,56.42H3.96v41.9h38.95V56.42L42.91,56.42L42.91,56.42z M46.77,98.31h38.77 v-28.7H46.77V98.31L46.77,98.31L46.77,98.31z M94,58.58c0.28,0,0.55,0.06,0.79,0.16l0.01,0.01c0.25,0.1,0.47,0.26,0.66,0.44 c0.19,0.19,0.34,0.42,0.45,0.67c0.1,0.24,0.16,0.51,0.16,0.79s-0.06,0.54-0.16,0.79c-0.11,0.25-0.26,0.48-0.45,0.67l-0.02,0.01 c-0.19,0.18-0.41,0.33-0.66,0.43c-0.24,0.1-0.51,0.16-0.79,0.16c-0.28,0-0.55-0.06-0.79-0.16c-0.24-0.1-0.46-0.25-0.65-0.43 l-0.03-0.02c-0.19-0.19-0.34-0.42-0.44-0.67l-0.01-0.01c-0.1-0.24-0.15-0.5-0.15-0.78c0-0.28,0.06-0.55,0.16-0.79 c0.1-0.25,0.26-0.48,0.45-0.67s0.42-0.34,0.67-0.45l0.01-0.01C93.47,58.63,93.73,58.58,94,58.58L94,58.58L94,58.58z M74.31,4.13 h-0.13v22.73h44.49V4.13H74.31L74.31,4.13L74.31,4.13z M78.11,6.66c0.19-0.18,0.41-0.33,0.66-0.43c0.24-0.1,0.51-0.16,0.79-0.16 c0.28,0,0.55,0.06,0.79,0.16l0.01,0.01c0.25,0.1,0.47,0.26,0.66,0.44c0.19,0.19,0.34,0.42,0.45,0.67c0.1,0.24,0.16,0.51,0.16,0.79 s-0.06,0.55-0.16,0.79l-0.01,0.01c-0.1,0.24-0.25,0.46-0.43,0.64l-0.03,0.03c-0.19,0.18-0.41,0.33-0.65,0.43 c-0.24,0.1-0.51,0.16-0.79,0.16c-0.28,0-0.55-0.06-0.79-0.16c-0.25-0.1-0.48-0.26-0.67-0.45l0,0c-0.19-0.19-0.34-0.42-0.45-0.67 c-0.1-0.24-0.16-0.51-0.16-0.79s0.06-0.54,0.16-0.79c0.11-0.25,0.26-0.48,0.45-0.67L78.11,6.66L78.11,6.66L78.11,6.66z"/>
                                            </g>
                                             </svg> 
-                                            Cuisine Équipée
+                                            {{ 'gite.icons.kitchen' | trans }}
                                     </span>
                         </section>
                                 
@@ -301,40 +301,34 @@
                     <article class="pt-2">
                     <p>
                         <b>
-                            Notre maison d’architecte combine design, modernité et
-                            caractère
+                            {{ 'gite.thehouse.text1' | trans }}
                         </b>
-                        pour vous apporter tout le confort durant votre séjour. Ses
-                        terrasses, son salon, sa salle de jeu et sa piscine sont
-                        notamment conçus pour
-                        <b> accueillir les Personnes à Mobilité Réduite</b> tout en
-                        mettant à disposition une suite adaptée dont l’accès est
-                        facilité grâce à sa rampe PMR.
-                  </p>
+                          {{ 'gite.thehouse.text2' | trans }}
+                        <b>  
+                            {{ 'gite.thehouse.text3' | trans }}
+                        </b>
+                    </p>
             
 
                     <p>
-                        La pièce à vivre de 75 m2 est aménagée avec : <br/>- Une
-                        cuisine entièrement équipée avec son réfrigérateur américain, sa
-                        cave à vin, son grand îlot central, etc. <br/>
+                         {{ 'gite.thehouse.text4' | trans }}<br/> 
+                         {{ 'gite.thehouse.text5' | trans }} <br/>
                                {# ------------------IMAGE SALON 2 -------------- #}
                       <img
-                            src="{{ asset('img/gitePage/salon06.webp') }}"
-                            alt="hamac géant gite etoile de dan"
+                            src="{{ asset('img/gitePage/salon02.webp') }}"
+                            alt="billard gite etoile de dan"
                             style="width: 10em; 
                             float: right; 
                             shape-outside: margin-box;
                             margin: 0 20px 5px 0; 
                             border-radius: 30%"
                     />
-                        - Un salon avec
-                        sa télévision très grand écran, <br/>- Une salle à manger avec
-                        sa grande table pouvant accueillir 12 convives, <br/>- un
-                        billard et un hamac géant, idéal pour la détente. <br/>
-                        Poursuivez cette douceur de vivre dans l’espace ludique :<br/>-
-                        Avec sa piscine intérieure et sa baie aquarium, <br/>- Une
-                        salle de jeux disposant : d’un baby-foot, d’une borne arcade et
-                        d’une table de jeux.
+                         {{ 'gite.thehouse.text6' | trans }}<br/>
+                          {{ 'gite.thehouse.text7' | trans }}<br/> 
+                          {{ 'gite.thehouse.text8' | trans }}<br/>
+                        {{ 'gite.thehouse.text9' | trans }}<br/> 
+                        {{ 'gite.thehouse.text10' | trans }} <br/> 
+                        {{ 'gite.thehouse.text11' | trans }}
                     </p>
                     <img
                             src="{{ asset('img/gitePage/chambre01.webp') }}"
@@ -348,21 +342,16 @@
                             "
                     />
                     <p>
-                        Pour accueillir jusqu’à
+                         {{ 'gite.thehouse.text12' | trans }}
                         <b>
-                            12 résidents, le gîte dispose de 4 chambres et de 3 Salles
-                            d’eau
+                             {{ 'gite.thehouse.text13' | trans }}
                         </b>
-                        avec douche à l’italienne :
-                        <br/>- Une suite parentale équipée PMR avec son lit en 160x200,
-                        son dressing et sa salle d’eau privative <br/>
-                        - Une chambre double avec son lit en 160x200 <br/>
-                        - Deux chambres quadruples avec dressing, idéales pour les
-                        familles, puisqu’en plus de leur lit en 160x200 ou 140x200, l’une est
-                        équipée de 2 fauteuils convertibles 1 place tandis que l’autre
-                        dispose d’un canapé convertible 2 places. <br/>- Enfin, l’une
-                        des trois terrasses dispose d’une cuisine d’été équipée d’un
-                        BBQ.
+                         {{ 'gite.thehouse.text14' | trans }}
+                        <br/>
+                        {{ 'gite.thehouse.text15' | trans }}<br/>
+                         {{ 'gite.thehouse.text16' | trans }} <br/>
+                         {{ 'gite.thehouse.text17' | trans }}<br/>
+                         {{ 'gite.thehouse.text18' | trans }}
                     </p>
                 </article>
             </div>
@@ -372,7 +361,7 @@
                 {#-----------------Le Jardin---------------- #}
                 <div <div class="cadre col-md-5 p-4 my-2">
                     <h3 class="d-flex justify-content-start" style="text-decoration:underline;">
-                        Le Jardin
+                        {{ 'gite.garden' | trans }}
                     </h3>
                 {#------------------IMAGE CAROUSEL 2---------------#}
                     <section class="my-2">
@@ -456,20 +445,20 @@
                 
                     <article>
                     <p>
-                        Le jardin arboré de 2500 m2 dispose : <br/>
-                        - D’un salon de jardin <br/>
-                        - D’un grand garage avec 2 abris de voitures (équipés de 2 bornes de charge) dans lesquels peuvent stationner 4 véhicules. <br/>
-                        - À l’arrière de la maison, d’une aire de stationnement pour 2 véhicules directement en contact avec la rampe PMR, <br/>
-                        - D’un magnifique boulodrome, <br/>
-                        - D’une table de ping-pong, <br/>
-                        - D’un trampoline réservé aux enfants
+                        {{ 'gite.thegarden.text1' | trans }} <br/>
+                         {{ 'gite.thegarden.text2' | trans }}  <br/>
+                         {{ 'gite.thegarden.text3' | trans }} <br/>
+                         {{ 'gite.thegarden.text4' | trans }}  <br/>
+                         {{ 'gite.thegarden.text5' | trans }}  <br/>
+                         {{ 'gite.thegarden.text6' | trans }} <br/>
+                         {{ 'gite.thegarden.text7' | trans }} 
                     </p>
                     </article>
                     <br />
                     
                     {#----------------Le Plan----------------#}
                     <h3 class="d-flex justify-content-start" style="text-decoration:underline;">
-                        Localisation
+                         {{ 'gite.thegarden.tex8' | trans }} 
                     </h3>
                     <section>
                         <img class="my-2" src="{{ asset('img/gitePage/Plan.jpg') }}" alt="salon gite etoile de dan" style="width: 100%; border-radius: 5%; margin-right: 1em;" />

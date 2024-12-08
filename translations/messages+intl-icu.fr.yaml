@@ -1,0 +1,66 @@
+navbar:
+    home: "Accueil"
+    gite: "Notre Gite"
+    prestation: "Prestations"
+    tourism: "tourisme"
+    informations : "informations"
+    magazine: "Magazine"
+footer:
+    about: "A propos"
+    legalnotices: "Mentions légales"
+    contactpage: "Contact Page"
+button:
+    more: "en savoir plus"
+    prereserv : "PRÉ-RESERVATION"
+homepage:
+    text: "Entre Cévennes et Camargue, venez profiter de notre gîte familial pour 12 personnes d’une superficie de 260 m2, de ses 4 chambres dont une pour les Personnes à Mobilité Réduite(PMR). Vous disposerez de sa piscine couverte et chauffée toute l’année, de son jacuzzi, de sa salle de jeux avec baby-foot , borne d’arcarde et billard. Venez vous détendre sur le hamac géant et dans le grand jardin arboré de 2500 m2 disposant de son barbecue, son boulodrome et ses transats."
+
+gite :
+    house : "La Maison"
+    icons : 
+       room : "Chambres"
+       bathrooms : "Salles de bain"
+       peoples : "personnes"
+       prm : "PMR"
+       pool : "Piscine intérieure"
+       games : "Salle de jeux"
+       wifi : "Wifi Gratuit"
+       kitchen : "Cuisine équipée"
+    thehouse :
+        text1 : " Notre maison d’architecte combine design, modernité et caractère"
+        text2 : "pour vous apporter tout le confort durant votre séjour. Ses terrasses, son salon, sa salle de jeu et sa piscine sont notamment conçus pour "
+        text3 : "accueillir les Personnes à Mobilité Réduite tout en mettant à disposition une suite adaptée dont l’accès est facilité grâce à sa rampe PMR."
+        text4 : "La pièce à vivre de 75 m2 est aménagée avec : - Une cuisine entièrement équipée avec son réfrigérateur américain, sa cave à vin, son grand îlot central, etc."
+        text5 : "- Une cuisine entièrement équipée avec son réfrigérateur américain, sa cave à vin, son grand îlot central, etc."
+        text6 : "- Un salon avec sa télévision très grand écran,"
+        text7 : "- Une salle à manger avec sa grande table pouvant accueillir 12 convives,"
+        text8 : "- un billard et un hamac géant, idéal pour la détente."
+        text9 : "Poursuivez cette douceur de vivre dans l’espace ludique :"
+        text10 : "- Avec sa piscine intérieure et sa baie aquarium,"
+        text11 : "- Une salle de jeux disposant : d’un baby-foot, d’une borne arcade et d’une table de jeux."
+        text12 : "Pour accueillir jusqu’à"
+        text13 : "12 résidents, le gîte dispose de 4 chambres et de 3 Salles d’eau"
+        text14 : "avec douche à l’italienne :"
+        text15 : "- Une suite parentale équipée PMR avec son lit en 160x200, son dressing et sa salle d’eau privative "
+        text16 : "- Une chambre double avec son lit en 160x200"
+        text17 : "- Deux chambres quadruples avec dressing, idéales pour les familles, puisqu’en plus de leur lit en 160x200 ou 140x200, l’une est équipée de 2 fauteuils convertibles 1 place tandis que l’autre dispose d’un canapé convertible 2 places."
+        text18 : "- Enfin, l’une des trois terrasses dispose d’une cuisine d’été équipée d’un BBQ."
+    garden : "Le Jardin"
+    thegarden : 
+        text1 : "Le jardin arboré de 2500 m2 dispose :"
+        text2 : "- D’un salon de jardin"
+        text3 : "- D’un grand garage avec 2 abris de voitures (équipés de 2 bornes de charge) dans lesquels peuvent stationner 4 véhicules. "
+        text4 : " - À l’arrière de la maison, d’une aire de stationnement pour 2 véhicules directement en contact avec la rampe PMR, "
+        text5 : "- D’un magnifique boulodrome,"
+        text6 : "- D’une table de ping-pong,"
+        text7 : "- D’un trampoline réservé aux enfants"
+        text8 : "Localisation"
+
+reservation : 
+    title : "Pré-Réserver votre Séjour"
+    step1 :
+       calendar : "calendrier"
+       step : "Etape 1"
+
+
+       

@@ -5,68 +5,81 @@ namespace App\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
+use Symfony\Component\HttpFoundation\RedirectResponse;
+use Symfony\Component\HttpFoundation\Request;
+use  Symfony\Contracts\Translation\TranslatorInterface;
+
 
 class AccueilController extends AbstractController
 {
+    // Route de redirection pour la racine '/'
+    #[Route('/', name: 'app_home_redirect', requirements: ['_locale' => 'fr|en'])]
+    public function redirectToDefaultLanguage(Request $request): Response
+    {
+        // Utilise la langue par défaut (fr) ou la langue du navigateur
+        $locale = $request->getPreferredLanguage(['fr', 'en']) ?: 'fr';  // Choisit 'fr' par défaut si aucune langue préférée
+        return $this->redirectToRoute('accueil', ['_locale' => $locale]);  // Redirige vers la page d'accueil avec la langue choisie
+    }
 
-    #[Route('/', name: 'accueil')]
-    public function index(): Response
+    // Route pour la page d'accueil dans la langue spécifiée
+    #[Route('/{_locale}/', name: 'accueil', requirements: ['_locale' => 'fr|en'])]
+    public function index(TranslatorInterface $translator): Response
     {
         return $this->render('accueil/index.html.twig');
     }
 
-    #[Route('/notre-gite', name: 'gite')]
+    #[Route('/{_locale}/notre-gite', name: 'gite', requirements: ['_locale' => 'fr|en'])]
     public function gite(): Response
     {
         return $this->render('landingpage/gite.twig');
     }
 
-    #[Route('/prestations', name: 'prestations')]
+    #[Route('/{_locale}/prestations', name: 'prestations', requirements: ['_locale' => 'fr|en'])]
     public function prestations(): Response
     {
         return $this->render('landingpage/prestations.twig');
     }
 
-    #[Route('/tourisme', name: 'tourisme')]
+    #[Route('/{_locale}/tourisme', name: 'tourisme', requirements: ['_locale' => 'fr|en'])]
     public function tourisme(): Response
     {
         return $this->render('landingpage/tourisme.twig');
     }
 
-    #[Route('/informations', name: 'informations')]
+    #[Route('/{_locale}/informations', name: 'informations', requirements: ['_locale' => 'fr|en'])]
     public function informations(): Response
     {
         return $this->render('landingpage/informations.twig');
     }
 
-    #[Route('/magazine', name: 'magazine')]
+    #[Route('/{_locale}/magazine', name: 'magazine', requirements: ['_locale' => 'fr|en'])]
     public function magazine(): Response
     {
         return $this->render('landingpage/magazine.twig');
     }
 
-    #[Route('/pmr', name: 'pmr')]
+    #[Route('/{_locale}/pmr', name: 'pmr', requirements: ['_locale' => 'fr|en'])]
     public function pmr(): Response
     {
         return $this->render('landingpage/pmr.twig');
     }
-    #[Route('/famille', name: 'famille')]
+    #[Route('/{_locale}/famille', name: 'famille', requirements: ['_locale' => 'fr|en'])]
     public function famille(): Response
     {
         return $this->render('landingpage/famille.twig');
     }
-    #[Route('/architecture', name: 'architecture')]
+    #[Route('/{_locale}/architecture', name: 'architecture', requirements: ['_locale' => 'fr|en'])]
     public function architecture(): Response
     {
         return $this->render('landingpage/architecture.twig');
     }
-    #[Route('/cgu', name: 'cgu')]
+    #[Route('/{_locale}/cgu', name: 'cgu')]
     public function cgu(): Response
     {
-        return $this->render('landingpage/cgu.twig');
+        return $this->render('landingpage/cgu.twig', requirements: ['_locale' => 'fr|en']);
     }
 
-    #[Route('/mentions-legales', name: 'mentionsLegales')]
+    #[Route('/{_locale}/mentions-legales', name: 'mentionsLegales', requirements: ['_locale' => 'fr|en'])]
     public function mentionsLegales(): Response
     {
         return $this->render('landingpage/mentionsLegales.twig');

@@ -1,9 +1,9 @@
 {% block boutonReservation %}
     <div class="buttonPreresev-form d-flex justify-content-center align-items-center flex-column">
-        Pré-Réservez votre sejour
+        {{ 'reservation.title' | trans }}
         <a href="{{ path('app_reservation') }}">
         <button type="button" class="btn-form">
-            <b> PRÉ-RÉSERVATION</b>
+            <b>{{ 'button.prereserv' | trans }} </b>
         </button>
         </a>
     </div>

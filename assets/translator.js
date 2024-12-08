@@ -14,3 +14,10 @@ setLocaleFallbacks(localeFallbacks);
 export { trans };
 
 export * from '../var/translations';
+
+
+import { setLocale, getLocale, trans } from '@symfony/ux-translator';
+// Récupérer la locale actuelle
+console.log('Current locale:', getLocale());
+// Définir une nouvelle locale
+setLocale('fr');

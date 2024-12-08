@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="{{ app.request.locale }}">
 <head>
     <meta charset="UTF-8">
     <meta name="description" content="Pré-reservez votre gîte accessible pour les pmr en ligne 24/7. Trouvez un lieu de prestige entre Alès, Nîmes et Montpellier. Un espace de villegiature idéal pour tous y compris les PMR" /> 
@@ -8,8 +8,10 @@
     <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0">
     <link rel="shortcut icon" href="/img/favicon-32x32.png"/>
     <link rel="apple-touch-icon" href="/img/favicon-32x32.png"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@6.6.6/css/flag-icons.min.css"/>
     {% block stylesheets %}
         {{ encore_entry_link_tags('app') }}
+         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     {% endblock %}
 
     {% block javascripts %}
@@ -45,12 +47,21 @@
             </div>
         </span>
 
-     {#  <span>
-            <button id="langToggleBtn" class="btn btn-secondary btn-sm small-btn" onclick="toggleLanguage()" style="font-size: 12px;">
-                FR
-            </button>
-        </span>
-    #}
+ <!-- Lien pour changer de langue -->
+						<span>
+							<a href="{{ path('switch_language', { '_locale': app.request.locale == 'fr' ? 'en' : 'fr' }) }}">
+
+								{% if app.request.locale == 'fr' %}
+									<span class="fi fi-gb m-2"></span>
+
+
+								{% else %}
+									<span class="fi fi-fr m-2"></span>
+
+
+								{% endif %}
+							</a>
+						</span>
     
     </div>
 
@@ -72,16 +83,6 @@
                 contactButton.style.display = 'none';
             }
         }
-
-     {#    function toggleLanguage() {
-            var button = document.getElementById('langToggleBtn');
-            if (button.textContent.trim() === 'FR') {
-                button.textContent = 'EN';
-            } else {
-                button.textContent = 'FR';
-            }
-        }
-        #}
     </script>
 
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
@@ -94,34 +95,35 @@
             </button>
             <div class="collapse navbar-collapse " id="navbarSupportedContent">
                 <ul class="navbar-nav navbar-light ms-auto">
+                  <li>
+								<a class="nav-link" href="{{ path('accueil', { '_locale': app.request.locale }) }}">
+									<span>
+										{{ 'navbar.home' | trans }}</span>
+								</a>
+							</li>
                     <li>
-                        <a class="nav-link" href="{{ path('accueil') }}">
-                            <span>Accueil</span>
+                        <a class="nav-link" href="{{ path('gite', { '_locale': app.request.locale }) }}">
+                            <span>{{ 'navbar.gite' | trans }}</span>
                         </a>
                     </li>
                     <li>
-                        <a class="nav-link" href="{{ path('gite') }}">
-                            <span>Notre Gite</span>
+                        <a class="nav-link" href="{{ path('prestations', { '_locale': app.request.locale }) }}">
+                            <span>{{ 'navbar.prestation' | trans }}</span>
                         </a>
                     </li>
                     <li>
-                        <a class="nav-link" href="{{ path('prestations') }}">
-                            <span>Prestations</span>
+                        <a class="nav-link" href="{{ path('tourisme', { '_locale': app.request.locale }) }}">
+                            <span>{{ 'navbar.tourism' | trans }}</span>
                         </a>
                     </li>
                     <li>
-                        <a class="nav-link" href="{{ path('tourisme') }}">
-                            <span>Tourisme</span>
+                        <a class="nav-link" href="{{ path('informations', { '_locale': app.request.locale }) }}">
+                            <span>{{ 'navbar.informations' | trans }}</span>
                         </a>
                     </li>
                     <li>
-                        <a class="nav-link" href="{{ path('informations') }}">
-                            <span> Informations</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="nav-link" href="{{ path('magazine') }}">
-                            <span> Magazine </span>
+                        <a class="nav-link" href="{{ path('magazine', { '_locale': app.request.locale }) }}">
+                            <span>{{ 'navbar.magazine' | trans }}</span>
                         </a>
                     </li>
                 </ul>
@@ -140,7 +142,7 @@
     <div class="container">
         <div class="row justify-content-around ">
             <div class="col-lg-4 col-md-4 col-sm-12">
-                <h2>A propos</h2>
+                <h2>{{ 'footer.about' | trans }}</h2>
                 <ul>
                     <li>
                         <a class="nav-link" href="{{ path('cgu') }}">
@@ -149,7 +151,7 @@
                     </li>
                     <li>
                         <a class="nav-link" href="{{ path('mentionsLegales') }}">
-                            <span>Mentions légales</span>
+                            <span>{{ 'footer.legalnotices' | trans }}</span>
                         </a>
                     </li>
                 </ul>
@@ -159,27 +161,36 @@
                 <ul>
                     <li>
                         <a class="nav-link" href="{{ path('accueil') }}">
-                            <span>Accueil</span>
+                            <span>{{ 'navbar.home' | trans }}</span>
                         </a>
                     </li>
                     <li>
                         <a class="nav-link" href="{{ path('gite') }}">
-                            <span>Notre Gîte</span>
+                            <span>{{ 'navbar.gite' | trans }}</span>
                         </a>
                     </li>
                     <li>
                         <a class="nav-link" href="{{ path('prestations') }}">
-                            <span>Prestations</span>
+                            <span>{{ 'navbar.prestation' | trans }}</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="{{ path('tourisme') }}">
+                            <span>{{ 'navbar.tourism' | trans }}</span>
                         </a>
                     </li>
                     <li>
                         <a class="nav-link" href="{{ path('informations') }}">
-                            <span>Informations</span>
+                            <span>{{ 'navbar.informations' | trans }}</span>
                         </a>
                     </li>
                     <li>
                         <a class="nav-link" href="{{ path('magazine') }}">
-                            <span>Magazine</span>
+                            <span><li>
+                        <a class="nav-link" href="{{ path('informations') }}">
+                            <span>{{ 'navbar.informations' | trans }}</span>
+                        </a>
+                    </li></span>
                         </a>
                     </li>
                     <li>
@@ -199,7 +210,11 @@
                     <li>FRANCE</li>
                     <li>
                         <a href="{{ path('app_contact') }}">
-                            Page contact
+                           <li>
+                        <a class="nav-link" href="{{ path('informations') }}">
+                            <span>{{ 'footer.contactpage' | trans }}</span>
+                        </a>
+                    </li>
                         </a>
                     </li>
                     <li>
@@ -208,6 +223,7 @@
                     <li>
                         <a href="tel:0622571552">06 78 44 27 07</a>
                     </li>
+                    		
                 </ul>
             </div>
 
@@ -225,5 +241,6 @@
         </div>
     </div>
 </footer>
+
 </body>
 </html>

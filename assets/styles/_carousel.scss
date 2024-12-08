@@ -1,26 +1,26 @@
 .carousel {
-  width: 100%; // Ensure the carousel takes full width
-  height: 100%; // Set the carousel height to 500px
-  margin: 0 auto; // Center the carousel
-  overflow: hidden; // Hide any overflow content
- position: relative;
- z-index: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  z-index: 0;
 
-
-  .carousel-inner{
+  .carousel-inner {
     background-color: black;
   }
-  .carousel-item {
-    height: auto; 
 
-    .carousel-item.active{
-      transition: transform 2.6s ease-in-out;
-    }
+  .carousel-item {
+    height: auto;
 
     img {
-      object-fit: contain; // Ensure images cover the carousel area
-      height: 100%; // Make sure the image takes the full height of the carousel item
-      width: 100%; // Ensure the image takes the full width of the carousel item
+      object-fit: contain;
+      height: 100%;
+      width: 100%;
     }
+  }
+
+  .carousel-item.active {
+    transition: transform 2.6s ease-in-out;
   }
 }

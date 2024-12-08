@@ -63,7 +63,9 @@ Encore
     // uncomment if you're having problems with a jQuery plugin
     //.autoProvidejQuery()
 
-    .addEntry('app', './assets/app.js')
+    .addEntry('app', ['./assets/app.js',  
+        'bootstrap/dist/css/bootstrap.css', 
+        'bootstrap',])
     .addEntry('prereserv', './assets/presreserv.js')
 
 //----------------Leaflet----------------
