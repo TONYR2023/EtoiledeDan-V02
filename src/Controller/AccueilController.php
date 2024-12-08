@@ -7,10 +7,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
-<<<<<<< HEAD
 use  Symfony\Contracts\Translation\TranslatorInterface;
-=======
->>>>>>> 934c314924fad945bb73f051126fbd4564a29d9c
 
 
 class AccueilController extends AbstractController
@@ -26,11 +23,7 @@ class AccueilController extends AbstractController
 
     // Route pour la page d'accueil dans la langue spécifiée
     #[Route('/{_locale}/', name: 'accueil', requirements: ['_locale' => 'fr|en'])]
-<<<<<<< HEAD
     public function index(TranslatorInterface $translator): Response
-=======
-    public function index(): Response
->>>>>>> 934c314924fad945bb73f051126fbd4564a29d9c
     {
         return $this->render('accueil/index.html.twig');
     }
