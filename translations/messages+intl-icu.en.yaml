@@ -1,7 +1,7 @@
 navbar:
     home: "Home"
     gite: "Our Cottage"
-    prestation: "Prestations"
+    prestation: "Services"
     tourism: "tourism"
     informations : "informations"
     magazine: "Magazine"
@@ -14,9 +14,11 @@ button:
     prereserv : "PRE-BOOK"
 
 homepage:
+    title: "Home - Spacious and family cottage - Between the Cévennes and the Gard"
     text: "Between the Cévennes and the Camargue, come and enjoy our family gîte for 12 people with a surface area of ​​260 m2, its 4 bedrooms, one of which is for people with reduced mobility (PRM). You will have access to its indoor swimming pool heated all year round, its jacuzzi, its games room with table football, arcade terminal and billiards. Come and relax on the giant hammock and in the large 2500 m2 garden with its barbecue, its bowling alley and its deckchairs."
 
-gite :
+gite : 
+    title : "Our cottage - L'Etoile De Dan - Spacious, Quiet and Family Architect's Cottage in the Gard"
     house : "The House"
     icons : 
        room : "Rooms"
@@ -56,6 +58,40 @@ gite :
         text6 : "- A ping-pong table,"
         text7 : "- A trampoline reserved for children"
         text8 : "Location"
+
+prestations :
+    title : "Services : Hostelry - Tourist discovery - Tasting - Massage - Chef at home "
+    prestations : "Services"
+    text1 : "Discover our varied services for an unforgettable stay:"
+    text2 : "Our comfortable hostelry service, food tastings
+            regional, relaxing massages, a chef at home for
+            gourmet meals and sightseeing tours to explore
+            our region."
+    text3 : "Enjoy a unique and personalized experience with us."
+
+    hostelry : 
+        title : "hostelry"
+        text1 : "Immerse yourself in a stay offering comfort and tranquility with
+                our hospitality service. Our welcoming rooms are
+                designed to provide an exceptional rest experience,
+                combining elegance and functionality. Whether for a
+                romantic getaway, family vacation, a moment
+                “farniente” or a business seminar, our
+                establishment will be able to meet all your needs."
+        link : "Service provided by us"
+
+    discovery :
+        title : "Tourist Discovery"
+        text1 : "Explore the hidden treasures of our region with our
+                tourist discovery service. Our local guides
+                enthusiasts will take you to meet the sites
+                iconic landmarks, spectacular landscapes and traditions
+                authentic about our destination. Whether you are an amateur
+                adventure, culture or nature, our service
+                tourist discovery promises you moments of discovery
+                and wonder."
+        link : "Service provided by us"
+
 
 reservation : 
    title : "Pre-Book your Stay"

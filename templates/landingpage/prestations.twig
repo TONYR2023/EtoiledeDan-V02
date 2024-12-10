@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Prestations : Hostellerie - Découverte touristique - Dégustation - Massage - Chef à domicile {% endblock %}
+{% block title %}{{ 'prestations.title' | trans }}{% endblock %}
 
 {% block head %} 
 <meta name="description" content="Découvrez nos prestations variées pour un séjour inoubliable : hostellerie confortable, dégustations régionales, massages relaxants, chef à domicile et découvertes touristiques. Profitez d'une expérience unique et personnalisée avec nous.">
@@ -18,7 +18,7 @@
             </div>
         </div>
 
-        <h2 class="mt-2">Prestations</h2>
+        <h2 class="mt-2">{{ 'prestations.prestations' | trans }}</h2>
         <div class="d-flex justify-content-center">
             <hr class="separator"/>
         </div>
@@ -27,16 +27,13 @@
         <section>
             <div class=" mx-4">
                 <p class="align-items-center text-center ">
-                    Découvrez nos prestations variées pour un séjour inoubliable :
+                    {{ 'prestations.text1' | trans }}
                 </p>
                 <p class="align-items-center text-center">
-                    Notre service d'hostellerie confortable, des dégustations de plats
-                    régionaux, des massages relaxants, un chef à domicile pour des
-                    repas gastronomiques et des visites touristiques pour explorer
-                    notre région.
+                   {{ 'prestations.text2' | trans }}
                 </p>
                 <p class="align-items-center text-center">
-                    Profitez d'une expérience unique et personnalisée avec nous.
+                    {{ 'prestations.text3' | trans }}
                 </p>
             </div>
             <div class="d-flex justify-content-center">
@@ -57,19 +54,13 @@
                         </div>
                         <div>
                             <h3 class="text-center">
-                                Hostellerie
+                                {{ 'prestations.hostelry.title' | trans }}
                                 <i class="bi bi-bed"></i>
                             </h3>
                             <p class="m-2">
-                                Plongez dans un séjour offrant confort et tranquillité avec
-                                notre service d'hostellerie. Nos chambres accueillantes sont
-                                conçues pour offrir une expérience de repos exceptionnel,
-                                alliant élégance et fonctionnalité. Que ce soit pour une
-                                escapade romantique, des vacances en famille, un moment
-                                «farniente» ou un séminaire d’entreprise, notre
-                                établissement saura répondre à tous vos besoins.
+                                {{ 'prestations.hostelry.text1' | trans }}
                             </p>
-                            <p> Service assuré par nos soins</p>
+                            <p class="text-primary">{{ 'prestations.hostelry.link' | trans }}</p>
                         </div>
                     </article>
 
@@ -85,20 +76,13 @@
                         </div>
                         <div>
                             <h3 class="text-center">
-                                Découverte Touristique
+                                {{ 'prestations.discovery.title' | trans }}
                                <i class="bi bi-compass"></i>
                             </h3>
                             <p class="m-2">
-                                Explorez les trésors cachés de notre région avec notre
-                                service de découverte touristique. Nos guides locaux
-                                passionnés vous emmèneront à la rencontre des sites
-                                emblématiques, des paysages spectaculaires et des traditions
-                                authentiques de notre destination. Que vous soyez amateur
-                                d'aventure, de culture ou de nature, notre service de
-                                découverte touristique vous promet des moments de découverte
-                                et d’émerveillement.
+                                {{ 'prestations.discovery.text1' | trans }}
                             </p>
-                              <p> Service assuré par nos soins</p>
+                              <p class="text-primary">{{ 'prestations.discovery.link' | trans }}</p>
                         </div>
                     </article>
 
