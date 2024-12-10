@@ -15,7 +15,7 @@ import './styles/_preReserv.scss';
 import './styles/_prestations.scss';
 
 // import './bootstrap'
-require('bootstrap')
+//require('bootstrap')
 
 import { setLocale, getLocale, trans } from '@symfony/ux-translator';
 // Récupérer la locale actuelle
