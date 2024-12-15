@@ -7,8 +7,103 @@ navbar:
     magazine: "Magazine"
 footer:
     about: "About"
-    legal notices: "Legal notices"
-    contact page: "Contact Page"
+    legalnotices : 
+        title : "Legal notices"
+        text1 : "The 'L'Étoile de Dan' site is published by TONY R, a BNC company not subject 
+            to VAT, registered in the Trade and Companies Register under SIRET number: 499676336000. The head office is located in
+            63 route de laverune 34070 Montpellier."
+        title2 : "2. Legal Representative"
+        text2 : "The legal representative of TONY R is Mr. BOURDEAU Anthony, acting in
+            as CEO, reachable at 63 route de Laverune 34070
+            Montpellier and by email to tonyr2004@neuf.fr."
+        title3 : "3. Site Hosting"
+        text3 : "The VeloMobile site is hosted by O2SWITCH, whose headquarters
+            social is located at 222-224 Boulevard Gustave Flaubert, 63000 Clermont-Ferrand, France. and can be reached at the following email address
+            : support@o2switch.fr ."
+        title4 : "4. Intellectual Property"
+        text4 : "The site and its content are the exclusive property of L'Étoile de Dan
+            and are protected by intellectual property laws. All
+            unauthorized reproduction, distribution or use of the content is
+            strictly prohibited."
+        title5 : "5. Collection and Processing of Personal Data"
+        text5 : "The collection and processing of personal data on the site
+            The Star of Dan are carried out in accordance with the Policy of
+            Accessible Privacy [link to Privacy Policy
+            Confidentiality]."
+        title6 : "6. Cookies"
+        text6 : "The site may use cookies to improve the user experience.
+            the user. Users have the option to disable
+            cookies in their browser settings."
+        title7 : "7. Responsibility"
+        text7 : "Despite all efforts made to ensure the accuracy of
+            information, TONY R declines all responsibility in the event of errors or
+            omissions on the site. Users are invited to report to us
+            any inaccuracy."
+        title8 : "8. Hypertext Links"
+        text8 : "The site may contain hypertext links to third-party sites. TONY
+            R assumes no responsibility for the content of these sites."
+        title9 : "9. Applicable Law and Jurisdiction"
+        text9 : "This legal notice is governed by current law.
+            Any dispute will be submitted to the competent courts of the place where is located
+            the head office of L'Étoile de Dan."
+        title10 : "10. Contact"
+        text10 : "For any questions or concerns regarding the L'Étoile de
+            Dan, please contact us at the following address: 61, route
+            Departmental 6110 30260 Crespian or by email at
+            contact@etoilededan.fr."
+        text11 : "Done in Montpellier, on 05/31/2024."
+        text12 : "M.BOURDEAU Anthony"
+    cgu :
+        title: "General Conditions of Use (GCU) – L’Étoile de Dan Site"
+        title1 : "1. Acceptance of the Conditions"
+        text1 : "By accessing and using the L'Étoile de Dan site, you agree to
+            comply with these General Conditions of Use. If
+            you do not agree to these terms, please do not use the site."
+        title2: "2. General Information"
+        text2: "the L'Étoile de Dan site is operated by L'Étoile de Dan, hereinafter
+            referred to as 'the site'. The GCU govern the use of the site, including
+            collection, storage and use of data."
+        title3: "3. Personal Data and Confidentiality"
+        text3: "Your use of the site is subject to our Privacy Policy
+            Confidentiality, governing the collection and processing of your data
+            personal. We are committed to protecting your information
+            in accordance with applicable laws."
+        title4: "4. Use of Forms"
+        text4: "The site offers detailed forms, in particular for requesting
+            information on the gîte and to make a pre-reservation with a view to
+            of a rental. By submitting these forms, you agree to
+            the use of your information to respond to your request and
+            to provide you with relevant news and updates."
+        title5: "5. Creation of a User Account"
+        text5: "Creating a user account on the L'Étoile de Dan site is
+            optional but can offer benefits such as management of
+            requests for information, access to exclusive offers. You are
+            responsible for the confidentiality of your account information."
+        title6: "6. Intellectual Property"
+        text6: "The content of the site, including texts, images, logos and other
+            elements, is the intellectual property of the site. None
+            unauthorized reproduction, distribution or use of content
+            is not permitted without prior consent."
+        title7: "7. Responsibilities"
+        text7: "The L'Étoile de Dan site strives to provide information
+            accurate, but does not guarantee the accuracy of all data.
+            We decline all responsibility in the event of inappropriate use
+            of the site or harm resulting from the use of the information
+            provided."
+        title8: "8. Modification of the GCU"
+        text8: "The site reserves the right to modify the T&Cs at any time. The
+            users will be informed of the changes, and it is their responsibility to
+            regularly consult the updated GCU."
+        title9: "9. Applicable Law and Jurisdiction"
+        text9: "These GCU are governed by the law in force. Any dispute
+            will be submitted to the competent courts of the place where the head office is located
+            of the company operating the L'Étoile de Dan site."
+        text10: "By using the L'Étoile de Dan site, you accept these conditions and
+            you agree to respect them. For any questions or
+            concern, please contact us at contact@letoilededan.fr."
+    contactpage: "Contact Page"
+
+    
 button:
     more: "learn more"
     prereserv : "PRE-BOOK"
@@ -91,7 +186,306 @@ prestations :
                 tourist discovery promises you moments of discovery
                 and wonder."
         link : "Service provided by us"
+    
+    degustation :
+        title : "degustation"
+        text1 : "Under the direction of the Florence tasting service
+                DELMAS (Degustez Sud), let your taste buds travel through an explosion
+                flavors. She will help you discover the best of
+                viticulture and regional culinary specialties, in
+                highlighting fresh, seasonal local produce. Of
+                the first bite to the last glass, every moment will be a
+                epicurean celebration of gastronomy."
+        link : "Degustez Sud"
 
+    massage :
+        title : "massage"
+        text1 : "A 5-minute walk from the gîte, recharge your batteries by treating yourself
+                a moment of relaxation and absolute well-being thanks to the spa
+                private, sauna and massages offered by OC’TAO. YOU
+                you will discover a haven of peace where you can
+                surrender to their expert hands to relieve stress and
+                tensions. Let yourself be enveloped by techniques of
+                soothing massages that will leave you revitalized and
+                regenerated."
+        link : "OC'Tao"
+    
+    chief : 
+        title : "Home chef"
+        text1 : "With takeachef and one of its 78 home chefs,
+                personalize your menu to transform your stay into
+                an unforgettable gastronomic experience. These leaders
+                professionals will come directly to your accommodation
+                to prepare tailor-made meals, adapted to your tastes and
+                preferences. Whether for a special occasion or
+                simply to enjoy an exclusive dinner in comfort
+                from your home, enjoy a culinary experience
+                exceptional!"
+        link : "Take A Chef"
+
+tourism :
+    title : "tourism"
+    nature :
+        title : "Unspoilt nature and captivating landscapes"
+        text1 : "Immerse yourself in the wild beauty of nature as you explore
+            the surroundings of Crespian. Less than 50 km away, you will find
+            natural sites of breathtaking beauty, such as the
+            majestic Gorges du Gardon and the peaceful expanses of
+            Cévennes. Explore scenic hiking trails,
+            discover breathtaking panoramas and let yourself
+            bewitched by the tranquility of the surrounding countryside."
+        link1 : "walk in the Lens woods"
+        distance1 : "- 5 min walk"
+        link2 : "Gorges du Gardon"
+        distance2 : "- 45 min by car / 40 km"
+        link3 : "Scamandre Nature Reserve"
+        distance3 : "- 45 min by car / 40 km"
+        link4 : Navacelles Circus
+        distance4 : "- 1h15 by car / 73 km"
+        link5 : Cévennes Cave
+        distance5 : "- 45 min by car/ 40 km (grotte de Trabuc, grotte des demoiselles, etc.)"
+        link6 : “Cevennes tourist office”
+    Heritage :
+        title : "Rich Cultural and Historical Heritage"
+        text1 : "Immerse yourself in the region's fascinating history by exploring
+                its many historical and cultural sites. Nearby
+                Crespian, you can visit architectural gems such
+                as the Pont du Gard, a masterpiece of Roman engineering
+                listed as a UNESCO World Heritage Site, or the
+                magnificent Château de Portes, witness to the medieval era.
+                Soak up the atmosphere steeped in village history
+                picturesque places of the region and discover the traditions
+                centuries-old traditions that still continue today."
+        link1 : "gard bridge"
+        distance1 : "- 45 min by car / 48 km"
+        link2 : Anduze bamboo grove
+        distance2 : "- 30 min by car / 29 km"
+        link3 : Historic heart of Nîmes
+        distance3 : "- 25 min by car / 26 km"
+        link4 : Oppidum of Ambrusum
+        distance4 : "- 25 min by car/ 26 km"
+        link5 : Uzes
+        distance5 : "- 40 min by / 38 km"
+        link6 : Aigues-Mortes
+        distance6 : "- 45 min by car / 42 km"
+        link7 : museum of the desert and the history of the Camisards
+        distance7 : "- 40 min en voiture / 36 km"
+    activity :
+        title : "Activities and Leisure for All"
+        text1 : "Whether you are an outdoor enthusiast, a history buff or
+                simply looking for relaxation, the region around Crespian
+                offers a multitude of activities and leisure activities for all
+                tastes. Go on a kayak excursion on the Gardon, explore
+                fascinating prehistoric caves, stroll through the
+                bustling markets or simply relax by the water
+                under the gentle sun of the south of France. ot the big motte"
+        link1 : Montpellier Tourist Office
+        distance1 : "- 55 min by car / 43 km"
+        link2 : Sommières Tourist Office
+        distance2 : "- 15 min by car / 14 km"
+        link3 : "Kayak Gardon"
+        distance3 : "- 40 min by car / 39 km"
+        link4 : La Grande Motte Tourist Office
+        distance4 : "- 45 min by car / 43 km"
+        link5 : Roc de Massereau treetop adventure course
+        distance5 : "- 15 min by car / 14 km"
+        link6 : Cévennes river
+        distance6 : "- 45 min by car / 45 km (bidge of abarines, St Laurent le Minier, etc.)"
+        link7 : Cevennes steam train
+        distance7 : "- 45 by car / 45 km "
+    gastronomy :
+        title : Gastronomy and Art of Living
+        text1 : "Let yourself be seduced by the culinary delights of the region
+                and enjoy authentic and refined cuisine. Explore the
+                local markets where you can taste local products
+                fresh and tasty terroir, such as the renowned wines of the
+                region, artisanal cheeses and specialties
+                regional gastronomy. Experience the French art of living
+                by sitting down at charming bistros or tasting a
+                picnic in an enchanting setting."
+        link1 : Sommières market
+        distance1 : "- 15 min by car / 14 km"
+        link2 : Clairan honey house
+        distance2 : "- 7 min by car / 6 km"
+        link3 : Gravette of Corconne wine estate
+        distance3 : "- 17 min by car / 18 km"
+        link4 : Loubes cheese factory in Montignargues
+        distance4 : "- 17 min by car / 17 km"
+        link5 : La Brandade du Petit Nîmois in Nîmes
+        distance5 : "- 23 min by car / 23 km"
+        link6 : Thau Pond
+        distance6 : "- 1h10 by car / 86 km"
+    map : 
+        title : "Activities Map"
+        title2 : "Enlarge map"
+
+informations :
+    title : "Information"
+    price :
+        price : "Price"
+        text1 : "Out of season : "
+        text2 : "- By the week : "
+        text3 : "- From Friday evening to Monday morning (3 nights) or"
+        text4 : "Monday evening to Friday morning (4 nights) :"
+        text5 : "Little vacation + month of May: " 
+        text6 : "- By the week: "
+        text7 : "- From Friday evening to Monday morning (3 nights) or"
+        text8 : "Monday evening to Friday morning (4 nights):"
+        text9 : "Summer vacation:"
+        text10 : "- By the week: "
+        text11 : "- From Friday evening to Monday morning (3 nights) or"
+        text12 : "Monday evening to Friday morning (4 nights):"
+        text13 : Decreasing price from two weeks
+    assurance :
+        title : Insurance / Guarantees in the event of damage
+        text1 : "- To validate the reservation, a check for
+         deposit of €2,500 serving as a security deposit in the event 
+         damages is requested."
+        text2 : "- In addition to this, to cover the amount of
+         repairs greater than the security deposit in the event of 
+         deterioration of the accommodation, residents will be asked to 
+         provide an insurance certificate upon booking 
+         resort (this insurance covers in particular breakage 
+         windows if applicable). This insurance coverage 
+         is included in everyone's home insurance. 
+         It is therefore sufficient to request this certificate from 
+         his insurance company..."
+        text3 : "- Questions relating to support 
+         damage will be handled within eight days
+         establishing the inventory of exit premises and the 
+         handing over of keys at the end of your stay and will depend on 
+         the condition of the accommodation"
+        text4 : "- The tenant is obliged:"
+        text5 : "- to pay the rent and charges on the agreed terms"
+        text6 : "- to peacefully use the rented premises while respecting 
+         their contractual destination. This induces in particular 
+         the ban on generating nuisance in the neighborhood, 
+         whether by noise at night or otherwise"
+        text7 : "- to respond to damage or losses
+         occurring during the duration of the contract on the premises 
+         of which he has the exclusive enjoyment"
+        text8 : "- not to transform the rented premises and equipment"
+        text9 : "- to be responsible for the use of 
+         safety devices intended to protect 
+         users of the swimming pool and the giant hammock."
+        text10 : "- Children are the sole responsibility
+         parents or legal representatives"
+        text11 : "- The tenant will be welcomed by the lessor or
+         his representative in order to establish an entry inventory.
+         At the end of the stay, an exit inventory will take place."
+    services :
+        title : Proximity Services
+        text1 : "Let yourself be seduced by the culinary delights of the region
+                and enjoy authentic and refined cuisine. Explore the
+                local markets where you can taste local products
+                fresh and tasty terroir, such as the renowned wines of the
+                region, artisanal cheeses and specialties
+                regional gastronomy. Experience the French art of living
+                by sitting down at charming bistros or tasting a
+                picnic in an enchanting setting."
+        link1 : Sommières Market
+        distance1 : "- 12 min by car"
+        link2 : ebiopi bakery
+        distance2 : "- 5 min walk"
+        link3 : Quissac Pharmacy
+        ditance3 : "- 11 min by car"
+        link4 : CarrefourMarket Villevieille
+        distance4 : "- 10 min by car"
+        link5 : Café Français
+        distance5 : "- 12 min by car"
+        link6 : Castel of Pondres
+        distance6 : "- 9 min by car"
+        link7 : Café de la Poste
+        distance7 : "- 7 min by car"
+    portfolio : "portfolio"
+
+magazine :
+    title : "Magazine - spacious accessible PRM - architect volume South of France - high-end luxurious 12 people"
+    title2 : "Magazine"
+    pmr :
+        text1 : "Discover our Spacious and Accessible cottage to
+            Reduced Mobility (PRM) in the Gard between Nîmes, Alès and
+            Montpellier"
+        text2 : “Why choose our cottage?”
+        text3 : "Our cottage is specially designed to accommodate
+            people with reduced mobility, with adapted facilities
+            to facilitate their stay and movement."
+        pmr :
+            header : "PMR"
+            title : "Discover our Spacious cottage Accessible to People with Mobility
+                    Reduced (PRM) in the Gard between Nîmes, Alès and Montpellier"
+            title1 : "PMR accessibility"
+            text11 : "Our cottage is specially designed to accommodate
+                    people with reduced mobility, with adapted facilities
+                    to facilitate their stay and movement."
+            title2 : "Large Volume"
+            text21 : "Enjoy vast indoor and outdoor spaces, offering
+                    comfort and freedom for the whole family, including
+                    people in wheelchairs."
+            title3 : "Family Accommodation"
+            text31 : "With several rooms and adapted equipment, our cottage
+                    is perfect for a family vacation, allowing everyone
+                    to share unforgettable moments together."
+            title4 : "Ideal Location"
+            text41 : "Nestled in the charming village of Crespian, our cottage
+                    benefits from a peaceful and natural setting, while being
+                    proximity to tourist attractions and amenities
+                    Quissac(11km)."
+            title5 : "Personalized Services"
+            text51 : "Our team and dedicated service providers
+                    are at your disposal to meet all your needs and
+                    make your stay as pleasant as possible."
+            textbottom : "Book now and treat yourself to a vacation accessible to all
+                    and unforgettable family experiences in the Gard!"
+    archi :
+        text1 : "Discover our cottage with its volumes, its architecture, its
+                locality and its secure spaces in the south of France"
+        text3 : "The cottage offers generous space to accommodate your group of 12 people. 
+                Our spacious interiors allow you to stretch out and relax in complete tranquility."
+        archi :
+            header : "Architecture and volume"
+            title : "Discover our cottage with its volumes, its architecture,"
+            title1 : "its locality and its secure spaces in the south of France"
+            title2 : "Spacious Space"
+            text21 : "The cottage offers generous space to accommodate your group of 12 people. Our spacious interiors allow you to spread out and relax in complete tranquility."
+            title3 : "Atypical House"
+            text31 : "Designed by an architect, our house stands out for its unique design and distinctive character. You will be charmed by its original architectural details."
+            title4 : "Secure Volume"
+            text41 : "Your safety is our priority. Our cottage is equipped with a sophisticated security system to ensure our guests' peace of mind."
+            title5 : "Quiet and Location"
+            text51 : "Nestled in a quiet and unspoiled environment, L'étoile de Dan offers an idyllic setting for a relaxing getaway. Enjoy the tranquility of nature while being close to local attractions."
+            title6 : "Filming Location"
+            text61 : "Our cottage provides a spectacular natural setting for any filming project. Whether you are a professional filmmaker or a passionate amateur, our cottage is the perfect place to bring your vision to life."
+            textbottom1 : "In addition, its location allows outreach to the various sites in the region"
+            textbottom2 : "(between the Cevennes, Montpellier, Nimes and the sea)."
+    
+    familly :
+        text1 : "Discover our high-end cottage, designed to offer a
+                exceptional and luxurious comfort for 12 people."
+        text3 : "Discover the height of refinement in our spacious and elegantly decorated rooms, 
+                designed to accommodate up to 12 people in complete privacy. Enjoy an atmosphere 
+                warm and welcoming where every detail has been carefully thought out for your ultimate comfort."
+        family :
+            header : "A family space"
+            title11 : “Welcome to your oasis of tranquility and luxury in the heart of the countryside.”
+            title12 : "Our prestigious lodge offers an incomparable experience, combining sumptuous comfort 
+             and high-end entertainment for an unforgettable vacation"
+            title2 : "Luxury, Comfort, and Space"
+            text21 : "Discover the height of refinement in our spacious and elegantly decorated rooms, 
+             designed to accommodate up to 12 people in complete privacy. Enjoy a warm and welcoming atmosphere where every detail has been carefully thought out for your ultimate comfort."
+            title3 : "Escape into Nature"
+            text31 : "Our isolated cottage offers you a refuge far from the hustle and bustle of urban life, nestled in a preserved natural setting. Immerse yourself in the tranquility of the countryside, where only the gentle breezes and the songs of birds disturb your serenity."
+            title4 : "Premium Entertainment"
+            text41 : "Immerse yourself in absolute luxury with our full range of premium leisure facilities. Relax in our private jacuzzi, cool off in our indoor swimming pool with garden views or challenge your friends to a lively game of billiards in our well-equipped games room."
+            title5 : "All Inclusive, All Personalized"
+            text51 : "Your comfort is our top priority. Enjoy our all-inclusive package, with tailor-made services tailored to your needs. Whether you want to organize an unforgettable party or simply relax with family, our dedicated team is here to make your stay just as perfect as possible."
+            textbottom1 : “Book today to guarantee your idyllic getaway in the heart of the countryside between the Cevennes and the sea.”
+            textbottom2 : "(between the Cevennes, Montpellier, Nimes and the sea)."
+            textbottom3 : “Contact us for more information and to book your dates now.”
+
+
+
+        
 
 reservation : 
    title : "Pre-Book your Stay"

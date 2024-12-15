@@ -8,124 +8,166 @@
 		<div class="backgroundImageContainer">
 			<img src="{{ asset('img/tourismePage/tourisme.png') }}" alt="tourisme" class="backgroundImage" title="Photo pont du gard, tourisme" loading="eager"/>
 
-			<div class="buttonContainer">
-				{{ include('reservation/boutonReservation.twig') }}
-			</div>
-		</div>
+        <h2 class="mt-2">{{ 'tourism.title' | trans }}</h2>
+        <div class="d-flex justify-content-center">
+            <hr class="separator" />
+        </div>
 
-		<h2 class="mt-2">Tourisme</h2>
-		<div class="d-flex justify-content-center">
-			<hr class="separator"/>
-		</div>
+{#        {/*------------------Presentation----------------*/}#}
+        <div class="container-fluid">
+            <div class="row justify-content-around mx-1">
+{#                {/*---------------Tarif---------------*/}#}
+                <div class=".col-6 col-md-6 pt-2">
+                    <div class="justify-content-center">
+{#                        {/*---------------Nature préservée et Paysages Envoûtants---------------*/}#}
+                        <div class="cadre p-2 mb-2">
+                            <h3>{{ 'tourism.nature.title' | trans }}</h3>
+                                    <article class="m-2">
+                                        <p>
+                                        {{ 'tourism.nature.text1' | trans }}
+                                        </p>
+                                    </article>
+                                    
+                                    <section class="cadre p-2 my-3">
+                                    <a href="https://ot-sommieres.com/annuaire/rando-le-bois-des-lens">{{ 'tourism.nature.link1' | trans }}</a>{{ 'tourism.nature.distance1' | trans }}
+                                        <br />
+                                    <a href="https://www.gorgesdugardon.fr/">{{ 'tourism.nature.link2' | trans }}</a>{{ 'tourism.nature.distance2' | trans }}          
+                                        <br />
+                                    <a href="https://www.cevennes-tourisme.fr/">{{ 'tourism.nature.link3' | trans }}</a>{{ 'tourism.nature.distance3' | trans }}
+                                        <br />
+                                    <a href="https://www.herault-tourisme.com/fr/decouvrir/nos-incontournables/cirque-de-navacelles/">{{ 'tourism.nature.link4' | trans }}</a>{{ 'tourism.nature.distance4' | trans }}
+                                        <br />
+                                    <a href="https://www.demoiselles.com/fr">{{ 'tourism.nature.link5' | trans }}</a>{{ 'tourism.nature.distance5' | trans }}
+                                        <br />
+                                    <a href="https://www.cevennes-tourisme.fr/">Offfice de tourisme des Cevennes</a>
+                                        <br />
+                                    </section>
+                        </div>
 
-		{#        {/*------------------Presentation----------------*/}#}
-		<div class="container-fluid">
-			<div
-				class="row justify-content-around mx-1">
-				{#                {/*---------------Tarif---------------*/}#}
-				<div class=".col-6 col-md-6 pt-2">
-					<div
-						class="justify-content-center">
-						{#                        {/*---------------Nature préservée et Paysages Envoûtants---------------*/}#}
-						<div class="cadre p-2 mb-2">
-							<h3>Nature préservée et Paysages Envoûtants</h3>
-							<article class="m-2">
-								<p>
-									Immergez-vous dans la beauté sauvage de la nature en explorant
-									                                        les environs de Crespian. À moins de 50 km, vous trouverez des
-									                                        sites naturels d'une beauté à couper le souffle, tels que les
-									                                        majestueuses Gorges du Gardon et les paisibles étendues des
-									                                        Cévennes. Parcourez des sentiers de randonnée pittoresques,
-									                                        découvrez des panoramas à couper le souffle et laissez-vous
-									                                        envoûter par la tranquillité de la campagne environnante.
-								</p>
-							</article>
+{#                        {/*---------------Patrimoine Culturel et Historique Richissime---------------*/}#}
+                        <div class="cadre p-2 mb-2">
+                            <h3> {{ 'tourism.Heritage.title' | trans }}</h3>
+                                    <article class="m-2">
+                                        <p>
+                                        {{ 'tourism.Heritage.text1' | trans }}
+                                        </p>
+                                    </article>
 
-							<section class="cadre p-2 my-3">
-								<a href="https://ot-sommieres.com/annuaire/rando-le-bois-des-lens">balade dans le bois des Lens</a>
-								5 min à pied
-								<br/>
-								<a href="https://www.gorgesdugardon.fr/">Gorges du Gardon</a>- 45 min en voiture / 40 km
-								<br/>
-								<a href="https://www.cevennes-tourisme.fr/">Reserve naturelle du Scamandre</a>- 45 min en voiture /46 km
-								<br/>
-								<a href="https://www.herault-tourisme.com/fr/decouvrir/nos-incontournables/cirque-de-navacelles/">Cirque de Navacelles</a>- 1h15 en voiture / 73 km
-								<br/>
-								<a href="https://www.demoiselles.com/fr">Grotte Cévenole</a>- 45 min en voiture/ 40 km (grotte de Trabuc, grotte des demoiselles, etc.)
-								<br/>
-								<a href="https://www.cevennes-tourisme.fr/">Offfice de tourisme des Cevennes</a>
-								<br/>
-							</section>
-						</div>
+                                    <section class="cadre p-2 my-3">
+                                    <a href="https://pontdugard.fr/fr">{{ 'tourism.Heritage.link1' | trans }}</a>{{ 'tourism.Heritage.distance1' | trans }}
+                                        <br />
+                                    <a href="https://bambouseraie.fr/">{{ 'tourism.Heritage.link2' | trans }}</a>{{ 'tourism.Heritage.distance2' | trans }}
+                                        <br />
+                                    <a href="https://www.nimes-tourisme.com/experience/">{{ 'tourism.Heritage.link3' | trans }}</a>{{ 'tourism.Heritage.distance3' | trans }}
+                                        <br />
+                                    <a href="https://www.ambrussum.fr/">{{ 'tourism.Heritage.link4' | trans }}</a>{{ 'tourism.Heritage.distance4' | trans }}
+                                        <br />
+                                    <a href="https://www.uzes.fr/">{{ 'tourism.Heritage.link5' | trans }}</a>{{ 'tourism.Heritage.distance5' | trans }}
+                                        <br />
+                                    <a href="https://ot-aiguesmortes.com/les-incontournables-a-aigues-mortes">{{ 'tourism.Heritage.link6' | trans }}</a>{{ 'tourism.Heritage.distance6' | trans }}
+                                        <br />
+                                    <a href="https://www.museedudesert.com/index.php">{{ 'tourism.Heritage.link7' | trans }}</a>{{ 'tourism.Heritage.distance7' | trans }}
+                                        <br />
+                                    </section>
+                        </div>
 
-						{#                        {/*---------------Patrimoine Culturel et Historique Richissime---------------*/}#}
-						<div class="cadre p-2 mb-2">
-							<h3>Patrimoine Culturel et Historique Richissime</h3>
-							<article class="m-2">
-								<p>
-									Plongez dans l'histoire fascinante de la région en explorant
-									                                        ses nombreux sites historiques et culturels. À proximité de
-									                                        Crespian, vous pourrez visiter des joyaux architecturaux tels
-									                                        que le Pont du Gard, un chef-d'œuvre de l'ingénierie romaine
-									                                        classé au patrimoine mondial de l'UNESCO, ou encore le
-									                                        magnifique Château de Portes, témoin de l'époque médiévale.
-									                                        Imprégnez-vous de l'atmosphère chargée d'histoire des villages
-									                                        pittoresques de la région et découvrez les traditions
-									                                        séculaires qui perdurent encore aujourd'hui.
-								</p>
-							</article>
+{#                        {/*---------------Activités et Loisirs pour Tous---------------*/}#}
+                        <div class="cadre p-2 mb-2">
+                            <h3>{{ 'tourism.activity.title' | trans }}</h3>
+                                    <article class="m-2">
+                                        <p>
+                                        {{ 'tourism.activity.text1' | trans }}
+                                        </p>
+                                    </article>
+                                    
+                                    <section class="cadre p-2 my-3">
+                                    <a href="https://www.montpellier-tourisme.fr/">{{ 'tourism.activity.link1' | trans }}</a>{{ 'tourism.activity.distance1' | trans }}
+                                        <br />
+                                    <a href="https://sommieres.fr/">{{ 'tourism.activity.link2' | trans }}</a>{{ 'tourism.activity.distance2' | trans }}
+                                        <br />
+                                    <a href="https://www.canoe-france.com/gardon-parcours-tarifs/">{{ 'tourism.activity.link3' | trans }}</a>{{ 'tourism.activity.distance3' | trans }}
+                                         <br />
+                                    <a href="https://www.lagrandemotte.com/">{{ 'tourism.activity.link4' | trans }}</a>{{ 'tourism.activity.distance4' | trans }}
+                                        <br />
+                                    <a href="https://rocdemassereau.com/">{{ 'tourism.activity.link5' | trans }}</a>{{ 'tourism.activity.distance5' | trans }}
+                                        <br />
+                                    <a href="https://www.cevennes-vacances.com/decouvertes/rivieres-et-baignade-en-cevennes/">{{ 'tourism.activity.link6' | trans }}</a>{{ 'tourism.activity.distance6' | trans }}
+                                        <br />
+                                    <a href="https://www.trainavapeur.com/">{{ 'tourism.activity.link7' | trans }}</a>{{ 'tourism.activity.distance7' | trans }}
+                                        <br />
+                                     </section>
+                        </div>
 
-							<section class="cadre p-2 my-3">
-								<a href="https://pontdugard.fr/fr">pont du gard</a>- 45 min en voiture / 48 km
-								<br/>
-								<a href="https://bambouseraie.fr/">Bambouseraie d'Anduze</a>- 30 min en voiture / 29 km
-								<br/>
-								<a href="https://www.nimes-tourisme.com/experience/">Coeur historique de Nîmes</a>- 25 min en voiture / 26 km
-								<br/>
-								<a href="https://www.ambrussum.fr/">Oppidum d'Ambrusum</a>- 25 min en voiture / 26 km
-								<br/>
-								<a href="https://www.uzes.fr/">Uzes</a>- 40 min en voiture / 38 km
-								<br/>
-								<a href="https://ot-aiguesmortes.com/les-incontournables-a-aigues-mortes">Aigues-Mortes</a>- 45 min en voiture / 42 km
-								<br/>
-								<a href="https://www.museedudesert.com/index.php">musée du désert et de l'histoire des Camisards
-								</a>- 40 min en voiture / 36 km
-								<br/>
-							</section>
-						</div>
+{#                        {/*---------------Gastronomie et Art de Vivre---------------*/}#}
+                        <div class="cadre p-2 mb-2">
+                            <h3>{{ 'tourism.gastronomy.title' | trans }}</h3>
+                                    <article class="m-2">
+                                        <p>
+                                        {{ 'tourism.gastronomy.text1' | trans }}
+                                        </p>
+                                    </article>
 
-						{#                        {/*---------------Activités et Loisirs pour Tous---------------*/}#}
-						<div class="cadre p-2 mb-2">
-							<h3>Activités et Loisirs pour Tous</h3>
-							<article class="m-2">
-								<p>
-									Que vous soyez amateur de plein air, passionné d'histoire ou
-									                                        simplement en quête de détente, la région autour de Crespian
-									                                        offre une multitude d'activités et de loisirs pour tous les
-									                                        goûts. Partez en excursion en kayak sur le Gardon, explorez
-									                                        des grottes préhistoriques fascinantes, flânez dans les
-									                                        marchés animés ou détendez-vous simplement au bord de l'eau
-									                                        sous le doux soleil du sud de la France. ot la grande motte
-								</p>
-							</article>
+                                    <section class="cadre p-2 my-3">
+                                    <a href="https://ot-sommieres.com/marches">{{ 'tourism.gastronomy.link1' | trans }}</a>{{ 'tourism.gastronomy.distance1' | trans }}
+                                        <br />
+                                    <a href="https://ot-sommieres.com/annuaire/miellerie-de-clairan">{{ 'tourism.gastronomy.link2' | trans }}</a>{{ 'tourism.gastronomy.distance2' | trans }}
+                                        <br />
+                                    <a href="https://www.la-gravette.com/">{{ 'tourism.gastronomy.link3' | trans }}</a>{{ 'tourism.gastronomy.distance3' | trans }}
+                                        <br />
+                                    <a href="https://la-fromagerie-des-loubes.eatbu.com/?lang=fr">{{ 'tourism.gastronomy.link4' | trans }}</a>{{ 'tourism.gastronomy.distance4' | trans }}
+                                        <br />
+                                    <a href="https://lanimoise.fr/">{{ 'tourism.gastronomy.link5' | trans }}</a>{{ 'tourism.gastronomy.distance5' | trans }}
+                                        <br />
+                                    <a href="https://www.herault-tourisme.com/fr/decouvrir/nos-incontournables/etang-de-thau/">{{ 'tourism.gastronomy.link6' | trans }}</a>{{ 'tourism.gastronomy.distance6' | trans }}
+                                    <br />
+                                    </section>
+                        </div>
+                    </div>
+                </div>
 
-							<section class="cadre p-2 my-3">
-								<a href="https://www.montpellier-tourisme.fr/">Office de Tourisme de Montpellier</a>- 55 min en voiture / 43 km
-								<br/>
-								<a href="https://sommieres.fr/">Office de Tourisme de Sommières</a>- 15 min en voiture / 14 km
-								<br/>
-								<a href="https://www.canoe-france.com/gardon-parcours-tarifs/">Kayak Gardon</a>- 40 min en voiture / 39 km
-								<br/>
-								<a href="https://www.lagrandemotte.com/">Office de tourisme de la grande motte</a>- 45 min en voiture / 43 km
-								<br/>
-								<a href="https://rocdemassereau.com/">Accrobranche Roc de Massereau</a>- 15 min en voiture / 14 km
-								<br/>
-								<a href="https://www.cevennes-vacances.com/decouvertes/rivieres-et-baignade-en-cevennes/">Rivière cévenole</a>- 45 min en voiture / 45 km (pont des abarines, St Laurent le Minier, etc.)
-								<br/>
-								<a href="https://www.trainavapeur.com/">Train à vapeur des cevennes</a>- 45 min en voiture / 45 km (pont des abarines, St Laurent le Minier, etc.)
-								<br/>
-							</section>
-						</div>
+{#                {/*---------------carte---------------*/}#}
+                <div class=" .col-6 col-md-5">
+                    <div class="cadre p-2 mb-2">
+                        <h3>{{ 'tourism.map.title' | trans }}</h3>
+                        <div>
+                         <!-- Button trigger modal -->
+                         <div class="d-flex justify-content-end my-2">
+                        <button type="button" class="btn-plus" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        {{ 'tourism.map.title2' | trans }}
+                        </button>
+                        </div>
+                        <img
+                                src="{{ asset('img/tourismePage/carte.jpg') }}"
+                                alt="carte"
+                                class="img-fluid"
+                                style="width: 100vw; border-radius: 0.5em "
+                        />
+                        </div>
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-xl">
+                            <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Carte des activités</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <img
+                                    src="{{ asset('img/tourismePage/carte.jpg') }}"
+                                    alt="carte"
+                                    class="img-fluid"
+                                    style="width: 100%; border-radius: 0.5em "
+                                />
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                            </div>
+                            </div>
+                        </div>
+                        </div>
+                        <!-- FIN Modal -->
+                    </div>
+                </div>
 
 						{#                        {/*---------------Gastronomie et Art de Vivre---------------*/}#}
 						<div class="cadre p-2 mb-2">

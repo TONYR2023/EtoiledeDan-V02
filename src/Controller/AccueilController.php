@@ -73,10 +73,10 @@ class AccueilController extends AbstractController
     {
         return $this->render('landingpage/architecture.twig');
     }
-    #[Route('/{_locale}/cgu', name: 'cgu')]
+    #[Route('/{_locale}/cgu', name: 'cgu', requirements: ['_locale' => 'fr|en'])]
     public function cgu(): Response
     {
-        return $this->render('landingpage/cgu.twig', requirements: ['_locale' => 'fr|en']);
+        return $this->render('landingpage/cgu.twig');
     }
 
     #[Route('/{_locale}/mentions-legales', name: 'mentionsLegales', requirements: ['_locale' => 'fr|en'])]

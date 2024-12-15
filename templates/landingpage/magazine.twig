@@ -1,30 +1,43 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Magazine- gîte spacieux et accessible aux pmr, architecture haut de gamme et famillial, 12 personnes
-{% endblock %}
+{% block title %}{{ 'magazine.title' | trans }}{% endblock %}
 
 {% block body %}
 	<main>
 		<div class="backgroundImageContainer">
 			<img src="{{ asset('img/magazinePage/magazine.png') }}" alt="magazine" class="backgroundImage" title="Photos magazine" loading="eager"/>
 
-			<div class="buttonContainer">
-				{{ include('reservation/boutonReservation.twig') }}
-			</div>
-		</div>
+        <h2 class="mt-2">{{ 'magazine.title2' | trans }}</h2>
+        <div class="d-flex justify-content-center">
+            <hr class="separator"/>
+        </div>
 
-		<h2 class="mt-2">Magazine</h2>
-		<div class="d-flex justify-content-center">
-			<hr class="separator"/>
-		</div>
+        <div class="container-fluid">
+            <div class="row my-2 mx-1 justify-content-around">
+                {#                {/*---------------PMR---------------*/} #}
+                 <div class="cadre col-md-3 mb-2">
+                    <div class="d-flex justify-content-center">
+                        <img class="presta-img" 
+                        src="/img/magazinePage/pmr.webp" 
+                        alt="pmr gite etoile de dan" />
+                       
+                    </div>
+                    <div>
+                        <h3>
+                            {{ 'magazine.pmr.text1' | trans }}
+                        </h3>
+                        <b class="m-2">{{ 'magazine.pmr.text2' | trans }}</b>
+                        <p class="m-2">
+                            {{ 'magazine.pmr.text3' | trans }}
+                        </p>
 
-		<div class="container-fluid">
-			<div
-				class="row my-2 mx-1 justify-content-around">
-				{#                {/*---------------PMR---------------*/} #}
-				<div class="cadre col-md-3 mb-2">
-					<div class="d-flex justify-content-center">
-						<img class="presta-img" src="/img/magazinePage/pmr.webp" alt="pmr gite etoile de dan"/>
+                    <div class="mt-5">
+                        <a class="btn-enSavoirPlus" href="{{ path('pmr') }}">
+                            <span>{{ 'button.more' | trans }}</span>
+                        </a>
+                    </div>
+                    </div>
+                </div>
 
 					</div>
 					<div>
@@ -40,31 +53,46 @@
 							                            pour faciliter leur séjour et leur circulation.
 						</p>
 
-						<div class="mt-5">
-							<a class="btn-enSavoirPlus" href="{{ path('pmr') }}">
-								<span>En savoir plus</span>
-							</a>
-						</div>
-					</div>
-				</div>
+                    <div>
+                        <h3>
+                            {{ 'magazine.archi.text1' | trans }}
+                        </h3>
+                        <b class="m-2">{{ 'magazine.pmr.text2' | trans }}</b>
+                        <p class="m-2">
+                           {{ 'magazine.archi.text3' | trans }}
+                        </p>
+                    </div>
 
-				{#                {/*---------------Architecture---------------*/} #}
-				<div class="cadre col-md-3 mb-2">
-					<div class="d-flex justify-content-center">
-						<img class="presta-img" src="{{ asset('img/magazinePage/salon06.webp') }}" alt="architecte volume spacieux"/>
-					</div>
+                    <div class="mt-5">
+                        <a class="btn-enSavoirPlus" href="{{ path('architecture') }}">
+                            <span>{{ 'button.more' | trans }}</span>
+                        </a>
+                    </div>
+                </div>
 
-					<div>
-						<h3>
-							Découvrez notre Gîte avec ses volumes, son architecture, sa
-							                            localité et ses espaces sécurisés dans le sud de la France
-						</h3>
-						<b class="m-2">Pourquoi choisir notre gîte ?</b>
-						<p class="m-2">
-							Le Gîte offre un espace généreux pour accueillir votre groupe de 12 personnes. 
-							                            Nos vastes intérieurs vous permettent de vous étendre et de vous détendre en toute tranquillité.
-						</p>
-					</div>
+                {#                {/*---------------Famille---------------*/} #}
+                <div class="cadre col-md-3 mb-2">
+                    <div class="d-flex justify-content-center">
+                         <img class="presta-img"
+                         src="{{ asset('img/magazinePage/stefetvan.webp') }}" 
+                         alt="famille" 
+                         />
+                    </div>
+                    <div>
+                        <h3>
+                            {{ 'magazine.familly.text1' | trans }}
+                        </h3>
+                        <b class="m-2">{{ 'magazine.pmr.text2' | trans }}</b>
+                        <p class="m-2">
+                                   {{ 'magazine.familly.text3' | trans }}
+                        </p>
+                        <div class="mt-5">
+                            <a class="btn-enSavoirPlus" href="{{ path('famille') }}">
+                                <span>{{ 'button.more' | trans }}</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
 
 					<div class="mt-5">
 						<a class="btn-enSavoirPlus" href="{{ path('architecture') }}">
