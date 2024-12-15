@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Famille{% endblock %}
+{% block title %}{{ 'magazine.archi.archi.header' | trans }}{% endblock %}
 
 {% block body %}
     <main>
@@ -12,8 +12,8 @@
         </div>
                 {#---------------cadre---------------#}
                         <h2 class="mt-2 mx-5 d-flex text-center">
-                           Découvrez notre Gîte avec ses volumes, son architecture, 
-                            <br />sa localité et ses espaces sécurisés dans le sud de la France
+                           {{ 'magazine.archi.archi.title' | trans }}
+                            <br />{{ 'magazine.archi.archi.title1' | trans }}
                         </h2>
                         <div class="d-flex justify-content-center">
                             <hr class="separator" />
@@ -35,10 +35,10 @@
                                     alt="espace spacieux detente"
                             ></img>
                             <div class="Espace Spacieux">
-                                <h3 class="card-title">Espace Spacieux</h3>
+                                <h3 class="card-title">{{ 'magazine.archi.archi.title2' | trans }}</h3>
                                 <article>
                                 <p class="card-text">
-                                    Le Gîte offre un espace généreux pour accueillir votre groupe de 12 personnes. Nos vastes intérieurs vous permettent de vous étendre et de vous détendre en toute tranquillité.
+                                    {{ 'magazine.archi.archi.text21' | trans }}
                                 </p>
                                 </article>
                             </div>
@@ -54,10 +54,10 @@
                                     alt="Maison atypique"
                             ></img>
                             <div class="Maison Atypique">
-                                <h3 class="card-title">Maison Atypique</h3>
+                                <h3 class="card-title">{{ 'magazine.archi.archi.title3' | trans }}</h3>
                                 <article>
                                 <p class="card-text">
-                                    Conçue par un architecte, notre maison se distingue par son design unique et son caractère distinctif. Vous serez charmé par ses détails architecturaux originaux.                               
+                                    {{ 'magazine.archi.archi.text31' | trans }}
                                  </p>
                          </div>
                        </div>
@@ -72,10 +72,10 @@
                                     alt="securité"
                             ></img>
                             <div class="volume securisé">
-                                <h3 class="card-title">Volume Sécurisé</h3>
+                                <h3 class="card-title">{{ 'magazine.archi.archi.title4' | trans }}</h3>
                                 <article>
                                 <p class="card-text">
-                                    Votre sécurité est notre priorité. Notre gîte est équipé d'un système de sécurité sophistiqué pour assurer la tranquillité d'esprit de nos hôtes.
+                                    {{ 'magazine.archi.archi.text41' | trans }}
                                 </p>
                                 </article>
                             </div>
@@ -91,10 +91,10 @@
                                     alt=""
                             ></img>
                             <div class="Calme et Localisation">
-                                <h3 class="card-title">Calme et Localisation</h3>
+                                <h3 class="card-title">{{ 'magazine.archi.archi.title5' | trans }}</h3>
                                 <article>
                                 <p class="card-text">
-                                   Niché dans un environnement calme et préservé, L'étoile de Dan offre un cadre idyllique pour une escapade relaxante. Profitez de la tranquillité de la nature tout en étant à proximité des attractions locales.
+                                   {{ 'magazine.archi.archi.text51' | trans }}
                                 </p>
                                 </article>
                             </div>
@@ -110,11 +110,10 @@
                                     alt=""
                             ></img>
                             <div class="Lieu de Tournage Nature Disponible">
-                                <h3 class="card-title">Lieu de Tournage</h3>
+                                <h3 class="card-title">{{ 'magazine.archi.archi.title6' | trans }}</h3>
                                 <article>
                                 <p class="card-text">
-                                    Notre gîte offre un décor naturel spectaculaire pour tout projet de tournage. Que vous soyez un cinéaste professionnel ou un amateur passionné, notre gîte est l'endroit parfait pour donner vie à votre vision.                                
-                                </p>
+                                   {{ 'magazine.archi.archi.text61' | trans }}
                                 </article>
                             </div>
                         </div>
@@ -127,8 +126,8 @@
                 {#-----------------fin---------------#}
                 <article>
                         <b class="d-flex justify-content-center text-center pb-2">
-                           De plus sa localisation permet un rayonnement sur les différents site de la région
-                            <br /> (entre Les cevennes, Montpellier, Nimes et la mer).
+                           {{ 'magazine.archi.archi.textbottom1' | trans }}
+                            <br /> {{ 'magazine.archi.archi.textbottom2' | trans }}
                         </b>
                    
                         <div class="d-flex justify-content-center my-2">

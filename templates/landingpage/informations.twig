@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Informations{% endblock %}
+{% block title %}{{ 'informations.title' | trans }}{% endblock %}
 
 {% block body %}
     <main>
@@ -11,7 +11,7 @@
             </div>
         </div>
 
-        <h2 class="mt-2">Informations</h2>
+        <h2 class="mt-2">{{ 'informations.title' | trans }}</h2>
         <div class="d-flex justify-content-center">
             <hr class="separator" />
         </div>
@@ -25,34 +25,34 @@
                     <div class="justify-content-center">
                         
                             <h3 class="d-flex justify-content-start" style="text-decoration:underline; mb-2">
-                            Tarif
+                            {{ 'informations.price.price' | trans }}
                             </h3>
 
                         {#---------------hors saison---------------#}
                             <article class="cadre p-2 my-3">
                                 <b>
-                                    <u>Hors saison : </u>
+                                    <u>{{ 'informations.price.text1' | trans }}</u>
                                 </b>
                                 <p>
-                                - A la semaine : <b> 3000 TTC / 2500 HT</b>
+                                {{ 'informations.price.text2' | trans }}<b> 3000 TTC / 2500 HT</b>
                                 </p>
                                 <p>
-                                    - Du vendredi soir au lundi matin (3 nuits) ou
-                                    <br /> du lundi soir au vendredi matin (4 nuits) : <b> 2000€ TTC / 1667 HT</b>
+                                    {{ 'informations.price.text3' | trans }}
+                                    <br /> {{ 'informations.price.text4' | trans }}<b> 2000€ TTC / 1667 HT</b>
                                 </p>
                              </article>
 
                         {#--------------basse saison---------------#}
                             <article class=" cadre p-2 my-3">
                                 <b>
-                                    <u>Petites vacances + mois de mai : </u>
+                                    <u>{{ 'informations.price.text5' | trans }}</u>
                                 </b>
                                 <p>
-                                - A la semaine : <b> 3600€ TTC / 3000€ HT</b>
+                                {{ 'informations.price.text6' | trans }} <b> 3600€ TTC / 3000€ HT</b>
                                 </p>
                                 <p>
-                                - Du vendredi soir au lundi matin (3 nuits) ou
-                                <br /> du lundi soir au vendredi matin (4 nuits): <b> 2700€ TTC / 2250€ HT</b>
+                                {{ 'informations.price.text7' | trans }}
+                                <br />{{ 'informations.price.text8' | trans }}<b> 2700€ TTC / 2250€ HT</b>
                                 </p>
                             </article>
 
@@ -60,20 +60,20 @@
                         {#---------------pleine saison---------------#}
                             <article class="cadre p-2 my-3">
                                 <b>
-                                    <u>Vacances d’été :</u>
+                                    <u>{{ 'informations.price.text9' | trans }}</u>
                                 </b>
                                 <p>
-                                - A la semaine : <b> 3800€ TTC / 3167€ HT</b>
+                                {{ 'informations.price.text10' | trans }}<b> 3800€ TTC / 3167€ HT</b>
                                 </p>
                                  <p>
-                                    - Du vendredi soir au lundi matin (3 nuits) ou
-                                    <br /> du lundi soir au vendredi matin (4 nuits) : <b> 2850€ TTC / 2375 HT</b>
+                                   {{ 'informations.price.text11' | trans }}
+                                    <br />{{ 'informations.price.text12' | trans }}<b> 2850€ TTC / 2375 HT</b>
                                 </p>
                             </article>
 
                         {#---------------Tarif dégressif---------------#}
                             <article class="cadre p-2 my-3 d-flex justify-content-center"> 
-                             <b> Tarif dégressif à partir de deux semaines </b>
+                             <b> {{ 'informations.price.text13' | trans }}</b>
                             </article>
                         {#---------------fin---------------#}
                         
@@ -88,7 +88,7 @@
                     <div class="d-flex justify-content-center">
                         <div>
                             <h3 class="d-flex justify-content-start" style="text-decoration:underline; mb-2">
-                            Assurance / Garanties en cas de dommages
+                            {{ 'informations.assurance.title' | trans }}
                             </h3>
                             <img
                                     src="{{ asset('img/informationsPage/assurance.png') }}"
@@ -104,18 +104,17 @@
 
                             <article class="mx-3">
                             <p>
-                                <b>1</b> - Pour valider la réservation, un chèque de caution de 2500€ servant de dépôt de garantie en cas de dommages est demandé. 
-                                <br/><b>2</b> - En plus de cela, pour couvrir le montant des réparations supérieur au dépôt de garantie en cas de détérioration du gîte, il sera demandé aux résidents de fournir dès la réservation une attestation d'assurance villégiature (cette assurance couvre notamment les bris de vitres le cas échéant).
-                                                Cette couverture d'assurance est inclus dans l'assurance du domicile de tout un chacun. Il suffit donc de demander cette attestation auprès de sa compagnie d'assurance...
-                                <br/><b>3</b> - Les questions relatives à la prise en charge des dommages seront traités dans les huit jours suivant l'établissement de l'état des lieux de sortie et de la remise des clés en fin de séjour et seront fonction de l'état du logement
-                                <br/><b>4</b> - Le locataire est obligé :
-                                                <br/>- de payer le loyer et les charges aux termes convenus
-                                                <br/>- d'user paisiblement des locaux loués en respectant leur destination contractuelle. Ceci induit notamment l'interdiction de générer des nuisances au voisinage, que ce soit par du tapage nocturne ou autre
-                                                <br/>- de répondre des dégradations ou des pertes survenues pendant la durée du contrat dans les locaux dont il a la jouissance exclusive
-                                                <br/>- de ne pas transformer les locaux et équipements loués
-                                                <br/>- d'être responsable de l'utilisation des dispositifs de sécurité destinés à protéger les usagers de la piscine et du hamac géant.
-                                                <br/>- Les enfants sont sous l'entière responsabilité des parents ou des représentants légaux
-                                <br/><b>5</b> - Le locataire sera accueilli par le bailleur ou son représentant afin d'établir un état des lieux d'entrée. A la fin du séjour, un état des lieux de sortie aura lieu
+                                <b>1</b> {{ 'informations.assurance.text1' | trans }}
+                                <br/><b>2</b> {{ 'informations.assurance.text2' | trans }}
+                                <br/><b>3</b> {{ 'informations.assurance.text3' | trans }}
+                                <br/><b>4</b> {{ 'informations.assurance.text4' | trans }}
+                                                <br/>{{ 'informations.assurance.text5' | trans }}
+                                                <br/>{{ 'informations.assurance.text6' | trans }}
+                                                <br/>{{ 'informations.assurance.text7' | trans }}
+                                                <br/>{{ 'informations.assurance.text8' | trans }}
+                                                <br/>{{ 'informations.assurance.text9' | trans }}
+                                                <br/>{{ 'informations.assurance.text10' | trans }}
+                                <br/><b>5</b>{{ 'informations.assurance.text11' | trans }}
                             </p>
                             </article>
                         </div>
@@ -137,7 +136,7 @@
                 <div class="cadre .col-6 col-md-5 pt-2">
                         <div>
                             <h3 class="d-flex justify-content-start" style="text-decoration:underline;">
-                            Services de Proximité
+                            {{ 'informations.services.title' | trans }}
                             </h3>
                             <img
                                     src="{{ asset('img/informationsPage/proximite.png') }}"
@@ -152,29 +151,21 @@
                             ></img>
                             <article class="m-2">
                                 <p>
-                                Laissez-vous séduire par les délices culinaires de la région
-                                et savourez une cuisine authentique et raffinée. Explorez les
-                                marchés locaux où vous pourrez déguster des produits du
-                                terroir frais et savoureux, tels que les vins renommés de la
-                                région, les fromages artisanaux et les spécialités
-                                gastronomiques régionales. Vivez l'art de vivre à la française
-                                en vous attablant à de charmants bistrots ou en dégustant un
-                                pique-nique dans un cadre enchanteur.
+                                 {{ 'informations.services.text1' | trans }}
                                 </p>
                             <section class="cadre p-2 my-3">
-                                <a href="https://ot-sommieres.com/marches">Marché de Sommières</a>- 12 min en voiture
+                                <a href="https://ot-sommieres.com/marches">{{ 'informations.services.link1' | trans }}</a>{{ 'informations.services.distance1' | trans }}
                                 <br/>
-                                <a href="">Boulangerie ebiopi</a>- 5 min à pied
+                                <a href="">{{ 'informations.services.link2' | trans }}</a>{{ 'informations.services.distance2' | trans }}
                                 <br/>
-                                <a href="">Pharmacie de Quissac</a>- 11 min en voiture
+                                <a href="">{{ 'informations.services.link3' | trans }}</a>{{ 'informations.services.distance3' | trans }}
                                 <br/>
-                                <a href="https://www.carrefour.fr/magasin/market-villevieille">Carrefour Market Villevieille</a>- 10 min en voiture
-                                <br/>
-                                <a href="">Café Français</a>- 12 min en voiture
+                                <a href="https://www.carrefour.fr/magasin/market-villevieille">{{ 'informations.services.link4' | trans }}</a>{{ 'informations.services.distance4' | trans }}
+                                <a href="">{{ 'informations.services.link5' | trans }}</a>{{ 'informations.services.distance5' | trans }}
                                  <br/>
-                                <a href="https://www.chateaudepondres.fr/le-restaurant/">Château de Pondres </a>- 9 min en voiture
+                                <a href="https://www.chateaudepondres.fr/le-restaurant/">{{ 'informations.services.link6' | trans }}</a>{{ 'informations.services.distance6' | trans }}
                                  <br/>
-                                <a href="https://cafe-de-la-poste.net/">Café de la Poste</a>- 7 min en voiture
+                                <a href="https://cafe-de-la-poste.net/">{{ 'informations.services.link7' | trans }}</a>{{ 'informations.services.distance7' | trans }}
                             </section>
                             </article>
 {#                            {/*---------------fin---------------*/}#}
@@ -189,7 +180,7 @@
                 <div class="cadre .col-6 col-md-6 py-2">
                
                          <h3 class="d-flex justify-content-start" style="text-decoration:underline;">
-                            Galerie
+                            {{ 'informations.portfolio' | trans }}
                             </h3>
                         <div id="carouselExampleCaptions" class="carousel slide" style="max-width: 100%; max-height:100%; margin:auto; border-radius: 10px; overflow: hidden;">
                                 <div class="carousel-indicators">
@@ -204,22 +195,22 @@
                                 
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
-                                    <img src="img/carousel/photosint/salon01.webp" class="d-block w-100" alt="salon cuisine">
+                                    <img src="{{ asset('/img/carousel/photosint/salon01.webp') }}" class="d-block w-100" alt="salon cuisine">
                                     </div>
                                     <div class="carousel-item">
-                                    <img src="img/carousel/photosint/salon02.webp" class="d-block w-100" alt="salon billard">
+                                    <img src="{{ asset('/img/carousel/photosint/salon02.webp') }}" class="d-block w-100" alt="salon billard">
                                     </div>
                                     <div class="carousel-item">
-                                    <img src="img/carousel/photosint/piscine01.webp" class="d-block w-100" alt="salon salle à manger">
+                                    <img src="{{ asset('/img/carousel/photosint/piscine01.webp') }}" class="d-block w-100" alt="salon salle à manger">
                                     </div>
                                     <div class="carousel-item">
-                                    <img src="img/carousel/photosint/sallejeux01.webp" class="d-block w-100" alt="salle de jeux">
+                                    <img src="{{ asset('/img/carousel/photosint/sallejeux01.webp') }}"class="d-block w-100" alt="salle de jeux">
                                     </div>
                                     <div class="carousel-item">
-                                    <img src="img/carousel/photosint/chambre01-1.webp" class="d-block w-100" alt="chambre">
+                                    <img src="{{ asset('/img/carousel/photosint/chambre01-01.webp') }}" class="d-block w-100" alt="chambre">
                                     </div>
                                     <div class="carousel-item">
-                                    <img src="img/carousel/photosint/chambre02-PMR-03.webp" class="d-block w-100" alt="pmr chambre">
+                                    <img src="{{ asset('/img/carousel/photosint/chambre02-PMR-03.webp') }}" class="d-block w-100" alt="pmr chambre">
                                     </div>
                                 </div>
 

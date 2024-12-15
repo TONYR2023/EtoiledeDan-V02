@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Magazine - spacieux accessible pmr - architecte volume sud de france - haut de gamme luxueux 12 personnes{% endblock %}
+{% block title %}{{ 'magazine.title' | trans }}{% endblock %}
 
 {% block body %}
     <main>
@@ -11,7 +11,7 @@
             </div>
         </div>
 
-        <h2 class="mt-2">Magazine</h2>
+        <h2 class="mt-2">{{ 'magazine.title2' | trans }}</h2>
         <div class="d-flex justify-content-center">
             <hr class="separator"/>
         </div>
@@ -28,20 +28,16 @@
                     </div>
                     <div>
                         <h3>
-                            Découvrez notre Gîte Spacieux et Accessible aux Personnes à
-                            Mobilité Réduite (PMR) dans le Gard entre Nîmes, Alès et
-                            Montpellier
+                            {{ 'magazine.pmr.text1' | trans }}
                         </h3>
-                        <b class="m-2">Pourquoi choisir notre gîte ?</b>
+                        <b class="m-2">{{ 'magazine.pmr.text2' | trans }}</b>
                         <p class="m-2">
-                            Notre gîte est spécialement conçu pour accueillir les
-                            personnes à mobilité réduite, avec des aménagements adaptés
-                            pour faciliter leur séjour et leur circulation.
+                            {{ 'magazine.pmr.text3' | trans }}
                         </p>
 
                     <div class="mt-5">
                         <a class="btn-enSavoirPlus" href="{{ path('pmr') }}">
-                            <span>En savoir plus</span>
+                            <span>{{ 'button.more' | trans }}</span>
                         </a>
                     </div>
                     </div>
@@ -59,19 +55,17 @@
 
                     <div>
                         <h3>
-                            Découvrez notre Gîte avec ses volumes, son architecture, sa
-                            localité et ses espaces sécurisés dans le sud de la France
+                            {{ 'magazine.archi.text1' | trans }}
                         </h3>
-                        <b class="m-2">Pourquoi choisir notre gîte ?</b>
+                        <b class="m-2">{{ 'magazine.pmr.text2' | trans }}</b>
                         <p class="m-2">
-                            Le Gîte offre un espace généreux pour accueillir votre groupe de 12 personnes. 
-                            Nos vastes intérieurs vous permettent de vous étendre et de vous détendre en toute tranquillité.
+                           {{ 'magazine.archi.text3' | trans }}
                         </p>
                     </div>
 
                     <div class="mt-5">
                         <a class="btn-enSavoirPlus" href="{{ path('architecture') }}">
-                            <span>En savoir plus</span>
+                            <span>{{ 'button.more' | trans }}</span>
                         </a>
                     </div>
                 </div>
@@ -86,18 +80,15 @@
                     </div>
                     <div>
                         <h3>
-                            Découvrez notre gîte haut de gamme, conçu pour offrir un
-                            confort exceptionnel et luxueux à 12 personnes.
+                            {{ 'magazine.familly.text1' | trans }}
                         </h3>
-                        <b class="m-2">Pourquoi choisir notre gîte ?</b>
+                        <b class="m-2">{{ 'magazine.pmr.text2' | trans }}</b>
                         <p class="m-2">
-                                    Découvrez le summum du raffinement dans nos chambres spacieuses et élégamment décorées, 
-                                    conçues pour accueillir jusqu'à 12 personnes en toute intimité. Profitez d'une atmosphère 
-                                    chaleureuse et accueillante où chaque détail a été soigneusement pensé pour votre confort ultime.
+                                   {{ 'magazine.familly.text3' | trans }}
                         </p>
                         <div class="mt-5">
                             <a class="btn-enSavoirPlus" href="{{ path('famille') }}">
-                                <span>En savoir plus</span>
+                                <span>{{ 'button.more' | trans }}</span>
                             </a>
                         </div>
                     </div>
