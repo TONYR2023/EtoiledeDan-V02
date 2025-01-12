@@ -127,14 +127,15 @@ gite :
     thehouse :
         text1 : "Our architect-designed house combines design, modernity and character"
         text2 : "to provide you with all the comfort during your stay. Its terraces, lounge, games room and swimming pool are designed to "
-        text3 : "welcome people with reduced mobility while providing an adapted suite with easy access thanks to its PMR ramp."
-        text4 : "The 75 m2 living room is fitted with: - A fully equipped kitchen with its American fridge, wine cellar, large central island, etc."
+        text3 : "welcome people with reduced mobility"
+        text4 : "while providing an adapted suite with easy access thanks to its PRM ramp."
+        text51 : "The 75 m2 living room is fitted with:"
         text5 : "- A fully equipped kitchen with its American fridge, wine cellar, large central island, etc."
-        text6 : "- A living room with its very large screen television,"
-        text7 : "- A dining room with its large table that can accommodate 12 guests,"
+        text6 : "- A living room with its very large screen television."
+        text7 : "- A dining room with its large table that can accommodate 12 guests."
         text8 : "- a pool table and a giant hammock, ideal for relaxing."
         text9: "Continue this gentle way of life in the play area:"
-        text10: "- With its indoor swimming pool and its aquarium bay,"
+        text10: "- With its indoor swimming pool and its aquarium bay."
         text11: "- A games room with: a table football, an arcade terminal and a games table."
         text12 : "To accommodate up to"
         text13 : "12 residents, the cottage has 4 bedrooms and 3 bathrooms"
@@ -146,12 +147,12 @@ gite :
     garden : "The Garden"
     thegarden :
         text1 : "The 2500 m2 wooded garden has:"
-        text2 : "- A garden furniture"
-        text3 : "- A large garage with 2 carports (equipped with 2 charging stations) in which 4 vehicles can be parked. "
-        text4 : "- At the back of the house, a parking area for 2 vehicles directly in contact with the PMR ramp, "
-        text5 : "- A magnificent bowling alley,"
-        text6 : "- A ping-pong table,"
-        text7 : "- A trampoline reserved for children"
+        text2 : "- A garden furniture."
+        text3 : "- A large garage with 2 carports (equipped with 2 charging stations) in which 4 vehicles can be parked."
+        text4 : "- At the back of the house, a parking area for 2 vehicles directly in contact with the PMR ramp."
+        text5 : "- A magnificent bowling alley."
+        text6 : "- A ping-pong table."
+        text7 : "- A trampoline (reserved for children)."
         text8 : "Location"
 
 prestations :
@@ -487,8 +488,6 @@ magazine :
 
         
 
-reservation : 
-   title : "Pre-Book your Stay"
-   step1 :
-       calendar : "calendar"
-       step : "step 1"
+"
+    btnreini : "reset calendar"
+    

@@ -5,6 +5,10 @@ import PrereservPage from "./pages/PrereservPage";
 require('bootstrap');
 
 console.log('Démarrage du script presreserv.js');
+console.log("Valeur de window.locale avant passage à React :", window.locale);
+const locale = window.locale;
+console.log("Locale transmis à React :", locale);
+
 
 const presreservElement = document.getElementById('presreserv');
 if (!presreservElement) {
@@ -15,8 +19,10 @@ if (!presreservElement) {
     const root = ReactDOM.createRoot(presreservElement);
     root.render(
         <React.Fragment>
-            <PrereservPage />
+            <PrereservPage initialLocale={locale} />
         </React.Fragment>
     );
     console.log('Composant React rendu');
 }
+
+

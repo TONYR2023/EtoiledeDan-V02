@@ -9,18 +9,11 @@ accueil:
     controller: App\Controller\AccueilController::index
     requirements:
         _locale: 'fr|en' # Cela spécifie que seules ces langues sont valides
-    defaults:
-        _locale: 'fr'  # Définit 'fr' comme langue par défaut
+    defaults: {_locale : fr } # Définit 'fr' comme langue par défaut
 
 app_home_redirect:
     path: /
     controller: App\Controller\AccueilController::redirectToDefaultLanguage
-
-app_reservation:
-    path: /{_locale}/reservation
-    controller: App\Controller\ReservationController::index
-    requirements:
-        _locale: en|fr
 
 # config/routes.yaml
 switch_language:
@@ -28,3 +21,33 @@ switch_language:
     controller: App\Controller\LanguageController::switchLanguage
     requirements:
         _locale: 'en|fr'  # Langues acceptées
+
+app_reservation:
+    path: /{_locale}/reservation
+    controller: App\Controller\ReservationController::index
+    requirements:
+        _locale: en|fr
+
+redirect_to_locale:
+    path: /reservation
+    controller: Symfony\Bundle\FrameworkBundle\Controller\RedirectController::redirectAction
+    defaults:
+        route: app_reservation
+        permanent: true
+        _locale: fr  # la langue par défaut
+
+# Redirection vers le gîte avec la langue par défaut 'fr'
+redirect_to_gite:
+    path: /notre-gite
+    controller: Symfony\Bundle\FrameworkBundle\Controller\RedirectController::redirectAction
+    defaults:
+        route: app_gite
+        permanent: true
+        _locale: fr  # redirection vers la version française du gîte
+
+# Route pour le gîte en différentes langues
+app_gite:
+    path: /{_locale}/notre-gite
+    controller: App\Controller\PmrController::index
+    requirements:
+        _locale: en|fr

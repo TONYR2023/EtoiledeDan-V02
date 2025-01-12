@@ -14,6 +14,7 @@
         bookeds.map((e) => {
             reserved.push({'startDate': new Date(e.startDate), endDate: new Date(e.endDate)})
         })
+        window.locale = '{{ app.request.locale }}';
     </script>     
 {% endblock %}
 
@@ -27,9 +28,14 @@
         <h2 class="mt-2">{{ 'reservation.title' | trans }} </h2>
         <div class="d-flex justify-content-center">
             <hr class="separator"/>
+        
+
         </div>
 
         <section class="container-fluid" id="presreserv">
         </section>
+        <div id="reservation"></div>
+
+        {{ encore_entry_script_tags('app') }}
     </main>
 {% endblock %}

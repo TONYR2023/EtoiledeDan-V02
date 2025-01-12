@@ -3,6 +3,4 @@ framework:
     translator:
         enabled: true
         default_path: '%kernel.project_dir%/translations'
-        fallbacks:
-            - 'fr'
-        providers:
+        fallbacks: ['fr']
