@@ -9,7 +9,7 @@ use Symfony\Component\Routing\Attribute\Route;
 
 class ReservationController extends AbstractController
 {
-    #[Route('/reservation', name: 'app_reservation')]
+    #[Route('reservation', name: 'app_reservation')]
     public function index(BookedRepository $bookedRepository): Response
     {
         $bookeds = $bookedRepository->findAllById();

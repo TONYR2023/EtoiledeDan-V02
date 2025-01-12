@@ -1,3 +1,4 @@
+
 const Encore = require('@symfony/webpack-encore');
 
 // Manually configure the runtime environment if not already configured yet by the "encore" command.
@@ -20,6 +21,7 @@ Encore
 
     // enables the Symfony UX Stimulus bridge (used in assets/bootstrap.js)
     .enableStimulusBridge('./assets/controllers.json')
+
 
     // will require an extra script tag for runtime.js
     // but, you probably want this, unless you're building a single-page app
@@ -48,6 +50,9 @@ Encore
         config.corejs = '3.23';
     })
 
+  
+    //.enableUXTranslatable() // Active Symfony UX Translator
+
 
     .enableSassLoader()
 
@@ -67,7 +72,7 @@ Encore
         'bootstrap/dist/css/bootstrap.css', 
         'bootstrap',])
     .addEntry('prereserv', './assets/presreserv.js')
-
+//  .addEntry('translations', './public/build/translations.js')  // Ajouter le fichier des traductions
 //----------------Leaflet----------------
 //  .addEntry('leaflet', ['leaflet/dist/leaflet.css', 'leaflet/dist/leaflet.js']) // Ajout de Leaflet
 //  .autoProvideVariables({

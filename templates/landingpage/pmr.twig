@@ -5,24 +5,43 @@
 {% block body %}
     <main>
         <div class="backgroundImageContainer">
-            <img src="{{ asset('img/magazinePage/pmr.webp') }}" alt="pmr" class="backgroundImage" />
+            <img src="{{ asset('img/magazinePage/pmr.webp') }}" alt="pmr" />
             <div class="buttonContainer">
                 {{ include('reservation/boutonReservation.twig') }}
             </div>
         </div>
         {#-----------------cadre---------------#}
-                <h2 class="mt-2 mx-5 d-flex text-center">
-                    {{ 'magazine.pmr.pmr.title' | trans }}
-                </h2>
-                <div class="d-flex justify-content-center">
-                    <hr class="separator" />
-                </div>
-            {#---------------cadre presentation--------------#}
+        <h2 class="mt-2 mx-5 d-flex text-center">
+            {{ 'magazine.pmr.pmr.title' | trans }}
+        </h2>
+        <div class="d-flex justify-content-center">
+            <hr class="separator" />
+        </div>
+
+
+        {# -------scroll--------- #}
+        <div class="scrolling-wrapper">
+            <div class="card">
+          {#   <img src="{{ asset('img/magazinePage/pmr.webp') }}" alt="pmr" class="backgroundImage" /> #}
+                <h3>{{ 'magazine.pmr.pmr.title1' | trans }}</h3>
+                    <section>
+                    <p>{{ 'magazine.pmr.pmr.text11' | trans }}</p>
+                    </section>
+            </div>
+            <div class="card">
+                <h3>{{ 'magazine.pmr.pmr.title2' | trans }}</h3>
+                    <section>
+                    <p>{{ 'magazine.pmr.pmr.text21' | trans }}</p>
+                    </section>
+            </div>
+        </div>
+
+            {# ---------------cadre presentation--------------
             <div class="p-3 mx-3">
                 <div class="container-fluid">
                     <div class="row my-2 mx-1 justify-content-around">
 
-                    {#-----------------pmr---------------#}
+                    {#-----------------pmr---------------
                          <div class="col-lg-2 col-md-4 col-sm-6 mb-4">
                         <div class="card px-2" style="width: 100%;">
                             <img
@@ -41,7 +60,7 @@
                         </div>
                         </div>
 
-                    {#-----------------grand volume---------------#}
+                    {#-----------------grand volume---------------
                         <div class="col-lg-2 col-md-4 col-sm-6 mb-4">
                         <div class="card px-2" style="width: 100%;">
                             <img
@@ -60,7 +79,7 @@
                         </div>
                         </div>
 
-                    {#-----------------Hébergement Familial ---------------#}
+                    {#-----------------Hébergement Familial ---------------
                         <div class="col-lg-2 col-md-4 col-sm-6 mb-4">
                         <div class="card px-2" style="width: 100%;">
                             <img
@@ -78,7 +97,7 @@
                         </div>
                         </div>
 
-{#                  {/*-----------------Situation Idéale---------------*/}#}
+{#                  {/*-----------------Situation Idéale---------------*/}
                         <div class="col-lg-2 col-md-4 col-sm-6 mb-4">
                         <div class="card px-2" style="width: 100%;">
                             <img
@@ -97,7 +116,7 @@
                         </div>
                         </div>
 
-{#                  {/*-----------------Services Personnalisés ---------------*/}#}
+{#                  {/*-----------------Services Personnalisés ---------------*/}
                         <div class="col-lg-2 col-md-4 col-sm-6 mb-4">
                         <div class="card px-2" style="width: 100%;">
                             <img
@@ -115,12 +134,12 @@
                             </div>
                         </div>
                         </div>
-                    {#-----------------fin bloc---------------#}
+                    {#-----------------fin bloc---------------
                      </div>
                      </div>
-                     </div>
+                     </div> 
                 {#-----------------fin---------------#}
-                <article>
+                {# <article>
                         <b class="d-flex justify-content-center text-center pb-2">
                             {{ 'magazine.pmr.pmr.textbottom' | trans }}
                         </b>
@@ -128,7 +147,7 @@
                         <div class="d-flex justify-content-center my-2">
                             {{ include('reservation/boutonReservation.twig') }}
                         </div>
-                </article>
+                </article> #}
 
     </main>
 {% endblock %}

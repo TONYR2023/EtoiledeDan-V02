@@ -1,494 +1,279 @@
-navbar:
-    home: "Accueil"
-    gite: "Notre Gite"
-    prestation: "Prestations"
-    tourism: "tourisme"
-    informations : "information"
-    magazine: "Magazine"
-footer:
-    about: "A propos"
-    legalnotices : 
-        title : "Legal notices"
-        text1 : "Le site L'Étoile de Dan est édité par TONY R, une société BNC non
-            soumis à la TVA, immatriculée au Registre du Commerce et des Sociétés
-            sous le numéro N° de SIRET : 499676336000. Le siège social est situé à
-            63 route de laverune 34070 Montpellier."
-        title2 : "2. Représentant Légal"
-        text2 : "Le représentant légal de TONY R est M.BOURDEAU Anthony, agissant en
-            qualité de PDG, joignable à l'adresse 63 route de laverune 34070
-            Montpellier et par courriel à tonyr2004@neuf.fr."
-        title3 : "3. Hébergement du Site"
-        text3 : "Le site VeloMobile est hébergé par O2SWITCH, dont le siège
-            social est situé à 222-224 Boulevard Gustave Flaubert, 63000 Clermont-Ferrand, France. et joignable à l'adresse e-mail suivante
-            : support@o2switch.fr ."
-        title4 : "4. Propriété Intellectuelle"
-        text4 : "Le site et son contenu sont la propriété exclusive de L'Étoile de Dan
-            et sont protégés par les lois sur la propriété intellectuelle. Toute
-            reproduction, distribution ou utilisation non autorisée du contenu est
-            strictement interdite."
-        title5 : "5. Collecte et Traitement des Données Personnelles"
-        text5 : "La collecte et le traitement des données personnelles sur le site
-            L'Étoile de Dan sont réalisés conformément à la Politique de
-            Confidentialité accessible [lien vers la Politique de
-            Confidentialité]."
-        title6 : "6. Cookies"
-        text6 : "Le site peut utiliser des cookies pour améliorer l'expérience de
-            l'utilisateur. Les utilisateurs ont la possibilité de désactiver les
-            cookies dans les paramètres de leur navigateur."
-        title7 : "7. Responsabilité"
-        text7 : " Malgré tous les efforts déployés pour assurer l'exactitude des
-            informations, TONY R décline toute responsabilité en cas d'erreurs ou
-            d'omissions sur le site. Les utilisateurs sont invités à nous signaler
-            toute inexactitude."
-        title8 : "8. Liens Hypertextes"
-        text8 : "Le site peut contenir des liens hypertextes vers des sites tiers. TONY
-            R n'assume aucune responsabilité quant au contenu de ces sites."
-        title9 : "9. Droit Applicable et Juridiction"
-        text9 : "Les présentes mentions légales sont régies par le droit en vigueur.
-            Tout litige sera soumis aux tribunaux compétents du lieu où est situé
-            le siège social de L'Étoile de Dan."
-        title10 : "10. Contact"
-        text10 : "Pour toute question ou préoccupation concernant le site L'Étoile de
-            Dan, veuillez nous contacter à l'adresse suivante : 61, route
-            Départementale 6110 30260 Crespian ou par courriel à
-            contact@etoilededan.fr."
-        text11 : "Fait à Montpellier, le 31/05/2024."
-        text12 : "M.BOURDEAU Anthony"
-    cgu :
-        title: "Conditions Générales d'Utilisation (CGU) - Site L'Étoile de Dan"
-        title1 : "1. Acceptation des Conditions"
-        text1 : "En accédant et en utilisant le site L'Étoile de Dan, vous acceptez de
-            vous conformer aux présentes Conditions Générales d'Utilisation. Si
-            vous n'acceptez pas ces conditions, veuillez ne pas utiliser le site."
-        title2 : "2. Informations Générales"
-        text2 : "e site L'Étoile de Dan est exploité par L'Étoile de Dan, ci-après
-            dénommé 'le site'. Les CGU régissent l'utilisation du site, y compris
-            la collecte, le stockage et l'utilisation des données."
-        title3 : " 3. Données Personnelles et Confidentialité"
-        text3 : "Votre utilisation du site est soumise à notre Politique de
-            Confidentialité, régissant la collecte et le traitement de vos données
-            personnelles. Nous nous engageons à protéger vos informations
-            conformément aux lois applicables."
-        title4 : "4. Utilisation des Formulaires"
-        text4 : "Le site propose des formulaires détaillés, notamment pour demander des
-            informations sur le gîte et pour faire une pré-reservation en vue
-            d'une location. En soumettant ces formulaires, vous consentez à
-            l'utilisation de vos informations pour répondre à votre demande et
-            pour vous fournir des actualités et des mises à jour pertinentes."
-        title5 : "5. Création d'un Compte Utilisateur"
-        text5 : "La création d'un compte utilisateur sur le site L'Étoile de Dan est
-            facultative mais peut offrir des avantages tels que la gestion des
-            demandes d'information, l'accès à des offres exclusives. Vous êtes
-            responsable de la confidentialité de vos informations de compte."
-        title6 : "6. Propriété Intellectuelle"
-        text6 : "Le contenu du site, y compris les textes, images, logos et autres
-            éléments, est la propriété intellectuelle du site. Aucune
-            reproduction, distribution ou utilisation non autorisée du contenu
-            n'est permise sans consentement préalable."
-        title7 : "7. Responsabilités"
-        text7 : "Le site L'Étoile de Dan s'efforce de fournir des informations
-            précises, mais ne garantit pas l'exactitude de toutes les données.
-            Nous déclinons toute responsabilité en cas d'utilisation inappropriée
-            du site ou de préjudice résultant de l'utilisation des informations
-            fournies."
-        title8 : "8. Modification des CGU"
-        text8 : "Le site se réserve le droit de modifier les CGU à tout moment. Les
-            utilisateurs seront informés des changements, et il leur incombe de
-            consulter régulièrement les CGU mises à jour."
-        title9 : "9. Droit Applicable et Juridiction"
-        text9 : "Les présentes CGU sont régies par le droit en vigueur. Tout litige
-            sera soumis aux tribunaux compétents du lieu où est situé le siège
-            social de l'entreprise exploitant le site L'Étoile de Dan."
-        text10 : "En utilisant le site L'Étoile de Dan, vous acceptez ces conditions et
-            vous vous engagez à les respecter. Pour toute question ou
-            préoccupation, veuillez nous contacter à contact@letoilededan.fr."
-    contactpage: "Contact Page"
+navbar.home: Accueil
+navbar.gite: 'Notre Gite'
+navbar.prestation: Prestations
+navbar.tourism: tourisme
+navbar.informations: information
+navbar.magazine: Magazine
+footer.about: 'A propos'
+footer.legalnotices.title: 'Legal notices'
+footer.legalnotices.text1: "Le site L'Étoile de Dan est édité par TONY R, une société BNC non soumis à la TVA, immatriculée au Registre du Commerce et des Sociétés sous le numéro N° de SIRET : 499676336000. Le siège social est situé à 63 route de laverune 34070 Montpellier."
+footer.legalnotices.title2: '2. Représentant Légal'
+footer.legalnotices.text2: "Le représentant légal de TONY R est M.BOURDEAU Anthony, agissant en qualité de PDG, joignable à l'adresse 63 route de laverune 34070 Montpellier et par courriel à tonyr2004@neuf.fr."
+footer.legalnotices.title3: '3. Hébergement du Site'
+footer.legalnotices.text3: "Le site VeloMobile est hébergé par O2SWITCH, dont le siège social est situé à 222-224 Boulevard Gustave Flaubert, 63000 Clermont-Ferrand, France. et joignable à l'adresse e-mail suivante : support@o2switch.fr ."
+footer.legalnotices.title4: '4. Propriété Intellectuelle'
+footer.legalnotices.text4: "Le site et son contenu sont la propriété exclusive de L'Étoile de Dan et sont protégés par les lois sur la propriété intellectuelle. Toute reproduction, distribution ou utilisation non autorisée du contenu est strictement interdite."
+footer.legalnotices.title5: '5. Collecte et Traitement des Données Personnelles'
+footer.legalnotices.text5: "La collecte et le traitement des données personnelles sur le site L'Étoile de Dan sont réalisés conformément à la Politique de Confidentialité accessible [lien vers la Politique de Confidentialité]."
+footer.legalnotices.title6: '6. Cookies'
+footer.legalnotices.text6: "Le site peut utiliser des cookies pour améliorer l'expérience de l'utilisateur. Les utilisateurs ont la possibilité de désactiver les cookies dans les paramètres de leur navigateur."
+footer.legalnotices.title7: '7. Responsabilité'
+footer.legalnotices.text7: " Malgré tous les efforts déployés pour assurer l'exactitude des informations, TONY R décline toute responsabilité en cas d'erreurs ou d'omissions sur le site. Les utilisateurs sont invités à nous signaler toute inexactitude."
+footer.legalnotices.title8: '8. Liens Hypertextes'
+footer.legalnotices.text8: "Le site peut contenir des liens hypertextes vers des sites tiers. TONY R n'assume aucune responsabilité quant au contenu de ces sites."
+footer.legalnotices.title9: '9. Droit Applicable et Juridiction'
+footer.legalnotices.text9: "Les présentes mentions légales sont régies par le droit en vigueur. Tout litige sera soumis aux tribunaux compétents du lieu où est situé le siège social de L'Étoile de Dan."
+footer.legalnotices.title10: '10. Contact'
+footer.legalnotices.text10: "Pour toute question ou préoccupation concernant le site L'Étoile de Dan, veuillez nous contacter à l'adresse suivante : 61, route Départementale 6110 30260 Crespian ou par courriel à contact@etoilededan.fr."
+footer.legalnotices.text11: 'Fait à Montpellier, le 31/05/2024.'
+footer.legalnotices.text12: 'M.BOURDEAU Anthony'
+footer.cgu.title: "Conditions Générales d'Utilisation (CGU) - Site L'Étoile de Dan"
+footer.cgu.title1: '1. Acceptation des Conditions'
+footer.cgu.text1: "En accédant et en utilisant le site L'Étoile de Dan, vous acceptez de vous conformer aux présentes Conditions Générales d'Utilisation. Si vous n'acceptez pas ces conditions, veuillez ne pas utiliser le site."
+footer.cgu.title2: '2. Informations Générales'
+footer.cgu.text2: "e site L'Étoile de Dan est exploité par L'Étoile de Dan, ci-après dénommé 'le site'. Les CGU régissent l'utilisation du site, y compris la collecte, le stockage et l'utilisation des données."
+footer.cgu.title3: ' 3. Données Personnelles et Confidentialité'
+footer.cgu.text3: 'Votre utilisation du site est soumise à notre Politique de Confidentialité, régissant la collecte et le traitement de vos données personnelles. Nous nous engageons à protéger vos informations conformément aux lois applicables.'
+footer.cgu.title4: '4. Utilisation des Formulaires'
+footer.cgu.text4: "Le site propose des formulaires détaillés, notamment pour demander des informations sur le gîte et pour faire une pré-reservation en vue d'une location. En soumettant ces formulaires, vous consentez à l'utilisation de vos informations pour répondre à votre demande et pour vous fournir des actualités et des mises à jour pertinentes."
+footer.cgu.title5: "5. Création d'un Compte Utilisateur"
+footer.cgu.text5: "La création d'un compte utilisateur sur le site L'Étoile de Dan est facultative mais peut offrir des avantages tels que la gestion des demandes d'information, l'accès à des offres exclusives. Vous êtes responsable de la confidentialité de vos informations de compte."
+footer.cgu.title6: '6. Propriété Intellectuelle'
+footer.cgu.text6: "Le contenu du site, y compris les textes, images, logos et autres éléments, est la propriété intellectuelle du site. Aucune reproduction, distribution ou utilisation non autorisée du contenu n'est permise sans consentement préalable."
+footer.cgu.title7: '7. Responsabilités'
+footer.cgu.text7: "Le site L'Étoile de Dan s'efforce de fournir des informations précises, mais ne garantit pas l'exactitude de toutes les données. Nous déclinons toute responsabilité en cas d'utilisation inappropriée du site ou de préjudice résultant de l'utilisation des informations fournies."
+footer.cgu.title8: '8. Modification des CGU'
+footer.cgu.text8: 'Le site se réserve le droit de modifier les CGU à tout moment. Les utilisateurs seront informés des changements, et il leur incombe de consulter régulièrement les CGU mises à jour.'
+footer.cgu.title9: '9. Droit Applicable et Juridiction'
+footer.cgu.text9: "Les présentes CGU sont régies par le droit en vigueur. Tout litige sera soumis aux tribunaux compétents du lieu où est situé le siège social de l'entreprise exploitant le site L'Étoile de Dan."
+footer.cgu.text10: "En utilisant le site L'Étoile de Dan, vous acceptez ces conditions et vous vous engagez à les respecter. Pour toute question ou préoccupation, veuillez nous contacter à contact@letoilededan.fr."
+footer.contactpage: 'Contact Page'
+button.more: 'en savoir plus'
+button.prereserv: PRÉ-RESERVATION
+homepage.title: 'Accueil - Gîte Spacieux et famillial  - Entre les Cévennes et le Gard '
+homepage.text: 'Entre Cévennes et Camargue, venez profiter de notre gîte familial pour 12 personnes d’une superficie de 260 m2, de ses 4 chambres dont une pour les Personnes à Mobilité Réduite(PMR). Vous disposerez de sa piscine couverte et chauffée toute l’année, de son jacuzzi, de sa salle de jeux avec baby-foot , borne d’arcarde et billard. Venez vous détendre sur le hamac géant et dans le grand jardin arboré de 2500 m2 disposant de son barbecue, son boulodrome et ses transats.'
+gite.title: "Notre gite - L'Etoile De Dan - Gite d'Architecte Spacieux, Calme et famillial dans le Gard"
+gite.house: 'La Maison'
+gite.icons.room: Chambres
+gite.icons.bathrooms: 'Salles de bain'
+gite.icons.peoples: personnes
+gite.icons.prm: PMR
+gite.icons.pool: 'Piscine intérieure'
+gite.icons.games: 'Salle de jeux'
+gite.icons.wifi: 'Wifi Gratuit'
+gite.icons.kitchen: 'Cuisine équipée'
+gite.thehouse.text1: 'Notre maison d’architecte combine design, modernité et caractère'
+gite.thehouse.text2: 'pour vous apporter tout le confort durant votre séjour. Ses terrasses, son salon, sa salle de jeu et sa piscine sont notamment conçus pour '
+gite.thehouse.text3: 'accueillir les Personnes à Mobilité Réduite'
+gite.thehouse.text4: 'tout en mettant à disposition une suite adaptée dont l’accès est facilité grâce à sa rampe PMR.'
+gite.thehouse.text51: 'La pièce à vivre de 75 m2 est aménagée avec :'
+gite.thehouse.text5: '- Une cuisine entièrement équipée avec son réfrigérateur américain, sa cave à vin, son grand îlot central, etc.'
+gite.thehouse.text6: '- Un salon avec sa télévision très grand écran.'
+gite.thehouse.text7: '- Une salle à manger avec sa grande table pouvant accueillir 12 convives.'
+gite.thehouse.text8: '- un billard et un hamac géant, idéal pour la détente.'
+gite.thehouse.text9: 'Poursuivez cette douceur de vivre dans l’espace ludique :'
+gite.thehouse.text10: '- Avec sa piscine intérieure et sa baie aquarium.'
+gite.thehouse.text11: '- Une salle de jeux disposant : d’un baby-foot, d’une borne arcade et d’une table de jeux.'
+gite.thehouse.text12: 'Pour accueillir jusqu’à'
+gite.thehouse.text13: '12 résidents, le gîte dispose de 4 chambres et de 3 Salles d’eau'
+gite.thehouse.text14: 'avec douche à l’italienne :'
+gite.thehouse.text15: '- Une suite parentale équipée PMR avec son lit en 160x200, son dressing et sa salle d’eau privative '
+gite.thehouse.text16: '- Une chambre double avec son lit en 160x200'
+gite.thehouse.text17: '- Deux chambres quadruples avec dressing, idéales pour les familles, puisqu’en plus de leur lit en 160x200 ou 140x200, l’une est équipée de 2 fauteuils convertibles 1 place tandis que l’autre dispose d’un canapé convertible 2 places.'
+gite.thehouse.text18: '- Enfin, l’une des trois terrasses dispose d’une cuisine d’été équipée d’un BBQ.'
+gite.garden: 'Le Jardin'
+gite.thegarden.text1: 'Le jardin arboré de 2500 m2 dispose :'
+gite.thegarden.text2: '- D’un salon de jardin.'
+gite.thegarden.text3: '- D’un grand garage avec 2 abris de voitures (équipés de 2 bornes de charge) dans lesquels peuvent stationner 4 véhicules.'
+gite.thegarden.text4: ' - À l’arrière de la maison, d’une aire de stationnement pour 2 véhicules directement en contact avec la rampe PMR.'
+gite.thegarden.text5: '- D’un magnifique boulodrome.'
+gite.thegarden.text6: '- D’une table de ping-pong.'
+gite.thegarden.text7: '- D’un trampoline (réservé aux enfants)'
+gite.thegarden.text8: Localisation
+prestations.title: 'Prestations : Hostellerie - Découverte touristique - Dégustation - Massage - Chef à domicile '
+prestations.prestations: Prestations
+prestations.text1: 'Découvrez nos prestations variées pour un séjour inoubliable :'
+prestations.text2: " Notre service d'hostellerie confortable, des dégustations de plats régionaux, des massages relaxants, un chef à domicile pour des repas gastronomiques et des visites touristiques pour explorer notre région."
+prestations.text3: "Profitez d'une expérience unique et personnalisée avec nous."
+prestations.hostelry.title: Hostellerie
+prestations.hostelry.text1: "Plongez dans un séjour offrant confort et tranquillité avec  notre service d'hostellerie. Nos chambres accueillantes sont conçues pour offrir une expérience de repos exceptionnel, alliant élégance et fonctionnalité. Que ce soit pour une escapade romantique, des vacances en famille, un moment «farniente» ou un séminaire d’entreprise, notre établissement saura répondre à tous vos besoins."
+prestations.hostelry.link: 'Service assuré par nos soins'
+prestations.discovery.title: 'Découverte Touristique'
+prestations.discovery.text1: "Explorez les trésors cachés de notre région avec notre service de découverte touristique. Nos guides locaux passionnés vous emmèneront à la rencontre des sites emblématiques, des paysages spectaculaires et des traditions authentiques de notre destination. Que vous soyez amateur d'aventure, de culture ou de nature, notre service de découverte touristique vous promet des moments de découverte et d’émerveillement."
+prestations.discovery.link: 'Service assuré par nos soins'
+prestations.degustation.title: Degustation
+prestations.degustation.text1: 'Sous la direction du service de dégustation de Florence DELMAS (Degustez Sud), laissez vos papilles voyager à travers une explosion de saveurs. Elle vous fera découvrir le meilleur de la viticulture et des spécialités culinaires régionales, en mettant en valeur les produits locaux frais et de saison. De la première bouchée au dernier verre, chaque moment sera une célébration épicurienne de la gastronomie.'
+prestations.degustation.link: 'Degustez Sud'
+prestations.massage.title: massage
+prestations.massage.text1: 'A 5 minutes à pied du gîte, ressourcez-vous en vous offrant un moment de détente et de bien-être absolu grâce au spa privatif, au sauna et aux massages proposés par OC’TAO. Vous y découvrirez un havre de paix où vous pourrez vous abandonner à leurs mains expertes pour soulager le stress et les tensions. Laissez-vous envelopper par des techniques de massage apaisantes qui vous laisseront revitalisé et régénéré.'
+prestations.massage.link: "OC'Tao"
+prestations.chief.title: 'Chef à Domicile'
+prestations.chief.text1: 'Avec takeachef et l’un de ses 78 chefs à domicile, personnalisez votre menu pour transformer votre séjour en une expérience gastronomique inoubliable. Ces chefs professionnels viendront directement dans votre logement pour préparer des repas sur mesure, adaptés à vos goûts et préférences. Que ce soit pour une occasion spéciale ou simplement pour savourer un dîner exclusif dans le confort de votre chez-vous, vivez une expérience culinaire exceptionnelle !'
+prestations.chief.link: 'Take A Chef'
+tourism.title: tourism
+tourism.nature.title: 'Nature préservée et Paysages Envoûtants'
+tourism.nature.text1: "Immergez-vous dans la beauté sauvage de la nature en explorant les environs de Crespian. À moins de 50 km, vous trouverez des sites naturels d'une beauté à couper le souffle, tels que les majestueuses Gorges du Gardon et les paisibles étendues des Cévennes. Parcourez des sentiers de randonnée pittoresques, découvrez des panoramas à couper le souffle et laissez-vous envoûter par la tranquillité de la campagne environnante."
+tourism.nature.link1: 'balade dans le bois des Lens'
+tourism.nature.distance1: '- 5 min à pied'
+tourism.nature.link2: 'Gorges du Gardon'
+tourism.nature.distance2: '- 45 min en voiture / 40 km'
+tourism.nature.link3: 'Reserve naturelle du Scamandre'
+tourism.nature.distance3: '- 45 min en voiture / 40 km'
+tourism.nature.link4: 'Cirque de Navacelles'
+tourism.nature.distance4: '- 1h15 en voiture / 73 km'
+tourism.nature.link5: 'Grotte Cévenole'
+tourism.nature.distance5: '- 45 min en voiture/ 40 km (grotte de Trabuc, grotte des demoiselles, etc.)'
+tourism.nature.link6: 'Offfice de tourisme des Cevennes'
+tourism.Heritage.title: 'Patrimoine Culturel et Historique Richissime'
+tourism.Heritage.text1: "Plongez dans l'histoire fascinante de la région en explorant ses nombreux sites historiques et culturels. À proximité de Crespian, vous pourrez visiter des joyaux architecturaux tels que le Pont du Gard, un chef-d'œuvre de l'ingénierie romaine classé au patrimoine mondial de l'UNESCO, ou encore le magnifique Château de Portes, témoin de l'époque médiévale. Imprégnez-vous de l'atmosphère chargée d'histoire des villages pittoresques de la région et découvrez les traditions séculaires qui perdurent encore aujourd'hui."
+tourism.Heritage.link1: 'Pont du gard'
+tourism.Heritage.distance1: '- 45 min en voiture / 48 km'
+tourism.Heritage.link2: "Bambouseraie d'Anduze"
+tourism.Heritage.distance2: '- 30 min en voiture / 29 km'
+tourism.Heritage.link3: 'Coeur historique de Nîmes'
+tourism.Heritage.distance3: '- 25 min en voiture / 26 km'
+tourism.Heritage.link4: "Oppidum d'Ambrusum"
+tourism.Heritage.distance4: '- 25 min en voiture / 26 km'
+tourism.Heritage.link5: Uzes
+tourism.Heritage.distance5: '- 40 min en voiture / 38 km'
+tourism.Heritage.link6: Aigues-Mortes
+tourism.Heritage.distance6: '- 45 min en voiture / 42 km'
+tourism.Heritage.link7: "musée du désert et de l'histoire des Camisards"
+tourism.Heritage.distance7: '- 40 min en voiture / 36 km'
+tourism.activity.title: 'Activités et Loisirs pour Tous'
+tourism.activity.text1: "Que vous soyez amateur de plein air, passionné d'histoire ou simplement en quête de détente, la région autour de Crespian offre une multitude d'activités et de loisirs pour tous les goûts. Partez en excursion en kayak sur le Gardon, explorez des grottes préhistoriques fascinantes, flânez dans les marchés animés ou détendez-vous simplement au bord de l'eau sous le doux soleil du sud de la France. ot la grande motte"
+tourism.activity.link1: 'Office de Tourisme de Montpellier'
+tourism.activity.distance1: '- 55 min en voiture / 43 km'
+tourism.activity.link2: 'Office de Tourisme de Sommières'
+tourism.activity.distance2: '- 15 min en voiture / 14 km'
+tourism.activity.link3: 'Kayak Gardon'
+tourism.activity.distance3: '- 40 min en voiture / 39 km'
+tourism.activity.link4: 'Office de tourisme de la grande motte'
+tourism.activity.distance4: '- 45 min en voiture / 43 km'
+tourism.activity.link5: 'Accrobranche Roc de Massereau'
+tourism.activity.distance5: '- 15 min en voiture / 14 km'
+tourism.activity.link6: 'Rivière cévenole'
+tourism.activity.distance6: '- 45 min en voiture / 45 km (pont des abarines, St Laurent le Minier, etc.)'
+tourism.activity.link7: 'Train à vapeur des cevennes'
+tourism.activity.distance7: '- 45 min en voiture / 45 km '
+tourism.gastronomy.title: 'Gastronomie et Art de Vivre'
+tourism.gastronomy.text1: "Laissez-vous séduire par les délices culinaires de la région et savourez une cuisine authentique et raffinée. Explorez les marchés locaux où vous pourrez déguster des produits du terroir frais et savoureux, tels que les vins renommés de la région, les fromages artisanaux et les spécialités gastronomiques régionales. Vivez l'art de vivre à la française en vous attablant à de charmants bistrots ou en dégustant un pique-nique dans un cadre enchanteur."
+tourism.gastronomy.link1: 'Marché de Sommières'
+tourism.gastronomy.distance1: '- 15 min en voiture / 14 km'
+tourism.gastronomy.link2: 'Miellerie de Clairan'
+tourism.gastronomy.distance2: '- 7 min en voiture / 6 km'
+tourism.gastronomy.link3: 'Domaine de la Gravette de Corconne'
+tourism.gastronomy.distance3: '- 17 min en voiture / 18 km'
+tourism.gastronomy.link4: 'Fromagerie des Loubes à Montignargues'
+tourism.gastronomy.distance4: '- 17 min en voiture / 17 km'
+tourism.gastronomy.link5: 'La Brandade du Petit Nîmois à Nîmes'
+tourism.gastronomy.distance5: '- 23 min en voiture / 23 km'
+tourism.gastronomy.link6: 'Etang de Thau'
+tourism.gastronomy.distance6: '- 1h10 en voiture / 86 km'
+tourism.map.title: 'Carte des Activités'
+tourism.map.title2: 'Agrandir la carte'
+informations.title: Information
+informations.price.price: Tarif
+informations.price.text1: 'Hors saison : '
+informations.price.text2: '- A la semaine : '
+informations.price.text3: '- Du vendredi soir au lundi matin (3 nuits) ou'
+informations.price.text4: 'du lundi soir au vendredi matin (4 nuits) : '
+informations.price.text5: 'Petites vacances + mois de mai : '
+informations.price.text6: '- A la semaine : '
+informations.price.text7: '- Du vendredi soir au lundi matin (3 nuits) ou'
+informations.price.text8: 'du lundi soir au vendredi matin (4 nuits): '
+informations.price.text9: 'Vacances d’été :'
+informations.price.text10: '- A la semaine :'
+informations.price.text11: '- Du vendredi soir au lundi matin (3 nuits) ou'
+informations.price.text12: 'du lundi soir au vendredi matin (4 nuits) : '
+informations.price.text13: 'Tarif dégressif à partir de deux semaines '
+informations.assurance.title: 'Assurance / Garanties en cas de dommages'
+informations.assurance.text1: '- Pour valider la réservation, un chèque de caution de 2500€ servant de dépôt de garantie en cas  de dommages est demandé.'
+informations.assurance.text2: "- En plus de cela, pour couvrir le montant des réparations supérieur au dépôt de garantie en cas de  détérioration du gîte, il sera demandé aux résidents de  fournir dès la réservation une attestation d'assurance  villégiature (cette assurance couvre notamment les bris  de vitres le cas échéant). Cette couverture d'assurance  est inclus dans l'assurance du domicile de tout un chacun.  Il suffit donc de demander cette attestation auprès de  sa compagnie d'assurance..."
+informations.assurance.text3: "- Les questions relatives à la prise en charge  des dommages seront traités dans les huit jours suivant l'établissement de l'état des lieux de sortie et de la  remise des clés en fin de séjour et seront fonction de  l'état du logement"
+informations.assurance.text4: '- Le locataire est obligé :'
+informations.assurance.text5: '- de payer le loyer et les charges aux termes convenus'
+informations.assurance.text6: "- d'user paisiblement des locaux loués en respectant  leur destination contractuelle. Ceci induit notamment  l'interdiction de générer des nuisances au voisinage,  que ce soit par du tapage nocturne ou autre"
+informations.assurance.text7: '- de répondre des dégradations ou des pertes survenues pendant la durée du contrat dans les locaux  dont il a la jouissance exclusive'
+informations.assurance.text8: '- de ne pas transformer les locaux et équipements loués'
+informations.assurance.text9: "- d'être responsable de l'utilisation des  dispositifs de sécurité destinés à protéger les  usagers de la piscine et du hamac géant."
+informations.assurance.text10: "- Les enfants sont sous l'entière responsabilité des parents ou des représentants légaux"
+informations.assurance.text11: "- Le locataire sera accueilli par le bailleur ou son représentant afin d'établir un état des lieux d'entrée. A la fin du séjour, un état des lieux de sortie aura lieu"
+informations.services.title: 'Services de Proximité'
+informations.services.text1: "Laissez-vous séduire par les délices culinaires de la région et savourez une cuisine authentique et raffinée. Explorez les marchés locaux où vous pourrez déguster des produits du terroir frais et savoureux, tels que les vins renommés de la région, les fromages artisanaux et les spécialités gastronomiques régionales. Vivez l'art de vivre à la française en vous attablant à de charmants bistrots ou en dégustant un pique-nique dans un cadre enchanteur."
+informations.services.link1: 'Marché de Sommières'
+informations.services.distance1: '- 12 min en voiture'
+informations.services.link2: 'Boulangerie ebiopi'
+informations.services.distance2: '- 5 min à pied'
+informations.services.link3: 'Pharmacie de Quissac'
+informations.services.ditance3: '- 11 min en voiture'
+informations.services.link4: 'Carrefour Market Villevieille'
+informations.services.distance4: '- 10 min en voiture'
+informations.services.link5: 'Café Français'
+informations.services.distance5: '- 12 min en voiture'
+informations.services.link6: 'Château de Pondres'
+informations.services.distance6: '- 9 min en voiture'
+informations.services.link7: 'Café de la Poste'
+informations.services.distance7: '- 7 min en voiture'
+informations.portfolio: portfolio
+magazine.title: 'Magazine - spacieux accessible pmr - architecte volume sud de france - haut de gamme luxueux 12 personnes'
+magazine.title2: Magazine
+magazine.pmr.text1: 'Découvrez notre Gîte Spacieux et Accessible aux Personnes à Mobilité Réduite (PMR) dans le Gard entre Nîmes, Alès et Montpellier'
+magazine.pmr.text2: 'Pourquoi choisir notre gîte ?'
+magazine.pmr.text3: 'Notre gîte est spécialement conçu pour accueillir les personnes à mobilité réduite, avec des aménagements adaptés pour faciliter leur séjour et leur circulation.'
+magazine.pmr.pmr.header: PMR
+magazine.pmr.pmr.title: 'Découvrez notre Gîte Spacieux et Accessible aux Personnes à Mobilité Réduite (PMR) dans le Gard entre Nîmes, Alès et Montpellier'
+magazine.pmr.pmr.title1: 'Accessibilité PMR '
+magazine.pmr.pmr.text11: 'Notre gîte est spécialement conçu pour accueillir les personnes à mobilité réduite, avec des aménagements adaptés pour faciliter leur séjour et leur circulation.'
+magazine.pmr.pmr.title2: 'De Grand Volume'
+magazine.pmr.pmr.text21: 'Profitez de vastes espaces intérieurs et extérieurs, offrant confort et liberté pour toute la famille, y compris les personnes en fauteuil roulant.'
+magazine.pmr.pmr.title3: 'Hébergement Familial '
+magazine.pmr.pmr.text31: 'Avec plusieurs chambres et équipements adaptés, notre gîte est parfait pour des vacances en famille, permettant à tous de partager des moments inoubliables ensemble.'
+magazine.pmr.pmr.title4: 'Situation Idéale'
+magazine.pmr.pmr.text41: "Niché dans le charmant village de Crespian, notre gîte bénéficie d'un cadre paisible et naturel, tout en étant à proximité des attractions touristiques et des commodités de Quissac(11km)."
+magazine.pmr.pmr.title5: 'Services Personnalisés '
+magazine.pmr.pmr.text51: ' Notre équipe ainsi que des prestataires de services dévouées sont à votre disposition pour répondre à tous vos besoins et rendre votre séjour aussi agréable que possible.'
+magazine.pmr.pmr.textbottom: 'Réservez des maintenant et offrez-vous des vacances accessibles pour tous et familiales inoubliables dans le Gard !'
+magazine.archi.text1: 'Découvrez notre Gîte avec ses volumes, son architecture, sa localité et ses espaces sécurisés dans le sud de la France'
+magazine.archi.text2: 'Pourquoi choisir notre gîte ?'
+magazine.archi.text3: 'Le Gîte offre un espace généreux pour accueillir votre groupe de 12 personnes.  Nos vastes intérieurs vous permettent de vous étendre et de vous détendre en toute tranquillité.'
+magazine.archi.archi.header: 'Architecture et volume'
+magazine.archi.archi.title: 'Découvrez notre Gîte avec ses volumes, son architecture,'
+magazine.archi.archi.title1: 'sa localité et ses espaces sécurisés dans le sud de la France'
+magazine.archi.archi.title2: 'Espace Spacieux'
+magazine.archi.archi.text21: 'Le Gîte offre un espace généreux pour accueillir votre groupe de 12 personnes. Nos vastes intérieurs vous permettent de vous étendre et de vous détendre en toute tranquillité.'
+magazine.archi.archi.title3: 'Maison Atypique'
+magazine.archi.archi.text31: ' Conçue par un architecte, notre maison se distingue par son design unique et son caractère distinctif. Vous serez charmé par ses détails architecturaux originaux.'
+magazine.archi.archi.title4: 'Volume Sécurisé'
+magazine.archi.archi.text41: "Votre sécurité est notre priorité. Notre gîte est équipé d'un système de sécurité sophistiqué pour assurer la tranquillité d'esprit de nos hôtes."
+magazine.archi.archi.title5: 'Calme et Localisation'
+magazine.archi.archi.text51: "Niché dans un environnement calme et préservé, L'étoile de Dan offre un cadre idyllique pour une escapade relaxante. Profitez de la tranquillité de la nature tout en étant à proximité des attractions locales."
+magazine.archi.archi.title6: 'Lieu de Tournage'
+magazine.archi.archi.text61: "Notre gîte offre un décor naturel spectaculaire pour tout projet de tournage. Que vous soyez un cinéaste professionnel ou un amateur passionné, notre gîte est l'endroit parfait pour donner vie à votre vision."
+magazine.archi.archi.textbottom1: 'De plus sa localisation permet un rayonnement sur les différents site de la région'
+magazine.archi.archi.textbottom2: '(entre Les cevennes, Montpellier, Nimes et la mer).'
+magazine.familly.text1: 'Découvrez notre gîte haut de gamme, conçu pour offrir un confort exceptionnel et luxueux à 12 personnes.'
+magazine.familly.text2: 'Pourquoi choisir notre gîte ?'
+magazine.familly.text3: "Découvrez le summum du raffinement dans nos chambres spacieuses et élégamment décorées,  conçues pour accueillir jusqu'à 12 personnes en toute intimité. Profitez d'une atmosphère  chaleureuse et accueillante où chaque détail a été soigneusement pensé pour votre confort ultime."
+magazine.familly.family.header: 'Un espace famillial'
+magazine.familly.family.title11: 'Bienvenue dans votre oasis de tranquillité et de luxe au cœur de la campagne.'
+magazine.familly.family.title12: 'Notre gîte prestigieux offre une expérience incomparable, combinant confort somptueux  et divertissements haut de gamme pour des vacances inoubliables'
+magazine.familly.family.title2: 'Luxe, Confort, et Espace'
+magazine.familly.family.text21: "Découvrez le summum du raffinement dans nos chambres spacieuses et élégamment décorées,  conçues pour accueillir jusqu'à 12 personnes en toute intimité. Profitez d'une atmosphère chaleureuse et accueillante où chaque détail a été soigneusement pensé pour votre confort ultime."
+magazine.familly.family.title3: 'Évasion en Pleine Nature'
+magazine.familly.family.text31: 'Notre gîte isolé vous offre un refuge loin du tumulte de la vie urbaine, niché dans un cadre naturel préservé. Plongez-vous dans la tranquillité de la campagne, où seules les douces brises et les chants des oiseaux viennent perturber votre sérénité.'
+magazine.familly.family.title4: 'Divertissements Haut de Gamme'
+magazine.familly.family.text41: "Plongez dans le luxe absolu avec notre gamme complète d'équipements de loisirs haut de gamme. Détendez-vous dans notre jacuzzi privé, rafraîchissez-vous dans notre piscine interieure avec vue sur le jardin ou défiez vos amis dans une partie animée de billard dans notre salle de jeux bien équipée."
+magazine.familly.family.title5: 'Tout Compris, Tout Personnalisé'
+magazine.familly.family.text51: 'Votre confort est notre priorité absolue. Profitez de notre formule tout compris, avec des services sur mesure adaptés à vos besoins. Que vous souhaitiez organiser une fête inoubliable ou simplement vous détendre en famille, notre équipe dévouée est là pour rendre votre séjour aussi parfait que possible.'
+magazine.familly.family.textbottom1: "Réservez dès aujourd'hui pour garantir votre escapade idyllique au cœur de la campagne entre les cevennes et la mer. "
+magazine.familly.family.textbottom2: '(between the Cevennes, Montpellier, Nimes and the sea).'
+magazine.familly.family.textbottom3: "Contactez-nous pour plus d'informations et pour réserver vos dates dès maintenant."
 
-button:
-    more: "en savoir plus"
-    prereserv : "PRÉ-RESERVATION"
-homepage:
-    title: "Accueil - Gîte Spacieux et famillial  - Entre les Cévennes et le Gard "
-    text: "Entre Cévennes et Camargue, venez profiter de notre gîte familial pour 12 personnes d’une superficie de 260 m2, de ses 4 chambres dont une pour les Personnes à Mobilité Réduite(PMR). Vous disposerez de sa piscine couverte et chauffée toute l’année, de son jacuzzi, de sa salle de jeux avec baby-foot , borne d’arcarde et billard. Venez vous détendre sur le hamac géant et dans le grand jardin arboré de 2500 m2 disposant de son barbecue, son boulodrome et ses transats."
-
-gite :
-    title : "Notre gite - L'Etoile De Dan - Gite d'Architecte Spacieux, Calme et famillial dans le Gard"
-    house : "La Maison"
-    icons : 
-       room : "Chambres"
-       bathrooms : "Salles de bain"
-       peoples : "personnes"
-       prm : "PMR"
-       pool : "Piscine intérieure"
-       games : "Salle de jeux"
-       wifi : "Wifi Gratuit"
-       kitchen : "Cuisine équipée"
-    thehouse :
-        text1 : " Notre maison d’architecte combine design, modernité et caractère"
-        text2 : "pour vous apporter tout le confort durant votre séjour. Ses terrasses, son salon, sa salle de jeu et sa piscine sont notamment conçus pour "
-        text3 : "accueillir les Personnes à Mobilité Réduite tout en mettant à disposition une suite adaptée dont l’accès est facilité grâce à sa rampe PMR."
-        text4 : "La pièce à vivre de 75 m2 est aménagée avec : - Une cuisine entièrement équipée avec son réfrigérateur américain, sa cave à vin, son grand îlot central, etc."
-        text5 : "- Une cuisine entièrement équipée avec son réfrigérateur américain, sa cave à vin, son grand îlot central, etc."
-        text6 : "- Un salon avec sa télévision très grand écran,"
-        text7 : "- Une salle à manger avec sa grande table pouvant accueillir 12 convives,"
-        text8 : "- un billard et un hamac géant, idéal pour la détente."
-        text9 : "Poursuivez cette douceur de vivre dans l’espace ludique :"
-        text10 : "- Avec sa piscine intérieure et sa baie aquarium,"
-        text11 : "- Une salle de jeux disposant : d’un baby-foot, d’une borne arcade et d’une table de jeux."
-        text12 : "Pour accueillir jusqu’à"
-        text13 : "12 résidents, le gîte dispose de 4 chambres et de 3 Salles d’eau"
-        text14 : "avec douche à l’italienne :"
-        text15 : "- Une suite parentale équipée PMR avec son lit en 160x200, son dressing et sa salle d’eau privative "
-        text16 : "- Une chambre double avec son lit en 160x200"
-        text17 : "- Deux chambres quadruples avec dressing, idéales pour les familles, puisqu’en plus de leur lit en 160x200 ou 140x200, l’une est équipée de 2 fauteuils convertibles 1 place tandis que l’autre dispose d’un canapé convertible 2 places."
-        text18 : "- Enfin, l’une des trois terrasses dispose d’une cuisine d’été équipée d’un BBQ."
-    garden : "Le Jardin"
-    thegarden : 
-        text1 : "Le jardin arboré de 2500 m2 dispose :"
-        text2 : "- D’un salon de jardin"
-        text3 : "- D’un grand garage avec 2 abris de voitures (équipés de 2 bornes de charge) dans lesquels peuvent stationner 4 véhicules. "
-        text4 : " - À l’arrière de la maison, d’une aire de stationnement pour 2 véhicules directement en contact avec la rampe PMR, "
-        text5 : "- D’un magnifique boulodrome,"
-        text6 : "- D’une table de ping-pong,"
-        text7 : "- D’un trampoline réservé aux enfants"
-        text8 : "Localisation"
-prestations :
-    title : "Prestations : Hostellerie - Découverte touristique - Dégustation - Massage - Chef à domicile "
-    prestations : "Prestations"
-    text1 : "Découvrez nos prestations variées pour un séjour inoubliable :"
-    text2 : " Notre service d'hostellerie confortable, des dégustations de plats
-                    régionaux, des massages relaxants, un chef à domicile pour des
-                    repas gastronomiques et des visites touristiques pour explorer
-                    notre région."
-    text3 : "Profitez d'une expérience unique et personnalisée avec nous."
-    hostelry : 
-        title : "Hostellerie"
-        text1 : "Plongez dans un séjour offrant confort et tranquillité avec 
-                notre service d'hostellerie. Nos chambres accueillantes sont
-                conçues pour offrir une expérience de repos exceptionnel,
-                alliant élégance et fonctionnalité. Que ce soit pour une
-                escapade romantique, des vacances en famille, un moment
-                «farniente» ou un séminaire d’entreprise, notre
-                établissement saura répondre à tous vos besoins."
-        link : "Service assuré par nos soins"
-        
-    discovery : 
-        title : "Découverte Touristique"
-        text1 : "Explorez les trésors cachés de notre région avec notre
-                service de découverte touristique. Nos guides locaux
-                passionnés vous emmèneront à la rencontre des sites
-                emblématiques, des paysages spectaculaires et des traditions
-                authentiques de notre destination. Que vous soyez amateur
-                d'aventure, de culture ou de nature, notre service de
-                découverte touristique vous promet des moments de découverte
-                et d’émerveillement."
-        link : "Service assuré par nos soins"
-    
-    Tasting :
-        title : 'Tasting'
-        text1 : "Sous la direction du service de dégustation de Florence
-                DELMAS (Degustez Sud), laissez vos papilles voyager à travers une explosion
-                de saveurs. Elle vous fera découvrir le meilleur de la
-                viticulture et des spécialités culinaires régionales, en
-                mettant en valeur les produits locaux frais et de saison. De
-                la première bouchée au dernier verre, chaque moment sera une
-                célébration épicurienne de la gastronomie."
-        link : "Degustez Sud"
-    
-    massage :
-        title : "massage"
-        text1 : "A 5 minutes à pied du gîte, ressourcez-vous en vous offrant
-                un moment de détente et de bien-être absolu grâce au spa
-                privatif, au sauna et aux massages proposés par OC’TAO. Vous
-                y découvrirez un havre de paix où vous pourrez vous
-                abandonner à leurs mains expertes pour soulager le stress et
-                les tensions. Laissez-vous envelopper par des techniques de
-                massage apaisantes qui vous laisseront revitalisé et
-                régénéré."
-        link : "OC'Tao"
-
-    chief:
-        title : "Chef à Domicile"
-        text1 : "Avec takeachef et l’un de ses 78 chefs à domicile,
-                personnalisez votre menu pour transformer votre séjour en
-                une expérience gastronomique inoubliable. Ces chefs
-                professionnels viendront directement dans votre logement
-                pour préparer des repas sur mesure, adaptés à vos goûts et
-                préférences. Que ce soit pour une occasion spéciale ou
-                simplement pour savourer un dîner exclusif dans le confort
-                de votre chez-vous, vivez une expérience culinaire
-                exceptionnelle !"
-        link : "Take A Chef"
-
-tourism :
-    title : "tourism"
-    nature : 
-        title : "Nature préservée et Paysages Envoûtants"
-        text1 : "Immergez-vous dans la beauté sauvage de la nature en explorant
-                les environs de Crespian. À moins de 50 km, vous trouverez des
-                sites naturels d'une beauté à couper le souffle, tels que les
-                majestueuses Gorges du Gardon et les paisibles étendues des
-                Cévennes. Parcourez des sentiers de randonnée pittoresques,
-                découvrez des panoramas à couper le souffle et laissez-vous
-                envoûter par la tranquillité de la campagne environnante."
-        link1 : "balade dans le bois des Lens" 
-        distance1 : "- 5 min à pied"
-        link2 : "Gorges du Gardon"
-        distance2 : "- 45 min en voiture / 40 km"
-        link3 : "Reserve naturelle du Scamandre"
-        distance3 : "- 45 min en voiture / 40 km"
-        link4 : "Cirque de Navacelles"
-        distance4 : "- 1h15 en voiture / 73 km"
-        link5 : "Grotte Cévenole"
-        distance5 : "- 45 min en voiture/ 40 km (grotte de Trabuc, grotte des demoiselles, etc.)"
-        link6 : "Offfice de tourisme des Cevennes"
-    Heritage :
-        title : "Patrimoine Culturel et Historique Richissime"
-        text1 : "Plongez dans l'histoire fascinante de la région en explorant
-                ses nombreux sites historiques et culturels. À proximité de
-                Crespian, vous pourrez visiter des joyaux architecturaux tels
-                que le Pont du Gard, un chef-d'œuvre de l'ingénierie romaine
-                classé au patrimoine mondial de l'UNESCO, ou encore le
-                magnifique Château de Portes, témoin de l'époque médiévale.
-                Imprégnez-vous de l'atmosphère chargée d'histoire des villages
-                pittoresques de la région et découvrez les traditions
-                séculaires qui perdurent encore aujourd'hui."
-        link1 : "Pont du gard"
-        distance1 : "- 45 min en voiture / 48 km"
-        link2 : "Bambouseraie d'Anduze"
-        distance2 : "- 30 min en voiture / 29 km"
-        link3 : "Coeur historique de Nîmes"
-        distance3 : "- 25 min en voiture / 26 km"
-        link4 : Oppidum d'Ambrusum
-        distance4 : "- 25 min en voiture / 26 km"
-        link5 : Uzes
-        distance5 : "- 40 min en voiture / 38 km"
-        link6 : Aigues-Mortes
-        distance6 : "- 45 min en voiture / 42 km"
-        link7 : "musée du désert et de l'histoire des Camisards"
-        distance7 : "- 40 min en voiture / 36 km"
-    activity :
-        title : "Activités et Loisirs pour Tous"
-        text1 : "Que vous soyez amateur de plein air, passionné d'histoire ou
-                simplement en quête de détente, la région autour de Crespian
-                offre une multitude d'activités et de loisirs pour tous les
-                goûts. Partez en excursion en kayak sur le Gardon, explorez
-                des grottes préhistoriques fascinantes, flânez dans les
-                marchés animés ou détendez-vous simplement au bord de l'eau
-                sous le doux soleil du sud de la France. ot la grande motte"
-        link1 : Office de Tourisme de Montpellier
-        distance1 : "- 55 min en voiture / 43 km"
-        link2 : "Office de Tourisme de Sommières"
-        distance2 : "- 15 min en voiture / 14 km"
-        link3 : "Kayak Gardon"
-        distance3 : "- 40 min en voiture / 39 km"
-        link4 : Office de tourisme de la grande motte
-        distance4 : "- 45 min en voiture / 43 km"
-        link5 : Accrobranche Roc de Massereau
-        distance5 : "- 15 min en voiture / 14 km"
-        link6 : Rivière cévenole
-        distance6 : "- 45 min en voiture / 45 km (pont des abarines, St Laurent le Minier, etc.)"
-        link7 : Train à vapeur des cevennes
-        distance7 : "- 45 min en voiture / 45 km "
-    gastronomy :
-        title : "Gastronomie et Art de Vivre"
-        text1 : "Laissez-vous séduire par les délices culinaires de la région
-                et savourez une cuisine authentique et raffinée. Explorez les
-                marchés locaux où vous pourrez déguster des produits du
-                terroir frais et savoureux, tels que les vins renommés de la
-                région, les fromages artisanaux et les spécialités
-                gastronomiques régionales. Vivez l'art de vivre à la française
-                en vous attablant à de charmants bistrots ou en dégustant un
-                pique-nique dans un cadre enchanteur."
-        link1 : Marché de Sommières
-        distance1 : "- 15 min en voiture / 14 km"
-        link2 : Miellerie de Clairan
-        distance2 : "- 7 min en voiture / 6 km"
-        link3 : Domaine de la Gravette de Corconne
-        distance3 : "- 17 min en voiture / 18 km"
-        link4 : Fromagerie des Loubes à Montignargues
-        distance4 : "- 17 min en voiture / 17 km"
-        link5 : La Brandade du Petit Nîmois à Nîmes
-        distance5 : "- 23 min en voiture / 23 km"
-        link6 : Etang de Thau
-        distance6 : "- 1h10 en voiture / 86 km"
-    map : 
-        title : "Carte des Activités"
-        title2 : "Agrandir la carte"
-
-informations :
-    title : "Information"
-    price :
-        price : "Tarif"
-        text1 : "Hors saison : "
-        text2 : "- A la semaine : "
-        text3 : "- Du vendredi soir au lundi matin (3 nuits) ou"
-        text4 : "du lundi soir au vendredi matin (4 nuits) : "
-        text5 : "Petites vacances + mois de mai : " 
-        text6 : "- A la semaine : "
-        text7 : "- Du vendredi soir au lundi matin (3 nuits) ou"
-        text8 : "du lundi soir au vendredi matin (4 nuits): "
-        text9 : "Vacances d’été :"
-        text10 : "- A la semaine :"
-        text11 : "- Du vendredi soir au lundi matin (3 nuits) ou"
-        text12 : "du lundi soir au vendredi matin (4 nuits) : "
-        text13 : "Tarif dégressif à partir de deux semaines "
-    assurance :
-        title : "Assurance / Garanties en cas de dommages"
-        text1 : "- Pour valider la réservation, un chèque de
-         caution de 2500€ servant de dépôt de garantie en cas 
-         de dommages est demandé."
-        text2 : "- En plus de cela, pour couvrir le montant des
-         réparations supérieur au dépôt de garantie en cas de 
-         détérioration du gîte, il sera demandé aux résidents de 
-         fournir dès la réservation une attestation d'assurance 
-         villégiature (cette assurance couvre notamment les bris 
-         de vitres le cas échéant). Cette couverture d'assurance 
-         est inclus dans l'assurance du domicile de tout un chacun. 
-         Il suffit donc de demander cette attestation auprès de 
-         sa compagnie d'assurance..."
-        text3 : "- Les questions relatives à la prise en charge 
-         des dommages seront traités dans les huit jours suivant
-         l'établissement de l'état des lieux de sortie et de la 
-         remise des clés en fin de séjour et seront fonction de 
-         l'état du logement"
-        text4 : "- Le locataire est obligé :"
-        text5 : "- de payer le loyer et les charges aux termes convenus"
-        text6 : "- d'user paisiblement des locaux loués en respectant 
-         leur destination contractuelle. Ceci induit notamment 
-         l'interdiction de générer des nuisances au voisinage, 
-         que ce soit par du tapage nocturne ou autre"
-        text7 : "- de répondre des dégradations ou des pertes
-         survenues pendant la durée du contrat dans les locaux 
-         dont il a la jouissance exclusive"
-        text8 : "- de ne pas transformer les locaux et équipements loués"
-        text9 : "- d'être responsable de l'utilisation des 
-         dispositifs de sécurité destinés à protéger les 
-         usagers de la piscine et du hamac géant."
-        text10 : "- Les enfants sont sous l'entière responsabilité
-         des parents ou des représentants légaux"
-        text11 : "- Le locataire sera accueilli par le bailleur ou
-         son représentant afin d'établir un état des lieux d'entrée.
-         A la fin du séjour, un état des lieux de sortie aura lieu"
-    services :
-        title : "Services de Proximité"
-        text1 : "Laissez-vous séduire par les délices culinaires de la région
-                et savourez une cuisine authentique et raffinée. Explorez les
-                marchés locaux où vous pourrez déguster des produits du
-                terroir frais et savoureux, tels que les vins renommés de la
-                région, les fromages artisanaux et les spécialités
-                gastronomiques régionales. Vivez l'art de vivre à la française
-                en vous attablant à de charmants bistrots ou en dégustant un
-                pique-nique dans un cadre enchanteur."
-        link1 : "Marché de Sommières"
-        distance1 : "- 12 min en voiture"
-        link2 : "Boulangerie ebiopi"
-        distance2 : "- 5 min à pied"
-        link3 : "Pharmacie de Quissac"
-        ditance3 : "- 11 min en voiture"
-        link4 : "Carrefour Market Villevieille"
-        distance4 : "- 10 min en voiture"
-        link5 : "Café Français"
-        distance5 : "- 12 min en voiture"
-        link6 : "Château de Pondres"
-        distance6 : "- 9 min en voiture"
-        link7 : "Café de la Poste"
-        distance7 : "- 7 min en voiture"
-    portfolio : "portfolio"
-
-magazine :
-    title : "Magazine - spacieux accessible pmr - architecte volume sud de france - haut de gamme luxueux 12 personnes"
-    title2 : "Magazine"
-    pmr :
-        text1 : "Découvrez notre Gîte Spacieux et Accessible aux Personnes à
-            Mobilité Réduite (PMR) dans le Gard entre Nîmes, Alès et
-            Montpellier"
-        text2 : "Pourquoi choisir notre gîte ?"
-        text3 : "Notre gîte est spécialement conçu pour accueillir les
-            personnes à mobilité réduite, avec des aménagements adaptés
-            pour faciliter leur séjour et leur circulation."
-        pmr :
-            header : "PMR"
-            title : "Découvrez notre Gîte Spacieux et Accessible aux Personnes à Mobilité
-                    Réduite (PMR) dans le Gard entre Nîmes, Alès et Montpellier"
-            title1 : "Accessibilité PMR "
-            text11 : "Notre gîte est spécialement conçu pour accueillir les
-                    personnes à mobilité réduite, avec des aménagements adaptés
-                    pour faciliter leur séjour et leur circulation."
-            title2 : "De Grand Volume"
-            text21 : "Profitez de vastes espaces intérieurs et extérieurs, offrant
-                    confort et liberté pour toute la famille, y compris les
-                    personnes en fauteuil roulant."
-            title3 : "Hébergement Familial "
-            text31 : "Avec plusieurs chambres et équipements adaptés, notre gîte
-                    est parfait pour des vacances en famille, permettant à tous
-                    de partager des moments inoubliables ensemble."
-            title4 : "Situation Idéale"
-            text41 : "Niché dans le charmant village de Crespian, notre gîte
-                    bénéficie d'un cadre paisible et naturel, tout en étant à
-                    proximité des attractions touristiques et des commodités de
-                    Quissac(11km)."
-            title5 : "Services Personnalisés "
-            text51 : " Notre équipe ainsi que des prestataires de services dévouées
-                    sont à votre disposition pour répondre à tous vos besoins et
-                    rendre votre séjour aussi agréable que possible."
-            textbottom : "Réservez des maintenant et offrez-vous des vacances accessibles pour tous
-                            et familiales inoubliables dans le Gard !"
-            
-    archi :
-        text1 : "Découvrez notre Gîte avec ses volumes, son architecture, sa
-                localité et ses espaces sécurisés dans le sud de la France"
-        text2 : "Pourquoi choisir notre gîte ?"
-        text3 : "Le Gîte offre un espace généreux pour accueillir votre groupe de 12 personnes. 
-                Nos vastes intérieurs vous permettent de vous étendre et de vous détendre en toute tranquillité."
-        archi :
-            header : "Architecture et volume"
-            title : "Découvrez notre Gîte avec ses volumes, son architecture,"
-            title1 : "sa localité et ses espaces sécurisés dans le sud de la France"
-            title2 : "Espace Spacieux"
-            text21 : "Le Gîte offre un espace généreux pour accueillir votre groupe de 12 personnes. Nos vastes intérieurs vous permettent de vous étendre et de vous détendre en toute tranquillité."
-            title3 : "Maison Atypique"
-            text31 : " Conçue par un architecte, notre maison se distingue par son design unique et son caractère distinctif. Vous serez charmé par ses détails architecturaux originaux."
-            title4 : "Volume Sécurisé"
-            text41 : "Votre sécurité est notre priorité. Notre gîte est équipé d'un système de sécurité sophistiqué pour assurer la tranquillité d'esprit de nos hôtes."
-            title5 : "Calme et Localisation"
-            text51 : "Niché dans un environnement calme et préservé, L'étoile de Dan offre un cadre idyllique pour une escapade relaxante. Profitez de la tranquillité de la nature tout en étant à proximité des attractions locales."
-            title6 : "Lieu de Tournage"
-            text61 : "Notre gîte offre un décor naturel spectaculaire pour tout projet de tournage. Que vous soyez un cinéaste professionnel ou un amateur passionné, notre gîte est l'endroit parfait pour donner vie à votre vision."
-            textbottom1 : "De plus sa localisation permet un rayonnement sur les différents site de la région"
-            textbottom2 : "(entre Les cevennes, Montpellier, Nimes et la mer)."
-
-    familly :
-        text1 : "Découvrez notre gîte haut de gamme, conçu pour offrir un
-                confort exceptionnel et luxueux à 12 personnes."
-        text2 : "Pourquoi choisir notre gîte ?"
-        text3 : "Découvrez le summum du raffinement dans nos chambres spacieuses et élégamment décorées, 
-                conçues pour accueillir jusqu'à 12 personnes en toute intimité. Profitez d'une atmosphère 
-                chaleureuse et accueillante où chaque détail a été soigneusement pensé pour votre confort ultime."
-        family :
-            header : "Un espace famillial"
-            title11 : "Bienvenue dans votre oasis de tranquillité et de luxe au cœur de la campagne."
-            title12 : "Notre gîte prestigieux offre une expérience incomparable, combinant confort somptueux 
-             et divertissements haut de gamme pour des vacances inoubliables"
-            title2 : "Luxe, Confort, et Espace"
-            text21 : "Découvrez le summum du raffinement dans nos chambres spacieuses et élégamment décorées, 
-             conçues pour accueillir jusqu'à 12 personnes en toute intimité. Profitez d'une atmosphère chaleureuse et accueillante où chaque détail a été soigneusement pensé pour votre confort ultime."
-            title3 : "Évasion en Pleine Nature"
-            text31 : "Notre gîte isolé vous offre un refuge loin du tumulte de la vie urbaine, niché dans un cadre naturel préservé. Plongez-vous dans la tranquillité de la campagne, où seules les douces brises et les chants des oiseaux viennent perturber votre sérénité."
-            title4 : "Divertissements Haut de Gamme"
-            text41 : "Plongez dans le luxe absolu avec notre gamme complète d'équipements de loisirs haut de gamme. Détendez-vous dans notre jacuzzi privé, rafraîchissez-vous dans notre piscine interieure avec vue sur le jardin ou défiez vos amis dans une partie animée de billard dans notre salle de jeux bien équipée."
-            title5 : "Tout Compris, Tout Personnalisé"
-            text51 : "Votre confort est notre priorité absolue. Profitez de notre formule tout compris, avec des services sur mesure adaptés à vos besoins. Que vous souhaitiez organiser une fête inoubliable ou simplement vous détendre en famille, notre équipe dévouée est là pour rendre votre séjour aussi parfait que possible."
-            textbottom1 : "Réservez dès aujourd'hui pour garantir votre escapade idyllique au cœur de la campagne entre les cevennes et la mer. "
-            textbottom2 : "(between the Cevennes, Montpellier, Nimes and the sea)."
-            textbottom3 : "Contactez-nous pour plus d'informations et pour réserver vos dates dès maintenant."
+reservation :
+    title: 'Pré-Réserver votre Séjour'
+    step1: 'Etape 1'
+    btnreini : 'Réinitialiser le calendrier'    
 
 
-reservation : 
-    title : "Pré-Réserver votre Séjour"
-    step1 :
-       calendar : "calendrier"
-       step : "Etape 1"
 
-
-       

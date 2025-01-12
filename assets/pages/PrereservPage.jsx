@@ -1,7 +1,55 @@
-import React, { useState } from "react";
+import { setLocale, getLocale } from "@symfony/ux-translator";
+import React, { useState, useEffect } from "react";
 import Calendar from "@demark-pro/react-booking-calendar";
+import YAML from "js-yaml";
 
-const PrereservPage = () => {
+const PrereservPage = ({ initialLocale }) => {
+  console.log("Valeur de initialLocale reçu par props :", initialLocale); 
+
+  const [locale, setLocaleState] = useState(initialLocale || "fr");
+  const [translations, setTranslations] = useState({});
+
+  useEffect(() => {
+    console.log("Valeur actuelle de locale (React) :", locale);
+
+    const load = async () => {
+      const currentLocale = locale; // Langue par défaut
+      try {
+        // Définir la langue locale pour le traducteur Symfony
+        setLocaleState(currentLocale);
+        console.log("Valeur actuelle de locale:", currentLocale);
+
+        // Charger le fichier de traduction YAML
+
+        const response = await fetch(
+          `/messages+intl-icu.${currentLocale}.yaml`
+        );
+        if (!response.ok) {
+          throw new Error(
+            `Erreur de chargement du fichier YAML: ${response.statusText}`
+          );
+        }
+
+        const text = await response.text();
+
+        // Charger le contenu YAML en objet JavaScript
+        const allTranslations = YAML.load(text);
+        console.log("Traductions récupérées:", allTranslations);
+
+        // Récupérer toutes les traductions sous `reservation`
+        const reservationTranslations = allTranslations["reservation"] || {};
+        console.log("Traductions 'reservation':", reservationTranslations);
+
+        // Mettre à jour l'état avec les traductions de `reservation`
+        setTranslations(reservationTranslations);
+      } catch (error) {
+        console.error("Erreur lors du chargement des traductions:", error);
+      }
+    };
+
+    load();
+  }, [locale]);
+
   const [selectedDates, setSelectedDates] = useState([]); //Etat pour selectionner les dates avec le range
   const [price, setPrice] = useState(""); // État pour stocker le prix
   const [priceHT, setPriceHT] = useState(0); // Définir le prix HT comme état
@@ -26,46 +74,48 @@ const PrereservPage = () => {
   });
 
   // fonction pour incrementer et decrementer le petit-dejeuner
-const increment = () => {
-  if (openBreakfast && nbrPersonne < 12) {
-    setNbrPersonne((prevNbrPersonne) => prevNbrPersonne + 1);
-    setTotalPetitDej((prevTotalPetitDej) => prevTotalPetitDej + prixDej);
-    setPrice((oldPrice) => oldPrice + prixDej);
-  }
-};
-
-const decrement = () => {
-  if (openBreakfast && nbrPersonne > 8) {
-    setNbrPersonne((prevNbrPersonne) => prevNbrPersonne - 1);
-    setTotalPetitDej((prevTotalPetitDej) => prevTotalPetitDej - prixDej);
-    setPrice((oldPrice) => oldPrice - prixDej);
-  }
-}
-  
-// Fonction pour ouvrir ou fermer la checkbox Breakfast
-const handleCheckboxBreakfast = () => {
-  let check = !openBreakfast;
-
-  if (price) {
-    if (check) {
-      setPrice((oldPrice) => oldPrice + totalPetitDej);
-    } else {
-      setPrice((oldPrice) => oldPrice - totalPetitDej);
+  const increment = () => {
+    if (openBreakfast && nbrPersonne < 12) {
+      setNbrPersonne((prevNbrPersonne) => prevNbrPersonne + 1);
+      setTotalPetitDej((prevTotalPetitDej) => prevTotalPetitDej + prixDej);
+      setPrice((oldPrice) => oldPrice + prixDej);
     }
+  };
 
-    setOpenBreakfast(check);
-  } else {
-    setOpenBreakfast(false);
-  }
-}
+  const decrement = () => {
+    if (openBreakfast && nbrPersonne > 8) {
+      setNbrPersonne((prevNbrPersonne) => prevNbrPersonne - 1);
+      setTotalPetitDej((prevTotalPetitDej) => prevTotalPetitDej - prixDej);
+      setPrice((oldPrice) => oldPrice - prixDej);
+    }
+  };
 
-// Fonction pour ouvrir ou fermer la checkbox Visite Guidée
-const handleCheckboxGuide = () => {
-  setOpenGuide(!openGuide);
-}
-  
-// Fonction pour calculer le prix en fonction du nombres de jours
-const calculatePrice = (dates) => {
+  // Fonction pour ouvrir ou fermer la checkbox Breakfast
+  const handleCheckboxBreakfast = () => {
+    let check = !openBreakfast;
+    console.log("Breakfast checkbox clicked. New state:", check);
+
+    if (price) {
+      if (check) {
+        setPrice((oldPrice) => oldPrice + totalPetitDej);
+      } else {
+        setPrice((oldPrice) => oldPrice - totalPetitDej);
+      }
+
+      setOpenBreakfast(check);
+    } else {
+      console.log("Price is not set. Checkbox not activated.");
+      setOpenBreakfast(false);
+    }
+  };
+
+  // Fonction pour ouvrir ou fermer la checkbox Visite Guidée
+  const handleCheckboxGuide = () => {
+    setOpenGuide(!openGuide);
+  };
+
+  // Fonction pour calculer le prix en fonction du nombres de jours
+  const calculatePrice = (dates) => {
     // Calculer le nombre de jours sélectionnés
     const startDate = new Date(dates[0]);
     const endDate = new Date(dates[dates.length - 1]);
@@ -82,11 +132,11 @@ const calculatePrice = (dates) => {
 
     setMessageCalendar("");
 
-  // Jours non valides pour la réservation (mardi, mercredi, jeudi, dimanche)
-  const joursNonValides = [2, 3, 4, 0]; // 0 = dimanche, 2 = mardi, 3 = mercredi, 4 = jeudi
+    // Jours non valides pour la réservation (mardi, mercredi, jeudi, dimanche)
+    const joursNonValides = [2, 3, 4, 0]; // 0 = dimanche, 2 = mardi, 3 = mercredi, 4 = jeudi
 
-  // Nombres de jours non valides pour la réservation (1, 2, 3, 6, 7 jours)
-  const joursNonPossibles = [1, 2, 3, 6, 7];
+    // Nombres de jours non valides pour la réservation (1, 2, 3, 6, 7 jours)
+    const joursNonPossibles = [1, 2, 3, 6, 7];
 
     let totalPrice1 = 3000;
     let totalPrice2 = 2000;
@@ -94,159 +144,162 @@ const calculatePrice = (dates) => {
     let totalPrice4 = 2850;
     let totalPrice5 = 3600;
 
-  // Vérification si le jour de début ou de fin est invalide
-  const isInvalidDay =
-    joursNonValides.includes(startDay) || joursNonValides.includes(endDay);
+    // Vérification si le jour de début ou de fin est invalide
+    const isInvalidDay =
+      joursNonValides.includes(startDay) || joursNonValides.includes(endDay);
 
-  // Vérification si la durée de la réservation est invalide
-  const isInvalidDuration = joursNonPossibles.includes(numberOfDays);
+    // Vérification si la durée de la réservation est invalide
+    const isInvalidDuration = joursNonPossibles.includes(numberOfDays);
 
-  // Si une des conditions est remplie, afficher le message d'erreur
-  if (isInvalidDay || isInvalidDuration) {
-    setMessageCalendar(
-      "Vous devez choisir des dates comprenant :\n" +
-        "- Une semaine complète (du samedi au samedi)\n" +
-        "- Les 4 premiers jours de la semaine (du lundi au vendredi)\n" +
-        "- Les 3 derniers jours de la semaine (du vendredi au lundi)\n" +
-        "- Tarif dégressif à partir de deux semaines.\n" +
-        "\n" +
-        "En dehors de toutes ces périodes:"
-    );
-    setPrice("");
-  } else {
-    setMessageCalendar("");
-  };
-
-  // Périodes de vacances
-  const periods = {
-    toussaint: {
-      start: new Date(startDate.getFullYear(), 9, 18), // 19 Octobre -1
-      end: new Date(endDate.getFullYear(), 10, 5), // 4 Novembre +1
-      priceOneWeek: 3600,
-      pricePartialWeek: 2400,
-    },
-    noel: {
-      start: new Date(startDate.getFullYear(), 11, 20), // 21 Décembre -1
-      end: new Date(endDate.getFullYear() + 1, 0, 5), // 4 Décembre +1
-      priceOneWeek: 3600,
-      pricePartialWeek: 2400,
-    },
-    fevrier: {
-      start: new Date(startDate.getFullYear(), 1, 7), // 8 fevrier
-      end: new Date(endDate.getFullYear(), 2, 11), // 10 mars
-      priceOneWeek: 3600,
-      pricePartialWeek: 2400,
-    },
-    paque: {
-      start: new Date(startDate.getFullYear(), 3, 4), // 4 avril
-      end: new Date(endDate.getFullYear(), 4, 6), // 5 mai
-      priceOneWeek: 3600,
-      pricePartialWeek: 2400,
-    },
-  };
-
-  // Vérification si la période est du 26 octobre au 2 novembre (Toussaint spécial)
-  const isToussaintSpecial =
-    startDate.getFullYear() === 2024 &&
-    startDate.getMonth() === 9 && // Mois d'octobre (0-indexé, donc 9 = octobre)
-    startDate.getDate() === 26 &&
-    endDate.getFullYear() === 2024 &&
-    endDate.getMonth() === 10 && // Mois de novembre (0-indexé, donc 10 = novembre)
-    endDate.getDate() === 2;
-
-  console.log("Start Date:", startDate);
-  console.log("End Date:", endDate);
-  console.log("isToussaintSpecial:", isToussaintSpecial);
-
-  if (isToussaintSpecial) {
-    if (numberOfDays === 9 && startDay === 6 && endDay === 6) {
-      console.log("Prix semaine spéciale Toussaint: 3600");
-      return 3600;
+    // Si une des conditions est remplie, afficher le message d'erreur
+    if (isInvalidDay || isInvalidDuration) {
+      setMessageCalendar(
+        "Vous devez choisir des dates comprenant :\n" +
+          "- Une semaine complète (du samedi au samedi)\n" +
+          "- Les 4 premiers jours de la semaine (du lundi au vendredi)\n" +
+          "- Les 3 derniers jours de la semaine (du vendredi au lundi)\n" +
+          "- Tarif dégressif à partir de deux semaines.\n" +
+          "\n" +
+          "En dehors de toutes ces périodes:"
+      );
+      setPrice("");
+    } else {
+      setMessageCalendar("");
     }
-  }
 
-  // Boucle sur les périodes pour appliquer les prix
-  for (const [periodName, period] of Object.entries(periods)) {
-    if (startDate >= period.start && endDate <= period.end) {
-      console.log(`Période sélectionnée : ${periodName}`);
+    // Périodes de vacances
+    const periods = {
+      toussaint: {
+        start: new Date(startDate.getFullYear(), 9, 18), // 19 Octobre -1
+        end: new Date(endDate.getFullYear(), 10, 5), // 4 Novembre +1
+        priceOneWeek: 3600,
+        pricePartialWeek: 2400,
+      },
+      noel: {
+        start: new Date(startDate.getFullYear(), 11, 20), // 21 Décembre -1
+        end: new Date(endDate.getFullYear() + 1, 0, 5), // 4 Décembre +1
+        priceOneWeek: 3600,
+        pricePartialWeek: 2400,
+      },
+      fevrier: {
+        start: new Date(startDate.getFullYear(), 1, 7), // 8 fevrier
+        end: new Date(endDate.getFullYear(), 2, 11), // 10 mars
+        priceOneWeek: 3600,
+        pricePartialWeek: 2400,
+      },
+      paque: {
+        start: new Date(startDate.getFullYear(), 3, 4), // 4 avril
+        end: new Date(endDate.getFullYear(), 4, 6), // 5 mai
+        priceOneWeek: 3600,
+        pricePartialWeek: 2400,
+      },
+    };
 
+    // Vérification si la période est du 26 octobre au 2 novembre (Toussaint spécial)
+    const isToussaintSpecial =
+      startDate.getFullYear() === 2024 &&
+      startDate.getMonth() === 9 && // Mois d'octobre (0-indexé, donc 9 = octobre)
+      startDate.getDate() === 26 &&
+      endDate.getFullYear() === 2024 &&
+      endDate.getMonth() === 10 && // Mois de novembre (0-indexé, donc 10 = novembre)
+      endDate.getDate() === 2;
+
+    console.log("Start Date:", startDate);
+    console.log("End Date:", endDate);
+    console.log("isToussaintSpecial:", isToussaintSpecial);
+
+    if (isToussaintSpecial) {
+      if (numberOfDays === 9 && startDay === 6 && endDay === 6) {
+        console.log("Prix semaine spéciale Toussaint: 3600");
+        return 3600;
+      }
+    }
+
+    // Boucle sur les périodes pour appliquer les prix
+    for (const [periodName, period] of Object.entries(periods)) {
+      if (startDate >= period.start && endDate <= period.end) {
+        console.log(`Période sélectionnée : ${periodName}`);
+
+        if (numberOfDays === 8 && startDay === 6 && endDay === 6) {
+          return period.priceOneWeek;
+          console.log(`Prix ${periodName} une semaine:`, price);
+        } else if (
+          (startDay === 1 && endDay === 5) ||
+          (startDay === 5 && endDay === 1)
+        ) {
+          return period.pricePartialWeek;
+          console.log(`Prix ${periodName} partielle:`, price);
+        } else if (jourNonPossiblePs.includes(numberOfDays)) {
+          return (
+            "Vous devez choisir des dates comprenant :\n" +
+            "- Une semaine complète (du samedi au samedi)\n" +
+            "- Les 4 premiers jours de la semaine (du lundi au vendredi)\n" +
+            "- Les 3 derniers jours de la semaine (du vendredi au lundi)\n" +
+            "- Tarif dégressif à partir de deux semaines.\n" +
+            "En dehors de toutes ces périodes, veuillez nous contacter. "
+          );
+        } else {
+          return 0;
+        }
+      }
+    }
+
+    // Hors saison
+    if (![6, 7].includes(startDate.getMonth())) {
       if (numberOfDays === 8 && startDay === 6 && endDay === 6) {
-        return period.priceOneWeek;
-        console.log(`Prix ${periodName} une semaine:`, price);
+        const priceOffSeasonOneWeek = 3000;
+        console.log("Prix une semaine hors saison:", priceOffSeasonOneWeek);
+        return priceOffSeasonOneWeek;
       } else if (
         (startDay === 1 && endDay === 5) ||
         (startDay === 5 && endDay === 1)
       ) {
-        return period.pricePartialWeek;
-        console.log(`Prix ${periodName} partielle:`, price);
-      } else if (jourNonPossiblePs.includes(numberOfDays)) {
+        const priceOffSeasonPartialWeek = 2000;
+        console.log("Prix partielle hors saison:", priceOffSeasonPartialWeek);
+        return priceOffSeasonPartialWeek;
+      } else if (jourNonPossibleHs.includes(numberOfDays)) {
         return (
           "Vous devez choisir des dates comprenant :\n" +
           "- Une semaine complète (du samedi au samedi)\n" +
           "- Les 4 premiers jours de la semaine (du lundi au vendredi)\n" +
           "- Les 3 derniers jours de la semaine (du vendredi au lundi)\n" +
-          "- Tarif dégressif à partir de deux semaines.\n" +
-          "En dehors de toutes ces périodes, veuillez nous contacter. "
+          "- Pour 2 semaines et plus tarif DEGRESSIF, veuillez nous contacter directement par email"
         );
       } else {
         return 0;
       }
     }
-  }
 
-  // Hors saison
-  if (![6, 7].includes(startDate.getMonth())) {
-    if (numberOfDays === 8 && startDay === 6 && endDay === 6) {
-      const priceOffSeasonOneWeek = 3000;
-      console.log("Prix une semaine hors saison:", priceOffSeasonOneWeek);
-      return priceOffSeasonOneWeek;
-    } else if (
-      (startDay === 1 && endDay === 5) ||
-      (startDay === 5 && endDay === 1)
-    ) {
-      const priceOffSeasonPartialWeek = 2000;
-      console.log("Prix partielle hors saison:", priceOffSeasonPartialWeek);
-      return priceOffSeasonPartialWeek;
-    } else if (jourNonPossibleHs.includes(numberOfDays)) {
-      return (
-        "Vous devez choisir des dates comprenant :\n" +
-        "- Une semaine complète (du samedi au samedi)\n" +
-        "- Les 4 premiers jours de la semaine (du lundi au vendredi)\n" +
-        "- Les 3 derniers jours de la semaine (du vendredi au lundi)\n" +
-        "- Pour 2 semaines et plus tarif DEGRESSIF, veuillez nous contacter directement par email"
-      );
-    } else {
-      return 0;
+    // Pleine saison
+    else if ([6, 7].includes(startDate.getMonth())) {
+      console.log("Pleine saison:", startDate.getMonth());
+      if (numberOfDays === 8 && startDay === 6 && endDay === 6) {
+        const priceFullSeasonOneWeek = 3800;
+        console.log("Prix pleine saison une semaine:", priceFullSeasonOneWeek);
+        return priceFullSeasonOneWeek;
+      } else if (
+        (startDay === 1 && endDay === 5) ||
+        (startDay === 5 && endDay === 1)
+      ) {
+        const priceFullSeasonPartialWeek = 2550;
+        console.log(
+          "Prix pleine saison partielle:",
+          priceFullSeasonPartialWeek
+        );
+        return priceFullSeasonPartialWeek;
+      } else if (jourNonPossiblePs.includes(numberOfDays)) {
+        return (
+          "Vous devez choisir des dates comprenant :\n" +
+          "- Une semaine complète (du samedi au samedi)\n" +
+          "- Les 4 premiers jours de la semaine (du lundi au vendredi)\n" +
+          "- Les 3 derniers jours de la semaine (du vendredi au lundi)"
+        );
+      } else {
+        return "nous contacter";
+      }
     }
-  }
-
-  // Pleine saison
-  else if ([6, 7].includes(startDate.getMonth())) {
-    console.log("Pleine saison:", startDate.getMonth());
-    if (numberOfDays === 8 && startDay === 6 && endDay === 6) {
-      const priceFullSeasonOneWeek = 3800;
-      console.log("Prix pleine saison une semaine:", priceFullSeasonOneWeek);
-      return priceFullSeasonOneWeek;
-    } else if (
-      (startDay === 1 && endDay === 5) ||
-      (startDay === 5 && endDay === 1)
-    ) {
-      const priceFullSeasonPartialWeek = 2550;
-      console.log("Prix pleine saison partielle:", priceFullSeasonPartialWeek);
-      return priceFullSeasonPartialWeek;
-    } else if (jourNonPossiblePs.includes(numberOfDays)) {
-      return (
-        "Vous devez choisir des dates comprenant :\n" +
-        "- Une semaine complète (du samedi au samedi)\n" +
-        "- Les 4 premiers jours de la semaine (du lundi au vendredi)\n" +
-        "- Les 3 derniers jours de la semaine (du vendredi au lundi)"
-      );
-    } else {
-      return "nous contacter";
-    }
-  }
-  return 0;
-};
+    return 0;
+  };
 
   // selection des dates pour afficher le prix
   const handleCalendarChange = (dates) => {
@@ -417,7 +470,9 @@ const calculatePrice = (dates) => {
         {/*------------------bloc1----------------*/}
         <div className="col-lg-4 mb-3">
           <h3 className="visually-hidden">Calendrier</h3>
-          <div className="d-flex justify-content-center">Étape 1</div>
+          <div className="d-flex justify-content-center">
+            <h2>{translations.step1}</h2>
+          </div>
           {/*------------------Calendrier----------------*/}
 
           <div className="calendarContainer">
@@ -445,7 +500,7 @@ const calculatePrice = (dates) => {
               onClick={handleReset}
               className="but-reset btn-warning mt-1"
             >
-              Réinitialiser le calendrier
+              {translations.btnreini}
             </button>
           </div>
 
@@ -461,7 +516,7 @@ const calculatePrice = (dates) => {
               <div className="d-flex justify-content-center">
                 <button type="button" className="btn btn-light m-1">
                   <a href="/contact" style={{ textDecoration: "none" }}>
-                    Nous contacter
+                    {translations.contact}
                   </a>
                 </button>
               </div>
@@ -472,23 +527,25 @@ const calculatePrice = (dates) => {
         {/*------------------bloc2----------------*/}
         <div className="col-lg-4 mb-3">
           <h3 className="visually-hidden">Options & Assurance</h3>
-          <div className="d-flex justify-content-center">Étape 2</div>
+          <div className="d-flex justify-content-center">
+            <h2>{translations.step2}</h2>
+          </div>
 
           {/*------------------options----------------*/}
           <div className="bla">
-            <h4>Options</h4>
+            <h4>{translations.options}</h4>
 
             {/*----------------- Proposées par L’Étoile de Dan ------------*/}
 
             <p>
               <strong>
-                <u> Proposées par L’Étoile de Dan</u>
+                <u>{translations.propose}</u>
               </strong>
 
               <br />
 
-              <a className="btn-plus" href="/informations">
-                <span> En savoir plus</span>
+              <a className="btn-plus" href={`/${locale}/informations`}>
+                <span>{translations.more}</span>
               </a>
             </p>
 
@@ -502,16 +559,16 @@ const calculatePrice = (dates) => {
                 onChange={handleCheckboxBreakfast}
                 disabled={disabledOptionsAssurances}
               />
-              <label htmlFor="breakfast">Petit Dejeuner</label>
+              <label htmlFor="breakfast">{translations.breakfast}</label>
             </div>
             {openBreakfast && (
               <>
                 <p>
-                  <b>- Petit déjeuner par jour</b> (minimum de 8 personnes)
+                  <b>{translations.days}</b> {translations.people}
                 </p>
                 <div>
                   <p>
-                    Nombre de personnes : {nbrPersonne}
+                    {translations.numpeople} {nbrPersonne}
                     <input
                       type="hidden"
                       name="nbrPersonne"
@@ -532,7 +589,10 @@ const calculatePrice = (dates) => {
                       ▼
                     </button>
                     <div className="my-2 text-end">
-                      <b className="bla">Prix : {totalPetitDej} € / jours</b>
+                      <b className="bla">
+                        {translations.price} {totalPetitDej}{" "}
+                        {translations.euros}
+                      </b>
                     </div>
                   </p>
                 </div>
@@ -549,14 +609,14 @@ const calculatePrice = (dates) => {
                 onChange={handleCheckboxGuide}
                 disabled={disabledOptionsAssurances}
               />
-              <label htmlFor="visite">Visite Guidée</label>
+              <label htmlFor="visite">{translations.visited}</label>
             </div>
             <div>
               {openGuide && (
                 <>
                   <p>
-                    <b>- Guide Touristique</b> (maximum 8 personnes) <br />A
-                    définir avec L'étoile de Dan
+                    <b>{translations.tourism}</b> {translations.people} <br />
+                    {translations.defined}
                   </p>
                 </>
               )}
@@ -566,13 +626,13 @@ const calculatePrice = (dates) => {
             <div className="mt-4">
               <p>
                 <strong>
-                  <u> Proposées par nos prestataires</u>
+                  <u>{translations.propose2}</u>
                 </strong>
 
                 <br />
 
-                <a className="btn-plus" href="/prestations">
-                  <span>En savoir plus</span>
+                <a className="btn-plus" href={`/${locale}/prestations`}>
+                  <span>{translations.more}</span>
                 </a>
               </p>
 
@@ -583,7 +643,7 @@ const calculatePrice = (dates) => {
                   name="degustation"
                   disabled={disabledOptionsAssurances}
                 />
-                <label htmlFor="degustation"> Service de Dégustation</label>
+                <label htmlFor="degustation">{translations.tasting}</label>
               </div>
               <div>
                 <input
@@ -592,7 +652,7 @@ const calculatePrice = (dates) => {
                   name="massage"
                   disabled={disabledOptionsAssurances}
                 />
-                <label htmlFor="massage"> Service de Massage</label>
+                <label htmlFor="massage">{translations.massage}</label>
               </div>
               <div>
                 <input
@@ -601,7 +661,7 @@ const calculatePrice = (dates) => {
                   name="chef"
                   disabled={disabledOptionsAssurances}
                 />
-                <label htmlFor="chef">Service de Chef à domicile</label>
+                <label htmlFor="chef">{translations.cooking}</label>
               </div>
             </div>
           </div>
@@ -611,7 +671,9 @@ const calculatePrice = (dates) => {
         <div className="col-lg-4 mb-3">
           <div className="">
             <h3 className="visually-hidden">Formulaire de Contact</h3>
-            <div className="d-flex justify-content-center">Étape 3</div>
+            <div className="d-flex justify-content-center">
+              <h2>{translations.step3} </h2>
+            </div>
             <div className="bla">
               <div className="input-group mb-3">
                 <div className="input-group-prepend">
@@ -619,14 +681,14 @@ const calculatePrice = (dates) => {
                     className="input-group-text"
                     id="inputGroup-sizing-default"
                   >
-                    * Nom
+                    {translations.name}
                   </span>
                 </div>
                 <input
                   type="text"
                   name="nom"
                   className="form-control"
-                  placeholder="Entrez votre nom"
+                  placeholder={translations.entername}
                   minLength={2}
                   required={true}
                 />
@@ -638,14 +700,14 @@ const calculatePrice = (dates) => {
                     id="inputGroup-sizing-default"
                     required={true}
                   >
-                    * Prenom
+                    {translations.firstname}
                   </span>
                 </div>
                 <input
                   type="text"
                   name="prenom"
                   className="form-control"
-                  placeholder="Entrez votre prénom"
+                  placeholder={translations.enterfirst}
                   minLength={2}
                   required={true}
                 />
@@ -657,14 +719,14 @@ const calculatePrice = (dates) => {
                     className="input-group-text"
                     id="inputGroup-sizing-default"
                   >
-                    * Email
+                    {translations.email}
                   </span>
                 </div>
                 <input
                   type="mail"
                   name="mail"
                   className="form-control"
-                  placeholder="Entrez votre email"
+                  placeholder={translations.enteremail}
                   required={true}
                 />
               </div>
@@ -675,14 +737,14 @@ const calculatePrice = (dates) => {
                     className="input-group-text"
                     id="inputGroup-sizing-default"
                   >
-                    * Telephone
+                    {translations.phone}
                   </span>
                 </div>
                 <input
                   type="tel"
                   name="telephone"
                   className="form-control"
-                  placeholder="Entrez votre téléphone"
+                  placeholder={translations.enterphone}
                   minLength={10}
                   required={true}
                 />
@@ -694,7 +756,7 @@ const calculatePrice = (dates) => {
                     className="input-group-text"
                     id="inputGroup-sizing-default"
                   >
-                    * Commentaires
+                    {translations.comments}
                   </span>
                 </div>
                 <textarea
@@ -716,14 +778,17 @@ const calculatePrice = (dates) => {
         <div className="row">
           <hr />
           {/*------Prix TTC-------*/}
-          <h6>PRIX TTC : {price}€</h6>
+          <h6>
+            {" "}
+            {translations.pricettc} {price}€
+          </h6>
 
           <input type="hidden" name="prix" value={price} />
 
           {/*------checkbox Prix HT-------*/}
           <div>
             <p>
-              Convertir le prix en HT
+              {translations.convert}
               <input
                 type="checkbox"
                 className="checkboxHt"
@@ -731,15 +796,17 @@ const calculatePrice = (dates) => {
                 onChange={handleChangePrixHt}
                 disabled={disabledOptionsAssurances}
               />
-              PRIX HT : {priceHT}€
+              {translations.priceht} {priceHT}€
             </p>
           </div>
 
           {/*------Nos prix comprennent-------*/}
           <div className="comprend">
             <p className="mt-2">
-              Nos prix comprennent :<br />
-              - Le linge de maison <br />- Le ménage en fin de séjour
+              {translations.ourprice}
+              <br />
+              {translations.linge}
+              <br /> {translations.clean}
             </p>
           </div>
 
@@ -752,11 +819,11 @@ const calculatePrice = (dates) => {
           {!isLoaded && (
             <>
               <button type="submit" className="btn btn-primary">
-                Pré-réserver
+                {translations.btnprereserver}
               </button>
             </>
           )}
-          {isLoaded && <>Veuillez patienter</>}
+          {isLoaded && <> {translations.wait}</>}
         </div>
       </div>
     </form>

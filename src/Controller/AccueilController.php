@@ -84,4 +84,5 @@ class AccueilController extends AbstractController
     {
         return $this->render('landingpage/mentionsLegales.twig');
     }
+    
 }

@@ -1,0 +1,63 @@
+.scrolling-wrapper{
+    position: relative;
+    display: flex;
+    justify-content: start;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    height: 400px; 
+  //  background-image: url(img/magazinePage/pmr/pmr.webp);
+
+.card{
+    display: inline-block;
+}
+}
+
+.scrolling-wrapper-flexbox{
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+
+    .card{
+        flex: 0 0 auto;
+    }
+}
+
+.card{
+    width: 150px;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 10px;
+    font-size: 0.8em;
+    overflow: hidden;
+    transition: all 0.6s ease;
+
+    h3{
+ overflow-wrap: break-word;
+ white-space: normal;
+    }
+    p{
+        color: transparent;
+    }
+}
+
+.card:hover{
+    background-color: blue;
+    border-radius: 8px;
+    width: 900px;
+    section{
+        display: flex;
+        justify-content: start;
+        background-color: grey;
+        padding: 10px;
+        p{
+            color: white;
+            white-space: normal;
+            font-size: 2vw;
+        }
+    }
+}
+
+.card:hover .card{
+    margin-left: 10px;
+}
