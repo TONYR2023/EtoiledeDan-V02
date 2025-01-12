@@ -6,7 +6,11 @@
 	<main>
 		<div class="backgroundImageContainer">
 			<img src="{{ asset('img/magazinePage/magazine.png') }}" alt="magazine" class="backgroundImage" title="Photos magazine" loading="eager"/>
-
+     <div class="buttonContainer">
+                {{ include('reservation/boutonReservation.twig') }}
+            </div>
+        </div>
+        <div>
         <h2 class="mt-2">{{ 'magazine.title2' | trans }}</h2>
         <div class="d-flex justify-content-center">
             <hr class="separator"/>

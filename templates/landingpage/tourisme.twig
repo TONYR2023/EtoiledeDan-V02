@@ -7,7 +7,11 @@
 	<main>
 		<div class="backgroundImageContainer">
 			<img src="{{ asset('img/tourismePage/tourisme.png') }}" alt="tourisme" class="backgroundImage" title="Photo pont du gard, tourisme" loading="eager"/>
-
+            <div class="buttonContainer">
+                {{ include('reservation/boutonReservation.twig') }}
+            </div>
+        </div>
+        <div>
         <h2 class="mt-2">{{ 'tourism.title' | trans }}</h2>
         <div class="d-flex justify-content-center">
             <hr class="separator" />
