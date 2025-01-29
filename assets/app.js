@@ -13,6 +13,7 @@ import './styles/_header.scss'
 import './styles/_options.scss'
 import './styles/_preReserv.scss'
 import './styles/_prestations.scss'
+import './styles/_reviews.scss'
 
 // import './bootstrap'
 //require('bootstrap')

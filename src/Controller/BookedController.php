@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Entity\Booked;
+use App\Entity\Review;
 use App\Form\BookedType;
 use App\Repository\BookedRepository;
 use Doctrine\ORM\EntityManagerInterface;
@@ -17,12 +18,28 @@ use Symfony\Component\Security\Http\Attribute\IsGranted;
 class BookedController extends AbstractController
 {
     #[Route('/', name: 'app_booked_index', methods: ['GET'])]
-    public function index(BookedRepository $bookedRepository): Response
+    public function index(BookedRepository $bookedRepository, EntityManagerInterface $entityManager): Response
     {
+        // Récupérer toutes les réservations
+        $bookeds = $bookedRepository->findAll();
+
+        // Récupérer les avis qui ne sont pas encore validés
+        $reviewsToValidate = $entityManager->getRepository(Review::class)->findBy([
+            'isApproved' => false,
+        ]);
+
+        // Récupérer les avis validés
+        $approvedReviews = $entityManager->getRepository(Review::class)->findBy([
+            'isApproved' => true,
+        ]);
+
         return $this->render('booked/index.html.twig', [
-            'bookeds' => $bookedRepository->findAll(),
+            'bookeds' => $bookeds,
+            'reviewsToValidate' => $reviewsToValidate,
+            'approvedReviews' => $approvedReviews,
         ]);
     }
+
 
     #[Route('/new', name: 'app_booked_new', methods: ['GET', 'POST'])]
     public function new(Request $request, EntityManagerInterface $entityManager): Response

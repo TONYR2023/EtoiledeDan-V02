@@ -1,42 +1,98 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Liste des réservations{% endblock %}
+{% block title %}Liste des réservations
+{% endblock %}
 
 {% block body %}
-    <div class="backgroundImageContainer">
-        <img src="{{ asset('img/homePage/home.png') }}" alt="salon" class="backgroundImage"/>
-    </div>
+	<div class="backgroundImageContainer">
+		<img src="{{ asset('img/homePage/home.png') }}" alt="salon" class="backgroundImage"/>
+	</div>
 
-    <div class="container-lg">
+	<div class="container-lg">
 
-        <h1>{{ block('title') }}</h1>
+		<h1>{{ block('title') }}</h1>
 
-        <table class="table">
-            <thead>
-            <tr>
-                <th>Date Debut</th>
-                <th>Date Fin</th>
-                <th>actions</th>
-            </tr>
-            </thead>
-            <tbody>
-            {% for booked in bookeds %}
-                <tr>
-                    <td>{{ booked.dateDebut ? booked.dateDebut|date('Y-m-d') : '' }}</td>
-                    <td>{{ booked.dateFin ? booked.dateFin|date('Y-m-d') : '' }}</td>
-                    <td>
-                        <a href="{{ path('app_booked_show', {'id': booked.id}) }}">voir</a>
-                        <a href="{{ path('app_booked_edit', {'id': booked.id}) }}">modifier</a>
-                    </td>
-                </tr>
-            {% else %}
-                <tr>
-                    <td colspan="4">Aucune réservation à ce jour</td>
-                </tr>
-            {% endfor %}
-            </tbody>
-        </table>
+		<table class="table">
+			<thead>
+				<tr>
+					<th>Date Debut</th>
+					<th>Date Fin</th>
+					<th>actions</th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for booked in bookeds %}
+					<tr>
+						<td>{{ booked.dateDebut ? booked.dateDebut|date('Y-m-d') : '' }}</td>
+						<td>{{ booked.dateFin ? booked.dateFin|date('Y-m-d') : '' }}</td>
+						<td>
+							<a href="{{ path('app_booked_show', {'id': booked.id}) }}">voir</a>
+							<a href="{{ path('app_booked_edit', {'id': booked.id}) }}">modifier</a>
+						</td>
+					</tr>
+				{% else %}
+					<tr>
+						<td colspan="4">Aucune réservation à ce jour</td>
+					</tr>
+				{% endfor %}
+			</tbody>
+		</table>
 
-        <a href="{{ path('app_booked_new') }}">Ajouter une réservation</a>
-    </div>
-{% endblock %}
+		<a href="{{ path('app_booked_new') }}">Ajouter une réservation</a>
+	</div>
+	<div class="container-lg">
+		<h3>Avis à valider</h3>
+
+		{% if reviewsToValidate is defined and reviewsToValidate is not empty %}
+			<table class="table">
+				<thead>
+					<tr>
+						<th>Auteur</th>
+						<th>Commentaire</th>
+						<th>Actions</th>
+					</tr>
+				</thead>
+				<tbody>
+					{% for review in reviewsToValidate %}
+						<tr>
+							<td>{{ review.name }}</td>
+							<td>{{ review.comment }}</td>
+							<td>
+								<a href="{{ path('review_approve', {'id': review.id}) }}" class="btn btn-success">Approuver</a>
+								<a href="{{ path('review_reject', {'id': review.id}) }}" class="btn btn-danger">Rejeter</a>
+							</td>
+						</tr>
+					{% endfor %}
+				</tbody>
+			</table>
+		{% else %}
+			<p>Aucun avis en attente de validation.</p>
+		{% endif %}
+
+		<h3>Avis validés</h3>
+
+		{% if approvedReviews is defined and approvedReviews is not empty %}
+			<table class="table">
+				<thead>
+					<tr>
+						<th>Auteur</th>
+						<th>Commentaire</th>
+					</tr>
+				</thead>
+				<tbody>
+					{% for review in approvedReviews %}
+						<tr>
+							<td>{{ review.name }}</td>
+							<td>{{ review.comment }}</td>
+						</tr>
+					{% endfor %}
+				</tbody>
+			</table>
+		{% else %}
+			<p>Aucun avis validé pour le moment.</p>
+		{% endif %}
+
+
+	</div>
+
+</div>{% endblock %}

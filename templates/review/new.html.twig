@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Ajouter un avis
+{% endblock %}
+
+{% block body %}
+	<main>
+		<div class="backgroundImageContainer">
+			<img src="{{ asset('img/gitePage/gite.webp') }}" alt="gite famille" class="backgroundImage"/>
+			<div class="buttonContainer">
+				{{ include('reservation/boutonReservation.twig') }}
+			</div>
+		</div>
+		{#---------------cadre---------------#}
+		<h2 class="mt-2 mx-5 d-flex text-center">
+			{{ 'magazine.archi.archi.title' | trans }}
+			<br/>{{ 'magazine.archi.archi.title1' | trans }}
+		</h2>
+		<div class="d-flex justify-content-center">
+			<hr class="separator"/>
+		</div>
+
+		<section class="container">
+			<h1>Ajouter un commentaire</h1>
+
+			{# Affichage des messages de succès #}
+			{% for message in app.flashes('success') %}
+				<div class="alert alert-success">
+					{{ message }}
+				</div>
+			{% endfor %}
+
+			{{ form_start(form) }}
+			{{ form_row(form.name) }}
+			{{ form_row(form.email) }}
+			{{ form_row(form.rating) }}
+			{{ form_row(form.comment) }}
+			<button class="btn btn-primary">Envoyer</button>
+			{{ form_end(form) }}
+			<section></main>
+		{% endblock %}

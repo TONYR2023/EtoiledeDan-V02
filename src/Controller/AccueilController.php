@@ -5,10 +5,10 @@ namespace App\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
-use Symfony\Component\HttpFoundation\RedirectResponse;
+use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
-use  Symfony\Contracts\Translation\TranslatorInterface;
-
+use Symfony\Contracts\Translation\TranslatorInterface;
+use App\Entity\Review;
 
 class AccueilController extends AbstractController
 {
@@ -23,9 +23,28 @@ class AccueilController extends AbstractController
 
     // Route pour la page d'accueil dans la langue spécifiée
     #[Route('/{_locale}/', name: 'accueil', requirements: ['_locale' => 'fr|en'])]
-    public function index(TranslatorInterface $translator): Response
+    public function index(EntityManagerInterface $entityManager, TranslatorInterface $translator): Response
     {
-        return $this->render('accueil/index.html.twig');
+        // Récupérer les reviews approuvées
+        $reviews = $entityManager->getRepository(Review::class)->findBy(
+            ['isApproved' => true], // Filtre : reviews approuvées
+            ['createdAt' => 'DESC'], // Tri par date décroissante
+            5, // Limite : afficher les 5 dernières reviews
+        );
+
+        // Calculer la moyenne des avis
+        $averageRating = 0;
+        if (count($reviews) > 0) {
+            $totalRating = array_reduce($reviews, function ($sum, $review) {
+                return $sum + $review->getRating();
+            }, 0);
+            $averageRating = $totalRating / count($reviews);
+        }
+
+        return $this->render('accueil/index.html.twig', [
+            'reviews' => $reviews,
+            'averageRating' => $averageRating,
+        ]);
     }
 
     #[Route('/{_locale}/notre-gite', name: 'gite', requirements: ['_locale' => 'fr|en'])]
@@ -84,5 +103,4 @@ class AccueilController extends AbstractController
     {
         return $this->render('landingpage/mentionsLegales.twig');
     }
-    
 }
