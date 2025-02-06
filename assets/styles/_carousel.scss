@@ -1,26 +1,48 @@
-.carousel {
-  width: 100%;
-  height: 100%;
-  margin: 0 auto;
-  overflow: hidden;
-  position: relative;
-  z-index: 0;
+.blocCarousel{
+  display: flex;
+  justify-content: center; /* Centrer horizontalement */
+  align-items: center; /* Centrer verticalement */
+  padding-right: 1em;
+}
 
-  .carousel-inner {
-    background-color: black;
+.carousel-container {
+  width: 100%; /* S'assurer que le container prend toute la largeur */
+  overflow: hidden; /* Empêcher tout débordement horizontal */
+  position: relative; /* Positionner correctement les éléments enfants */
+  border-radius: 10px; /* Pour arrondir les coins, c'est optionnel */
+}
+
+.carousel-inner {
+  display: flex;
+  width: 100%; /* Empêcher les éléments de s'étendre au-delà de la largeur */
+  height: auto; /* Permet d'adapter la hauteur des éléments */
+}
+
+.carousel-item {
+  flex-shrink: 0; /* Empêcher l'élément de rétrécir */
+  width: 100%; /* Garantir que chaque item prenne toute la largeur du carousel */
+  height: 100%; /* Permet d'adapter la hauteur des éléments */
+}
+
+.carousel-item img {
+  object-fit: cover; /* Couvre tout l'espace sans déformer l'image */
+  width: 100%; /* Utilise toute la largeur du conteneur */
+  height: 100%; /* Utilise toute la hauteur du conteneur */
+}
+.carousel-control-next, .carousel-control-prev {
+  background-color: rgb(53, 53, 53) !important;
+  z-index: 1050;
+  width: 6% !important;
+}
+
+@media (max-width: 800px) {
+  .carousel-container {
+ //   padding-right: 1em;
+    margin: 0;
   }
-
-  .carousel-item {
-    height: auto;
-
-    img {
-      object-fit: contain;
-      height: 100%;
-      width: 100%;
-    }
-  }
-
-  .carousel-item.active {
-    transition: transform 2.6s ease-in-out;
+  .carousel-item img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
   }
 }

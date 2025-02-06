@@ -1,8 +1,8 @@
 navbar.home: Accueil
 navbar.gite: 'Notre Gite'
 navbar.prestation: Prestations
-navbar.tourism: tourisme
-navbar.informations: information
+navbar.tourism: Tourisme
+navbar.informations: Information
 navbar.magazine: Magazine
 footer.about: 'A propos'
 footer.legalnotices.title: 'Legal notices'
@@ -50,9 +50,19 @@ footer.cgu.text10: "En utilisant le site L'Étoile de Dan, vous acceptez ces con
 footer.contactpage: 'Contact Page'
 button.more: 'en savoir plus'
 button.prereserv: PRÉ-RESERVATION
-homepage.title: 'Accueil - Gîte Spacieux et famillial  - Entre les Cévennes et le Gard '
+homepage.title: 'Accueil - Gîte Spacieux et famillial  - Entre les Cévennes et le Gard'
 homepage.text: 'Entre Cévennes et Camargue, venez profiter de notre gîte familial pour 12 personnes d’une superficie de 260 m2, de ses 4 chambres dont une pour les Personnes à Mobilité Réduite(PMR). Vous disposerez de sa piscine couverte et chauffée toute l’année, de son jacuzzi, de sa salle de jeux avec baby-foot , borne d’arcarde et billard. Venez vous détendre sur le hamac géant et dans le grand jardin arboré de 2500 m2 disposant de son barbecue, son boulodrome et ses transats.'
+homepage.title2: 'Crespian et ses Trésors'
+homepage.tourism: 'Entre nature préservée, patrimoine riche et loisirs variés, Crespian et ses environs offrent une escapade idéale. Découvrez les Gorges du Gardon, le Pont du Gard, ou encore Uzès. Profitez de randonnées, kayak, accrobranche et savourez la gastronomie locale. Une destination mêlant aventure, culture et plaisirs gourmands !'
+homepage.informations: ' Prix de la location : Nos tarifs varient en fonction de la saison et de la durée de la location. Contactez-nous pour obtenir un devis personnalisé selon vos besoins.'
+homepage.informations2: 'Contrats : Un contrat de location détaillé sera signé avant chaque réservation. Il définit les termes et conditions ainsi que les responsabilités de chaque partie.'
+homepage.informations3: 'Services de proximité : Profitez de nombreux services à proximité : commerces, restaurants, transports en commun et activités locales pour agrémenter votre séjour.'
+homepage.informations4: 'Portfolio : Découvrez notre galerie de photos. Consultez nos disponibilités et imaginez-vous déjà chez nous !'
+homepage.titleMagazine : 'Découvrez les atouts de nos gîtes'
+homepage.magazine: "Notre gîte offre un cadre idéal avec des aménagements pensés pour le confort de tous. L'accès PMR assure une accessibilité totale. Profitez de la piscine intérieure chauffée, de la climatisation et de deux terrasses spacieuses pour vos moments de détente. Les enfants apprécieront nos espaces de jeux sécurisés, pour un séjour agréable en famille."
+
 gite.title: "Notre gite - L'Etoile De Dan - Gite d'Architecte Spacieux, Calme et famillial dans le Gard"
+gite.title1: "Notre gite"
 gite.house: 'La Maison'
 gite.icons.room: Chambres
 gite.icons.bathrooms: 'Salles de bain'
@@ -91,7 +101,7 @@ gite.thegarden.text6: '- D’une table de ping-pong.'
 gite.thegarden.text7: '- D’un trampoline (réservé aux enfants)'
 gite.thegarden.text8: Localisation
 prestations.title: 'Prestations : Hostellerie - Découverte touristique - Dégustation - Massage - Chef à domicile '
-prestations.prestations: Prestations
+prestations.prestations: 'Prestations'
 prestations.text1: 'Découvrez nos prestations variées pour un séjour inoubliable :'
 prestations.text2: " Notre service d'hostellerie confortable, des dégustations de plats régionaux, des massages relaxants, un chef à domicile pour des repas gastronomiques et des visites touristiques pour explorer notre région."
 prestations.text3: "Profitez d'une expérience unique et personnalisée avec nous."
@@ -110,7 +120,7 @@ prestations.massage.link: "OC'Tao"
 prestations.chief.title: 'Chef à Domicile'
 prestations.chief.text1: 'Avec takeachef et l’un de ses 78 chefs à domicile, personnalisez votre menu pour transformer votre séjour en une expérience gastronomique inoubliable. Ces chefs professionnels viendront directement dans votre logement pour préparer des repas sur mesure, adaptés à vos goûts et préférences. Que ce soit pour une occasion spéciale ou simplement pour savourer un dîner exclusif dans le confort de votre chez-vous, vivez une expérience culinaire exceptionnelle !'
 prestations.chief.link: 'Take A Chef'
-tourism.title: tourism
+tourism.title: 'tourisme'
 tourism.nature.title: 'Nature préservée et Paysages Envoûtants'
 tourism.nature.text1: "Immergez-vous dans la beauté sauvage de la nature en explorant les environs de Crespian. À moins de 50 km, vous trouverez des sites naturels d'une beauté à couper le souffle, tels que les majestueuses Gorges du Gardon et les paisibles étendues des Cévennes. Parcourez des sentiers de randonnée pittoresques, découvrez des panoramas à couper le souffle et laissez-vous envoûter par la tranquillité de la campagne environnante."
 tourism.nature.link1: 'balade dans le bois des Lens'
@@ -270,10 +280,13 @@ magazine.familly.family.textbottom1: "Réservez dès aujourd'hui pour garantir v
 magazine.familly.family.textbottom2: '(between the Cevennes, Montpellier, Nimes and the sea).'
 magazine.familly.family.textbottom3: "Contactez-nous pour plus d'informations et pour réserver vos dates dès maintenant."
 
-reservation :
-    title: 'Pré-Réserver votre Séjour'
-    step1: 'Etape 1'
-    btnreini : 'Réinitialiser le calendrier'    
-
+review :
+    title : "Ajouter un commentaire"
+    title2 : "Votre avis compte pour nous"    
+    name : "Votre nom"
+    email : " Votre email"
+    rating : "Note"
+    comment : "Votre avis"
+    but-send : "Envoyer"
 
 

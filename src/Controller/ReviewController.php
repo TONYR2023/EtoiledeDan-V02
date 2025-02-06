@@ -13,7 +13,9 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class ReviewController extends AbstractController
 {
-    #[Route('/review/new', name: 'review_new')]
+    #[Route('{_locale}/review', name:
+        'review',
+        requirements: ['_locale' => 'fr|en'])]
     public function new(Request $request, EntityManagerInterface $entityManager): Response
     {
         // Création d'une nouvelle entité Review
@@ -37,12 +39,14 @@ class ReviewController extends AbstractController
         }
 
         // Si le formulaire n'est pas soumis ou n'est pas valide, afficher la page de formulaire
-        return $this->render('review/new.html.twig', [
+        return $this->render('landingpage/review.twig', [
             'form' => $form->createView(),
         ]);
     }
 
-    #[Route('/review/approve/{id}', name: 'review_approve')]
+    #[Route('{_locale}/review/approve/{id}', name:
+        'review_approve',
+        requirements: ['_locale' => 'fr|en'])]
     public function approve(Review $review, EntityManagerInterface $entityManager): RedirectResponse
     {
         $review->setIsApproved(true);
@@ -53,7 +57,9 @@ class ReviewController extends AbstractController
         return $this->redirectToRoute('app_booked_index');
     }
 
-    #[Route('/review/reject/{id}', name: 'review_reject')]
+    #[Route('{_locale}/review/reject/{id}', name:
+        'review_reject',
+        requirements: ['_locale' => 'fr|en'])]
     public function reject(Review $review, EntityManagerInterface $entityManager): RedirectResponse
     {
         $entityManager->remove($review);

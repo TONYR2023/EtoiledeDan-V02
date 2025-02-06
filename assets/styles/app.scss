@@ -1,2 +1,33 @@
+html, body {
+    overflow-x: hidden; /* Empêche le débordement horizontal */
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+//  titre 
+h2 {
+  color:#413934 !important;
+  display: flex;
+  justify-content: center;
+}
+// separator apres le titre
+.separator {
+  height: 2px;
+  background-color: #413934;
+  width: 30em;
+}
+// couleur police 
+p {
+  color: #413934;
+  margin-inline: 2em;
+}
 
+// cadre sur page ??
+.cadres p {
+  border: 1px solid #bfb3a3;
+  border-radius: 0.4em;
+  padding-left: 0.5em;
+  font-weight: bold;
+  color: #413934;
+}
 

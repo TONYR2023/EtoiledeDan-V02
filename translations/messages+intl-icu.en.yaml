@@ -2,8 +2,8 @@ navbar:
     home: "Home"
     gite: "Our Cottage"
     prestation: "Services"
-    tourism: "tourism"
-    informations : "informations"
+    tourism: "Tourism"
+    informations : "Informations"
     magazine: "Magazine"
 footer:
     about: "About"
@@ -111,9 +111,18 @@ button:
 homepage:
     title: "Home - Spacious and family cottage - Between the Cévennes and the Gard"
     text: "Between the Cévennes and the Camargue, come and enjoy our family gîte for 12 people with a surface area of ​​260 m2, its 4 bedrooms, one of which is for people with reduced mobility (PRM). You will have access to its indoor swimming pool heated all year round, its jacuzzi, its games room with table football, arcade terminal and billiards. Come and relax on the giant hammock and in the large 2500 m2 garden with its barbecue, its bowling alley and its deckchairs."
+    title2: 'Crespian and his Treasures'
+    tourism: 'Between preserved nature, rich heritage and varied leisure activities, Crespian and its surroundings offer an ideal getaway. Discover the Gorges du Gardon, the Pont du Gard, or even Uzès. Enjoy hiking, kayaking, tree climbing and savor the local gastronomy. A destination combining adventure, culture and gourmet pleasures!'
+    informations: 'Rental price: Our prices vary depending on the season and the duration of the rental. Contact us to obtain a personalized quote according to your needs.'
+    informations2: 'Contracts: A detailed rental contract will be signed before each reservation. It defines the terms and conditions as well as the responsibilities of each party.'
+    informations3: 'local services: Take advantage of numerous nearby services: shops, restaurants, public transport and local activities to enhance your stay.'
+    informations4: 'Portfolio: Discover our photo gallery. Check our availability and imagine yourself with us!'
+    titleMagazine : 'Discover the advantages of our lodgings'
+    magazine: 'Our gîte offers an ideal setting for everyone, with facilities designed for comfort and conviviality. We have provided PMR access to guarantee accessibility for all. Also enjoy our heated indoor swimming pool, available all year round, and air conditioning for an ideal temperature in all seasons. With two spacious terraces, you can enjoy your meals outdoors or relax while admiring the scenery. Children will not be left out thanks to our secure play areas...'
 
 gite : 
     title : "Our cottage - L'Etoile De Dan - Spacious, Quiet and Family Architect's Cottage in the Gard"
+    title1: "Our cottage"
     house : "The House"
     icons : 
        room : "Rooms"
@@ -484,6 +493,12 @@ magazine :
             textbottom2 : "(between the Cevennes, Montpellier, Nimes and the sea)."
             textbottom3 : “Contact us for more information and to book your dates now.”
 
-
-
+review :
+    title : "Add a comment" 
+    title2 : "Your opinion matters to us"  
+    name : "Your name"
+    email : "Your email"
+    rating : "rating"
+    comment : "Your review"
+    but-send : "Send"
     

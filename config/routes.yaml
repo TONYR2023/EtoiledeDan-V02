@@ -22,6 +22,7 @@ switch_language:
     requirements:
         _locale: 'en|fr'  # Langues acceptées
 
+# Redirection vers reservation avec la langue par défaut 'fr'
 app_reservation:
     path: /{_locale}/reservation
     controller: App\Controller\ReservationController::index
@@ -48,6 +49,39 @@ redirect_to_gite:
 # Route pour le gîte en différentes langues
 app_gite:
     path: /{_locale}/notre-gite
-    controller: App\Controller\PmrController::index
+    controller: App\Controller\AccueilController::index
     requirements:
         _locale: en|fr
+
+# Redirection vers tourisme avec la langue par défaut 'fr'
+redirect_to_tourisme:
+    path: /tourisme
+    controller: Symfony\Bundle\FrameworkBundle\Controller\RedirectController::redirectAction
+    defaults:
+        route: app_tourisme
+        permanent: true
+        _locale: fr  # redirection vers la version française du gîte
+
+# Route pour tourisme en différentes langues
+app_tourisme:
+    path: /{_locale}/tourisme
+    controller: App\Controller\AccueilController::index
+    requirements:
+        _locale: en|fr
+
+# Redirection vers le tourisme avec la langue par défaut 'fr'
+redirect_to_magazine:
+    path: /magazine
+    controller: Symfony\Bundle\FrameworkBundle\Controller\RedirectController::redirectAction
+    defaults:
+        route: app_magazine
+        permanent: true
+        _locale: fr  # redirection vers la version française du gîte
+
+# Route pour le gîte en différentes langues
+app_magazine:
+    path: /{_locale}/magazine
+    controller: App\Controller\AccueilController::index
+    requirements:
+        _locale: en|fr
+

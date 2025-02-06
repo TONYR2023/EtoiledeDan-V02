@@ -1,0 +1,122 @@
+// bloc principal
+.bloc1{
+  margin: 0;
+  padding: 0;
+  padding-inline: 1em;
+}
+/* section prestation */
+.homeCol1Presta{
+    margin: 2em;
+}
+
+/* section tourisme */
+.homeTourism{
+    background-image: url(/public/img/tourismePage/tourisme.png);
+    position: relative; /* Nécessaire pour que les pseudo-éléments soient positionnés correctement */
+    padding: 10px;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height:600px;
+    background-attachment: fixed;
+      display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+//le titre
+.title h2 {
+  color: #fbefe2 !important;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+  margin-top: 2rem;
+}
+
+
+ /* Block de texte */
+.blockText {
+    background-color: rgba(255, 255, 255, 0.763);
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 90%;
+    justify-content: center;
+    min-height: auto; /* Permet au bloc de s'ajuster au texte */
+    max-width: 90%; /* Empêche un débordement trop large */
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Empêche le débordement */
+    word-wrap: break-word; /* Coupe les mots longs si nécessaire */
+}
+
+    /* Dégradé */
+.homeTourism::before,
+.homeTourism::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 55px; /* La hauteur du dégradé */
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1)); /* Dégradé vers le blanc */
+    z-index: 2; 
+}
+
+    /* Dégradé en haut */
+.homeTourism::before {
+    top: 0;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+}
+
+    /* Dégradé en bas */
+.homeTourism::after {
+    bottom: 0;
+    background: linear-gradient(to top, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+}
+
+/* section Magazine */
+.magazineTourism{
+    background-image: url(/public/img/carousel/photosext/maison-ext14.webp);
+    position: relative; /* Nécessaire pour que les pseudo-éléments soient positionnés correctement */
+    padding: 10px;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height:600px;
+    background-attachment: fixed;
+      display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+    /* Dégradé */
+.magazineTourism::before,
+.magazineTourism::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 55px; /* La hauteur du dégradé */
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1)); /* Dégradé vers le blanc */
+    z-index: 2; 
+}
+
+    /* Dégradé en haut */
+.magazineTourism::before {
+    top: 0;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+}
+
+    /* Dégradé en bas */
+.magazineTourism::after {
+    bottom: 0;
+    background: linear-gradient(to top, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+}
+
+
+
+
+

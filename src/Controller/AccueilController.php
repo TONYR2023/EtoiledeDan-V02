@@ -47,6 +47,14 @@ class AccueilController extends AbstractController
         ]);
     }
 
+    #[Route('/{_locale}/review', name: 'review',
+        requirements: ['_locale' => 'fr|en']
+    )]
+    public function review(): Response
+    {
+        return $this->render('landingpage/review.twig');
+    }
+
     #[Route('/{_locale}/notre-gite', name: 'gite', requirements: ['_locale' => 'fr|en'])]
     public function gite(): Response
     {

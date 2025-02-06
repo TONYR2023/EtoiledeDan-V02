@@ -1,22 +1,4 @@
-.buttonPreresev-form {
-  background-color: rgba(246, 237, 231, 0.7);
-  padding: 1em;
-  border-radius: 0.2em;
-}
-.btn-form {
-  background-color: white;
-  padding: 0.5em;
-  border: 1px solid #bfb3a3;
-  border-radius: 0.4em;
-  color: #bfb3a3;
-}
-
-.btn-form:hover {
-  background-color: #ddd0bf;
-  color: #413934;
-}
-
-
+// calendrier
 .calendar {
   width: 100%;
   height: auto;
@@ -29,7 +11,7 @@
   border-radius: 0.4em;
   padding: 10px; /* Optionnel : ajoute un peu d'espacement à l'intérieur du cadre */
 }
-
+  // bouton reinitialiser le calendrier
 .but-reset {
   background-color: #ddd0bf;
   padding: 0.5em;
@@ -42,20 +24,58 @@
   color: #413934;
 }
 
-.cadres p {
-  border: 1px solid #bfb3a3;
-  border-radius: 0.4em;
-  padding-left: 0.5em;
-  font-weight: bold;
-  color: #413934;
-}
-
+//  checkbox HT
 .checkboxHt {
   margin-left: 1em;
   margin-right: 1em;
 }
+// Les prix comprennent 
 .comprend p {
   color: #413934;
   font-size: 0.8em;
+}
+
+// container 
+.bla {
+  border: 1px solid #bfb3a3;
+  border-radius: 0.4em;
+  padding: 0.2em;
+  width: 100%;
+}
+
+// label
+label {
+  margin-left: 0.5em;
+}
+
+// ??
+.center {
+  display: flex;
+  //justify-content: center;
+  //align-items: center;
+  height: 100%;
+}
+
+// bouton en savoir plus
+.btn-plus {
+  background-color: #413934;
+  color: #fbefe2;
+  text-decoration: none;
+  border-radius: 0.2em;
+  padding-inline: 0.6em;
+  margin-inline: 0.5em;
+  transition: background-color 0.3s ease;
+  display: flex;
+  justify-content: center;
+}
+
+.btn-plus:hover {
+  background-color: #fbefe2;
+  color: #413934;
+  border: 1px solid #413934;
+}
+
+.btn-reduit {
+  font-size: 0.7em;
 }
 

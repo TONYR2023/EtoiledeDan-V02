@@ -1,61 +1,99 @@
-.reviews{
+
+
+.reviews {
+    position: relative;
     background-image: url(/public/img/carousel/photosint/piscine02.webp);
-     color: #fbefe2;
-    margin : 0;
-    padding : 10px;
+    color: #fbefe2;
+    height: 100%;
+    padding: 10px;
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
-//le titre
-.reviews h2{
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+.reviews::before,
+.reviews::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 55px;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+    z-index: 2;
 }
 
-//la moyenne
+.reviews::before {
+    top: 0;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+}
+
+.reviews::after {
+    bottom: 0;
+    background: linear-gradient(to top, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+}
+
+.reviews h2 {
+    color: #fbefe2 !important;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+    margin-top: 2rem;
+}
+
 .average{
-   display: flex;
-  justify-content: center;
+    display: flex;
+    justify-content: center;
 }
 
-//le bouton ajouter un commentaire
 .center-button-container {
-  display: flex;
-  justify-content: center; /* Centre le bouton horizontalement */
-  align-items: center; /* Centre le bouton verticalement */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 3em;
+}
 
-  width: 100%; /* Prend toute la largeur */
+.butAddReview {
+    background-color: #413934;
+    color: #fbefe2;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
 }
-.butAddReview{
-  background-color: #413934;
-  color: #fbefe2;
-  border-radius: 4px;
-  padding: 10px 20px;
-  font-size: 16px;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
-   display: inline-flex; /* Pour que le bouton ajuste sa taille au texte */
-  justify-content: center;
-  align-items: center; /* Centrer verticalement le texte */
-}
+
 .butAddReview:hover {
-  background-color: #fbefe2;
-  color: #413934;
-  border: 1px solid #413934;
+    background-color: #fbefe2;
+    color: #413934;
+    border: 1px solid #413934;
 }
 
-//conteneurs des reviews
 .reviewContainer {
-    display: flex; 
-    flex-wrap: wrap; /* Permet aux éléments de passer à la ligne suivante */
-    gap: 20px; /* Espacement entre les éléments */
-    justify-content: space-around; 
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     margin-top: 20px;
+    padding: 0;
+    list-style: none;
+    position: relative;
+    z-index: 1;
 }
 
+.reviewContainer li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
 
-/* Conteneur pour chaque review */
 .circle {
     background-color: rgba(255, 255, 255, 0.763);
     padding: 20px;
@@ -71,13 +109,10 @@
     transition: transform 0.3s ease;
 }
 
-
 .circle:hover {
-    transform: translateY(-5px); /* Effet de hover pour les reviews */
+    transform: translateY(-5px);
 }
 
-
-/* Nom de la personne */
 .name {
     font-size: 18px;
     font-weight: bold;
@@ -85,7 +120,6 @@
     margin-bottom: 5px;
 }
 
-/* Etoiles de notation */
 .stars {
     display: inline-block;
     margin-right: 5px;
@@ -98,32 +132,30 @@
 }
 
 .stars .filled {
-    color: #f8cb17 !important; /* Couleur des étoiles remplies */
+    color: #f8cb17 !important;
 }
 
 .stars .empty {
-    color: #e0e0e0ab; /* Couleur des étoiles vides */
+    color: #e0e0e0ab;
 }
+
 .star.half {
-    background: linear-gradient(to right, #ffcc00 50%, #e0e0e0 50%); /* Dégradé pour demi-étoile */
+    background: linear-gradient(to right, #ffcc00 50%, #e0e0e0 50%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     display: inline-block;
 }
 
-
 .stars + .rating-text {
-    color: #555; /* Changer la couleur du texte en noir */
-    font-size: 16px; /* Ajuster la taille du texte si nécessaire */
+    color: #555;
+    font-size: 16px;
 }
 
 .stars .rating-text {
-    color: #555 !important;/* Forcer la couleur noire pour le texte */
+    color: #555 !important;
     text-shadow: none !important;
-  }
+}
 
-
-/* Commentaire */
 .comment {
     font-size: 14px;
     color: #555;
@@ -131,9 +163,23 @@
     line-height: 1.5;
 }
 
-/* Date de publication */
 .date {
     font-size: 12px;
     color: #999;
     margin-top: 10px;
+}
+
+/* Partie mobile */
+@media screen and (max-width: 768px) {
+    .reviewContainer {
+        flex-direction: column; /* Affichage en colonne */
+        align-items: center;
+    }
+
+    .circle {
+        width: 90%; /* Réduit la taille de l'avis */
+        max-width: 500px;
+        transform-origin: top center; /* Permet de réduire l'élément depuis le haut */
+        padding: 10px; /* Réduit l'espace interne */
+    }
 }

@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	{{ 'review.title' | trans }}
+
+{% endblock %}
+
+{% block body %}
+	<main>
+		<div class="backgroundImageContainer">
+			<img src="{{ asset('img/gitePage/gite.webp') }}" alt="gite famille" class="backgroundImage"/>
+			<div class="buttonContainer">
+				{{ include('reservation/boutonReservation.twig') }}
+			</div>
+		</div>
+		{#---------------cadre---------------#}
+		<div>
+			<img src="{{ asset('img/fond.webp') }}" alt="gite famille" class="backgroundImage"/>
+
+			<h2 class="mt-2 mx-5 d-flex text-center">
+				{{ 'review.title' | trans }}
+			</h2>
+			<div class="d-flex justify-content-center">
+				<hr class="separator"/>
+			</div>
+
+			<section
+				class="container">
+				{# Affichage des messages de succès #}
+				{% for message in app.flashes('success') %}
+					<div class="alert alert-success">
+						{{ message }}
+					</div>
+				{% endfor %}
+
+				{{ form_start(form) }}
+				{{ form_row(form.name, {'label': 'review.name' | trans }) }}
+				{{ form_row(form.email, {'label': 'review.email' | trans }) }}
+				{{ form_row(form.rating, {'label': 'review.rating' | trans }) }}
+				{{ form_row(form.comment, {'label': 'review.comment' | trans }) }}
+
+				<button class="btn btn-primary">{{ 'review.but-send' | trans }}</button>
+
+				{{ form_end(form) }}
+			</section>
+		</div>
+	</main>
+{% endblock %}

@@ -2,18 +2,27 @@
 <html lang="{{ app.request.locale }}">
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Pré-reservez votre gîte accessible pour les pmr en ligne 24/7. Trouvez un lieu de prestige entre Alès, Nîmes et Montpellier. Un espace de villegiature idéal pour tous y compris les PMR" /> 
-    <meta name="keywords" content="letoilededan, etoile, dan, gite, gîte, gard, france, caractère, jacouzi, piscine, chef à domicile, massage, découverte touristique, produits locaux, famillial, détente, nature, convivial, atypique, charmant, calme, pmr, handicap" />
-    <title>{% block title %}Bienvenue sur le gîte l'Étoile de Dan{% endblock %}</title>
     <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0">
+
+    {# SEO #}
+    <meta name="description" content="Pré-reservez votre gîte accessible pour les pmr en ligne 24/7. Trouvez un lieu de prestige entre Alès, Nîmes et Montpellier. Un espace de villegiature idéal pour tous y compris les PMR" /> 
+    <meta name="keywords" content="letoilededan, etoile de dan, etoile, dan, gite, gîte, gard, france, caractère, jacouzi, piscine, climatisation, chef à domicile, massage, découverte touristique, produits locaux, famillial, détente, nature, convivial, atypique, charmant, calme, pmr, handicap" />
+   
+    
+    <title>{% block title %}Bienvenue sur le gîte l'Étoile de Dan{% endblock %}</title>
+
+    {# Favicon #}
     <link rel="shortcut icon" href="/img/favicon-32x32.png"/>
     <link rel="apple-touch-icon" href="/img/favicon-32x32.png"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@6.6.6/css/flag-icons.min.css"/>
+    
+    {# CSS #}
     {% block stylesheets %}
         {{ encore_entry_link_tags('app') }}
          <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     {% endblock %}
 
+    {# JS #}
     {% block javascripts %}
     {{ encore_entry_script_tags('app') }}
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js">
