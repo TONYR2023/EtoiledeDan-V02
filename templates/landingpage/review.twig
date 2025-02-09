@@ -7,41 +7,44 @@
 
 {% block body %}
 	<main>
-		<div class="backgroundImageContainer">
-			<img src="{{ asset('img/gitePage/gite.webp') }}" alt="gite famille" class="backgroundImage"/>
-			<div class="buttonContainer">
-				{{ include('reservation/boutonReservation.twig') }}
-			</div>
-		</div>
+		{# <div class="backgroundImageContainer">
+																					<img src="{{ asset('img/gitePage/gite.webp') }}" alt="gite famille" class="backgroundImage"/>
+																					<div class="buttonContainer">
+																						{{ include('reservation/boutonReservation.twig') }}
+																					</div>
+																				</div> #}
 		{#---------------cadre---------------#}
-		<div>
-			<img src="{{ asset('img/fond.webp') }}" alt="gite famille" class="backgroundImage"/>
-
-			<h2 class="mt-2 mx-5 d-flex text-center">
-				{{ 'review.title' | trans }}
-			</h2>
-			<div class="d-flex justify-content-center">
-				<hr class="separator"/>
+			<div class="backgroundSection"> <div class="title">
+				<h2>
+					{{ 'review.title' | trans }}
+				</h2>
 			</div>
 
-			<section
-				class="container">
-				{# Affichage des messages de succès #}
-				{% for message in app.flashes('success') %}
-					<div class="alert alert-success">
-						{{ message }}
+			<section class="blockReview">
+				<article
+					class="container1">{# <img src="{{ asset('img/logo.png') }}" alt="Logo"/> #}
+				</article>
+				<article
+					class="container2">
+
+					{# Affichage des messages de succès #}
+					{% for message in app.flashes('success') %}
+						<div class="alert alert-success">
+							{{ message }}
+						</div>
+					{% endfor %}
+
+					{{ form_start(form) }}
+					{{ form_row(form.name, {'label': 'review.name' | trans }) }}
+					{{ form_row(form.email, {'label': 'review.email' | trans }) }}
+					{{ form_row(form.comment, {'label': 'review.comment' | trans }) }}
+					{{ form_row(form.rating, {'label': 'review.rating' | trans }) }}
+
+					<div class="butContainer">
+						<button class="butAddReview">{{ 'review.but-send' | trans }}</button>
 					</div>
-				{% endfor %}
-
-				{{ form_start(form) }}
-				{{ form_row(form.name, {'label': 'review.name' | trans }) }}
-				{{ form_row(form.email, {'label': 'review.email' | trans }) }}
-				{{ form_row(form.rating, {'label': 'review.rating' | trans }) }}
-				{{ form_row(form.comment, {'label': 'review.comment' | trans }) }}
-
-				<button class="btn btn-primary">{{ 'review.but-send' | trans }}</button>
-
-				{{ form_end(form) }}
+					{{ form_end(form) }}
+				</article>
 			</section>
 		</div>
 	</main>

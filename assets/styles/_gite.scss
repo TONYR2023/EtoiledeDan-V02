@@ -1,0 +1,34 @@
+
+.presentation{
+display: flex;
+flex-direction: row;
+}
+
+.blocHouse{
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #fbefe2;;
+    border-radius: 10px;
+    margin: 2%;
+    padding: 3%;
+    border-radius: 10px;
+ }
+
+.iconsHouse svg {
+    width: 24px; /* Taille fixe des icônes */
+    height: auto;
+    flex-shrink: 0; /* Empêche l'icône de rétrécir */
+}
+@media screen and (max-width: 768px) {
+ .presentation {
+        flex-direction: column; /* Les blocs se mettent en colonne sur mobile */
+    }
+
+    .blocHouse {
+        flex: none; /* Annule la largeur égale */
+        margin-bottom: 10px; /* Optionnel : espace entre les blocs */
+        display: flex;
+        justify-content: center;
+    }
+}

@@ -7,29 +7,14 @@
 
 {% block body %}
 	<main>
-{# L'ancre en haut de la page #}
-<div id="top"></div>
+	{# L'ancre en haut de la page #}
+	<div id="top"></div>
 
-{# Le bouton qui permet de remonter #}
-<a href="#top" class="scroll-to-top">
-	<div class="arrow-up"></div>
-</a>
+	{# Le bouton qui permet de remonter #}
+	<a href="#top" class="scroll-to-top">
+		<div class="arrow-up"></div>
+	</a>
 
-<script>
-	// Sélection du bouton "Retour en haut"
-const scrollToTopButton = document.querySelector('.scroll-to-top');
-
-// Lorsque l'utilisateur fait défiler la page
-window.addEventListener('scroll', () => { // Si la page a été défilée de plus de 700px, affichez le bouton
-if (window.scrollY > 300) {
-scrollToTopButton.style.display = 'block';
-} else {
-scrollToTopButton.style.display = 'none';
-}
-});
-</script>
-
-		<div class="backgd">
 			<div class="backgroundImageContainer">
 				<img src="{{ asset('img/homePage/home.png') }}" alt="gite exterieur" class="backgroundImage" title="Vue extérieure du gîte avec jardin et piscine" loading="eager"/>
 

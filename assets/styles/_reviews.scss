@@ -1,5 +1,3 @@
-
-
 .reviews {
     position: relative;
     background-image: url(/public/img/carousel/photosint/piscine02.webp);
@@ -85,6 +83,7 @@
     list-style: none;
     position: relative;
     z-index: 1;
+    gap:2em;
 }
 
 .reviewContainer li {
@@ -181,5 +180,109 @@
         max-width: 500px;
         transform-origin: top center; /* Permet de réduire l'élément depuis le haut */
         padding: 10px; /* Réduit l'espace interne */
+    }
+}
+// backgroundImage //
+.backgroundSection {
+    background-image: url('/public/img/fond.webp'); /* Assurez-vous du bon chemin */
+    background-size: cover; /* Couvre tout l'élément */
+    background-position: center; /* Centre l’image */
+    background-repeat: no-repeat; /* Évite la répétition */
+    background-attachment: fixed; /* Effet de parallaxe */
+    padding-top: 20%;
+    padding-bottom: 5%;
+    padding-inline: 5%;
+}
+
+// block Review //
+.blockReview {
+    background-color: #413934b7;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 2em;
+}
+
+.container1 {
+    background-image: url('/public/img/logo.png');
+    background-position: center; /* Centre l’image */
+    background-repeat: no-repeat; /* Évite la répétition */
+    margin: 1em;
+    width: 50%;
+    min-height: 360px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.container2 {
+    color: #fbefe2;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centre le contenu horizontalement */
+    justify-content: center; /* Centre verticalement */
+    text-align: start;
+     max-width: 700px; /* Ajuste la largeur */
+}
+
+
+.container2 form {
+    width: 100%;
+    padding: 2em;
+   max-width: 550px; /* Ajustement de la taille du formulaire */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centre les éléments */
+}
+.mb-3{
+    width: inherit;
+}
+
+
+// Bouton container //
+.butContainer {
+    display: flex;
+    justify-content: flex-end; /* Aligner à droite */
+    width: 100%;
+}
+
+.butAddReview {
+    background-color: #413934;
+    color: #fbefe2;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.butAddReview:hover {
+    background-color: #fbefe2;
+    color: #413934;
+    border: 1px solid #413934;
+}
+
+// Responsive pour mobile //
+@media screen and (max-width: 768px) {
+    .blockReview {
+        flex-direction: column; /* Passe en colonne */
+        align-items: center; /* Centre les éléments */
+    }
+
+    .container1, 
+    .container2 {
+        width: 100%; /* Occupe toute la largeur */
+        text-align: center; /* Centre le texte */
+    }
+
+    .butContainer {
+        justify-content: center; /* Centre le bouton */
     }
 }
