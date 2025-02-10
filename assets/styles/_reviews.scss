@@ -217,6 +217,18 @@
     justify-content: center;
     text-align: center;
 }
+.container1{
+    animation: rotate-logo 10s linear infinite;
+}
+@keyframes rotate-logo {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(-360deg);
+  }
+}
+
 
 .container2 {
     color: #fbefe2;

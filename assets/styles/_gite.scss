@@ -14,11 +14,20 @@ flex-direction: row;
     padding: 3%;
     border-radius: 10px;
  }
+ .iconsHouse{
+    margin-bottom: 1em;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Deux colonnes égales */
+    gap: 10px; /* Espacement entre les icônes */
+}
 
+.iconsHouse span{
+       margin-right: 0.8em;
+}
 .iconsHouse svg {
     width: 24px; /* Taille fixe des icônes */
     height: auto;
-    flex-shrink: 0; /* Empêche l'icône de rétrécir */
+    // flex-shrink: 0; /* Empêche l'icône de rétrécir */
 }
 @media screen and (max-width: 768px) {
  .presentation {
