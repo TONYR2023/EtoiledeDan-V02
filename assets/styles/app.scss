@@ -34,3 +34,43 @@ p {
   color: #413934;
 }
 
+// leaflet
+ #map {
+        height: 400px;
+        width: 100%;
+        border-radius: 5px;
+        margin-top: 10px;
+    }
+
+    #calculate-route {
+        background-color: #413934;
+  color: #fbefe2;
+  border-radius: 4px;
+  padding: 10px 20px;
+  font-size: 16px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  display: block;
+ text-align: center;
+  margin: 1em auto;
+  border: 1px solid transparent;
+}
+
+#calculate-route:hover {
+  background-color: #fbefe2;
+  color: #413934;
+  border: 1px solid #413934;
+  transform: scale(1.1);
+}
+
+#route-info {
+        margin-top: 20px;
+        padding: 15px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        width: 100%;
+        background: #f8f9fa;
+    }
+
+
+
