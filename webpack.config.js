@@ -57,7 +57,7 @@ Encore
     .enableSassLoader()
 
     // uncomment if you use TypeScript
-    // .enableTypeScriptLoader()
+    .enableTypeScriptLoader()
 
     .enableReactPreset()
 
@@ -69,8 +69,9 @@ Encore
     //.autoProvidejQuery()
 
     .addEntry('app', ['./assets/app.js',  
-        'bootstrap/dist/css/bootstrap.css', 
-        'bootstrap',])
+        // 'flag-icons/css/flag-icons.min.css',
+    ])
+
     .addEntry('prereserv', './assets/presreserv.js')
 //  .addEntry('translations', './public/build/translations.js')  // Ajouter le fichier des traductions
 //----------------Leaflet----------------

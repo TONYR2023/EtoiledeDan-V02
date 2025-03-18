@@ -1,25 +1,38 @@
+@use "~bootstrap/scss/bootstrap";
+@use '~leaflet/dist/leaflet';
+
+@use "_header.scss";
+@use "_footer.scss";
+@use "_backgroundImage.scss";
+//@use '~flag-icons/css/flag-icons.min.css';
+
+
 html, body {
-    overflow-x: hidden; /* Empêche le débordement horizontal */
-    margin: 0;
-    padding: 0;
-    width: 100%;
+  overflow-x: hidden; /* Empêche le débordement horizontal */
+  margin: 0;
+  padding: 0;
+  width: 100%;
 }
-//  titre 
+
+//  titre
 h2 {
-  color:#413934 !important;
+  color: #413934 !important;
   display: flex;
   justify-content: center;
 }
-h3{
+
+h3 {
   text-decoration: underline;
 }
+
 // separator apres le titre
 .separator {
   height: 2px;
   background-color: #413934;
   width: 30em;
 }
-// couleur police 
+
+// couleur police
 p {
   color: #413934;
   margin-inline: 2em;
@@ -35,15 +48,15 @@ p {
 }
 
 // leaflet
- #map {
-        height: 400px;
-        width: 100%;
-        border-radius: 5px;
-        margin-top: 10px;
-    }
+#map {
+  height: 400px;
+  width: 100%;
+  border-radius: 5px;
+  margin-top: 10px;
+}
 
-    #calculate-route {
-        background-color: #413934;
+#calculate-route {
+  background-color: #413934;
   color: #fbefe2;
   border-radius: 4px;
   padding: 10px 20px;
@@ -51,7 +64,7 @@ p {
   text-decoration: none;
   transition: background-color 0.3s ease;
   display: block;
- text-align: center;
+  text-align: center;
   margin: 1em auto;
   border: 1px solid transparent;
 }
@@ -64,13 +77,13 @@ p {
 }
 
 #route-info {
-        margin-top: 20px;
-        padding: 15px;
-        border: 1px solid #ddd;
-        border-radius: 5px;
-        width: 100%;
-        background: #f8f9fa;
-    }
+  margin-top: 20px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 100%;
+  background: #f8f9fa;
+}
 
 
 

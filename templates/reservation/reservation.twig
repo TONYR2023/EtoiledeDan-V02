@@ -2,20 +2,26 @@
 
 {% block title %}{{ 'reservation.title' | trans }} {% endblock %}
 
+{% block stylesheets %}
+    {{ encore_entry_link_tags('prereserv') }}
+{% endblock %}
+
 {% block javascripts %}
     {{ encore_entry_script_tags('prereserv') }}
-   <script>
+
+    <script>
         console.log('Scripts chargés');
     </script>
     <script>
         const bookeds = {{ reserved|json_encode|raw }}
-        let reserved = []
-        
+            let
+        reserved = []
+
         bookeds.map((e) => {
             reserved.push({'startDate': new Date(e.startDate), endDate: new Date(e.endDate)})
         })
         window.locale = '{{ app.request.locale }}';
-    </script>     
+    </script>
 {% endblock %}
 
 {% block body %}
@@ -28,7 +34,7 @@
         <h2 class="mt-2">{{ 'reservation.title' | trans }} </h2>
         <div class="d-flex justify-content-center">
             <hr class="separator"/>
-        
+
 
         </div>
 
@@ -36,6 +42,5 @@
         </section>
         <div id="reservation"></div>
 
-        {{ encore_entry_script_tags('app') }}
     </main>
 {% endblock %}

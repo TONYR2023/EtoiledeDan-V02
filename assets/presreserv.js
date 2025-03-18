@@ -2,7 +2,8 @@ import React from "react"
 import ReactDOM from 'react-dom/client'
 import PrereservPage from "./pages/PrereservPage";
 
-require('bootstrap');
+import 'bootstrap';
+import './styles/prereserv.scss';
 
 console.log('Démarrage du script presreserv.js');
 console.log("Valeur de window.locale avant passage à React :", window.locale);
